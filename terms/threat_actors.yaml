@@ -1,0 +1,286 @@
+# ============================================
+# 資安術語庫 - 威脅行為者 (Threat Actors)
+# ============================================
+
+terms:
+  # ------------------------------------------
+  # 行為者類型 (Actor Type)
+  # ------------------------------------------
+  - id: "apt"
+    term_en: "APT"
+    term_zh: "進階持續性威脅"
+    full_name_en: "Advanced Persistent Threat"
+    definitions:
+      brief: "國家級駭客組織發動的長期網路攻擊"
+      standard: |
+        進階持續性威脅是指由國家政府支持或高度組織化的駭客團體，
+        針對特定目標進行長期、隱蔽的網路入侵活動，
+        目標通常是竊取情報或破壞關鍵基礎設施。
+      detailed: |
+        APT 是一種攻擊類型的總稱，具有以下特徵：
+        
+        1. **進階 (Advanced)**：使用先進技術，包括零日漏洞、客製化惡意程式
+        2. **持續性 (Persistent)**：長期潛伏，可達數月甚至數年
+        3. **威脅 (Threat)**：有明確目標和充足資源
+        
+        各國資安機構對 APT 組織有不同命名方式：
+        - 美國：APT + 編號（如 APT29）
+        - Microsoft：元素名稱（如 Midnight Blizzard）
+        - CrowdStrike：動物名稱（如 Cozy Bear）
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["國家級攻擊", "長期潛伏", "針對性"]
+    related_terms: ["nation_state_actor", "cyber_espionage"]
+    # ⭐ 新增：列出已知的子術語（具體組織）
+    child_terms: ["apt28", "apt29", "apt41", "lazarus_group"]
+    aliases:
+      zh: ["高級持續性威脅", "APT 攻擊"]
+    usage:
+      preferred: true
+      context: "泛指國家級駭客組織時使用，若已知具體組織應使用組織名稱"
+      examples:
+        - "本週觀察到 APT 組織針對金融業發動攻擊"
+        - "APT29 是俄羅斯的 APT 組織"
+      avoid: ["高級黑客攻擊"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/"
+
+  # ------------------------------------------
+  # APT 具體組織 (APT Groups)
+  # ------------------------------------------
+  - id: "apt29"
+    term_en: "APT29"
+    term_zh: "APT29"
+    definitions:
+      brief: "俄羅斯國家級駭客組織，又稱 Cozy Bear"
+      standard: |
+        APT29 是俄羅斯對外情報局 (SVR) 關聯的國家級駭客組織，
+        主要針對政府機關、智庫、政黨進行網路間諜活動，
+        以 SolarWinds 供應鏈攻擊聞名。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["俄羅斯", "國家級", "網路間諜"]
+    # ⭐ 關聯到父術語
+    parent_term: "apt"
+    relationship: "instance_of"
+    related_terms: ["apt28", "supply_chain_attack"]
+    aliases:
+      en: ["Cozy Bear", "The Dukes", "NOBELIUM", "Midnight Blizzard"]
+    usage:
+      context: "描述俄羅斯 SVR 相關攻擊時使用"
+      examples:
+        - "APT29 被指控發動 SolarWinds 供應鏈攻擊"
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0016/"
+    metadata:
+      status: "approved"
+      attribution_country: "Russia"
+      attribution_agency: "SVR"
+
+  - id: "apt28"
+    term_en: "APT28"
+    term_zh: "APT28"
+    definitions:
+      brief: "俄羅斯國家級駭客組織，又稱 Fancy Bear"
+      standard: |
+        APT28 是俄羅斯軍事情報局 (GRU) 關聯的國家級駭客組織，
+        以針對政治目標的攻擊聞名，包括 2016 年美國大選干預事件。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["俄羅斯", "國家級", "政治干預"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    related_terms: ["apt29"]
+    aliases:
+      en: ["Fancy Bear", "Sofacy", "Pawn Storm", "Forest Blizzard"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0007/"
+    metadata:
+      status: "approved"
+      attribution_country: "Russia"
+      attribution_agency: "GRU"
+
+  - id: "apt41"
+    term_en: "APT41"
+    term_zh: "APT41"
+    definitions:
+      brief: "中國國家級駭客組織，兼具間諜與金融犯罪動機"
+      standard: |
+        APT41 是與中國政府有關聯的駭客組織，獨特之處在於
+        同時進行國家支持的網路間諜活動和以金錢為動機的犯罪行為。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["中國", "國家級", "雙重動機"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Double Dragon", "Wicked Panda", "Brass Typhoon"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0096/"
+    metadata:
+      status: "approved"
+      attribution_country: "China"
+
+  - id: "lazarus_group"
+    term_en: "Lazarus Group"
+    term_zh: "拉撒路集團"
+    definitions:
+      brief: "北韓國家級駭客組織，以金融竊盜聞名"
+      standard: |
+        Lazarus Group 是北韓政府支持的駭客組織，
+        主要從事金融竊盜以規避國際制裁，
+        曾發動孟加拉央行 SWIFT 系統攻擊，竊取近 10 億美元。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["北韓", "國家級", "金融犯罪"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Hidden Cobra", "Zinc", "Diamond Sleet"]
+      zh: ["拉撒路組織"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0032/"
+    metadata:
+      status: "approved"
+      attribution_country: "North Korea"
+
+  - id: "nation_state_actor"
+    term_en: "Nation-State Actor"
+    term_zh: "國家級駭客"
+    definitions:
+      brief: "由國家政府支持或直接指揮的駭客組織"
+      standard: |
+        國家級駭客是由國家政府資助、訓練或直接指揮的網路攻擊組織，
+        擁有充足資源和先進技術，執行網路間諜、破壞或影響力行動。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["國家級", "地緣政治"]
+    related_terms: ["apt", "cyber_espionage"]
+
+  - id: "ransomware_group"
+    term_en: "Ransomware Group"
+    term_zh: "勒索軟體集團"
+    definitions:
+      brief: "專門開發和散播勒索軟體的犯罪組織"
+      standard: |
+        勒索軟體集團是專門從事勒索軟體攻擊的網路犯罪組織，
+        可能自行開發惡意程式或透過 RaaS 模式運作，
+        通常具有組織化結構和分工。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["犯罪組織", "勒索軟體", "金錢動機"]
+    related_terms: ["ransomware", "raas"]
+    usage:
+      examples:
+        - "LockBit 勒索軟體集團聲稱對此次攻擊負責"
+
+  - id: "hacktivist"
+    term_en: "Hacktivist"
+    term_zh: "駭客行動主義者"
+    definitions:
+      brief: "基於政治或社會理念進行網路攻擊的駭客"
+      standard: |
+        駭客行動主義者出於政治、社會或意識形態動機進行網路攻擊，
+        常見手法包括網站置換、DDoS 攻擊、資料外洩等，
+        目的是宣傳理念或抗議特定組織或政府。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["政治動機", "社會運動"]
+    related_terms: ["ddos", "defacement"]
+
+  - id: "insider_threat"
+    term_en: "Insider Threat"
+    term_zh: "內部威脅"
+    definitions:
+      brief: "來自組織內部人員的安全威脅"
+      standard: |
+        內部威脅是指來自組織內部人員（員工、承包商、合作夥伴）的安全風險，
+        可能是惡意行為（故意竊取或破壞）或疏忽（意外洩露）。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["內部", "人員安全"]
+    related_terms: ["data_exfiltration", "privileged_access"]
+
+  - id: "iab"
+    term_en: "IAB"
+    term_zh: "初始存取掮客"
+    full_name_en: "Initial Access Broker"
+    definitions:
+      brief: "專門販售企業網路存取權限的犯罪角色"
+      standard: |
+        初始存取掮客專門入侵企業網路並販售存取權限給其他犯罪者，
+        是勒索軟體攻擊供應鏈中的重要角色。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["犯罪服務", "供應鏈"]
+    related_terms: ["ransomware_group", "raas"]
+
+  # ------------------------------------------
+  # 方法論 (Methodology)
+  # ------------------------------------------
+  - id: "ttp"
+    term_en: "TTP"
+    term_zh: "戰術、技術與程序"
+    full_name_en: "Tactics, Techniques, and Procedures"
+    definitions:
+      brief: "描述威脅行為者攻擊方式的標準化框架"
+      standard: |
+        TTP 是描述威脅行為者如何進行攻擊的標準化方式：
+        戰術是攻擊目標、技術是達成目標的方法、程序是具體實作細節。
+    category: "threat_actors"
+    subcategory: "methodology"
+    tags: ["威脅情報", "MITRE ATT&CK"]
+    related_terms: ["mitre_attack", "ioc"]
+
+  - id: "ioc"
+    term_en: "IoC"
+    term_zh: "入侵指標"
+    full_name_en: "Indicator of Compromise"
+    definitions:
+      brief: "用於識別系統是否遭入侵的技術證據"
+      standard: |
+        入侵指標是可用於偵測系統是否遭入侵的技術證據，
+        包括惡意 IP、網域、檔案雜湊值、異常行為模式等。
+    category: "threat_actors"
+    subcategory: "methodology"
+    tags: ["威脅情報", "偵測", "鑑識"]
+    related_terms: ["ttp", "threat_intelligence"]
+    aliases:
+      en: ["Indicators of Compromise"]
+
+  # ------------------------------------------
+  # 基礎設施 (Infrastructure)
+  # ------------------------------------------
+  - id: "c2"
+    term_en: "C2"
+    term_zh: "命令與控制"
+    full_name_en: "Command and Control"
+    definitions:
+      brief: "攻擊者用來遠端控制受感染系統的基礎設施"
+      standard: |
+        命令與控制是攻擊者建立的通訊管道，用於向受感染系統下達指令、
+        接收竊取的資料，並管理殭屍網路。
+    category: "threat_actors"
+    subcategory: "infrastructure"
+    tags: ["惡意程式", "網路通訊"]
+    related_terms: ["botnet", "backdoor"]
+    aliases:
+      en: ["C&C", "CnC"]
+    references:
+      mitre_attack: "https://attack.mitre.org/tactics/TA0011/"
+
+  - id: "botnet"
+    term_en: "Botnet"
+    term_zh: "殭屍網路"
+    definitions:
+      brief: "由攻擊者控制的大量受感染電腦組成的網路"
+      standard: |
+        殭屍網路是由大量被惡意程式感染的電腦（殭屍電腦）組成，
+        受攻擊者遠端控制，常用於發動 DDoS 攻擊、散播垃圾郵件或挖礦。
+    category: "threat_actors"
+    subcategory: "infrastructure"
+    tags: ["惡意程式", "DDoS"]
+    related_terms: ["c2", "ddos"]
+    usage:
+      examples:
+        - "該殭屍網路控制超過 10 萬台 IoT 裝置"

@@ -1,0 +1,80 @@
+# ============================================
+# 術語關係定義
+# ============================================
+
+relationship_types:
+
+  - id: "instance_of"
+    name_zh: "是...的實例"
+    description: "具體的組織、軟體、事件，屬於某個通用類別"
+    examples:
+      - parent: "apt"
+        child: "apt29"
+        explanation: "APT29 是 APT 的一個具體組織"
+      - parent: "ransomware_group"
+        child: "lockbit"
+        explanation: "LockBit 是勒索軟體集團的一個具體組織"
+    display_format: "{child} 是 {parent} 的一個實例"
+
+  - id: "subtype_of"
+    name_zh: "是...的子類型"
+    description: "概念上的分類，不是具體實例"
+    examples:
+      - parent: "phishing"
+        child: "spear_phishing"
+        explanation: "魚叉式釣魚是釣魚的一種特定類型"
+      - parent: "malware"
+        child: "ransomware"
+        explanation: "勒索軟體是惡意程式的一種類型"
+    display_format: "{child} 是 {parent} 的一種類型"
+
+  - id: "variant_of"
+    name_zh: "是...的變體"
+    description: "同一事物的不同版本"
+    examples:
+      - parent: "lockbit"
+        child: "lockbit_30"
+        explanation: "LockBit 3.0 是 LockBit 的新版本"
+    display_format: "{child} 是 {parent} 的變體版本"
+
+  - id: "alias_of"
+    name_zh: "是...的別名"
+    description: "完全相同的概念，只是不同名稱（不需獨立術語）"
+    examples:
+      - primary: "apt29"
+        alias: "Cozy Bear"
+        explanation: "Cozy Bear 是 APT29 的別名，不需獨立術語"
+    note: "別名應記錄在 aliases 欄位，不建立獨立術語"
+
+  - id: "related_to"
+    name_zh: "與...相關"
+    description: "概念上相關但無從屬關係"
+    examples:
+      - term_a: "ransomware"
+        term_b: "data_exfiltration"
+        explanation: "勒索軟體攻擊常伴隨資料外洩"
+    display_format: "{term_a} 與 {term_b} 相關"
+
+# ============================================
+# 判斷流程
+# ============================================
+decision_tree:
+  question_1:
+    question: "這個新發現的術語是某個現有術語的別名嗎？"
+    if_yes: "加入現有術語的 aliases 欄位，不建立新術語"
+    if_no: "繼續判斷"
+    
+  question_2:
+    question: "這是一個具體的組織/軟體/事件嗎？"
+    if_yes: "關係類型為 instance_of"
+    if_no: "繼續判斷"
+    
+  question_3:
+    question: "這是某個概念的子分類嗎？"
+    if_yes: "關係類型為 subtype_of"
+    if_no: "繼續判斷"
+    
+  question_4:
+    question: "這是某個術語的新版本嗎？"
+    if_yes: "關係類型為 variant_of"
+    if_no: "關係類型為 related_to 或獨立術語"

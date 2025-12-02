@@ -1,0 +1,219 @@
+# ============================================
+# 資安術語庫 - 漏洞類型 (Vulnerabilities)
+# ============================================
+
+terms:
+  # ------------------------------------------
+  # 程式碼執行 (Code Execution)
+  # ------------------------------------------
+  - id: "rce"
+    term_en: "RCE"
+    term_zh: "遠端程式碼執行"
+    full_name_en: "Remote Code Execution"
+    definitions:
+      brief: "攻擊者可遠端在目標系統執行任意程式碼的漏洞"
+      standard: |
+        遠端程式碼執行漏洞允許攻擊者透過網路在目標系統上執行任意程式碼，
+        通常被評為「危急」等級，是最嚴重的漏洞類型之一。
+    category: "vulnerabilities"
+    subcategory: "code_execution"
+    tags: ["危急", "程式碼執行", "遠端"]
+    related_terms: ["ace", "command_injection"]
+    usage:
+      preferred: true
+      examples:
+        - "該漏洞允許未經驗證的 RCE"
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/94.html"
+
+  - id: "ace"
+    term_en: "ACE"
+    term_zh: "任意程式碼執行"
+    full_name_en: "Arbitrary Code Execution"
+    definitions:
+      brief: "攻擊者可執行任意程式碼的漏洞"
+    category: "vulnerabilities"
+    subcategory: "code_execution"
+    related_terms: ["rce", "lce"]
+
+  # ------------------------------------------
+  # 注入攻擊 (Injection)
+  # ------------------------------------------
+  - id: "sql_injection"
+    term_en: "SQL Injection"
+    term_zh: "SQL 注入"
+    definitions:
+      brief: "透過惡意 SQL 語句操縱資料庫的攻擊"
+      standard: |
+        SQL 注入是將惡意 SQL 程式碼插入應用程式查詢中，
+        可能導致資料外洩、資料篡改、驗證繞過，甚至系統入侵。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["網頁安全", "資料庫", "OWASP Top 10"]
+    related_terms: ["xss", "command_injection"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/89.html"
+
+  - id: "xss"
+    term_en: "XSS"
+    term_zh: "跨站腳本"
+    full_name_en: "Cross-Site Scripting"
+    definitions:
+      brief: "在網頁中注入惡意腳本的攻擊"
+      standard: |
+        跨站腳本攻擊將惡意 JavaScript 注入網頁，
+        當其他使用者瀏覽時執行，可竊取 Cookie、劫持工作階段或進行釣魚攻擊。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["網頁安全", "JavaScript", "OWASP Top 10"]
+    related_terms: ["csrf", "sql_injection"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/79.html"
+
+  - id: "xxe"
+    term_en: "XXE"
+    term_zh: "XML 外部實體注入"
+    full_name_en: "XML External Entity Injection"
+    definitions:
+      brief: "利用 XML 解析器處理外部實體的漏洞"
+    category: "vulnerabilities"
+    subcategory: "injection"
+    related_terms: ["ssrf", "lfi"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/611.html"
+
+  - id: "command_injection"
+    term_en: "Command Injection"
+    term_zh: "命令注入"
+    definitions:
+      brief: "透過應用程式執行系統命令的漏洞"
+    category: "vulnerabilities"
+    subcategory: "injection"
+    related_terms: ["rce", "sql_injection"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/78.html"
+
+  # ------------------------------------------
+  # 記憶體安全 (Memory Safety)
+  # ------------------------------------------
+  - id: "buffer_overflow"
+    term_en: "Buffer Overflow"
+    term_zh: "緩衝區溢位"
+    definitions:
+      brief: "程式寫入資料超過緩衝區大小的漏洞"
+      standard: |
+        緩衝區溢位發生在程式寫入資料超過分配的記憶體空間，
+        可能覆蓋相鄰記憶體導致程式崩潰或執行任意程式碼。
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    tags: ["記憶體", "C/C++", "二進位"]
+    related_terms: ["use_after_free", "heap_overflow"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/120.html"
+
+  - id: "use_after_free"
+    term_en: "Use-After-Free"
+    term_zh: "釋放後使用"
+    definitions:
+      brief: "程式使用已釋放記憶體區域的漏洞"
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    aliases:
+      en: ["UAF"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/416.html"
+
+  # ------------------------------------------
+  # 驗證與授權 (Authentication & Authorization)
+  # ------------------------------------------
+  - id: "authentication_bypass"
+    term_en: "Authentication Bypass"
+    term_zh: "驗證繞過"
+    definitions:
+      brief: "繞過身分驗證機制取得未授權存取的漏洞"
+    category: "vulnerabilities"
+    subcategory: "authentication"
+    usage:
+      avoid: ["認證繞過"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/287.html"
+
+  - id: "idor"
+    term_en: "IDOR"
+    term_zh: "不安全直接物件參考"
+    full_name_en: "Insecure Direct Object Reference"
+    definitions:
+      brief: "透過修改參數存取未授權資源的漏洞"
+    category: "vulnerabilities"
+    subcategory: "authentication"
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/639.html"
+
+  - id: "csrf"
+    term_en: "CSRF"
+    term_zh: "跨站請求偽造"
+    full_name_en: "Cross-Site Request Forgery"
+    definitions:
+      brief: "誘騙使用者在已登入網站執行非預期操作的攻擊"
+    category: "vulnerabilities"
+    subcategory: "authentication"
+    aliases:
+      en: ["XSRF"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/352.html"
+
+  - id: "ssrf"
+    term_en: "SSRF"
+    term_zh: "伺服器端請求偽造"
+    full_name_en: "Server-Side Request Forgery"
+    definitions:
+      brief: "利用伺服器發送請求存取內部資源的攻擊"
+      standard: |
+        SSRF 漏洞允許攻擊者誘使伺服器向內部或外部資源發送請求，
+        可用於存取內部服務、讀取雲端元資料或掃描內網。
+    category: "vulnerabilities"
+    subcategory: "authentication"
+    tags: ["網頁安全", "雲端安全", "OWASP Top 10"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/918.html"
+
+  # ------------------------------------------
+  # 其他 (Other)
+  # ------------------------------------------
+  - id: "path_traversal"
+    term_en: "Path Traversal"
+    term_zh: "路徑遍歷"
+    definitions:
+      brief: "透過操縱路徑存取未授權檔案的漏洞"
+    category: "vulnerabilities"
+    subcategory: "configuration"
+    aliases:
+      en: ["Directory Traversal"]
+      zh: ["目錄遍歷"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/22.html"
+
+  - id: "deserialization"
+    term_en: "Insecure Deserialization"
+    term_zh: "不安全反序列化"
+    definitions:
+      brief: "反序列化不受信任資料導致的安全漏洞"
+    category: "vulnerabilities"
+    subcategory: "configuration"
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/502.html"
+
+  - id: "misconfiguration"
+    term_en: "Security Misconfiguration"
+    term_zh: "安全設定錯誤"
+    definitions:
+      brief: "因不當設定導致的安全弱點"
+      standard: |
+        安全設定錯誤是因系統、應用程式或雲端服務設定不當所導致的漏洞，
+        例如預設密碼、過於寬鬆的權限、未關閉除錯功能等。
+    category: "vulnerabilities"
+    subcategory: "configuration"
+    tags: ["設定", "雲端安全", "OWASP Top 10"]
+    usage:
+      examples:
+        - "S3 儲存桶設定為公開存取，導致資料外洩"

@@ -1,0 +1,90 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "security-glossary-tw"
+version = "0.1.0"
+description = "繁體中文資安術語庫 - Taiwan Traditional Chinese Cybersecurity Glossary"
+readme = "README.md"
+license = "CC-BY-4.0"
+requires-python = ">=3.10"
+authors = [
+    { name = "Your Name", email = "your@email.com" }
+]
+keywords = [
+    "cybersecurity",
+    "glossary",
+    "taiwan",
+    "traditional-chinese",
+    "security",
+    "terminology"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved",
+    "Natural Language :: Chinese (Traditional)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Text Processing",
+]
+
+dependencies = [
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+    "rapidfuzz>=3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+]
+site = [
+    "jinja2>=3.0",
+    "markdown>=3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/security-glossary-tw"
+Documentation = "https://your-org.github.io/security-glossary-tw/"
+Repository = "https://github.com/your-org/security-glossary-tw"
+Issues = "https://github.com/your-org/security-glossary-tw/issues"
+
+[project.scripts]
+glossary = "security_glossary_tw.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/security_glossary_tw"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/terms",
+    "/meta",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --cov=security_glossary_tw"

@@ -1,0 +1,83 @@
+# ============================================
+# 術語分類定義
+# ============================================
+
+categories:
+  - id: "attack_types"
+    name_en: "Attack Types"
+    name_zh: "攻擊類型"
+    description: "各種網路攻擊手法與技術"
+    icon: "⚔️"
+    subcategories:
+      - social_engineering
+      - network_attack
+      - web_attack
+      - advanced_attack
+      - post_exploitation
+
+  - id: "vulnerabilities"
+    name_en: "Vulnerabilities"
+    name_zh: "漏洞類型"
+    description: "軟體與系統中的安全弱點分類"
+    icon: "🔓"
+    subcategories:
+      - code_execution
+      - injection
+      - memory_safety
+      - authentication
+      - configuration
+
+  - id: "threat_actors"
+    name_en: "Threat Actors"
+    name_zh: "威脅行為者"
+    description: "網路威脅的來源與攻擊者類型"
+    icon: "👤"
+    subcategories:
+      - actor_type
+      - methodology
+      - infrastructure
+
+  - id: "malware"
+    name_en: "Malware"
+    name_zh: "惡意程式"
+    description: "各類惡意軟體的分類與特徵"
+    icon: "🦠"
+    subcategories:
+      - ransomware
+      - trojan
+      - worm
+      - rootkit
+      - other
+
+  - id: "technologies"
+    name_en: "Technologies"
+    name_zh: "技術名詞"
+    description: "資安技術、工具與解決方案"
+    icon: "🛡️"
+    subcategories:
+      - security_operations
+      - network_security
+      - endpoint_security
+      - identity
+      - data_security
+      - cloud_security
+
+  - id: "frameworks"
+    name_en: "Frameworks & Standards"
+    name_zh: "框架標準"
+    description: "資安框架、標準與評估方法"
+    icon: "📋"
+    subcategories:
+      - threat_framework
+      - compliance_framework
+      - assessment
+
+  - id: "compliance"
+    name_en: "Compliance & Regulations"
+    name_zh: "法規合規"
+    description: "資安相關法規與合規要求"
+    icon: "⚖️"
+    subcategories:
+      - data_protection
+      - industry_regulation
+      - government

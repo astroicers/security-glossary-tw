@@ -1,0 +1,284 @@
+# ============================================
+# 資安術語庫 - 技術名詞 (Technologies)
+# ============================================
+
+terms:
+  # ------------------------------------------
+  # 安全營運 (Security Operations)
+  # ------------------------------------------
+  - id: "siem"
+    term_en: "SIEM"
+    term_zh: "安全資訊與事件管理"
+    full_name_en: "Security Information and Event Management"
+    definitions:
+      brief: "集中收集、分析安全日誌並偵測威脅的平台"
+      standard: |
+        SIEM 是一種安全解決方案，集中收集來自網路設備、伺服器、
+        應用程式等的日誌資料，透過關聯分析和規則比對偵測可疑活動。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["SOC", "日誌管理", "威脅偵測"]
+    related_terms: ["soc", "soar", "xdr"]
+
+  - id: "soc"
+    term_en: "SOC"
+    term_zh: "資安監控中心"
+    full_name_en: "Security Operations Center"
+    definitions:
+      brief: "負責監控、偵測和回應安全事件的專責團隊"
+      standard: |
+        SOC 是組織內專責監控資安威脅的團隊和設施，
+        24/7 監控安全警示、分析可疑活動、回應安全事件。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["安全監控", "事件回應"]
+    related_terms: ["siem", "soar"]
+    aliases:
+      zh: ["安全監控中心", "資安維運中心"]
+
+  - id: "soar"
+    term_en: "SOAR"
+    term_zh: "安全協作自動化與回應"
+    full_name_en: "Security Orchestration, Automation and Response"
+    definitions:
+      brief: "整合安全工具並自動化事件回應流程的平台"
+    category: "technologies"
+    subcategory: "security_operations"
+    related_terms: ["siem", "soc"]
+
+  - id: "xdr"
+    term_en: "XDR"
+    term_zh: "延伸式偵測與回應"
+    full_name_en: "Extended Detection and Response"
+    definitions:
+      brief: "跨多種安全層整合偵測與回應能力的解決方案"
+      standard: |
+        XDR 整合端點、網路、雲端、郵件等多種安全資料來源，
+        提供跨環境的威脅偵測、調查和自動化回應能力。
+    category: "technologies"
+    subcategory: "security_operations"
+    related_terms: ["edr", "siem", "mdr"]
+
+  - id: "edr"
+    term_en: "EDR"
+    term_zh: "端點偵測與回應"
+    full_name_en: "Endpoint Detection and Response"
+    definitions:
+      brief: "監控端點設備以偵測和回應威脅的安全解決方案"
+    category: "technologies"
+    subcategory: "endpoint_security"
+    related_terms: ["xdr", "antivirus"]
+
+  - id: "mdr"
+    term_en: "MDR"
+    term_zh: "託管式偵測與回應"
+    full_name_en: "Managed Detection and Response"
+    definitions:
+      brief: "由外部專家團隊提供的威脅監控與回應服務"
+    category: "technologies"
+    subcategory: "security_operations"
+    related_terms: ["soc", "mssp", "edr"]
+
+  # ------------------------------------------
+  # 網路安全 (Network Security)
+  # ------------------------------------------
+  - id: "firewall"
+    term_en: "Firewall"
+    term_zh: "防火牆"
+    definitions:
+      brief: "監控和控制網路流量的安全設備"
+      standard: |
+        防火牆是網路安全的基本設備，根據預設規則
+        監控進出網路的流量，允許或阻擋特定的網路連線。
+    category: "technologies"
+    subcategory: "network_security"
+    related_terms: ["ngfw", "waf"]
+
+  - id: "ngfw"
+    term_en: "NGFW"
+    term_zh: "次世代防火牆"
+    full_name_en: "Next-Generation Firewall"
+    definitions:
+      brief: "具備應用程式感知和進階威脅防護的防火牆"
+    category: "technologies"
+    subcategory: "network_security"
+    related_terms: ["firewall", "ips"]
+
+  - id: "waf"
+    term_en: "WAF"
+    term_zh: "網頁應用程式防火牆"
+    full_name_en: "Web Application Firewall"
+    definitions:
+      brief: "保護網頁應用程式免受常見攻擊的安全設備"
+      standard: |
+        WAF 專門保護網頁應用程式，過濾和監控 HTTP 流量，
+        防禦 SQL 注入、XSS、CSRF 等常見網頁攻擊。
+    category: "technologies"
+    subcategory: "network_security"
+    related_terms: ["sql_injection", "xss"]
+
+  - id: "ids"
+    term_en: "IDS"
+    term_zh: "入侵偵測系統"
+    full_name_en: "Intrusion Detection System"
+    definitions:
+      brief: "監控網路或系統活動以偵測惡意行為的系統"
+    category: "technologies"
+    subcategory: "network_security"
+    related_terms: ["ips", "siem"]
+
+  - id: "ips"
+    term_en: "IPS"
+    term_zh: "入侵防禦系統"
+    full_name_en: "Intrusion Prevention System"
+    definitions:
+      brief: "可主動阻擋偵測到的惡意活動的安全系統"
+    category: "technologies"
+    subcategory: "network_security"
+    related_terms: ["ids", "ngfw"]
+
+  - id: "vpn"
+    term_en: "VPN"
+    term_zh: "虛擬私人網路"
+    full_name_en: "Virtual Private Network"
+    definitions:
+      brief: "透過加密通道在公共網路上建立私密連線"
+    category: "technologies"
+    subcategory: "network_security"
+    related_terms: ["encryption", "ztna"]
+
+  - id: "ztna"
+    term_en: "ZTNA"
+    term_zh: "零信任網路存取"
+    full_name_en: "Zero Trust Network Access"
+    definitions:
+      brief: "基於零信任原則的遠端存取解決方案"
+      standard: |
+        ZTNA 是實現零信任架構的技術，不再信任網路位置，
+        而是基於使用者身分、設備狀態和情境動態授予存取權限。
+    category: "technologies"
+    subcategory: "network_security"
+    related_terms: ["zero_trust", "vpn"]
+
+  - id: "zero_trust"
+    term_en: "Zero Trust"
+    term_zh: "零信任"
+    definitions:
+      brief: "永不信任、持續驗證的安全架構理念"
+      standard: |
+        零信任是一種安全模型，假設威脅可能存在於網路內外任何位置，
+        因此不論使用者或裝置位於何處，都需要持續驗證才能存取資源。
+    category: "technologies"
+    subcategory: "network_security"
+    tags: ["架構", "策略"]
+    related_terms: ["ztna", "mfa"]
+
+  # ------------------------------------------
+  # 身分管理 (Identity)
+  # ------------------------------------------
+  - id: "mfa"
+    term_en: "MFA"
+    term_zh: "多因子驗證"
+    full_name_en: "Multi-Factor Authentication"
+    definitions:
+      brief: "要求使用者提供兩種以上驗證因子的身分驗證方式"
+      standard: |
+        多因子驗證要求使用者提供兩種或以上的驗證因子：
+        知識因子（密碼）、持有因子（手機）、生物因子（指紋）。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["身分驗證", "帳號安全"]
+    related_terms: ["2fa", "sso"]
+    aliases:
+      zh: ["多重驗證", "雙因子驗證", "2FA"]
+    usage:
+      examples:
+        - "強烈建議為所有帳號啟用 MFA"
+
+  - id: "sso"
+    term_en: "SSO"
+    term_zh: "單一登入"
+    full_name_en: "Single Sign-On"
+    definitions:
+      brief: "使用者只需登入一次即可存取多個應用程式"
+    category: "technologies"
+    subcategory: "identity"
+    related_terms: ["mfa", "saml", "oauth"]
+
+  - id: "pam"
+    term_en: "PAM"
+    term_zh: "特權存取管理"
+    full_name_en: "Privileged Access Management"
+    definitions:
+      brief: "管理和監控特權帳號存取的安全解決方案"
+      standard: |
+        PAM 解決方案集中管理組織內的特權帳號（如管理員帳號），
+        提供密碼保管、存取控制、工作階段錄影等功能。
+    category: "technologies"
+    subcategory: "identity"
+    related_terms: ["privileged_account", "least_privilege"]
+
+  - id: "iam"
+    term_en: "IAM"
+    term_zh: "身分與存取管理"
+    full_name_en: "Identity and Access Management"
+    definitions:
+      brief: "管理使用者身分和存取權限的框架與解決方案"
+    category: "technologies"
+    subcategory: "identity"
+    related_terms: ["pam", "sso", "mfa"]
+
+  # ------------------------------------------
+  # 資料安全 (Data Security)
+  # ------------------------------------------
+  - id: "dlp"
+    term_en: "DLP"
+    term_zh: "資料外洩防護"
+    full_name_en: "Data Loss Prevention"
+    definitions:
+      brief: "防止敏感資料未經授權外流的安全技術"
+    category: "technologies"
+    subcategory: "data_security"
+    related_terms: ["data_classification", "encryption"]
+
+  - id: "encryption"
+    term_en: "Encryption"
+    term_zh: "加密"
+    definitions:
+      brief: "將資料轉換為無法直接讀取的格式以保護機密性"
+    category: "technologies"
+    subcategory: "data_security"
+    related_terms: ["aes", "rsa", "tls"]
+
+  # ------------------------------------------
+  # 雲端安全 (Cloud Security)
+  # ------------------------------------------
+  - id: "casb"
+    term_en: "CASB"
+    term_zh: "雲端存取安全代理"
+    full_name_en: "Cloud Access Security Broker"
+    definitions:
+      brief: "在使用者和雲端服務之間執行安全政策的解決方案"
+    category: "technologies"
+    subcategory: "cloud_security"
+    related_terms: ["shadow_it", "dlp"]
+
+  - id: "cspm"
+    term_en: "CSPM"
+    term_zh: "雲端安全態勢管理"
+    full_name_en: "Cloud Security Posture Management"
+    definitions:
+      brief: "持續監控和改善雲端環境安全設定的解決方案"
+    category: "technologies"
+    subcategory: "cloud_security"
+    related_terms: ["misconfiguration", "cloud_security"]
+
+  - id: "cwpp"
+    term_en: "CWPP"
+    term_zh: "雲端工作負載保護平台"
+    full_name_en: "Cloud Workload Protection Platform"
+    definitions:
+      brief: "保護雲端環境中各類工作負載的安全解決方案"
+    category: "technologies"
+    subcategory: "cloud_security"
+    related_terms: ["container_security", "serverless"]

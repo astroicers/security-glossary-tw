@@ -1,0 +1,159 @@
+# ============================================
+# 資安術語庫 - 框架標準 (Frameworks & Standards)
+# ============================================
+
+terms:
+  # ------------------------------------------
+  # 威脅框架 (Threat Framework)
+  # ------------------------------------------
+  - id: "mitre_attack"
+    term_en: "MITRE ATT&CK"
+    term_zh: "MITRE ATT&CK 框架"
+    definitions:
+      brief: "描述網路攻擊戰術與技術的知識庫"
+      standard: |
+        MITRE ATT&CK 是一個全球可存取的知識庫，
+        記錄了真實世界觀察到的網路攻擊者戰術和技術，
+        廣泛用於威脅建模、偵測和防禦策略。
+    category: "frameworks"
+    subcategory: "threat_framework"
+    tags: ["威脅情報", "戰術技術"]
+    related_terms: ["ttp", "kill_chain"]
+    references:
+      other:
+        official: "https://attack.mitre.org/"
+
+  - id: "kill_chain"
+    term_en: "Cyber Kill Chain"
+    term_zh: "網路殺傷鏈"
+    definitions:
+      brief: "描述網路攻擊各階段的框架模型"
+      standard: |
+        網路殺傷鏈由 Lockheed Martin 提出，將網路攻擊分為七個階段：
+        偵查、武器化、投遞、利用、安裝、命令與控制、達成目標。
+    category: "frameworks"
+    subcategory: "threat_framework"
+    tags: ["攻擊模型", "防禦策略"]
+    related_terms: ["mitre_attack", "ttp"]
+
+  # ------------------------------------------
+  # 合規框架 (Compliance Framework)
+  # ------------------------------------------
+  - id: "nist_csf"
+    term_en: "NIST CSF"
+    term_zh: "NIST 網路安全框架"
+    full_name_en: "NIST Cybersecurity Framework"
+    definitions:
+      brief: "美國國家標準提供的網路安全管理框架"
+      standard: |
+        NIST 網路安全框架提供組織管理網路安全風險的標準化方法，
+        包含五大核心功能：識別、保護、偵測、回應、復原。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["合規", "風險管理"]
+    related_terms: ["iso_27001"]
+    references:
+      other:
+        official: "https://www.nist.gov/cyberframework"
+
+  - id: "iso_27001"
+    term_en: "ISO 27001"
+    term_zh: "ISO 27001"
+    definitions:
+      brief: "資訊安全管理系統的國際標準"
+      standard: |
+        ISO/IEC 27001 是資訊安全管理系統 (ISMS) 的國際標準，
+        提供建立、實施、維護和持續改進 ISMS 的要求。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["合規", "管理系統", "認證"]
+    related_terms: ["isms", "nist_csf"]
+
+  - id: "owasp_top10"
+    term_en: "OWASP Top 10"
+    term_zh: "OWASP 十大風險"
+    definitions:
+      brief: "網頁應用程式十大安全風險排名"
+      standard: |
+        OWASP 十大風險是由 OWASP 基金會定期更新的清單，
+        列出網頁應用程式最常見和最嚴重的安全風險，
+        是網頁安全的重要參考標準。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["網頁安全", "風險排名"]
+    references:
+      other:
+        official: "https://owasp.org/Top10/"
+
+  # ------------------------------------------
+  # 評估標準 (Assessment)
+  # ------------------------------------------
+  - id: "cvss"
+    term_en: "CVSS"
+    term_zh: "通用漏洞評分系統"
+    full_name_en: "Common Vulnerability Scoring System"
+    definitions:
+      brief: "評估漏洞嚴重程度的標準化計分系統"
+      standard: |
+        CVSS 提供一種標準化的方式來評估漏洞的嚴重程度，
+        分數從 0 到 10，目前廣泛使用的是 CVSS v3.x 和 v4.0。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["漏洞評估", "風險量化"]
+    related_terms: ["cve", "vulnerability"]
+    usage:
+      examples:
+        - "該漏洞 CVSS 分數為 9.8，屬於危急等級"
+
+  - id: "cve"
+    term_en: "CVE"
+    term_zh: "通用漏洞揭露"
+    full_name_en: "Common Vulnerabilities and Exposures"
+    definitions:
+      brief: "公開已知漏洞的統一編號系統"
+      standard: |
+        CVE 是由 MITRE 維護的漏洞編號系統，
+        為每個公開揭露的漏洞分配唯一識別碼，格式為 CVE-年份-編號。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["漏洞管理", "識別碼"]
+    related_terms: ["cvss", "nvd"]
+    usage:
+      examples:
+        - "CVE-2024-12345 已被確認遭到實際利用"
+    references:
+      other:
+        official: "https://cve.mitre.org/"
+
+  - id: "cwe"
+    term_en: "CWE"
+    term_zh: "通用弱點列舉"
+    full_name_en: "Common Weakness Enumeration"
+    definitions:
+      brief: "軟體和硬體弱點類型的分類系統"
+      standard: |
+        CWE 是一個社群維護的軟體和硬體安全弱點清單，
+        提供弱點的分類和描述，用於識別和預防安全問題。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["弱點分類", "安全開發"]
+    related_terms: ["cve", "owasp_top10"]
+    references:
+      other:
+        official: "https://cwe.mitre.org/"
+
+  - id: "nvd"
+    term_en: "NVD"
+    term_zh: "國家漏洞資料庫"
+    full_name_en: "National Vulnerability Database"
+    definitions:
+      brief: "美國政府維護的漏洞資料庫"
+      standard: |
+        NVD 是美國 NIST 維護的漏洞資料庫，
+        包含 CVE 漏洞的詳細資訊、CVSS 分數和修復建議。
+    category: "frameworks"
+    subcategory: "assessment"
+    related_terms: ["cve", "cvss"]
+    references:
+      other:
+        official: "https://nvd.nist.gov/"
