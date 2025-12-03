@@ -1,0 +1,137 @@
+name: CI - Validate Glossary
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml pydantic rapidfuzz pytest
+
+      - name: Install package
+        run: |
+          pip install -e .
+
+      - name: Validate YAML structure
+        run: |
+          python -m pytest tests/test_yaml_validation.py -v --tb=short
+
+      - name: Run glossary tests
+        run: |
+          python -m pytest tests/test_glossary.py -v --tb=short
+
+  lint-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install yamllint
+        run: pip install yamllint
+
+      - name: Lint YAML files
+        run: |
+          yamllint -d "{extends: relaxed, rules: {line-length: disable, truthy: disable}}" terms/*.yaml meta/*.yaml
+        continue-on-error: true  # 暫時不強制失敗
+
+  check-duplicates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Check for duplicate term IDs
+        run: |
+          python -c "
+          import yaml
+          from pathlib import Path
+
+          terms_dir = Path('terms')
+          all_ids = {}
+          duplicates = []
+
+          for yaml_file in terms_dir.glob('*.yaml'):
+              with open(yaml_file, encoding='utf-8') as f:
+                  data = yaml.safe_load(f)
+                  if data and 'terms' in data:
+                      for term in data['terms']:
+                          term_id = term.get('id')
+                          if term_id in all_ids:
+                              duplicates.append(f'{term_id}: {all_ids[term_id]} <-> {yaml_file.name}')
+                          else:
+                              all_ids[term_id] = yaml_file.name
+
+          if duplicates:
+              print('Duplicate term IDs found:')
+              for d in duplicates:
+                  print(f'  - {d}')
+              exit(1)
+          else:
+              print(f'All {len(all_ids)} term IDs are unique')
+          "
+
+  count-terms:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Count terms by category
+        run: |
+          python -c "
+          import yaml
+          from pathlib import Path
+
+          terms_dir = Path('terms')
+          categories = {}
+          total = 0
+
+          for yaml_file in terms_dir.glob('*.yaml'):
+              with open(yaml_file, encoding='utf-8') as f:
+                  data = yaml.safe_load(f)
+                  if data and 'terms' in data:
+                      count = len(data['terms'])
+                      categories[yaml_file.stem] = count
+                      total += count
+
+          print('Term count by category:')
+          for cat, count in sorted(categories.items()):
+              print(f'  {cat}: {count}')
+          print(f'  ---')
+          print(f'  Total: {total}')
+          "
