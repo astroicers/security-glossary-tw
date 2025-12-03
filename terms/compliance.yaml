@@ -1,0 +1,207 @@
+# ============================================
+# 資安術語庫 - 法規合規 (Compliance & Regulations)
+# ============================================
+
+terms:
+  # ------------------------------------------
+  # 資料保護法規 (Data Protection Regulations)
+  # ------------------------------------------
+  - id: "gdpr"
+    term_en: "GDPR"
+    term_zh: "歐盟一般資料保護規則"
+    full_name_en: "General Data Protection Regulation"
+    definitions:
+      brief: "歐盟個人資料保護與隱私法規"
+      standard: |
+        歐盟一般資料保護規則是歐盟針對個人資料保護與隱私制定的法規，
+        適用於處理歐盟居民個人資料的所有組織，
+        違規者可被處以最高年營業額 4% 的罰款。
+    category: "compliance"
+    subcategory: "data_protection"
+    tags: ["隱私", "資料保護", "歐盟"]
+    related_terms: ["pii", "data_breach"]
+
+  - id: "pdpa"
+    term_en: "PDPA"
+    term_zh: "個人資料保護法"
+    full_name_en: "Personal Data Protection Act"
+    definitions:
+      brief: "規範個人資料蒐集、處理、利用的法規"
+      standard: |
+        個人資料保護法規範公務機關與非公務機關對個人資料的蒐集、處理及利用，
+        保障人民隱私權益，促進個人資料的合理利用。
+        台灣於 2012 年施行個人資料保護法。
+    category: "compliance"
+    subcategory: "data_protection"
+    tags: ["隱私", "資料保護", "台灣"]
+    related_terms: ["gdpr", "pii"]
+
+  # ------------------------------------------
+  # 產業合規標準 (Industry Compliance Standards)
+  # ------------------------------------------
+  - id: "pci_dss"
+    term_en: "PCI-DSS"
+    term_zh: "支付卡產業資料安全標準"
+    full_name_en: "Payment Card Industry Data Security Standard"
+    definitions:
+      brief: "保護支付卡資料的安全標準"
+      standard: |
+        PCI-DSS 是由主要信用卡組織制定的資訊安全標準，
+        適用於處理、儲存或傳輸持卡人資料的所有組織，
+        包含 12 項核心安全要求。
+    category: "compliance"
+    subcategory: "industry_standard"
+    tags: ["支付安全", "信用卡"]
+    related_terms: ["encryption", "access_control"]
+
+  - id: "hipaa"
+    term_en: "HIPAA"
+    term_zh: "美國健康保險可攜性與責任法案"
+    full_name_en: "Health Insurance Portability and Accountability Act"
+    definitions:
+      brief: "美國保護醫療資訊隱私與安全的法規"
+      standard: |
+        HIPAA 是美國聯邦法律，規範受保護健康資訊（PHI）的使用和揭露，
+        要求醫療機構實施適當的安全措施保護病患資料。
+    category: "compliance"
+    subcategory: "industry_standard"
+    tags: ["醫療", "健康資訊", "美國"]
+    related_terms: ["phi", "data_breach"]
+
+  - id: "sox"
+    term_en: "SOX"
+    term_zh: "沙賓法案"
+    full_name_en: "Sarbanes-Oxley Act"
+    definitions:
+      brief: "美國企業財務報告與內控的合規要求"
+      standard: |
+        沙賓法案是美國聯邦法律，要求上市公司建立內部控制機制，
+        確保財務報告的準確性與完整性，
+        對 IT 系統的存取控制與稽核追蹤有明確要求。
+    category: "compliance"
+    subcategory: "financial_compliance"
+    tags: ["財務", "內控", "稽核"]
+    related_terms: ["access_control", "audit_log"]
+
+  - id: "ccpa"
+    term_en: "CCPA"
+    term_zh: "加州消費者隱私法"
+    full_name_en: "California Consumer Privacy Act"
+    definitions:
+      brief: "美國加州的消費者隱私保護法規"
+      standard: |
+        加州消費者隱私法賦予加州居民對其個人資料的權利，
+        包括知情權、刪除權、拒絕出售權等，
+        適用於符合特定門檻的企業，違規可處民事罰款。
+    category: "compliance"
+    subcategory: "data_protection"
+    tags: ["隱私", "資料保護", "美國"]
+    related_terms: ["gdpr", "cpra"]
+
+  # ------------------------------------------
+  # 資安框架與標準 (Security Frameworks & Standards)
+  # ------------------------------------------
+  - id: "iso_27001"
+    term_en: "ISO 27001"
+    term_zh: "ISO 27001 資訊安全管理系統"
+    full_name_en: "ISO/IEC 27001 Information Security Management System"
+    definitions:
+      brief: "國際公認的資訊安全管理系統標準"
+      standard: |
+        ISO 27001 是國際標準化組織制定的資訊安全管理系統（ISMS）標準，
+        提供建立、實施、維護和持續改善資安管理的框架，
+        組織可通過第三方認證證明其資安能力。
+    category: "compliance"
+    subcategory: "security_framework"
+    tags: ["ISO", "ISMS", "認證"]
+    related_terms: ["iso_27002", "risk_management"]
+
+  - id: "nist_csf"
+    term_en: "NIST CSF"
+    term_zh: "NIST 網路安全框架"
+    full_name_en: "NIST Cybersecurity Framework"
+    definitions:
+      brief: "美國國家標準與技術研究院的網路安全框架"
+      standard: |
+        NIST 網路安全框架提供管理和降低網路安全風險的指引，
+        包含識別、保護、偵測、回應、復原五大功能，
+        2024 年發布 2.0 版本新增治理功能。
+    category: "compliance"
+    subcategory: "security_framework"
+    tags: ["NIST", "框架", "美國"]
+    related_terms: ["nist_sp_800_53", "risk_management"]
+
+  - id: "nist_sp_800_53"
+    term_en: "NIST SP 800-53"
+    term_zh: "NIST SP 800-53 安全控制措施"
+    definitions:
+      brief: "美國聯邦系統安全控制措施指引"
+      standard: |
+        NIST SP 800-53 提供聯邦資訊系統的安全和隱私控制措施目錄，
+        涵蓋存取控制、稽核、風險評估等 20 個控制家族，
+        是美國政府機關和承包商必須遵循的標準。
+    category: "compliance"
+    subcategory: "security_framework"
+    tags: ["NIST", "控制措施", "美國政府"]
+    related_terms: ["nist_csf", "fedramp"]
+
+  - id: "cis_controls"
+    term_en: "CIS Controls"
+    term_zh: "CIS 關鍵安全控制措施"
+    full_name_en: "CIS Critical Security Controls"
+    definitions:
+      brief: "優先排序的網路安全最佳實務清單"
+      standard: |
+        CIS 關鍵安全控制措施是一組優先排序的安全行動指南，
+        幫助組織防禦最常見的網路攻擊，
+        最新第 8 版包含 18 項控制措施，分為三個實施群組。
+    category: "compliance"
+    subcategory: "security_framework"
+    tags: ["最佳實務", "控制措施", "優先排序"]
+    related_terms: ["nist_csf", "iso_27001"]
+    aliases:
+      en: ["CIS Top 18", "CIS CSC"]
+
+  - id: "psd2"
+    term_en: "PSD2"
+    term_zh: "歐盟支付服務指令 2"
+    full_name_en: "Payment Services Directive 2"
+    definitions:
+      brief: "歐盟規範支付服務和開放銀行的法規"
+      standard: |
+        PSD2 是歐盟針對電子支付服務的法規，
+        要求銀行開放 API 給第三方支付服務提供商，
+        並強制實施強客戶驗證（SCA）提升支付安全。
+    category: "compliance"
+    subcategory: "financial_compliance"
+    tags: ["支付安全", "開放銀行", "歐盟"]
+    related_terms: ["mfa", "api_security"]
+
+  - id: "fedramp"
+    term_en: "FedRAMP"
+    term_zh: "聯邦風險與授權管理計畫"
+    full_name_en: "Federal Risk and Authorization Management Program"
+    definitions:
+      brief: "美國政府雲端服務安全評估與授權計畫"
+      standard: |
+        FedRAMP 是美國政府對雲端服務供應商的安全評估、授權和持續監控計畫，
+        雲端服務必須通過 FedRAMP 授權才能被聯邦機關採用。
+    category: "compliance"
+    subcategory: "cloud_compliance"
+    tags: ["雲端", "美國政府", "認證"]
+    related_terms: ["nist_sp_800_53", "cspm"]
+
+  - id: "soc2"
+    term_en: "SOC 2"
+    term_zh: "SOC 2 報告"
+    full_name_en: "System and Organization Controls 2"
+    definitions:
+      brief: "服務組織資安控制的獨立審計報告"
+      standard: |
+        SOC 2 是由會計師事務所出具的審計報告，
+        評估服務組織在安全性、可用性、處理完整性、機密性和隱私方面的控制，
+        是 SaaS 和雲端服務供應商常見的合規要求。
+    category: "compliance"
+    subcategory: "audit_report"
+    tags: ["審計", "雲端", "信任服務準則"]
+    related_terms: ["iso_27001"]

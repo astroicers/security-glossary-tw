@@ -851,3 +851,45 @@ terms:
     subcategory: "apt_category"
     tags: ["伊朗", "國家級", "分類"]
     related_terms: ["apt33", "apt34", "charming_kitten"]
+
+  # ------------------------------------------
+  # 2024-12 新增威脅行為者（補充）
+  # ------------------------------------------
+  - id: "moonstone_sleet"
+    term_en: "Moonstone Sleet"
+    term_zh: "Moonstone Sleet"
+    definitions:
+      brief: "北韓國家級駭客組織，針對科技與國防產業"
+      standard: |
+        Moonstone Sleet 是北韓國家級駭客組織，
+        主要針對軟體開發者、科技公司和國防產業，
+        使用假公司和社交工程手法散播惡意程式。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["北韓", "國家級", "軟體開發者"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Storm-1789"]
+    related_terms: ["lazarus_group", "social_engineering"]
+    metadata:
+      status: "approved"
+      attribution_country: "North Korea"
+
+  - id: "qilin"
+    term_en: "Qilin"
+    term_zh: "Qilin 勒索軟體組織"
+    definitions:
+      brief: "採用 RaaS 模式的勒索軟體犯罪組織"
+      standard: |
+        Qilin（又名 Agenda）是 2022 年出現的勒索軟體組織，
+        以 RaaS 模式運作，使用 Rust 和 Go 語言開發惡意程式，
+        主要攻擊醫療、教育和關鍵基礎設施。
+    category: "threat_actors"
+    subcategory: "ransomware_operator"
+    tags: ["勒索軟體", "RaaS", "醫療"]
+    aliases:
+      en: ["Agenda Ransomware"]
+    related_terms: ["ransomware_group", "raas"]
+    metadata:
+      status: "approved"

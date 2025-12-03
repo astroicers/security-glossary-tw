@@ -726,3 +726,64 @@ terms:
     subcategory: "identity"
     tags: ["安全原則", "存取控制", "零信任"]
     related_terms: ["pam", "rbac", "zero_trust"]
+
+  # ------------------------------------------
+  # 2024-12 新增技術名詞（補充）
+  # ------------------------------------------
+  - id: "msp"
+    term_en: "MSP"
+    term_zh: "託管服務提供商"
+    full_name_en: "Managed Service Provider"
+    definitions:
+      brief: "為企業提供 IT 基礎設施和服務管理的外包商"
+      standard: |
+        託管服務提供商是為企業提供遠端 IT 服務管理的外包商，
+        負責監控、維護客戶的 IT 基礎設施，
+        因擁有多家客戶的存取權限，常成為供應鏈攻擊的目標。
+    category: "technologies"
+    subcategory: "service_provider"
+    tags: ["外包", "IT 服務", "供應鏈"]
+    related_terms: ["mssp", "supply_chain_attack"]
+
+  - id: "mssp"
+    term_en: "MSSP"
+    term_zh: "託管安全服務提供商"
+    full_name_en: "Managed Security Service Provider"
+    definitions:
+      brief: "專門提供資安監控和管理服務的外包商"
+      standard: |
+        託管安全服務提供商是專門提供資安服務的外包商，
+        服務包括 SIEM 監控、威脅偵測、事件回應、弱點掃描等，
+        讓企業無需自建 SOC 也能獲得專業資安防護。
+    category: "technologies"
+    subcategory: "service_provider"
+    tags: ["資安服務", "SOC", "外包"]
+    related_terms: ["msp", "mdr", "soc"]
+
+  - id: "vulnerability_management"
+    term_en: "Vulnerability Management"
+    term_zh: "弱點管理"
+    definitions:
+      brief: "持續識別、評估和修復系統弱點的流程"
+      standard: |
+        弱點管理是持續性的資安流程，包括弱點掃描、
+        風險評估、優先排序、修補和驗證等步驟，
+        目標是降低組織的攻擊面。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["弱點", "風險管理", "修補"]
+    related_terms: ["patch_management", "asm"]
+
+  - id: "patch_management"
+    term_en: "Patch Management"
+    term_zh: "修補程式管理"
+    definitions:
+      brief: "管理和部署軟體更新與安全修補的流程"
+      standard: |
+        修補程式管理是識別、測試和部署軟體更新的系統化流程，
+        確保系統和應用程式的安全漏洞能及時修補，
+        是資安防護的基本功。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["更新", "修補", "弱點"]
+    related_terms: ["vulnerability_management"]

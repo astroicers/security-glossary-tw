@@ -725,3 +725,67 @@ terms:
     related_terms: ["c2", "data_exfiltration"]
     references:
       mitre_attack: "https://attack.mitre.org/techniques/T1071/004/"
+
+  # ------------------------------------------
+  # 2024-12 新增攻擊類型（補充）
+  # ------------------------------------------
+  - id: "double_extortion"
+    term_en: "Double Extortion"
+    term_zh: "雙重勒索"
+    definitions:
+      brief: "同時加密資料和威脅公開外洩資料的勒索策略"
+      standard: |
+        雙重勒索是現代勒索軟體常用的策略，
+        除了加密受害者資料外，還先竊取資料並威脅公開，
+        即使受害者有備份也會面臨資料外洩的壓力。
+    category: "attack_types"
+    subcategory: "ransomware_tactic"
+    tags: ["勒索軟體", "資料外洩", "勒索策略"]
+    related_terms: ["ransomware", "data_exfiltration", "triple_extortion"]
+    usage:
+      examples:
+        - "該勒索軟體組織採用雙重勒索策略，要求支付贖金否則公開資料"
+
+  - id: "triple_extortion"
+    term_en: "Triple Extortion"
+    term_zh: "三重勒索"
+    definitions:
+      brief: "在雙重勒索基礎上增加第三層壓力的勒索策略"
+      standard: |
+        三重勒索在雙重勒索基礎上增加額外威脅，
+        如對受害者發動 DDoS 攻擊、騷擾客戶或員工、
+        或威脅向主管機關檢舉，進一步施壓。
+    category: "attack_types"
+    subcategory: "ransomware_tactic"
+    tags: ["勒索軟體", "DDoS", "勒索策略"]
+    related_terms: ["double_extortion", "ransomware", "ddos"]
+
+  - id: "callback_phishing"
+    term_en: "Callback Phishing"
+    term_zh: "回撥式釣魚"
+    definitions:
+      brief: "誘騙受害者主動撥打假客服電話的釣魚攻擊"
+      standard: |
+        回撥式釣魚透過郵件假冒訂閱通知或發票，
+        誘騙受害者撥打假客服電話取消訂閱，
+        電話中引導安裝遠端存取軟體或提供機密資訊。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["釣魚", "社交工程", "電話詐騙"]
+    related_terms: ["vishing", "phishing", "bec"]
+    aliases:
+      en: ["TOAD", "Telephone-Oriented Attack Delivery"]
+
+  - id: "seo_poisoning"
+    term_en: "SEO Poisoning"
+    term_zh: "搜尋引擎毒化"
+    definitions:
+      brief: "操縱搜尋引擎排名將使用者導向惡意網站"
+      standard: |
+        搜尋引擎毒化是攻擊者使用 SEO 技術，
+        讓惡意網站在特定關鍵字搜尋結果中排名靠前，
+        誘騙使用者點擊後感染惡意程式或進入釣魚網站。
+    category: "attack_types"
+    subcategory: "web_attack"
+    tags: ["搜尋引擎", "惡意廣告", "惡意程式"]
+    related_terms: ["malvertising", "drive_by_download"]
