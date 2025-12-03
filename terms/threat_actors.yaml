@@ -284,3 +284,570 @@ terms:
     usage:
       examples:
         - "該殭屍網路控制超過 10 萬台 IoT 裝置"
+
+  # ------------------------------------------
+  # 新增 APT 組織
+  # ------------------------------------------
+  - id: "scattered_spider"
+    term_en: "Scattered Spider"
+    term_zh: "Scattered Spider"
+    definitions:
+      brief: "以社交工程手法著稱的年輕駭客組織"
+      standard: |
+        Scattered Spider 是一個以年輕成員為主的駭客組織，
+        擅長使用社交工程手法繞過 MFA 和 IT 服務台，
+        曾攻擊 MGM、Caesars 等大型企業。
+    category: "threat_actors"
+    subcategory: "cybercrime_group"
+    tags: ["社交工程", "勒索軟體", "身分冒充"]
+    aliases:
+      en: ["UNC3944", "0ktapus", "Muddled Libra"]
+    related_terms: ["social_engineering", "blackcat"]
+    metadata:
+      status: "approved"
+
+  - id: "fin7"
+    term_en: "FIN7"
+    term_zh: "FIN7"
+    definitions:
+      brief: "專門攻擊零售和餐飲業的金融犯罪組織"
+      standard: |
+        FIN7 是一個以金融利益為動機的網路犯罪組織，
+        主要針對零售和餐飲業竊取信用卡資料，
+        後來轉向勒索軟體攻擊。
+    category: "threat_actors"
+    subcategory: "cybercrime_group"
+    tags: ["金融犯罪", "POS 惡意程式", "勒索軟體"]
+    aliases:
+      en: ["Carbanak", "Carbon Spider"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0046/"
+    metadata:
+      status: "approved"
+
+  - id: "turla"
+    term_en: "Turla"
+    term_zh: "Turla"
+    definitions:
+      brief: "俄羅斯最精密的國家級駭客組織之一"
+      standard: |
+        Turla 是與俄羅斯 FSB 有關聯的國家級駭客組織，
+        以高度精密的惡意程式和隱蔽技術著稱，
+        主要針對政府機關和外交單位進行間諜活動。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["俄羅斯", "國家級", "網路間諜"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Snake", "Venomous Bear", "Secret Blizzard"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0010/"
+    metadata:
+      status: "approved"
+      attribution_country: "Russia"
+      attribution_agency: "FSB"
+
+  - id: "sandworm"
+    term_en: "Sandworm"
+    term_zh: "Sandworm"
+    definitions:
+      brief: "俄羅斯軍事情報局的破壞性攻擊組織"
+      standard: |
+        Sandworm 是俄羅斯 GRU 單位 74455 的駭客組織，
+        以破壞性攻擊聞名，曾發動 NotPetya、對烏克蘭電網的攻擊。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["俄羅斯", "國家級", "破壞性攻擊"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Voodoo Bear", "IRIDIUM", "Seashell Blizzard"]
+    related_terms: ["wiper", "notpetya"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0034/"
+    metadata:
+      status: "approved"
+      attribution_country: "Russia"
+      attribution_agency: "GRU Unit 74455"
+
+  - id: "kimsuky"
+    term_en: "Kimsuky"
+    term_zh: "Kimsuky"
+    definitions:
+      brief: "北韓針對南韓的網路間諜組織"
+      standard: |
+        Kimsuky 是北韓的國家級駭客組織，
+        主要針對南韓政府、智庫、學術機構進行網路間諜活動，
+        擅長使用魚叉式釣魚攻擊。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["北韓", "國家級", "網路間諜"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Velvet Chollima", "Thallium", "Emerald Sleet"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0094/"
+    metadata:
+      status: "approved"
+      attribution_country: "North Korea"
+
+  - id: "volt_typhoon"
+    term_en: "Volt Typhoon"
+    term_zh: "Volt Typhoon"
+    definitions:
+      brief: "中國針對美國關鍵基礎設施的駭客組織"
+      standard: |
+        Volt Typhoon 是中國國家級駭客組織，
+        專門針對美國關鍵基礎設施（通訊、能源、水務）進行滲透，
+        以「就地取材」手法著稱，潛伏時間長。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["中國", "國家級", "關鍵基礎設施"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Vanguard Panda", "Bronze Silhouette"]
+    related_terms: ["living_off_the_land", "critical_infrastructure"]
+    metadata:
+      status: "approved"
+      attribution_country: "China"
+
+  - id: "blacktech"
+    term_en: "BlackTech"
+    term_zh: "BlackTech"
+    definitions:
+      brief: "中國針對台灣和日本的駭客組織"
+      standard: |
+        BlackTech 是與中國政府有關聯的駭客組織，
+        主要針對台灣、日本和美國的政府機關和科技公司，
+        進行網路間諜活動。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["中國", "國家級", "台灣"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Palmerworm", "Circuit Panda"]
+    metadata:
+      status: "approved"
+      attribution_country: "China"
+
+  # ------------------------------------------
+  # 新增威脅情報相關術語
+  # ------------------------------------------
+  - id: "threat_intelligence"
+    term_en: "Threat Intelligence"
+    term_zh: "威脅情報"
+    definitions:
+      brief: "關於現有或潛在網路威脅的可行動資訊"
+      standard: |
+        威脅情報是經過收集、分析的資訊，
+        可幫助組織了解威脅行為者的動機、能力和手法，
+        以做出更好的安全決策。
+    category: "threat_actors"
+    subcategory: "methodology"
+    tags: ["情報", "防禦", "決策支援"]
+    related_terms: ["ioc", "ttp"]
+    aliases:
+      zh: ["威脅情資"]
+
+  - id: "dark_web"
+    term_en: "Dark Web"
+    term_zh: "暗網"
+    definitions:
+      brief: "需要特殊軟體才能存取的隱藏網路"
+      standard: |
+        暗網是網際網路中需要使用 Tor 等特殊軟體才能存取的部分，
+        因其匿名特性，常被用於非法交易、販售被盜資料和駭客服務。
+    category: "threat_actors"
+    subcategory: "infrastructure"
+    tags: ["匿名", "犯罪", "Tor"]
+    related_terms: ["underground_forum"]
+
+  - id: "underground_forum"
+    term_en: "Underground Forum"
+    term_zh: "地下論壇"
+    definitions:
+      brief: "網路犯罪者交流和交易的秘密社群"
+      standard: |
+        地下論壇是網路犯罪者聚集的秘密網站，
+        用於分享駭客技術、販售被盜資料、招募合作夥伴，
+        是網路犯罪生態系統的重要組成部分。
+    category: "threat_actors"
+    subcategory: "infrastructure"
+    tags: ["犯罪", "交易", "社群"]
+    related_terms: ["dark_web", "iab"]
+
+  - id: "cyber_espionage"
+    term_en: "Cyber Espionage"
+    term_zh: "網路間諜活動"
+    definitions:
+      brief: "透過網路入侵竊取機密資訊的活動"
+      standard: |
+        網路間諜活動是利用網路入侵手段竊取政府、企業機密資訊的行為，
+        通常由國家級駭客組織執行，目標包括政治、軍事、經濟情報。
+    category: "threat_actors"
+    subcategory: "activity_type"
+    tags: ["國家級", "情報", "機密"]
+    related_terms: ["apt", "nation_state_actor"]
+
+  - id: "supply_chain_compromise"
+    term_en: "Supply Chain Compromise"
+    term_zh: "供應鏈入侵"
+    definitions:
+      brief: "透過攻擊軟體供應鏈來滲透目標的手法"
+      standard: |
+        供應鏈入侵是針對軟體開發、分發過程中的弱點，
+        在合法軟體中植入惡意程式，藉由軟體更新散播給所有使用者。
+    category: "threat_actors"
+    subcategory: "activity_type"
+    tags: ["供應鏈", "第三方風險", "進階攻擊"]
+    related_terms: ["supply_chain_attack", "apt"]
+    usage:
+      examples:
+        - "SolarWinds 事件是典型的供應鏈入侵案例"
+
+  # ------------------------------------------
+  # 2024-12 新增威脅行為者 (+14)
+  # ------------------------------------------
+
+  # 網路犯罪組織
+  - id: "lapsus"
+    term_en: "LAPSUS$"
+    term_zh: "LAPSUS$ 駭客組織"
+    definitions:
+      brief: "以社交工程和內部威脅手法著稱的駭客組織"
+      standard: |
+        LAPSUS$ 是一個以年輕成員為主的駭客組織，
+        擅長透過社交工程、賄賂內部員工取得存取權限，
+        曾攻擊 Microsoft、Nvidia、Uber 等大型科技公司。
+    category: "threat_actors"
+    subcategory: "cybercrime_group"
+    tags: ["社交工程", "資料竊取", "內部威脅"]
+    related_terms: ["social_engineering", "scattered_spider"]
+    metadata:
+      status: "approved"
+
+  - id: "lockbit_group"
+    term_en: "LockBit Group"
+    term_zh: "LockBit 勒索軟體集團"
+    definitions:
+      brief: "全球最活躍的 RaaS 勒索軟體營運組織"
+      standard: |
+        LockBit 是最多產的勒索軟體即服務營運組織之一，
+        透過加盟者網路進行攻擊，2024 年遭執法機構 Operation Cronos 打擊，
+        但仍持續活躍。
+    category: "threat_actors"
+    subcategory: "ransomware_operator"
+    tags: ["勒索軟體", "RaaS", "犯罪集團"]
+    related_terms: ["lockbit", "raas", "ransomware_group"]
+    metadata:
+      status: "approved"
+
+  - id: "alphv_group"
+    term_en: "ALPHV/BlackCat Group"
+    term_zh: "ALPHV 勒索軟體集團"
+    definitions:
+      brief: "營運 BlackCat 勒索軟體的犯罪組織"
+      standard: |
+        ALPHV 是營運 BlackCat 勒索軟體的組織，
+        採用 RaaS 模式，以進階的 Rust 開發技術著稱，
+        曾攻擊 MGM Resorts 等大型企業。
+    category: "threat_actors"
+    subcategory: "ransomware_operator"
+    tags: ["勒索軟體", "RaaS", "BlackCat"]
+    related_terms: ["blackcat", "raas"]
+    metadata:
+      status: "approved"
+
+  # 中國 APT 組織
+  - id: "mustang_panda"
+    term_en: "Mustang Panda"
+    term_zh: "Mustang Panda"
+    definitions:
+      brief: "針對東南亞和歐洲的中國國家級駭客組織"
+      standard: |
+        Mustang Panda 是與中國政府有關聯的駭客組織，
+        主要針對東南亞政府和歐洲外交單位進行間諜活動，
+        擅長使用 PlugX 惡意程式。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["中國", "國家級", "網路間諜"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Bronze President", "RedDelta", "Earth Preta"]
+    related_terms: ["plugx"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0129/"
+    metadata:
+      status: "approved"
+      attribution_country: "China"
+
+  - id: "flax_typhoon"
+    term_en: "Flax Typhoon"
+    term_zh: "Flax Typhoon"
+    definitions:
+      brief: "針對台灣的中國國家級駭客組織"
+      standard: |
+        Flax Typhoon 是中國國家級駭客組織，
+        主要針對台灣政府機關、教育機構和關鍵基礎設施，
+        以「就地取材」手法維持長期存取。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["中國", "國家級", "台灣"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Ethereal Panda"]
+    related_terms: ["living_off_the_land", "volt_typhoon"]
+    metadata:
+      status: "approved"
+      attribution_country: "China"
+
+  - id: "salt_typhoon"
+    term_en: "Salt Typhoon"
+    term_zh: "Salt Typhoon"
+    definitions:
+      brief: "針對美國電信業的中國國家級駭客組織"
+      standard: |
+        Salt Typhoon 是中國國家級駭客組織，
+        於 2024 年被揭露入侵美國多家主要電信公司，
+        可能存取合法監聽系統和通訊資料。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["中國", "國家級", "電信"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["GhostEmperor", "FamousSparrow"]
+    metadata:
+      status: "approved"
+      attribution_country: "China"
+
+  - id: "earth_lusca"
+    term_en: "Earth Lusca"
+    term_zh: "Earth Lusca"
+    definitions:
+      brief: "針對政府和教育機構的中國駭客組織"
+      standard: |
+        Earth Lusca 是與中國有關聯的駭客組織，
+        針對全球政府機關、媒體和教育機構進行間諜活動，
+        同時也從事加密貨幣竊盜等金融犯罪。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["中國", "國家級", "雙重動機"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["TAG-22"]
+    metadata:
+      status: "approved"
+      attribution_country: "China"
+
+  # 其他 APT 組織
+  - id: "sidewinder"
+    term_en: "SideWinder"
+    term_zh: "SideWinder"
+    definitions:
+      brief: "針對南亞鄰國的印度國家級駭客組織"
+      standard: |
+        SideWinder 是與印度政府有關聯的駭客組織，
+        主要針對巴基斯坦、中國、尼泊爾等鄰國的政府和軍事單位，
+        進行網路間諜活動。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["印度", "國家級", "南亞"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Rattlesnake", "T-APT-04"]
+    metadata:
+      status: "approved"
+      attribution_country: "India"
+
+  - id: "bitter_apt"
+    term_en: "Bitter APT"
+    term_zh: "Bitter APT"
+    definitions:
+      brief: "針對南亞的國家級駭客組織"
+      standard: |
+        Bitter APT 是針對南亞國家進行網路間諜活動的組織，
+        主要攻擊巴基斯坦、孟加拉和中國的政府機關，
+        被認為與印度有關聯。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["國家級", "南亞", "網路間諜"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["T-APT-17"]
+    metadata:
+      status: "approved"
+
+  - id: "transparent_tribe"
+    term_en: "Transparent Tribe"
+    term_zh: "Transparent Tribe"
+    definitions:
+      brief: "針對印度的巴基斯坦國家級駭客組織"
+      standard: |
+        Transparent Tribe 是與巴基斯坦政府有關聯的駭客組織，
+        主要針對印度政府和軍事單位進行網路間諜活動，
+        使用自製的 CrimsonRAT 惡意程式。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["巴基斯坦", "國家級", "印度"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["APT36", "Mythic Leopard", "ProjectM"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0134/"
+    metadata:
+      status: "approved"
+      attribution_country: "Pakistan"
+
+  - id: "lancefly"
+    term_en: "Lancefly"
+    term_zh: "Lancefly"
+    definitions:
+      brief: "針對南亞和東南亞的間諜活動組織"
+      standard: |
+        Lancefly 是一個針對南亞和東南亞國家的駭客組織，
+        主要攻擊政府、航空和電信產業，
+        使用名為 Merdoor 的自製後門程式。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["國家級", "東南亞", "網路間諜"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    metadata:
+      status: "approved"
+
+  # 伊朗 APT 組織
+  - id: "apt33"
+    term_en: "APT33"
+    term_zh: "APT33"
+    definitions:
+      brief: "針對航空和能源產業的伊朗國家級駭客組織"
+      standard: |
+        APT33 是伊朗政府支持的駭客組織，
+        主要針對美國、沙烏地阿拉伯的航空和能源產業，
+        進行破壞性攻擊和網路間諜活動。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["伊朗", "國家級", "能源"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["Elfin", "Magnallium", "Refined Kitten", "Peach Sandstorm"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0064/"
+    metadata:
+      status: "approved"
+      attribution_country: "Iran"
+
+  - id: "apt34"
+    term_en: "APT34"
+    term_zh: "APT34"
+    definitions:
+      brief: "針對中東地區的伊朗國家級駭客組織"
+      standard: |
+        APT34 是與伊朗情報機構有關聯的駭客組織，
+        主要針對中東地區的政府、金融和能源產業，
+        進行網路間諜活動和社交工程攻擊。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["伊朗", "國家級", "中東"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["OilRig", "Helix Kitten", "Hazel Sandstorm"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0049/"
+    metadata:
+      status: "approved"
+      attribution_country: "Iran"
+
+  - id: "charming_kitten"
+    term_en: "Charming Kitten"
+    term_zh: "Charming Kitten"
+    definitions:
+      brief: "針對學術和媒體人士的伊朗駭客組織"
+      standard: |
+        Charming Kitten 是伊朗國家級駭客組織，
+        主要針對學者、記者、人權活動家和政策研究人員，
+        使用精細的社交工程和釣魚攻擊。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["伊朗", "國家級", "社交工程"]
+    parent_term: "apt"
+    relationship: "instance_of"
+    aliases:
+      en: ["APT42", "Phosphorus", "TA453", "Mint Sandstorm"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0058/"
+    metadata:
+      status: "approved"
+      attribution_country: "Iran"
+
+  # ------------------------------------------
+  # APT 地區分類 (補充關聯術語)
+  # ------------------------------------------
+  - id: "chinese_apt"
+    term_en: "Chinese APT"
+    term_zh: "中國 APT 組織"
+    definitions:
+      brief: "與中國政府有關聯的國家級駭客組織統稱"
+      standard: |
+        中國 APT 組織是與中國政府有關聯的國家級駭客組織，
+        主要從事網路間諜活動，目標包括政府機關、關鍵基礎設施和智慧財產，
+        Microsoft 採用「Typhoon」命名，CrowdStrike 採用「Panda」命名。
+    category: "threat_actors"
+    subcategory: "apt_category"
+    tags: ["中國", "國家級", "分類"]
+    related_terms: ["apt41", "volt_typhoon", "blacktech", "mustang_panda", "salt_typhoon"]
+
+  - id: "russian_apt"
+    term_en: "Russian APT"
+    term_zh: "俄羅斯 APT 組織"
+    definitions:
+      brief: "與俄羅斯政府有關聯的國家級駭客組織統稱"
+      standard: |
+        俄羅斯 APT 組織主要隸屬於情報機構（SVR、FSB）或軍方（GRU），
+        從事網路間諜和破壞性攻擊，Microsoft 採用「Blizzard」命名，
+        CrowdStrike 採用「Bear」命名。
+    category: "threat_actors"
+    subcategory: "apt_category"
+    tags: ["俄羅斯", "國家級", "分類"]
+    related_terms: ["apt28", "apt29", "turla", "sandworm"]
+
+  - id: "north_korean_apt"
+    term_en: "North Korean APT"
+    term_zh: "北韓 APT 組織"
+    definitions:
+      brief: "與北韓政府有關聯的國家級駭客組織統稱"
+      standard: |
+        北韓 APT 組織主要從事金融竊盜以規避國際制裁，
+        同時也進行間諜活動，Microsoft 採用「Sleet」命名，
+        CrowdStrike 採用「Chollima」命名。
+    category: "threat_actors"
+    subcategory: "apt_category"
+    tags: ["北韓", "國家級", "分類"]
+    related_terms: ["lazarus_group", "kimsuky"]
+
+  - id: "iranian_apt"
+    term_en: "Iranian APT"
+    term_zh: "伊朗 APT 組織"
+    definitions:
+      brief: "與伊朗政府有關聯的國家級駭客組織統稱"
+      standard: |
+        伊朗 APT 組織主要針對中東地區和西方國家，
+        從事間諜活動和破壞性攻擊，Microsoft 採用「Sandstorm」命名，
+        CrowdStrike 採用「Kitten」命名。
+    category: "threat_actors"
+    subcategory: "apt_category"
+    tags: ["伊朗", "國家級", "分類"]
+    related_terms: ["apt33", "apt34", "charming_kitten"]

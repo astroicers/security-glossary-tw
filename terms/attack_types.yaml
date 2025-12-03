@@ -343,3 +343,385 @@ terms:
     related_terms: ["backdoor", "rootkit"]
     references:
       mitre_attack: "https://attack.mitre.org/tactics/TA0003/"
+
+  # ------------------------------------------
+  # 新增攻擊類型
+  # ------------------------------------------
+  - id: "drive_by_download"
+    term_en: "Drive-by Download"
+    term_zh: "路過式下載"
+    definitions:
+      brief: "使用者僅瀏覽網頁即被自動下載惡意程式"
+      standard: |
+        路過式下載攻擊利用瀏覽器或外掛程式漏洞，
+        使用者只需瀏覽惡意或被入侵的網頁，
+        即會在不知情的情況下自動下載並執行惡意程式。
+    category: "attack_types"
+    subcategory: "web_attack"
+    tags: ["網頁攻擊", "漏洞利用", "惡意程式"]
+    related_terms: ["watering_hole", "exploit_kit"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1189/"
+
+  - id: "typosquatting"
+    term_en: "Typosquatting"
+    term_zh: "網域名稱搶註"
+    definitions:
+      brief: "註冊與知名網站相似的網域來欺騙使用者"
+      standard: |
+        網域名稱搶註是註冊與合法網站名稱相似的網域（如拼寫錯誤），
+        當使用者輸入錯誤網址時會進入攻擊者網站，
+        可能遭受釣魚攻擊或下載惡意程式。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["網域", "釣魚", "冒充"]
+    related_terms: ["phishing", "domain_hijacking"]
+    aliases:
+      en: ["URL Hijacking", "Domain Squatting"]
+      zh: ["網址劫持", "域名搶註"]
+
+  - id: "session_hijacking"
+    term_en: "Session Hijacking"
+    term_zh: "會話劫持"
+    definitions:
+      brief: "竊取使用者的會話令牌以冒充其身分"
+      standard: |
+        會話劫持是攻擊者竊取使用者的 Session ID 或 Cookie，
+        藉此接管使用者的登入狀態，無需帳密即可存取帳戶，
+        常透過 XSS、網路竊聽或惡意程式取得。
+    category: "attack_types"
+    subcategory: "web_attack"
+    tags: ["網頁攻擊", "身分冒充", "Cookie"]
+    related_terms: ["xss", "mitm", "csrf"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1563/"
+
+  - id: "cryptojacking"
+    term_en: "Cryptojacking"
+    term_zh: "挖礦劫持"
+    definitions:
+      brief: "未經授權使用他人電腦資源挖掘加密貨幣"
+      standard: |
+        挖礦劫持是攻擊者在受害者電腦或網頁中植入挖礦程式，
+        未經同意使用其運算資源挖掘加密貨幣，
+        導致系統效能下降和電費增加。
+    category: "attack_types"
+    subcategory: "malware"
+    tags: ["加密貨幣", "資源竊取", "惡意程式"]
+    related_terms: ["cryptominer", "malware"]
+    aliases:
+      zh: ["加密貨幣劫持"]
+
+  - id: "formjacking"
+    term_en: "Formjacking"
+    term_zh: "表單劫持"
+    definitions:
+      brief: "在網站表單中注入惡意程式碼竊取輸入資料"
+      standard: |
+        表單劫持是攻擊者在電商網站的付款表單中注入惡意 JavaScript，
+        當使用者輸入信用卡資訊時，資料會被同時傳送給攻擊者，
+        類似數位版的 ATM 側錄器。
+    category: "attack_types"
+    subcategory: "web_attack"
+    tags: ["網頁攻擊", "信用卡", "JavaScript"]
+    related_terms: ["xss", "magecart"]
+    aliases:
+      zh: ["網頁側錄"]
+
+  - id: "password_spraying"
+    term_en: "Password Spraying"
+    term_zh: "密碼噴灑"
+    definitions:
+      brief: "用少量常見密碼嘗試大量帳號的攻擊"
+      standard: |
+        密碼噴灑與傳統暴力破解相反，使用少量常見密碼（如 Password123）
+        嘗試大量帳號，藉此避免觸發帳號鎖定機制。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["密碼攻擊", "帳號安全", "暴力破解"]
+    related_terms: ["brute_force", "credential_stuffing"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1110/003/"
+
+  - id: "kerberoasting"
+    term_en: "Kerberoasting"
+    term_zh: "Kerberos 烤肉攻擊"
+    definitions:
+      brief: "利用 Kerberos 協定竊取服務帳號密碼的攻擊"
+      standard: |
+        Kerberoasting 是針對 Active Directory 環境的攻擊技術，
+        攻擊者請求服務票證後離線破解，取得服務帳號密碼，
+        常用於內網滲透和權限提升。
+    category: "attack_types"
+    subcategory: "post_exploitation"
+    tags: ["Active Directory", "Kerberos", "內網滲透"]
+    related_terms: ["lateral_movement", "privilege_escalation"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1558/003/"
+
+  - id: "living_off_the_land"
+    term_en: "Living off the Land"
+    term_zh: "就地取材攻擊"
+    definitions:
+      brief: "利用系統內建工具進行攻擊以規避偵測"
+      standard: |
+        就地取材攻擊使用作業系統內建的合法工具（如 PowerShell、WMI），
+        執行惡意行為，因不需外部惡意程式，
+        較難被傳統防毒軟體偵測。
+    category: "attack_types"
+    subcategory: "advanced_attack"
+    tags: ["規避偵測", "APT", "無檔案"]
+    related_terms: ["fileless_attack", "lolbas"]
+    aliases:
+      en: ["LOLBins", "LOTL"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1218/"
+
+  - id: "fileless_attack"
+    term_en: "Fileless Attack"
+    term_zh: "無檔案攻擊"
+    definitions:
+      brief: "不在硬碟留下惡意檔案的攻擊手法"
+      standard: |
+        無檔案攻擊僅在記憶體中執行惡意程式碼，
+        不在硬碟寫入惡意檔案，透過 PowerShell、WMI 或
+        注入合法程序來執行，大幅增加偵測難度。
+    category: "attack_types"
+    subcategory: "advanced_attack"
+    tags: ["規避偵測", "APT", "記憶體"]
+    related_terms: ["living_off_the_land", "memory_injection"]
+    aliases:
+      zh: ["無文件攻擊"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1055/"
+
+  - id: "arp_spoofing"
+    term_en: "ARP Spoofing"
+    term_zh: "ARP 欺騙"
+    definitions:
+      brief: "偽造 ARP 回應來攔截網路流量"
+      standard: |
+        ARP 欺騙透過發送偽造的 ARP 訊息，
+        將攻擊者的 MAC 位址與目標 IP 綁定，
+        使網路流量經過攻擊者設備，實現中間人攻擊。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["網路攻擊", "區域網路", "竊聽"]
+    related_terms: ["mitm", "dns_spoofing"]
+    aliases:
+      zh: ["ARP 毒化"]
+
+  - id: "replay_attack"
+    term_en: "Replay Attack"
+    term_zh: "重放攻擊"
+    definitions:
+      brief: "截取並重新發送合法通訊資料進行攻擊"
+      standard: |
+        重放攻擊是攻擊者截取網路中的合法認證資料或交易訊息，
+        之後重新發送這些資料來偽造身分或重複執行交易。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["網路攻擊", "認證", "竊聽"]
+    related_terms: ["mitm", "session_hijacking"]
+
+  # ------------------------------------------
+  # 2024-12 新增攻擊類型 (+12)
+  # ------------------------------------------
+  - id: "clickjacking"
+    term_en: "Clickjacking"
+    term_zh: "點擊劫持"
+    definitions:
+      brief: "誘騙使用者點擊隱藏的惡意元素"
+      standard: |
+        點擊劫持透過將惡意頁面以透明層覆蓋在合法網頁上，
+        使用者以為點擊合法元素，實際上是在操作惡意頁面。
+    category: "attack_types"
+    subcategory: "web_attack"
+    tags: ["網頁攻擊", "UI 欺騙", "iframe"]
+    related_terms: ["xss", "csrf"]
+    aliases:
+      en: ["UI Redressing"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/1021.html"
+
+  - id: "sim_swapping"
+    term_en: "SIM Swapping"
+    term_zh: "SIM 卡交換攻擊"
+    definitions:
+      brief: "詐騙電信業者將受害者手機號碼轉移至攻擊者 SIM 卡"
+      standard: |
+        SIM 卡交換攻擊是攻擊者透過社交工程詐騙電信客服，
+        將受害者的手機號碼轉移到自己的 SIM 卡上，
+        藉此接收受害者的簡訊驗證碼，繞過 MFA 保護。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["社交工程", "MFA 繞過", "電信詐騙"]
+    related_terms: ["mfa", "smishing"]
+    aliases:
+      zh: ["SIM 劫持", "換卡攻擊"]
+
+  - id: "mfa_fatigue"
+    term_en: "MFA Fatigue"
+    term_zh: "MFA 疲勞攻擊"
+    definitions:
+      brief: "反覆發送 MFA 推播通知直到受害者誤按允許"
+      standard: |
+        MFA 疲勞攻擊是攻擊者在取得使用者帳密後，
+        持續觸發 MFA 推播通知，直到受害者因疲勞或誤操作而按下允許，
+        又稱為「推播轟炸」或「MFA 推播垃圾攻擊」。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["MFA 繞過", "社交工程", "帳號入侵"]
+    related_terms: ["mfa", "credential_stuffing"]
+    aliases:
+      en: ["MFA Bombing", "Push Bombing", "MFA Push Spam"]
+      zh: ["MFA 推播轟炸"]
+
+  - id: "quishing"
+    term_en: "Quishing"
+    term_zh: "QR 碼釣魚"
+    full_name_en: "QR Code Phishing"
+    definitions:
+      brief: "利用惡意 QR 碼進行的釣魚攻擊"
+      standard: |
+        QR 碼釣魚是將惡意連結嵌入 QR 碼中，
+        誘騙使用者掃描後進入釣魚網站或下載惡意程式，
+        常見於偽造停車繳費、餐廳菜單等場景。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["釣魚", "QR 碼", "行動裝置"]
+    related_terms: ["phishing", "smishing"]
+
+  - id: "aitm"
+    term_en: "AiTM"
+    term_zh: "中間人對手攻擊"
+    full_name_en: "Adversary-in-the-Middle"
+    definitions:
+      brief: "即時攔截並轉發驗證流程的進階中間人攻擊"
+      standard: |
+        中間人對手攻擊是進階的中間人攻擊，
+        攻擊者在受害者與合法網站之間即時轉發請求，
+        可以竊取 Session Cookie 繞過 MFA 保護。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["MFA 繞過", "Session 劫持", "代理"]
+    related_terms: ["mitm", "session_hijacking", "phishing"]
+    aliases:
+      en: ["Adversary in the Middle"]
+
+  - id: "dll_hijacking"
+    term_en: "DLL Hijacking"
+    term_zh: "DLL 劫持"
+    definitions:
+      brief: "利用 Windows DLL 載入機制執行惡意程式碼"
+      standard: |
+        DLL 劫持利用 Windows 搜尋 DLL 的順序漏洞，
+        將惡意 DLL 放置在程式搜尋路徑中，
+        使程式載入惡意 DLL 而非合法 DLL。
+    category: "attack_types"
+    subcategory: "post_exploitation"
+    tags: ["Windows", "持久化", "權限提升"]
+    related_terms: ["persistence", "privilege_escalation"]
+    aliases:
+      en: ["DLL Search Order Hijacking", "DLL Side-Loading"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1574/001/"
+
+  - id: "pass_the_hash"
+    term_en: "Pass-the-Hash"
+    term_zh: "雜湊傳遞攻擊"
+    definitions:
+      brief: "使用竊取的密碼雜湊值進行身分驗證"
+      standard: |
+        雜湊傳遞攻擊使用竊取的密碼雜湊值進行 NTLM 驗證，
+        無需知道明文密碼即可冒充使用者存取網路資源，
+        是 Active Directory 環境中常見的橫向移動技術。
+    category: "attack_types"
+    subcategory: "post_exploitation"
+    tags: ["Active Directory", "橫向移動", "憑證攻擊"]
+    related_terms: ["lateral_movement", "mimikatz", "pass_the_ticket"]
+    aliases:
+      en: ["PtH"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1550/002/"
+
+  - id: "pass_the_ticket"
+    term_en: "Pass-the-Ticket"
+    term_zh: "票證傳遞攻擊"
+    definitions:
+      brief: "使用竊取的 Kerberos 票證進行身分驗證"
+      standard: |
+        票證傳遞攻擊使用竊取的 Kerberos 票證（TGT 或服務票證）
+        冒充使用者存取網路資源，無需知道密碼或雜湊值。
+    category: "attack_types"
+    subcategory: "post_exploitation"
+    tags: ["Active Directory", "Kerberos", "橫向移動"]
+    related_terms: ["pass_the_hash", "golden_ticket", "kerberoasting"]
+    aliases:
+      en: ["PtT"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1550/003/"
+
+  - id: "golden_ticket"
+    term_en: "Golden Ticket"
+    term_zh: "黃金票證攻擊"
+    definitions:
+      brief: "偽造 Kerberos TGT 取得網域完全控制權"
+      standard: |
+        黃金票證攻擊利用竊取的 KRBTGT 帳號雜湊值，
+        偽造任意使用者的 Kerberos TGT，
+        取得 Active Directory 網域的完全控制權。
+    category: "attack_types"
+    subcategory: "post_exploitation"
+    tags: ["Active Directory", "Kerberos", "網域控制"]
+    related_terms: ["silver_ticket", "pass_the_ticket", "dcsync"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1558/001/"
+
+  - id: "silver_ticket"
+    term_en: "Silver Ticket"
+    term_zh: "白銀票證攻擊"
+    definitions:
+      brief: "偽造 Kerberos 服務票證存取特定服務"
+      standard: |
+        白銀票證攻擊利用竊取的服務帳號雜湊值，
+        偽造該服務的 Kerberos 服務票證，
+        可存取特定服務而不需接觸網域控制器。
+    category: "attack_types"
+    subcategory: "post_exploitation"
+    tags: ["Active Directory", "Kerberos", "服務存取"]
+    related_terms: ["golden_ticket", "kerberoasting"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1558/002/"
+
+  - id: "dcsync"
+    term_en: "DCSync"
+    term_zh: "DCSync 攻擊"
+    definitions:
+      brief: "模擬網域控制器複製取得使用者憑證"
+      standard: |
+        DCSync 攻擊利用網域複製協定（MS-DRSR），
+        假冒網域控制器向真正的 DC 請求密碼資料複製，
+        可取得包括 KRBTGT 在內的所有使用者密碼雜湊。
+    category: "attack_types"
+    subcategory: "post_exploitation"
+    tags: ["Active Directory", "憑證竊取", "網域控制"]
+    related_terms: ["golden_ticket", "mimikatz"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1003/006/"
+
+  - id: "dns_tunneling"
+    term_en: "DNS Tunneling"
+    term_zh: "DNS 隧道"
+    definitions:
+      brief: "利用 DNS 協定隱蔽傳輸資料"
+      standard: |
+        DNS 隧道將資料編碼在 DNS 查詢和回應中，
+        因 DNS 流量通常不受嚴格審查，
+        攻擊者可藉此進行 C2 通訊或資料外洩。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["C2", "規避偵測", "資料外洩"]
+    related_terms: ["c2", "data_exfiltration"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1071/004/"

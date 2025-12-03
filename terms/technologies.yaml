@@ -42,6 +42,10 @@ terms:
     full_name_en: "Security Orchestration, Automation and Response"
     definitions:
       brief: "整合安全工具並自動化事件回應流程的平台"
+      standard: |
+        SOAR 平台整合組織內的多種安全工具，
+        透過劇本（Playbook）自動化重複性的事件回應流程，
+        減少分析師工作負擔，加速威脅回應速度。
     category: "technologies"
     subcategory: "security_operations"
     related_terms: ["siem", "soc"]
@@ -65,6 +69,10 @@ terms:
     full_name_en: "Endpoint Detection and Response"
     definitions:
       brief: "監控端點設備以偵測和回應威脅的安全解決方案"
+      standard: |
+        EDR 持續監控端點（電腦、伺服器）的活動，
+        收集遙測資料並使用行為分析偵測威脅，
+        提供事件調查、威脅獵捕和自動化回應功能。
     category: "technologies"
     subcategory: "endpoint_security"
     related_terms: ["xdr", "antivirus"]
@@ -75,6 +83,10 @@ terms:
     full_name_en: "Managed Detection and Response"
     definitions:
       brief: "由外部專家團隊提供的威脅監控與回應服務"
+      standard: |
+        MDR 服務由外部資安專家提供 24/7 威脅監控、偵測和回應，
+        適合缺乏內部資安團隊的組織，
+        結合技術工具和人工分析提供完整的威脅管理服務。
     category: "technologies"
     subcategory: "security_operations"
     related_terms: ["soc", "mssp", "edr"]
@@ -100,6 +112,10 @@ terms:
     full_name_en: "Next-Generation Firewall"
     definitions:
       brief: "具備應用程式感知和進階威脅防護的防火牆"
+      standard: |
+        次世代防火牆除了傳統的封包過濾功能外，
+        還整合深度封包檢測、應用程式識別、入侵防禦、
+        惡意程式防護等進階功能，提供更全面的網路保護。
     category: "technologies"
     subcategory: "network_security"
     related_terms: ["firewall", "ips"]
@@ -123,6 +139,10 @@ terms:
     full_name_en: "Intrusion Detection System"
     definitions:
       brief: "監控網路或系統活動以偵測惡意行為的系統"
+      standard: |
+        入侵偵測系統透過特徵比對或異常行為分析，
+        偵測網路或主機上的可疑活動並發出警示，
+        本身不會阻擋攻擊，僅提供偵測和警告功能。
     category: "technologies"
     subcategory: "network_security"
     related_terms: ["ips", "siem"]
@@ -133,6 +153,10 @@ terms:
     full_name_en: "Intrusion Prevention System"
     definitions:
       brief: "可主動阻擋偵測到的惡意活動的安全系統"
+      standard: |
+        入侵防禦系統是 IDS 的進階版本，
+        除了偵測功能外還能主動阻擋惡意流量，
+        通常部署在網路入口處即時阻止攻擊。
     category: "technologies"
     subcategory: "network_security"
     related_terms: ["ids", "ngfw"]
@@ -143,6 +167,10 @@ terms:
     full_name_en: "Virtual Private Network"
     definitions:
       brief: "透過加密通道在公共網路上建立私密連線"
+      standard: |
+        VPN 透過加密技術在公共網路上建立安全的私密通道，
+        保護傳輸中的資料不被竊聽，常用於遠端存取企業網路，
+        傳統 VPN 正逐漸被 ZTNA 等現代方案取代。
     category: "technologies"
     subcategory: "network_security"
     related_terms: ["encryption", "ztna"]
@@ -155,10 +183,12 @@ terms:
       brief: "基於零信任原則的遠端存取解決方案"
       standard: |
         ZTNA 是實現零信任架構的技術，不再信任網路位置，
-        而是基於使用者身分、設備狀態和情境動態授予存取權限。
+        而是基於使用者身分、設備狀態和情境動態授予存取權限，
+        是 VPN 的現代替代方案。
     category: "technologies"
     subcategory: "network_security"
-    related_terms: ["zero_trust", "vpn"]
+    tags: ["零信任", "遠端存取", "VPN 替代"]
+    related_terms: ["zero_trust", "vpn", "sase"]
 
   - id: "zero_trust"
     term_en: "Zero Trust"
@@ -201,6 +231,10 @@ terms:
     full_name_en: "Single Sign-On"
     definitions:
       brief: "使用者只需登入一次即可存取多個應用程式"
+      standard: |
+        單一登入讓使用者只需驗證一次身分，
+        即可存取組織內所有已整合的應用程式和服務，
+        常見協定包括 SAML、OAuth 和 OpenID Connect。
     category: "technologies"
     subcategory: "identity"
     related_terms: ["mfa", "saml", "oauth"]
@@ -224,6 +258,10 @@ terms:
     full_name_en: "Identity and Access Management"
     definitions:
       brief: "管理使用者身分和存取權限的框架與解決方案"
+      standard: |
+        IAM 是管理數位身分和存取權限的系統框架，
+        涵蓋使用者生命週期管理、身分驗證、授權、
+        存取稽核等功能，確保正確的人存取正確的資源。
     category: "technologies"
     subcategory: "identity"
     related_terms: ["pam", "sso", "mfa"]
@@ -237,6 +275,10 @@ terms:
     full_name_en: "Data Loss Prevention"
     definitions:
       brief: "防止敏感資料未經授權外流的安全技術"
+      standard: |
+        DLP 解決方案監控和控制敏感資料的使用與傳輸，
+        可偵測並阻止透過電子郵件、雲端儲存、USB 等
+        管道外洩機密資訊，是資料保護的重要工具。
     category: "technologies"
     subcategory: "data_security"
     related_terms: ["data_classification", "encryption"]
@@ -246,6 +288,10 @@ terms:
     term_zh: "加密"
     definitions:
       brief: "將資料轉換為無法直接讀取的格式以保護機密性"
+      standard: |
+        加密使用演算法將明文轉換為密文，
+        只有擁有正確金鑰者才能解密還原，
+        分為對稱式加密（AES）和非對稱式加密（RSA）兩類。
     category: "technologies"
     subcategory: "data_security"
     related_terms: ["aes", "rsa", "tls"]
@@ -259,6 +305,10 @@ terms:
     full_name_en: "Cloud Access Security Broker"
     definitions:
       brief: "在使用者和雲端服務之間執行安全政策的解決方案"
+      standard: |
+        CASB 作為使用者和雲端服務之間的安全閘道，
+        提供可見性、合規性、資料保護和威脅防護功能，
+        可發現影子 IT 並控制雲端應用程式的使用。
     category: "technologies"
     subcategory: "cloud_security"
     related_terms: ["shadow_it", "dlp"]
@@ -269,6 +319,10 @@ terms:
     full_name_en: "Cloud Security Posture Management"
     definitions:
       brief: "持續監控和改善雲端環境安全設定的解決方案"
+      standard: |
+        CSPM 持續掃描雲端環境中的設定錯誤和合規問題，
+        自動偵測暴露的儲存桶、過度授權等風險，
+        協助組織維持安全的雲端配置。
     category: "technologies"
     subcategory: "cloud_security"
     related_terms: ["misconfiguration", "cloud_security"]
@@ -279,6 +333,396 @@ terms:
     full_name_en: "Cloud Workload Protection Platform"
     definitions:
       brief: "保護雲端環境中各類工作負載的安全解決方案"
+      standard: |
+        CWPP 保護雲端環境中的各種工作負載，
+        包括虛擬機器、容器和無伺服器函式，
+        提供漏洞管理、惡意程式防護和執行時期保護。
     category: "technologies"
     subcategory: "cloud_security"
     related_terms: ["container_security", "serverless"]
+
+  # ------------------------------------------
+  # 新增技術名詞
+  # ------------------------------------------
+  - id: "sase"
+    term_en: "SASE"
+    term_zh: "安全存取服務邊緣"
+    full_name_en: "Secure Access Service Edge"
+    definitions:
+      brief: "結合網路和安全功能的雲端架構"
+      standard: |
+        SASE 是一種雲端交付的架構，將 SD-WAN 與多種安全功能
+        （如 SWG、CASB、FWaaS、ZTNA）整合，提供統一的安全存取。
+    category: "technologies"
+    subcategory: "network_security"
+    tags: ["雲端", "零信任", "邊緣"]
+    related_terms: ["ztna", "swg", "casb"]
+
+  - id: "ueba"
+    term_en: "UEBA"
+    term_zh: "使用者與實體行為分析"
+    full_name_en: "User and Entity Behavior Analytics"
+    definitions:
+      brief: "透過機器學習分析異常行為的安全技術"
+      standard: |
+        UEBA 利用機器學習建立使用者和實體的正常行為基線，
+        偵測偏離基線的異常行為，可發現內部威脅和帳號入侵。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["機器學習", "異常偵測", "內部威脅"]
+    related_terms: ["siem", "insider_threat"]
+
+  - id: "ndr"
+    term_en: "NDR"
+    term_zh: "網路偵測與回應"
+    full_name_en: "Network Detection and Response"
+    definitions:
+      brief: "監控網路流量以偵測威脅的安全解決方案"
+      standard: |
+        NDR 透過分析網路流量、使用機器學習和行為分析，
+        偵測網路中的異常活動和威脅，補強端點安全的盲點。
+    category: "technologies"
+    subcategory: "network_security"
+    tags: ["網路監控", "威脅偵測", "流量分析"]
+    related_terms: ["edr", "xdr"]
+
+  - id: "asm"
+    term_en: "ASM"
+    term_zh: "攻擊面管理"
+    full_name_en: "Attack Surface Management"
+    definitions:
+      brief: "持續發現、分析和監控組織暴露資產的流程"
+      standard: |
+        攻擊面管理持續掃描和發現組織所有對外暴露的資產，
+        包括已知和未知的資產，評估其風險並追蹤變化。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["資產管理", "風險評估", "外部曝險"]
+    related_terms: ["vulnerability_management", "easm"]
+
+  - id: "ciem"
+    term_en: "CIEM"
+    term_zh: "雲端基礎設施授權管理"
+    full_name_en: "Cloud Infrastructure Entitlement Management"
+    definitions:
+      brief: "管理雲端環境中身分和權限的解決方案"
+      standard: |
+        CIEM 專注於發現和管理雲端環境中過度授權的問題，
+        實施最小權限原則，降低因權限過大造成的風險。
+    category: "technologies"
+    subcategory: "cloud_security"
+    tags: ["雲端", "身分", "權限管理"]
+    related_terms: ["iam", "cspm"]
+
+  - id: "deception"
+    term_en: "Deception Technology"
+    term_zh: "欺敵技術"
+    definitions:
+      brief: "使用誘餌和陷阱偵測攻擊者的安全技術"
+      standard: |
+        欺敵技術在網路中部署假目標（誘餌帳號、蜜罐系統），
+        吸引攻擊者觸及，提供早期預警和威脅情報。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["蜜罐", "誘餌", "早期預警"]
+    related_terms: ["honeypot", "threat_intelligence"]
+    aliases:
+      zh: ["誘捕技術"]
+
+  - id: "honeypot"
+    term_en: "Honeypot"
+    term_zh: "蜜罐"
+    definitions:
+      brief: "故意設置的誘餌系統，用於吸引和研究攻擊者"
+      standard: |
+        蜜罐是故意設置的脆弱系統，用於吸引攻擊者，
+        收集攻擊手法情報，並及早偵測入侵行為。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["誘餌", "威脅情報", "研究"]
+    related_terms: ["deception"]
+
+  - id: "api_security"
+    term_en: "API Security"
+    term_zh: "API 安全"
+    definitions:
+      brief: "保護應用程式介面免受攻擊的安全措施"
+      standard: |
+        API 安全涵蓋認證、授權、速率限制、輸入驗證等措施，
+        保護 API 免受資料外洩、濫用和攻擊。
+    category: "technologies"
+    subcategory: "application_security"
+    tags: ["API", "應用程式安全", "認證"]
+    related_terms: ["oauth", "api_gateway"]
+
+  - id: "pentesting"
+    term_en: "Penetration Testing"
+    term_zh: "滲透測試"
+    definitions:
+      brief: "模擬攻擊者手法評估系統安全性的測試"
+      standard: |
+        滲透測試由專業人員模擬真實攻擊者的手法，
+        嘗試發現和利用系統漏洞，評估組織的安全防護能力。
+    category: "technologies"
+    subcategory: "security_testing"
+    tags: ["紅隊", "安全評估", "漏洞"]
+    related_terms: ["red_team", "vulnerability_assessment"]
+    aliases:
+      en: ["Pentest"]
+      zh: ["滲透測試", "PT"]
+
+  - id: "red_team"
+    term_en: "Red Team"
+    term_zh: "紅隊"
+    definitions:
+      brief: "模擬真實攻擊者評估組織防禦能力的團隊"
+      standard: |
+        紅隊使用真實世界攻擊者的戰術、技術和程序（TTP），
+        測試組織的偵測和回應能力，不僅限於技術層面。
+    category: "technologies"
+    subcategory: "security_testing"
+    tags: ["攻防演練", "安全評估"]
+    related_terms: ["blue_team", "purple_team", "pentesting"]
+
+  - id: "blue_team"
+    term_en: "Blue Team"
+    term_zh: "藍隊"
+    definitions:
+      brief: "負責防禦和偵測攻擊的安全團隊"
+      standard: |
+        藍隊是負責維護組織安全防禦的團隊，
+        包括監控、偵測、回應安全事件，並持續改善防護措施。
+    category: "technologies"
+    subcategory: "security_testing"
+    tags: ["防禦", "SOC", "事件回應"]
+    related_terms: ["red_team", "soc"]
+
+  # ------------------------------------------
+  # 2024-12 新增技術名詞 (+10)
+  # ------------------------------------------
+  - id: "sbom"
+    term_en: "SBOM"
+    term_zh: "軟體物料清單"
+    full_name_en: "Software Bill of Materials"
+    definitions:
+      brief: "列出軟體中所有元件和相依套件的清單"
+      standard: |
+        軟體物料清單是軟體中使用的所有元件、函式庫和相依套件的詳細清單，
+        有助於識別供應鏈風險和已知漏洞，是軟體供應鏈安全的重要工具。
+    category: "technologies"
+    subcategory: "devsecops"
+    tags: ["供應鏈安全", "合規", "漏洞管理"]
+    related_terms: ["supply_chain_attack", "vulnerability_management"]
+
+  - id: "cnapp"
+    term_en: "CNAPP"
+    term_zh: "雲原生應用程式保護平台"
+    full_name_en: "Cloud-Native Application Protection Platform"
+    definitions:
+      brief: "整合多種雲端安全功能的統一平台"
+      standard: |
+        CNAPP 整合 CSPM、CWPP、CIEM 等雲端安全功能，
+        為雲原生應用程式提供從開發到執行時期的完整保護。
+    category: "technologies"
+    subcategory: "cloud_security"
+    tags: ["雲端", "整合平台", "DevSecOps"]
+    related_terms: ["cspm", "cwpp", "ciem"]
+
+  - id: "dspm"
+    term_en: "DSPM"
+    term_zh: "資料安全態勢管理"
+    full_name_en: "Data Security Posture Management"
+    definitions:
+      brief: "發現和保護雲端環境中敏感資料的解決方案"
+      standard: |
+        DSPM 自動發現雲端環境中的敏感資料位置，
+        評估其曝險風險，並提供資料存取控制和合規建議。
+    category: "technologies"
+    subcategory: "data_security"
+    tags: ["資料安全", "雲端", "合規"]
+    related_terms: ["dlp", "cspm"]
+
+  - id: "sast"
+    term_en: "SAST"
+    term_zh: "靜態應用程式安全測試"
+    full_name_en: "Static Application Security Testing"
+    definitions:
+      brief: "分析原始碼或二進位碼以發現安全漏洞"
+      standard: |
+        靜態應用程式安全測試在不執行程式的情況下分析原始碼，
+        可在開發早期發現 SQL 注入、XSS 等常見漏洞。
+    category: "technologies"
+    subcategory: "application_security"
+    tags: ["DevSecOps", "程式碼分析", "漏洞掃描"]
+    related_terms: ["dast", "iast"]
+
+  - id: "dast"
+    term_en: "DAST"
+    term_zh: "動態應用程式安全測試"
+    full_name_en: "Dynamic Application Security Testing"
+    definitions:
+      brief: "在應用程式執行時進行安全測試"
+      standard: |
+        動態應用程式安全測試透過模擬攻擊測試執行中的應用程式，
+        可以發現執行時期才會出現的漏洞，但不需要原始碼。
+    category: "technologies"
+    subcategory: "application_security"
+    tags: ["DevSecOps", "黑箱測試", "漏洞掃描"]
+    related_terms: ["sast", "iast", "pentesting"]
+
+  - id: "iast"
+    term_en: "IAST"
+    term_zh: "互動式應用程式安全測試"
+    full_name_en: "Interactive Application Security Testing"
+    definitions:
+      brief: "結合靜態和動態分析的安全測試方法"
+      standard: |
+        互動式應用程式安全測試結合 SAST 和 DAST 的優點，
+        透過在應用程式內部植入代理程式，在執行時分析程式碼行為。
+    category: "technologies"
+    subcategory: "application_security"
+    tags: ["DevSecOps", "混合測試"]
+    related_terms: ["sast", "dast"]
+
+  - id: "rasp"
+    term_en: "RASP"
+    term_zh: "執行時期應用程式自我保護"
+    full_name_en: "Runtime Application Self-Protection"
+    definitions:
+      brief: "在應用程式內部即時偵測和阻擋攻擊的技術"
+      standard: |
+        RASP 將安全保護整合到應用程式執行時期，
+        可以即時偵測和阻擋攻擊行為，無需修改應用程式碼。
+    category: "technologies"
+    subcategory: "application_security"
+    tags: ["應用程式安全", "即時防護"]
+    related_terms: ["waf", "iast"]
+
+  - id: "sspm"
+    term_en: "SSPM"
+    term_zh: "SaaS 安全態勢管理"
+    full_name_en: "SaaS Security Posture Management"
+    definitions:
+      brief: "監控和管理 SaaS 應用程式安全設定的解決方案"
+      standard: |
+        SSPM 持續監控組織使用的 SaaS 應用程式安全設定，
+        偵測設定錯誤、過度授權和合規問題。
+    category: "technologies"
+    subcategory: "cloud_security"
+    tags: ["SaaS", "設定管理", "合規"]
+    related_terms: ["cspm", "casb"]
+
+  - id: "itdr"
+    term_en: "ITDR"
+    term_zh: "身分威脅偵測與回應"
+    full_name_en: "Identity Threat Detection and Response"
+    definitions:
+      brief: "偵測和回應身分相關安全威脅的解決方案"
+      standard: |
+        ITDR 專注於偵測針對身分系統的攻擊，
+        如憑證竊取、權限提升、帳號接管等，並提供自動化回應。
+    category: "technologies"
+    subcategory: "identity_security"
+    tags: ["身分安全", "威脅偵測", "帳號保護"]
+    related_terms: ["iam", "pam", "edr"]
+
+  - id: "purple_team"
+    term_en: "Purple Team"
+    term_zh: "紫隊"
+    definitions:
+      brief: "結合紅隊和藍隊進行協作演練的方式"
+      standard: |
+        紫隊是紅隊和藍隊的協作模式，
+        紅隊執行攻擊的同時藍隊進行偵測和回應，
+        目的是改善整體安全防護能力而非對抗。
+    category: "technologies"
+    subcategory: "security_testing"
+    tags: ["攻防演練", "協作", "安全評估"]
+    related_terms: ["red_team", "blue_team"]
+
+  # ------------------------------------------
+  # 補充關聯術語
+  # ------------------------------------------
+  - id: "authentication"
+    term_en: "Authentication"
+    term_zh: "身分驗證"
+    definitions:
+      brief: "驗證使用者或系統身分的過程"
+      standard: |
+        身分驗證是確認使用者或系統聲稱身分的過程，
+        常見方式包括密碼、生物特徵、數位憑證等，
+        是資訊安全的基礎控制措施。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["身分", "存取控制", "安全基礎"]
+    related_terms: ["mfa", "sso", "authorization"]
+
+  - id: "authorization"
+    term_en: "Authorization"
+    term_zh: "授權"
+    definitions:
+      brief: "決定使用者可存取哪些資源的過程"
+      standard: |
+        授權是在身分驗證後，根據使用者的角色或權限，
+        決定其可以存取哪些資源和執行哪些操作的過程。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["身分", "存取控制", "權限"]
+    related_terms: ["authentication", "access_control", "rbac"]
+
+  - id: "access_control"
+    term_en: "Access Control"
+    term_zh: "存取控制"
+    definitions:
+      brief: "限制對資源存取的安全機制"
+      standard: |
+        存取控制是管理誰可以存取哪些資源的安全機制，
+        包括身分驗證、授權和稽核等功能，
+        是資訊安全的核心原則之一。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["安全控制", "權限管理"]
+    related_terms: ["authentication", "authorization", "rbac", "iam"]
+
+  - id: "rbac"
+    term_en: "RBAC"
+    term_zh: "角色型存取控制"
+    full_name_en: "Role-Based Access Control"
+    definitions:
+      brief: "根據使用者角色授予權限的存取控制模型"
+      standard: |
+        角色型存取控制將權限指派給角色而非個別使用者，
+        使用者透過被指派的角色獲得相應權限，
+        簡化權限管理並符合最小權限原則。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["存取控制", "權限管理", "角色"]
+    related_terms: ["access_control", "least_privilege"]
+
+  - id: "network_monitoring"
+    term_en: "Network Monitoring"
+    term_zh: "網路監控"
+    definitions:
+      brief: "持續監視網路流量和狀態的過程"
+      standard: |
+        網路監控是持續觀察網路流量、效能和安全事件的過程，
+        可偵測異常行為、效能問題和安全威脅，
+        是維運和安全團隊的重要工具。
+    category: "technologies"
+    subcategory: "network_security"
+    tags: ["監控", "流量分析", "威脅偵測"]
+    related_terms: ["ndr", "siem", "ids"]
+
+  - id: "least_privilege"
+    term_en: "Least Privilege"
+    term_zh: "最小權限原則"
+    definitions:
+      brief: "僅授予完成任務所需的最低權限"
+      standard: |
+        最小權限原則是安全設計原則，
+        要求使用者、程式和系統僅擁有完成工作所需的最低權限，
+        降低因權限過大造成的安全風險。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["安全原則", "存取控制", "零信任"]
+    related_terms: ["pam", "rbac", "zero_trust"]

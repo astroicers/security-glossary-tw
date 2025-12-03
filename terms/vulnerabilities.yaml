@@ -32,6 +32,9 @@ terms:
     full_name_en: "Arbitrary Code Execution"
     definitions:
       brief: "攻擊者可執行任意程式碼的漏洞"
+      standard: |
+        任意程式碼執行漏洞允許攻擊者在目標系統上執行其選擇的程式碼，
+        與 RCE 類似但更廣泛，可能是本地或遠端利用。
     category: "vulnerabilities"
     subcategory: "code_execution"
     related_terms: ["rce", "lce"]
@@ -76,6 +79,10 @@ terms:
     full_name_en: "XML External Entity Injection"
     definitions:
       brief: "利用 XML 解析器處理外部實體的漏洞"
+      standard: |
+        XXE 漏洞發生在應用程式解析含有外部實體參照的 XML 時，
+        攻擊者可利用此漏洞讀取伺服器檔案、發起 SSRF 攻擊，
+        甚至在某些情況下執行遠端程式碼。
     category: "vulnerabilities"
     subcategory: "injection"
     related_terms: ["ssrf", "lfi"]
@@ -87,6 +94,10 @@ terms:
     term_zh: "命令注入"
     definitions:
       brief: "透過應用程式執行系統命令的漏洞"
+      standard: |
+        命令注入發生在應用程式將使用者輸入傳遞給系統命令時，
+        攻擊者可注入額外的命令在伺服器上執行，
+        通常可導致完全控制系統。
     category: "vulnerabilities"
     subcategory: "injection"
     related_terms: ["rce", "sql_injection"]
@@ -116,6 +127,10 @@ terms:
     term_zh: "釋放後使用"
     definitions:
       brief: "程式使用已釋放記憶體區域的漏洞"
+      standard: |
+        釋放後使用發生在程式釋放記憶體後仍繼續使用該位址，
+        攻擊者可透過控制該記憶體區域的內容來劫持程式執行流程，
+        是瀏覽器和作業系統中常見的嚴重漏洞類型。
     category: "vulnerabilities"
     subcategory: "memory_safety"
     aliases:
@@ -131,6 +146,9 @@ terms:
     term_zh: "驗證繞過"
     definitions:
       brief: "繞過身分驗證機制取得未授權存取的漏洞"
+      standard: |
+        驗證繞過漏洞允許攻擊者在不提供有效憑證的情況下存取受保護資源，
+        常見原因包括邏輯錯誤、預設帳號、會話管理問題等。
     category: "vulnerabilities"
     subcategory: "authentication"
     usage:
@@ -144,6 +162,10 @@ terms:
     full_name_en: "Insecure Direct Object Reference"
     definitions:
       brief: "透過修改參數存取未授權資源的漏洞"
+      standard: |
+        IDOR 漏洞發生在應用程式使用使用者提供的輸入直接存取物件，
+        攻擊者可透過修改 ID 或參數值存取其他使用者的資料，
+        是水平權限提升的常見形式。
     category: "vulnerabilities"
     subcategory: "authentication"
     references:
@@ -155,6 +177,10 @@ terms:
     full_name_en: "Cross-Site Request Forgery"
     definitions:
       brief: "誘騙使用者在已登入網站執行非預期操作的攻擊"
+      standard: |
+        跨站請求偽造誘使已登入的使用者在不知情的情況下執行操作，
+        攻擊者建立惡意網頁，使使用者的瀏覽器向目標網站發送請求，
+        可能導致轉帳、修改密碼等危害。
     category: "vulnerabilities"
     subcategory: "authentication"
     aliases:
@@ -185,6 +211,9 @@ terms:
     term_zh: "路徑遍歷"
     definitions:
       brief: "透過操縱路徑存取未授權檔案的漏洞"
+      standard: |
+        路徑遍歷漏洞允許攻擊者使用 ../ 等特殊字元跳出預期目錄，
+        存取伺服器上的其他檔案，如設定檔、密碼檔等敏感資料。
     category: "vulnerabilities"
     subcategory: "configuration"
     aliases:
@@ -198,6 +227,10 @@ terms:
     term_zh: "不安全反序列化"
     definitions:
       brief: "反序列化不受信任資料導致的安全漏洞"
+      standard: |
+        不安全反序列化發生在應用程式將不受信任的資料還原為物件時，
+        攻擊者可透過精心構造的序列化資料執行任意程式碼，
+        是 Java、PHP 等語言中的常見嚴重漏洞。
     category: "vulnerabilities"
     subcategory: "configuration"
     references:
@@ -217,3 +250,485 @@ terms:
     usage:
       examples:
         - "S3 儲存桶設定為公開存取，導致資料外洩"
+
+  # ------------------------------------------
+  # 新增漏洞類型
+  # ------------------------------------------
+  - id: "race_condition"
+    term_en: "Race Condition"
+    term_zh: "競爭條件"
+    definitions:
+      brief: "多執行緒競爭存取共享資源導致的漏洞"
+      standard: |
+        競爭條件發生在多個程序或執行緒同時存取共享資源時，
+        因時序差異導致非預期行為，可能被利用於權限提升或繞過檢查。
+    category: "vulnerabilities"
+    subcategory: "logic"
+    tags: ["邏輯漏洞", "並行", "TOCTOU"]
+    aliases:
+      zh: ["競態條件"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/362.html"
+
+  - id: "heap_overflow"
+    term_en: "Heap Overflow"
+    term_zh: "堆積溢位"
+    definitions:
+      brief: "堆積記憶體區域的緩衝區溢位漏洞"
+      standard: |
+        堆積溢位發生在程式對堆積記憶體區域寫入超過分配大小的資料，
+        攻擊者可利用來覆蓋函式指標或控制程式執行流程。
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    tags: ["記憶體", "二進位", "漏洞利用"]
+    related_terms: ["buffer_overflow", "use_after_free"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/122.html"
+
+  - id: "integer_overflow"
+    term_en: "Integer Overflow"
+    term_zh: "整數溢位"
+    definitions:
+      brief: "整數運算超出型別範圍導致的漏洞"
+      standard: |
+        整數溢位發生在運算結果超過變數可儲存的最大值，
+        導致數值回繞，可能被利用來繞過長度檢查或觸發緩衝區溢位。
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    tags: ["記憶體", "二進位", "數值"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/190.html"
+
+  - id: "format_string"
+    term_en: "Format String Vulnerability"
+    term_zh: "格式化字串漏洞"
+    definitions:
+      brief: "因不當使用格式化函式導致的漏洞"
+      standard: |
+        格式化字串漏洞發生在程式將使用者輸入直接作為格式字串參數，
+        攻擊者可利用 %x、%n 等格式符來讀取或寫入記憶體。
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    tags: ["記憶體", "C/C++", "printf"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/134.html"
+
+  - id: "lfi"
+    term_en: "LFI"
+    term_zh: "本地檔案包含"
+    full_name_en: "Local File Inclusion"
+    definitions:
+      brief: "透過操縱參數讀取伺服器本地檔案的漏洞"
+      standard: |
+        本地檔案包含漏洞允許攻擊者透過操縱路徑參數，
+        讀取伺服器上的敏感檔案如設定檔、密碼檔等。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["網頁安全", "檔案存取"]
+    related_terms: ["rfi", "path_traversal"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/98.html"
+
+  - id: "rfi"
+    term_en: "RFI"
+    term_zh: "遠端檔案包含"
+    full_name_en: "Remote File Inclusion"
+    definitions:
+      brief: "透過操縱參數載入外部惡意檔案的漏洞"
+      standard: |
+        遠端檔案包含漏洞允許攻擊者讓伺服器載入並執行外部惡意程式碼，
+        常導致遠端程式碼執行。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["網頁安全", "RCE"]
+    related_terms: ["lfi", "rce"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/98.html"
+
+  - id: "ssti"
+    term_en: "SSTI"
+    term_zh: "伺服器端模板注入"
+    full_name_en: "Server-Side Template Injection"
+    definitions:
+      brief: "在伺服器端模板引擎中注入惡意程式碼"
+      standard: |
+        伺服器端模板注入發生在使用者輸入被直接嵌入模板中，
+        攻擊者可利用模板語法執行任意程式碼，常導致 RCE。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["網頁安全", "模板", "RCE"]
+    related_terms: ["rce", "xss"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/1336.html"
+
+  - id: "ldap_injection"
+    term_en: "LDAP Injection"
+    term_zh: "LDAP 注入"
+    definitions:
+      brief: "透過惡意 LDAP 查詢存取或修改目錄資料"
+      standard: |
+        LDAP 注入發生在應用程式使用使用者輸入建構 LDAP 查詢時，
+        攻擊者可操控查詢邏輯以繞過驗證、存取未授權資料，
+        或修改 Active Directory 等目錄服務中的資訊。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["目錄服務", "Active Directory"]
+    related_terms: ["sql_injection"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/90.html"
+
+  - id: "prototype_pollution"
+    term_en: "Prototype Pollution"
+    term_zh: "原型污染"
+    definitions:
+      brief: "污染 JavaScript 物件原型導致的安全漏洞"
+      standard: |
+        原型污染是 JavaScript 特有的漏洞，攻擊者透過操縱物件屬性，
+        污染 Object.prototype，影響所有繼承該原型的物件。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["JavaScript", "Node.js", "網頁安全"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/1321.html"
+
+  - id: "open_redirect"
+    term_en: "Open Redirect"
+    term_zh: "開放重導向"
+    definitions:
+      brief: "將使用者重導向至任意外部網站的漏洞"
+      standard: |
+        開放重導向漏洞允許攻擊者利用受信任網站將使用者重導向至惡意網站，
+        常用於釣魚攻擊或 OAuth 劫持。
+    category: "vulnerabilities"
+    subcategory: "configuration"
+    tags: ["網頁安全", "釣魚"]
+    related_terms: ["phishing"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/601.html"
+
+  - id: "hardcoded_credentials"
+    term_en: "Hardcoded Credentials"
+    term_zh: "硬編碼憑證"
+    definitions:
+      brief: "將密碼或金鑰直接寫入程式碼的弱點"
+      standard: |
+        硬編碼憑證是將密碼、API 金鑰等敏感資訊直接寫入原始碼，
+        一旦程式碼洩露，這些憑證即被暴露。
+    category: "vulnerabilities"
+    subcategory: "configuration"
+    tags: ["設定", "密碼管理", "DevSecOps"]
+    usage:
+      avoid: ["寫死密碼"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/798.html"
+
+  - id: "information_disclosure"
+    term_en: "Information Disclosure"
+    term_zh: "資訊洩露"
+    definitions:
+      brief: "非預期暴露敏感資訊的漏洞"
+      standard: |
+        資訊洩露漏洞導致系統暴露敏感資訊，
+        如錯誤訊息顯示技術細節、目錄列表、原始碼外洩等。
+    category: "vulnerabilities"
+    subcategory: "configuration"
+    tags: ["資訊安全", "偵察"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/200.html"
+
+  - id: "broken_access_control"
+    term_en: "Broken Access Control"
+    term_zh: "存取控制失效"
+    definitions:
+      brief: "存取控制機制實作不當導致的漏洞"
+      standard: |
+        存取控制失效是 OWASP Top 10 第一名的漏洞類型，
+        包含水平/垂直權限提升、繞過授權檢查等問題。
+    category: "vulnerabilities"
+    subcategory: "authentication"
+    tags: ["OWASP Top 10", "授權", "權限"]
+    related_terms: ["idor", "privilege_escalation"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/284.html"
+
+  # ------------------------------------------
+  # 2024-12 新增漏洞類型 (+14)
+  # ------------------------------------------
+  - id: "null_pointer_dereference"
+    term_en: "Null Pointer Dereference"
+    term_zh: "空指標解參考"
+    definitions:
+      brief: "程式嘗試存取空指標所指向的記憶體位置"
+      standard: |
+        空指標解參考發生在程式嘗試讀取或寫入空指標（NULL）指向的記憶體，
+        通常導致程式崩潰，某些情況下可能被利用執行任意程式碼。
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    tags: ["記憶體", "崩潰", "C/C++"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/476.html"
+
+  - id: "double_free"
+    term_en: "Double Free"
+    term_zh: "重複釋放"
+    definitions:
+      brief: "程式對同一記憶體區塊執行兩次釋放操作"
+      standard: |
+        重複釋放發生在程式對已釋放的記憶體再次呼叫 free()，
+        可能導致記憶體損壞，攻擊者可利用來執行任意程式碼。
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    tags: ["記憶體", "堆積", "漏洞利用"]
+    related_terms: ["use_after_free", "heap_overflow"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/415.html"
+
+  - id: "type_confusion"
+    term_en: "Type Confusion"
+    term_zh: "型別混淆"
+    definitions:
+      brief: "程式將資料當作錯誤的型別處理"
+      standard: |
+        型別混淆發生在程式將某種型別的資料誤認為另一種型別處理，
+        在瀏覽器引擎等複雜軟體中常見，可能導致任意程式碼執行。
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    tags: ["記憶體", "瀏覽器", "漏洞利用"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/843.html"
+
+  - id: "out_of_bounds_read"
+    term_en: "Out-of-Bounds Read"
+    term_zh: "越界讀取"
+    definitions:
+      brief: "程式讀取超出緩衝區邊界的記憶體資料"
+      standard: |
+        越界讀取發生在程式讀取超出分配記憶體範圍的資料，
+        可能洩露敏感資訊，如 Heartbleed 漏洞。
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    tags: ["記憶體", "資訊洩露"]
+    aliases:
+      en: ["OOB Read"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/125.html"
+
+  - id: "out_of_bounds_write"
+    term_en: "Out-of-Bounds Write"
+    term_zh: "越界寫入"
+    definitions:
+      brief: "程式寫入資料到緩衝區邊界之外"
+      standard: |
+        越界寫入發生在程式將資料寫入超出分配記憶體範圍的位置，
+        可能覆蓋重要資料或控制流程，導致任意程式碼執行。
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    tags: ["記憶體", "程式碼執行", "二進位"]
+    aliases:
+      en: ["OOB Write"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/787.html"
+
+  - id: "crlf_injection"
+    term_en: "CRLF Injection"
+    term_zh: "CRLF 注入"
+    definitions:
+      brief: "透過注入換行符號操控 HTTP 標頭的漏洞"
+      standard: |
+        CRLF 注入透過在使用者輸入中插入 CR（%0D）和 LF（%0A）字元，
+        可以在 HTTP 回應中注入新的標頭或分割回應，用於 XSS 或快取污染。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["HTTP", "網頁安全", "標頭注入"]
+    related_terms: ["http_response_splitting", "xss"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/93.html"
+
+  - id: "xpath_injection"
+    term_en: "XPath Injection"
+    term_zh: "XPath 注入"
+    definitions:
+      brief: "透過惡意 XPath 查詢存取 XML 資料的漏洞"
+      standard: |
+        XPath 注入發生在應用程式使用使用者輸入建構 XPath 查詢，
+        攻擊者可以操控查詢邏輯，存取或修改 XML 文件中的資料。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["XML", "注入", "資料存取"]
+    related_terms: ["sql_injection", "xxe"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/643.html"
+
+  - id: "nosql_injection"
+    term_en: "NoSQL Injection"
+    term_zh: "NoSQL 注入"
+    definitions:
+      brief: "針對 NoSQL 資料庫的注入攻擊"
+      standard: |
+        NoSQL 注入是針對 MongoDB、Redis 等 NoSQL 資料庫的攻擊，
+        攻擊者透過操控查詢物件或運算子，繞過驗證或存取未授權資料。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["資料庫", "MongoDB", "注入"]
+    related_terms: ["sql_injection"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/943.html"
+
+  - id: "http_request_smuggling"
+    term_en: "HTTP Request Smuggling"
+    term_zh: "HTTP 請求走私"
+    definitions:
+      brief: "利用前後端伺服器解析差異的攻擊"
+      standard: |
+        HTTP 請求走私利用前端和後端伺服器對 HTTP 請求解析方式的不一致，
+        將惡意請求「走私」到後端，可能導致快取污染、存取控制繞過等問題。
+    category: "vulnerabilities"
+    subcategory: "configuration"
+    tags: ["HTTP", "代理", "Web 伺服器"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/444.html"
+
+  - id: "subdomain_takeover"
+    term_en: "Subdomain Takeover"
+    term_zh: "子網域接管"
+    definitions:
+      brief: "接管指向已失效服務的子網域"
+      standard: |
+        子網域接管發生在子網域的 DNS 記錄指向已不再使用的外部服務，
+        攻擊者可以在該服務平台註冊並控制該子網域，用於釣魚或竊取 Cookie。
+    category: "vulnerabilities"
+    subcategory: "configuration"
+    tags: ["DNS", "雲端", "設定錯誤"]
+    related_terms: ["dns_spoofing", "misconfiguration"]
+
+  - id: "cors_misconfiguration"
+    term_en: "CORS Misconfiguration"
+    term_zh: "CORS 設定錯誤"
+    definitions:
+      brief: "跨來源資源共用設定不當導致的安全問題"
+      standard: |
+        CORS 設定錯誤發生在網站設定過於寬鬆的存取控制標頭，
+        允許惡意網站跨網域讀取敏感資料或執行操作。
+    category: "vulnerabilities"
+    subcategory: "configuration"
+    tags: ["網頁安全", "跨網域", "API"]
+    related_terms: ["csrf", "api_security"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/942.html"
+
+  - id: "jwt_vulnerability"
+    term_en: "JWT Vulnerability"
+    term_zh: "JWT 漏洞"
+    definitions:
+      brief: "JSON Web Token 實作或設定不當導致的漏洞"
+      standard: |
+        JWT 漏洞包括使用弱簽章演算法（如 none）、
+        未驗證簽章、金鑰洩露等問題，可能導致身分偽造或權限繞過。
+    category: "vulnerabilities"
+    subcategory: "authentication"
+    tags: ["身分驗證", "Token", "API"]
+    related_terms: ["authentication_bypass"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/347.html"
+
+  - id: "mass_assignment"
+    term_en: "Mass Assignment"
+    term_zh: "批量賦值漏洞"
+    definitions:
+      brief: "允許攻擊者修改不應被修改的物件屬性"
+      standard: |
+        批量賦值漏洞發生在應用程式自動將 HTTP 請求參數綁定到物件屬性，
+        攻擊者可以注入額外參數修改敏感屬性，如 isAdmin、role 等。
+    category: "vulnerabilities"
+    subcategory: "logic"
+    tags: ["API", "框架", "物件綁定"]
+    aliases:
+      en: ["Auto-binding Vulnerability"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/915.html"
+
+  - id: "insecure_file_upload"
+    term_en: "Insecure File Upload"
+    term_zh: "不安全的檔案上傳"
+    definitions:
+      brief: "未充分驗證上傳檔案導致的安全漏洞"
+      standard: |
+        不安全的檔案上傳漏洞發生在應用程式未正確驗證上傳檔案的類型和內容，
+        攻擊者可上傳惡意腳本（如 PHP Webshell）取得系統控制權。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["網頁安全", "檔案上傳", "RCE"]
+    related_terms: ["webshell", "rce"]
+    references:
+      cwe: "https://cwe.mitre.org/data/definitions/434.html"
+
+  # ------------------------------------------
+  # 補充關聯術語
+  # ------------------------------------------
+  - id: "vulnerability"
+    term_en: "Vulnerability"
+    term_zh: "漏洞"
+    definitions:
+      brief: "系統或軟體中可被利用的安全弱點"
+      standard: |
+        漏洞是系統、軟體或設定中的弱點，
+        可被攻擊者利用來取得未授權存取、執行惡意程式碼或造成其他危害，
+        漏洞嚴重程度通常以 CVSS 評分表示。
+    category: "vulnerabilities"
+    subcategory: "general"
+    tags: ["基礎概念", "安全弱點"]
+    related_terms: ["cve", "cvss", "exploit"]
+
+  - id: "exploit"
+    term_en: "Exploit"
+    term_zh: "漏洞利用程式"
+    definitions:
+      brief: "用於利用特定漏洞的程式碼或技術"
+      standard: |
+        漏洞利用程式是專門設計來利用特定漏洞的程式碼或技術，
+        可能用於取得系統存取權、提升權限或執行其他惡意操作。
+    category: "vulnerabilities"
+    subcategory: "general"
+    tags: ["攻擊", "漏洞利用"]
+    related_terms: ["vulnerability", "zero_day", "poc"]
+
+  - id: "input_validation"
+    term_en: "Input Validation"
+    term_zh: "輸入驗證"
+    definitions:
+      brief: "檢查和清理使用者輸入的安全措施"
+      standard: |
+        輸入驗證是在處理使用者輸入前進行檢查和清理的過程，
+        缺乏適當的輸入驗證是注入攻擊（SQL、XSS、命令注入）的根本原因。
+    category: "vulnerabilities"
+    subcategory: "defense"
+    tags: ["安全開發", "防禦", "最佳實務"]
+    related_terms: ["sql_injection", "xss", "command_injection"]
+
+  - id: "memory_corruption"
+    term_en: "Memory Corruption"
+    term_zh: "記憶體損壞"
+    definitions:
+      brief: "程式不當操作記憶體導致的安全問題"
+      standard: |
+        記憶體損壞是指程式不當讀寫記憶體導致的安全漏洞類別，
+        包括緩衝區溢位、堆積溢位、使用後釋放、雙重釋放等，
+        是嚴重的漏洞類型，可能導致任意程式碼執行。
+    category: "vulnerabilities"
+    subcategory: "memory_safety"
+    tags: ["記憶體", "二進位", "漏洞類別"]
+    related_terms: ["buffer_overflow", "use_after_free", "heap_overflow"]
+
+  - id: "poc"
+    term_en: "PoC"
+    term_zh: "概念驗證"
+    full_name_en: "Proof of Concept"
+    definitions:
+      brief: "證明漏洞可被利用的示範程式碼"
+      standard: |
+        概念驗證是用於證明某個漏洞確實存在且可被利用的程式碼或方法，
+        安全研究人員通常在負責任揭露時提供 PoC 供廠商確認漏洞。
+    category: "vulnerabilities"
+    subcategory: "general"
+    tags: ["漏洞研究", "揭露"]
+    related_terms: ["exploit", "vulnerability", "responsible_disclosure"]

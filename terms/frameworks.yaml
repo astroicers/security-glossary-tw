@@ -157,3 +157,171 @@ terms:
     references:
       other:
         official: "https://nvd.nist.gov/"
+
+  # ------------------------------------------
+  # 2024-12 新增框架標準 (+8)
+  # ------------------------------------------
+  - id: "mitre_defend"
+    term_en: "MITRE D3FEND"
+    term_zh: "MITRE D3FEND 框架"
+    definitions:
+      brief: "描述網路防禦技術的知識庫"
+      standard: |
+        MITRE D3FEND 是 MITRE ATT&CK 的防禦對應框架，
+        分類和描述各種網路防禦技術，
+        幫助防禦者選擇對應特定攻擊技術的防禦措施。
+    category: "frameworks"
+    subcategory: "threat_framework"
+    tags: ["防禦", "對策", "知識庫"]
+    related_terms: ["mitre_attack"]
+    references:
+      other:
+        official: "https://d3fend.mitre.org/"
+
+  - id: "kev"
+    term_en: "KEV"
+    term_zh: "已知遭利用漏洞清單"
+    full_name_en: "Known Exploited Vulnerabilities"
+    definitions:
+      brief: "CISA 維護的已確認遭實際利用的漏洞清單"
+      standard: |
+        KEV 是美國 CISA 維護的漏洞清單，
+        收錄已確認在野外遭實際利用的漏洞，
+        聯邦機構須在期限內修補，也是民間優先修補的參考。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["漏洞", "優先順序", "CISA"]
+    related_terms: ["cve", "cvss"]
+    references:
+      other:
+        official: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+
+  - id: "epss"
+    term_en: "EPSS"
+    term_zh: "漏洞利用預測評分系統"
+    full_name_en: "Exploit Prediction Scoring System"
+    definitions:
+      brief: "預測漏洞被利用機率的評分系統"
+      standard: |
+        EPSS 使用機器學習預測 CVE 漏洞在未來 30 天內被利用的機率，
+        幫助組織優先處理最可能被利用的漏洞，
+        補充 CVSS 嚴重度評分的不足。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["漏洞", "優先順序", "機器學習"]
+    related_terms: ["cvss", "cve"]
+    references:
+      other:
+        official: "https://www.first.org/epss/"
+
+  - id: "stride"
+    term_en: "STRIDE"
+    term_zh: "STRIDE 威脅模型"
+    definitions:
+      brief: "Microsoft 提出的威脅分類方法論"
+      standard: |
+        STRIDE 是 Microsoft 開發的威脅建模方法，
+        將威脅分為六類：Spoofing（偽造）、Tampering（竄改）、
+        Repudiation（否認）、Information Disclosure（資訊洩露）、
+        Denial of Service（阻斷服務）、Elevation of Privilege（權限提升）。
+    category: "frameworks"
+    subcategory: "threat_framework"
+    tags: ["威脅建模", "安全設計", "SDLC"]
+    related_terms: ["dread"]
+
+  - id: "dread"
+    term_en: "DREAD"
+    term_zh: "DREAD 風險評估模型"
+    definitions:
+      brief: "量化安全風險的評估方法"
+      standard: |
+        DREAD 是風險評估模型，評估五個維度：
+        Damage（損害）、Reproducibility（可重現性）、
+        Exploitability（可利用性）、Affected Users（影響用戶）、
+        Discoverability（可發現性）。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["風險評估", "威脅建模"]
+    related_terms: ["stride"]
+
+  - id: "fair"
+    term_en: "FAIR"
+    term_zh: "資訊風險因素分析"
+    full_name_en: "Factor Analysis of Information Risk"
+    definitions:
+      brief: "量化資訊安全風險的國際標準"
+      standard: |
+        FAIR 是一套量化風險分析方法論，
+        將風險分解為可測量的因素，以金額估算潛在損失，
+        幫助組織做出基於數據的安全投資決策。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["風險量化", "財務", "決策"]
+    related_terms: ["risk_management"]
+
+  - id: "pci_dss"
+    term_en: "PCI DSS"
+    term_zh: "支付卡產業資料安全標準"
+    full_name_en: "Payment Card Industry Data Security Standard"
+    definitions:
+      brief: "處理信用卡資料的安全標準"
+      standard: |
+        PCI DSS 是支付卡產業制定的安全標準，
+        要求處理、儲存或傳輸信用卡資料的組織
+        實施特定的安全控制措施。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["合規", "金融", "資料保護"]
+    references:
+      other:
+        official: "https://www.pcisecuritystandards.org/"
+
+  - id: "nist_sp_800_53"
+    term_en: "NIST SP 800-53"
+    term_zh: "NIST SP 800-53 安全控制措施"
+    definitions:
+      brief: "美國政府資訊系統安全控制措施目錄"
+      standard: |
+        NIST SP 800-53 是美國 NIST 發布的安全控制措施目錄，
+        提供聯邦資訊系統所需的安全和隱私控制措施，
+        也被民間組織廣泛採用作為安全基線。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["合規", "控制措施", "美國政府"]
+    related_terms: ["nist_csf"]
+    references:
+      other:
+        official: "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final"
+
+  # ------------------------------------------
+  # 補充關聯術語
+  # ------------------------------------------
+  - id: "isms"
+    term_en: "ISMS"
+    term_zh: "資訊安全管理系統"
+    full_name_en: "Information Security Management System"
+    definitions:
+      brief: "組織管理資訊安全的系統化框架"
+      standard: |
+        資訊安全管理系統是組織用於管理資訊安全風險的系統化方法，
+        包含政策、程序、組織架構和技術控制措施，
+        ISO 27001 是最廣泛採用的 ISMS 標準。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["管理系統", "政策", "控制"]
+    related_terms: ["iso_27001", "risk_management"]
+
+  - id: "risk_management"
+    term_en: "Risk Management"
+    term_zh: "風險管理"
+    definitions:
+      brief: "識別、評估和處理資訊安全風險的流程"
+      standard: |
+        風險管理是組織識別資訊資產面臨的威脅和漏洞，
+        評估風險的可能性和影響，並決定適當處置方式
+        （接受、降低、轉移或規避）的持續性流程。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["風險評估", "治理", "決策"]
+    related_terms: ["fair", "nist_csf", "isms"]
+
