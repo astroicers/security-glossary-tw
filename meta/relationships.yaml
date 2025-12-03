@@ -63,17 +63,17 @@ decision_tree:
     question: "這個新發現的術語是某個現有術語的別名嗎？"
     if_yes: "加入現有術語的 aliases 欄位，不建立新術語"
     if_no: "繼續判斷"
-    
+
   question_2:
     question: "這是一個具體的組織/軟體/事件嗎？"
     if_yes: "關係類型為 instance_of"
     if_no: "繼續判斷"
-    
+
   question_3:
     question: "這是某個概念的子分類嗎？"
     if_yes: "關係類型為 subtype_of"
     if_no: "繼續判斷"
-    
+
   question_4:
     question: "這是某個術語的新版本嗎？"
     if_yes: "關係類型為 variant_of"
