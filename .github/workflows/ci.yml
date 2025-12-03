@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pyyaml pydantic rapidfuzz pytest hatchling
+          pip install pyyaml pydantic rapidfuzz pytest hatchling editables
 
       - name: Install package
         run: |
