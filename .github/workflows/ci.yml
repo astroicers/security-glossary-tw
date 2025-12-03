@@ -20,11 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pyyaml pydantic rapidfuzz pytest
+          pip install pyyaml pydantic rapidfuzz pytest hatchling
 
       - name: Install package
         run: |
-          pip install -e .
+          pip install -e . --no-build-isolation
 
       - name: Validate YAML structure
         run: |
