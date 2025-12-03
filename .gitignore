@@ -3,3 +3,13 @@ venv/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Test coverage
+.coverage
+.pytest_cache/
+
+# MkDocs generated site
+site/
+
+# Generated docs (from build_docs.py)
+docs/

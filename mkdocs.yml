@@ -1,0 +1,70 @@
+site_name: 資安術語庫 Security Glossary TW
+site_url: https://astroicers.github.io/security-glossary-tw
+site_description: 繁體中文資安術語標準化詞彙庫
+site_author: Astroicers
+
+repo_name: astroicers/security-glossary-tw
+repo_url: https://github.com/astroicers/security-glossary-tw
+
+theme:
+  name: material
+  language: zh-TW
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切換深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切換淺色模式
+  features:
+    - search.highlight
+    - search.suggest
+    - search.share
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+      separator: '[\s\-]+'
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/astroicers/security-glossary-tw
+  generator: false
+
+nav:
+  - 首頁: index.md
+  - 術語庫:
+      - glossary/index.md
+  - 分類瀏覽:
+      - categories/index.md
+  - API 文件: api.md
