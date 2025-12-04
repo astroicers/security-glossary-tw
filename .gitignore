@@ -13,3 +13,5 @@ site/
 
 # Generated docs (from build_docs.py)
 docs/
+# But keep stylesheets (source files)
+!docs/stylesheets/

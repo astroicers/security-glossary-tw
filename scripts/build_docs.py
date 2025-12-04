@@ -170,17 +170,8 @@ def generate_term_json(term: dict) -> dict:
 
 
 def generate_glossary_index(terms: list[dict], categories: dict[str, dict]) -> str:
-    """Generate glossary index page."""
-    lines = [
-        "# 術語庫",
-        "",
-        "資安術語完整列表，點擊術語查看詳細說明。",
-        "",
-        f"共收錄 **{len(terms)}** 個術語。",
-        "",
-    ]
-
-    # Group by category
+    """Generate glossary index page with left-side navigation."""
+    # Group by category first
     by_category: dict[str, list[dict]] = {}
     for term in terms:
         cat_id = term.get("category", "other")
@@ -188,14 +179,51 @@ def generate_glossary_index(terms: list[dict], categories: dict[str, dict]) -> s
             by_category[cat_id] = []
         by_category[cat_id].append(term)
 
+    # Build category order for navigation
+    sorted_categories = sorted(by_category.items())
+
+    # Generate left navigation links
+    nav_links = []
+    for cat_id, _ in sorted_categories:
+        cat = categories.get(cat_id, {})
+        cat_name = cat.get("name_zh", cat_id)
+        cat_icon = cat.get("icon", "📚")
+        # Use category ID as anchor for stability
+        nav_links.append(f"- [{cat_icon} {cat_name}](#{cat_id})")
+
+    lines = [
+        "# 術語庫",
+        "",
+        "資安術語完整列表，點擊術語查看詳細說明。",
+        "",
+        f"共收錄 **{len(terms)}** 個術語。",
+        "",
+        '<div class="glossary-container" markdown>',
+        '<nav class="glossary-nav" markdown>',
+        "",
+        "**目錄**",
+        "",
+    ]
+
+    # Add navigation links
+    lines.extend(nav_links)
+
+    lines.extend([
+        "",
+        "</nav>",
+        '<div class="glossary-content" markdown>',
+        "",
+    ])
+
     # Generate sections
-    for cat_id, cat_terms in sorted(by_category.items()):
+    for cat_id, cat_terms in sorted_categories:
         cat = categories.get(cat_id, {})
         cat_name = cat.get("name_zh", cat_id)
         cat_icon = cat.get("icon", "📚")
 
+        # Use attr_list syntax to set custom anchor ID
         lines.extend([
-            f"## {cat_icon} {cat_name}",
+            f"## {cat_icon} {cat_name} {{#{cat_id}}}",
             "",
             "| 英文 | 中文 | 說明 |",
             "|------|------|------|",
@@ -209,6 +237,12 @@ def generate_glossary_index(terms: list[dict], categories: dict[str, dict]) -> s
             lines.append(f"| [{term_en}]({term_id}/) | {term_zh} | {brief} |")
 
         lines.append("")
+
+    # Close containers
+    lines.extend([
+        "</div>",
+        "</div>",
+    ])
 
     return "\n".join(lines)
 
