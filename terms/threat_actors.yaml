@@ -893,3 +893,24 @@ terms:
     related_terms: ["ransomware_group", "raas"]
     metadata:
       status: "approved"
+
+  - id: "lazarus"
+    term_en: "Lazarus Group"
+    term_zh: "Lazarus 駭客集團"
+    definitions:
+      brief: "北韓政府支持的多功能駭客組織"
+      standard: |
+        Lazarus Group 是北韓最知名的國家級駭客組織，
+        進行網路間諜、金融犯罪和破壞性攻擊，
+        包括 2014 年 Sony Pictures 攻擊和 WannaCry 勒索軟體。
+    category: "threat_actors"
+    subcategory: "apt_group"
+    tags: ["北韓", "國家級", "金融犯罪"]
+    aliases:
+      en: ["Hidden Cobra", "Zinc", "Diamond Sleet"]
+    related_terms: ["apt", "wannacry"]
+    references:
+      mitre_attack: "https://attack.mitre.org/groups/G0032/"
+    metadata:
+      status: "approved"
+      attribution_country: "North Korea"

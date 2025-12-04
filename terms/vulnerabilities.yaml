@@ -732,3 +732,61 @@ terms:
     subcategory: "general"
     tags: ["漏洞研究", "揭露"]
     related_terms: ["exploit", "vulnerability", "responsible_disclosure"]
+
+  - id: "lce"
+    term_en: "LCE"
+    term_zh: "本地程式碼執行"
+    full_name_en: "Local Code Execution"
+    definitions:
+      brief: "在本地系統執行任意程式碼的漏洞"
+      standard: |
+        本地程式碼執行是指攻擊者能夠在已有存取權限的系統上
+        執行任意程式碼的漏洞，
+        通常需要結合權限提升漏洞才能造成更大危害。
+    category: "vulnerabilities"
+    subcategory: "code_execution"
+    tags: ["程式碼執行", "本地", "漏洞"]
+    related_terms: ["rce", "ace", "lpe"]
+
+  - id: "lpe"
+    term_en: "LPE"
+    term_zh: "本地權限提升"
+    full_name_en: "Local Privilege Escalation"
+    definitions:
+      brief: "從低權限提升至高權限的漏洞"
+      standard: |
+        本地權限提升是指攻擊者利用漏洞
+        從一般使用者權限提升至管理員或系統權限，
+        是後滲透階段常見的攻擊步驟。
+    category: "vulnerabilities"
+    subcategory: "authentication"
+    tags: ["權限提升", "本地", "後滲透"]
+    related_terms: ["privilege_escalation", "lce"]
+
+  - id: "stealth"
+    term_en: "Stealth Techniques"
+    term_zh: "隱匿技術"
+    definitions:
+      brief: "惡意程式用於規避偵測的技術"
+      standard: |
+        隱匿技術是惡意程式或攻擊者用於規避安全軟體偵測的方法，
+        包括程式碼混淆、反偵錯、rootkit 隱藏等技術，
+        增加分析和偵測的困難度。
+    category: "vulnerabilities"
+    subcategory: "configuration"
+    tags: ["規避偵測", "隱藏", "惡意程式"]
+    related_terms: ["rootkit", "obfuscation"]
+
+  - id: "vulnerability_assessment"
+    term_en: "Vulnerability Assessment"
+    term_zh: "弱點評估"
+    definitions:
+      brief: "系統性識別和評估安全弱點的過程"
+      standard: |
+        弱點評估是識別、量化和優先排序系統安全弱點的系統性過程，
+        包括自動化掃描和人工審查，
+        是弱點管理和風險評估的基礎。
+    category: "vulnerabilities"
+    subcategory: "general"
+    tags: ["弱點", "風險評估", "安全評估"]
+    related_terms: ["pentesting", "vulnerability_management"]

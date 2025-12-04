@@ -789,3 +789,202 @@ terms:
     subcategory: "web_attack"
     tags: ["搜尋引擎", "惡意廣告", "惡意程式"]
     related_terms: ["malvertising", "drive_by_download"]
+
+  - id: "dos"
+    term_en: "DoS"
+    term_zh: "阻斷服務攻擊"
+    full_name_en: "Denial of Service"
+    definitions:
+      brief: "癱瘓目標系統使其無法提供正常服務的攻擊"
+      standard: |
+        阻斷服務攻擊透過大量請求或利用漏洞，
+        耗盡目標系統資源使其無法回應正常請求，
+        分散式阻斷服務（DDoS）使用多個來源發動攻擊。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["可用性", "流量攻擊", "網路攻擊"]
+    related_terms: ["ddos", "botnet"]
+
+  - id: "credential_theft"
+    term_en: "Credential Theft"
+    term_zh: "憑證竊取"
+    definitions:
+      brief: "竊取使用者帳號密碼等驗證資訊的攻擊"
+      standard: |
+        憑證竊取是指透過各種手法取得使用者的帳號密碼，
+        包括釣魚、鍵盤側錄、記憶體擷取等方式，
+        竊取的憑證可用於進一步滲透或橫向移動。
+    category: "attack_types"
+    subcategory: "post_exploitation"
+    tags: ["憑證竊取", "後滲透", "橫向移動"]
+    related_terms: ["mimikatz", "phishing", "lateral_movement"]
+
+  - id: "data_breach"
+    term_en: "Data Breach"
+    term_zh: "資料外洩事件"
+    definitions:
+      brief: "敏感資料被未授權存取或洩露的安全事件"
+      standard: |
+        資料外洩是指機密或敏感資料被未授權存取、複製或傳輸，
+        可能因駭客攻擊、內部威脅或意外洩露造成，
+        可能導致法規裁罰、聲譽損失和財務損失。
+    category: "attack_types"
+    subcategory: "advanced_attack"
+    tags: ["資料外洩", "隱私", "合規"]
+    related_terms: ["data_exfiltration", "gdpr", "ccpa"]
+
+  - id: "malvertising"
+    term_en: "Malvertising"
+    term_zh: "惡意廣告"
+    definitions:
+      brief: "透過線上廣告散播惡意程式的攻擊手法"
+      standard: |
+        惡意廣告是指攻擊者在合法廣告網路中植入惡意廣告，
+        使用者瀏覽含有惡意廣告的網頁時可能被感染，
+        無需點擊即可透過漏洞利用進行攻擊。
+    category: "attack_types"
+    subcategory: "web_attack"
+    tags: ["惡意廣告", "廣告", "路過式下載"]
+    related_terms: ["drive_by_download", "exploit_kit"]
+
+  - id: "pretexting"
+    term_en: "Pretexting"
+    term_zh: "藉口攻擊"
+    definitions:
+      brief: "編造虛假情境騙取資訊的社交工程手法"
+      standard: |
+        藉口攻擊是攻擊者編造可信的虛假情境或身分，
+        如假冒 IT 人員、銀行客服、同事等，
+        誘騙受害者提供敏感資訊或執行特定操作。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["社交工程", "冒充", "詐騙"]
+    related_terms: ["social_engineering", "phishing", "vishing"]
+
+  - id: "pharming"
+    term_en: "Pharming"
+    term_zh: "網域嫁接攻擊"
+    definitions:
+      brief: "將使用者導向假冒網站的攻擊手法"
+      standard: |
+        網域嫁接透過篡改 DNS 設定或本機 hosts 檔案，
+        將使用者在輸入正確網址時導向攻擊者控制的假冒網站，
+        比傳統釣魚更難察覺。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["DNS", "網頁攻擊", "詐騙"]
+    related_terms: ["dns_spoofing", "phishing", "dns_hijacking"]
+
+  - id: "dns_hijacking"
+    term_en: "DNS Hijacking"
+    term_zh: "DNS 劫持"
+    definitions:
+      brief: "篡改 DNS 查詢結果將流量導向惡意伺服器"
+      standard: |
+        DNS 劫持是攻擊者透過入侵 DNS 伺服器、
+        修改網域註冊資訊或攻擊路由器等方式，
+        將特定網域的 DNS 解析結果指向攻擊者控制的 IP。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["DNS", "網路攻擊", "流量劫持"]
+    related_terms: ["dns_spoofing", "pharming"]
+
+  - id: "domain_hijacking"
+    term_en: "Domain Hijacking"
+    term_zh: "網域劫持"
+    definitions:
+      brief: "非法取得網域控制權的攻擊"
+      standard: |
+        網域劫持是攻擊者透過社交工程、
+        入侵網域註冊商帳號或利用過期網域，
+        非法取得網域的控制權，可進一步發動釣魚或散播惡意程式。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["網域", "帳號入侵", "社交工程"]
+    related_terms: ["typosquatting", "dns_hijacking"]
+
+  - id: "http_response_splitting"
+    term_en: "HTTP Response Splitting"
+    term_zh: "HTTP 回應分割"
+    definitions:
+      brief: "在 HTTP 回應中注入惡意標頭的攻擊"
+      standard: |
+        HTTP 回應分割是透過注入換行字元，
+        在 HTTP 回應中插入額外的標頭或內容，
+        可用於執行快取毒化、跨站腳本或釣魚攻擊。
+    category: "attack_types"
+    subcategory: "web_attack"
+    tags: ["網頁攻擊", "HTTP", "標頭注入"]
+    related_terms: ["crlf_injection", "xss"]
+
+  - id: "memory_injection"
+    term_en: "Memory Injection"
+    term_zh: "記憶體注入"
+    definitions:
+      brief: "將惡意程式碼注入執行中程序記憶體的攻擊"
+      standard: |
+        記憶體注入是將惡意程式碼注入其他程序的記憶體空間，
+        在目標程序的上下文中執行，
+        常用於規避安全軟體偵測和執行惡意行為。
+    category: "attack_types"
+    subcategory: "advanced_attack"
+    tags: ["記憶體", "程式碼執行", "規避偵測"]
+    related_terms: ["process_injection", "fileless_attack"]
+
+  - id: "defacement"
+    term_en: "Website Defacement"
+    term_zh: "網站置換攻擊"
+    definitions:
+      brief: "篡改網站外觀內容的攻擊行為"
+      standard: |
+        網站置換是攻擊者入侵網站後篡改其內容，
+        通常用於宣傳政治訊息、展示駭客技術或損害聲譽，
+        是駭客行動主義者常用的攻擊方式。
+    category: "attack_types"
+    subcategory: "web_attack"
+    tags: ["網站入侵", "政治動機", "社會運動"]
+    related_terms: ["hacktivist", "sql_injection"]
+
+  - id: "ssl_stripping"
+    term_en: "SSL Stripping"
+    term_zh: "SSL 剝離攻擊"
+    definitions:
+      brief: "將加密連線降級為明文連線的中間人攻擊"
+      standard: |
+        SSL 剝離是攻擊者作為中間人，
+        攔截受害者的 HTTPS 請求並改為 HTTP 明文傳輸，
+        同時維持與目標伺服器的加密連線以竊取敏感資訊。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["中間人攻擊", "加密", "竊聽"]
+    related_terms: ["mitm", "tls"]
+
+  - id: "obfuscation"
+    term_en: "Obfuscation"
+    term_zh: "程式碼混淆"
+    definitions:
+      brief: "故意讓程式碼難以理解以規避偵測的技術"
+      standard: |
+        程式碼混淆是將程式碼轉換成難以閱讀和分析的形式，
+        惡意程式常用此技術規避安全軟體偵測和逆向工程，
+        包括字串加密、控制流程扁平化等技術。
+    category: "attack_types"
+    subcategory: "advanced_attack"
+    tags: ["規避偵測", "惡意程式", "程式碼分析"]
+    related_terms: ["stealth", "packer"]
+
+  - id: "process_injection"
+    term_en: "Process Injection"
+    term_zh: "行程注入"
+    definitions:
+      brief: "將惡意程式碼注入其他執行中行程的技術"
+      standard: |
+        行程注入是將惡意程式碼注入合法行程的記憶體空間執行，
+        讓惡意行為看似來自合法程式，
+        常見技術包括 DLL 注入、行程鏤空等。
+    category: "attack_types"
+    subcategory: "advanced_attack"
+    tags: ["記憶體", "規避偵測", "後滲透"]
+    related_terms: ["memory_injection", "dll_hijacking"]
+    references:
+      mitre_attack: "https://attack.mitre.org/techniques/T1055/"

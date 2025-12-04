@@ -324,3 +324,47 @@ terms:
     subcategory: "compliance_framework"
     tags: ["風險評估", "治理", "決策"]
     related_terms: ["fair", "nist_csf", "isms"]
+
+  - id: "critical_infrastructure"
+    term_en: "Critical Infrastructure"
+    term_zh: "關鍵基礎設施"
+    definitions:
+      brief: "對國家運作至關重要的實體和虛擬系統"
+      standard: |
+        關鍵基礎設施是指對國家安全、經濟、公共衛生至關重要的系統，
+        包括能源、交通、金融、醫療、通訊等 16 個領域，
+        是國家級網路攻擊的主要目標。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["國家安全", "關鍵基礎設施", "能源"]
+    related_terms: ["ics", "scada", "ot"]
+
+  - id: "responsible_disclosure"
+    term_en: "Responsible Disclosure"
+    term_zh: "負責任揭露"
+    definitions:
+      brief: "通知廠商漏洞並給予修補時間的揭露方式"
+      standard: |
+        負責任揭露是安全研究人員發現漏洞後，
+        先私下通知廠商並給予合理時間修補，
+        之後才公開漏洞資訊的做法，又稱協調式揭露。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["漏洞", "研究", "揭露"]
+    related_terms: ["poc", "cve"]
+    aliases:
+      en: ["Coordinated Disclosure"]
+
+  - id: "data_classification"
+    term_en: "Data Classification"
+    term_zh: "資料分類"
+    definitions:
+      brief: "依據敏感度將資料分級的管理方法"
+      standard: |
+        資料分類是依據資料的機密性、敏感度和重要性進行分級，
+        如公開、內部、機密、絕密等級別，
+        是資料保護和存取控制的基礎。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["資料保護", "分類", "政策"]
+    related_terms: ["dlp", "pii"]

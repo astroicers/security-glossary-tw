@@ -787,3 +787,379 @@ terms:
     subcategory: "security_operations"
     tags: ["更新", "修補", "弱點"]
     related_terms: ["vulnerability_management"]
+
+  # ------------------------------------------
+  # 2024-12 新增術語（補充缺失的相關術語）
+  # ------------------------------------------
+  - id: "2fa"
+    term_en: "2FA"
+    term_zh: "雙因素驗證"
+    full_name_en: "Two-Factor Authentication"
+    definitions:
+      brief: "使用兩種不同驗證因素確認身分的安全機制"
+      standard: |
+        雙因素驗證要求使用者提供兩種不同類型的驗證因素，
+        通常結合密碼（知識因素）與手機驗證碼或硬體金鑰（持有因素），
+        大幅提升帳號安全性。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["認證", "帳號安全", "身分驗證"]
+    related_terms: ["mfa", "authentication"]
+    aliases:
+      zh: ["兩步驟驗證", "雙重驗證"]
+
+  - id: "aes"
+    term_en: "AES"
+    term_zh: "進階加密標準"
+    full_name_en: "Advanced Encryption Standard"
+    definitions:
+      brief: "目前最廣泛使用的對稱式加密演算法"
+      standard: |
+        AES 是美國國家標準與技術研究院（NIST）採用的對稱式加密標準，
+        支援 128、192、256 位元金鑰長度，
+        廣泛應用於資料加密、VPN、無線網路等場景。
+    category: "technologies"
+    subcategory: "data_security"
+    tags: ["加密", "對稱式加密", "NIST"]
+    related_terms: ["encryption", "rsa", "tls"]
+
+  - id: "rsa"
+    term_en: "RSA"
+    term_zh: "RSA 加密演算法"
+    full_name_en: "Rivest-Shamir-Adleman"
+    definitions:
+      brief: "廣泛使用的非對稱式加密演算法"
+      standard: |
+        RSA 是最早的公開金鑰加密演算法之一，
+        基於大質數分解的數學難題，
+        常用於數位簽章、金鑰交換和小量資料加密。
+    category: "technologies"
+    subcategory: "data_security"
+    tags: ["加密", "非對稱式加密", "公開金鑰"]
+    related_terms: ["encryption", "aes", "tls"]
+
+  - id: "tls"
+    term_en: "TLS"
+    term_zh: "傳輸層安全協定"
+    full_name_en: "Transport Layer Security"
+    definitions:
+      brief: "保護網路通訊安全的加密協定"
+      standard: |
+        TLS 是用於保護網路通訊的加密協定，
+        提供機密性、完整性和身分驗證，
+        是 HTTPS、安全郵件等應用的基礎，現行版本為 TLS 1.3。
+    category: "technologies"
+    subcategory: "network_security"
+    tags: ["加密", "網路通訊", "HTTPS"]
+    related_terms: ["encryption", "ssl_stripping"]
+    aliases:
+      zh: ["傳輸層安全性"]
+      en: ["SSL/TLS"]
+
+  - id: "oauth"
+    term_en: "OAuth"
+    term_zh: "OAuth 授權協定"
+    full_name_en: "Open Authorization"
+    definitions:
+      brief: "允許第三方應用程式安全存取使用者資源的授權標準"
+      standard: |
+        OAuth 是開放授權標準，讓使用者授權第三方應用程式
+        存取其在其他服務的資源，而不需分享密碼，
+        廣泛用於社群登入和 API 授權，現行版本為 OAuth 2.0。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["授權", "API", "身分驗證"]
+    related_terms: ["saml", "sso", "api_security"]
+
+  - id: "saml"
+    term_en: "SAML"
+    term_zh: "SAML 身分驗證協定"
+    full_name_en: "Security Assertion Markup Language"
+    definitions:
+      brief: "企業單一登入的身分驗證標準"
+      standard: |
+        SAML 是基於 XML 的身分驗證協定，
+        用於在身分提供者和服務提供者之間交換驗證資訊，
+        是企業單一登入（SSO）最常用的標準之一。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["認證", "SSO", "企業"]
+    related_terms: ["sso", "oauth"]
+
+  - id: "antivirus"
+    term_en: "Antivirus"
+    term_zh: "防毒軟體"
+    definitions:
+      brief: "偵測和移除惡意程式的安全軟體"
+      standard: |
+        防毒軟體是端點安全的基礎工具，
+        透過特徵碼比對和行為分析偵測病毒、木馬等惡意程式，
+        現代解決方案已整合至 EDR 和 XDR 平台。
+    category: "technologies"
+    subcategory: "endpoint_security"
+    tags: ["端點安全", "惡意程式", "即時防護"]
+    related_terms: ["edr", "malware"]
+    aliases:
+      zh: ["防病毒軟體", "殺毒軟體"]
+
+  - id: "audit_log"
+    term_en: "Audit Log"
+    term_zh: "稽核日誌"
+    definitions:
+      brief: "記錄系統活動和安全事件的日誌"
+      standard: |
+        稽核日誌記錄使用者操作、系統事件和安全相關活動，
+        用於事件調查、合規稽核和異常偵測，
+        是資安監控和鑑識分析的重要資料來源。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["日誌管理", "合規", "稽核"]
+    related_terms: ["siem", "soc"]
+
+  - id: "pii"
+    term_en: "PII"
+    term_zh: "個人可識別資訊"
+    full_name_en: "Personally Identifiable Information"
+    definitions:
+      brief: "可用於識別特定個人的資料"
+      standard: |
+        個人可識別資訊是指可單獨或結合其他資訊識別特定個人的資料，
+        如姓名、身分證號碼、電話、地址等，
+        受到 GDPR、CCPA 等隱私法規保護。
+    category: "technologies"
+    subcategory: "data_security"
+    tags: ["隱私", "資料保護", "合規"]
+    related_terms: ["gdpr", "ccpa", "data_classification"]
+
+  - id: "phi"
+    term_en: "PHI"
+    term_zh: "受保護健康資訊"
+    full_name_en: "Protected Health Information"
+    definitions:
+      brief: "與個人健康狀況相關的受保護資料"
+      standard: |
+        受保護健康資訊是指與個人健康狀況、醫療服務或付款相關的資訊，
+        受到 HIPAA 等醫療資料保護法規規範，
+        包括病歷、診斷結果、處方等。
+    category: "technologies"
+    subcategory: "data_security"
+    tags: ["隱私", "醫療", "健康資訊"]
+    related_terms: ["hipaa", "pii"]
+
+  - id: "api_gateway"
+    term_en: "API Gateway"
+    term_zh: "API 閘道"
+    definitions:
+      brief: "管理和保護 API 存取的入口點"
+      standard: |
+        API 閘道是位於用戶端和後端服務之間的中介層，
+        提供身分驗證、速率限制、日誌記錄等功能，
+        是微服務架構和 API 安全的關鍵元件。
+    category: "technologies"
+    subcategory: "network_security"
+    tags: ["API", "微服務", "存取控制"]
+    related_terms: ["api_security", "oauth"]
+
+  - id: "easm"
+    term_en: "EASM"
+    term_zh: "外部攻擊面管理"
+    full_name_en: "External Attack Surface Management"
+    definitions:
+      brief: "持續發現和監控組織對外暴露資產的解決方案"
+      standard: |
+        外部攻擊面管理持續掃描和監控組織在網際網路上暴露的資產，
+        識別未知資產、錯誤配置和潛在弱點，
+        是主動式資安防護的重要工具。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["外部曝險", "資產管理", "弱點"]
+    related_terms: ["asm", "vulnerability_management"]
+
+  - id: "privileged_access"
+    term_en: "Privileged Access"
+    term_zh: "特權存取"
+    definitions:
+      brief: "具有高度權限的系統存取能力"
+      standard: |
+        特權存取是指對系統、資料或應用程式具有高度權限的存取能力，
+        如系統管理員帳號、root 權限等，
+        是攻擊者的主要目標，需要嚴格管控。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["權限管理", "存取控制", "特權"]
+    related_terms: ["pam", "privileged_account"]
+
+  - id: "privileged_account"
+    term_en: "Privileged Account"
+    term_zh: "特權帳號"
+    definitions:
+      brief: "具有高度系統權限的帳號"
+      standard: |
+        特權帳號是指具有管理權限的帳號，
+        如 Administrator、root、服務帳號等，
+        需要透過 PAM 解決方案進行管理和監控。
+    category: "technologies"
+    subcategory: "identity"
+    tags: ["帳號安全", "權限管理", "特權"]
+    related_terms: ["pam", "privileged_access"]
+
+  - id: "shadow_it"
+    term_en: "Shadow IT"
+    term_zh: "影子 IT"
+    definitions:
+      brief: "未經 IT 部門核准使用的應用程式和服務"
+      standard: |
+        影子 IT 是指員工未經 IT 部門核准或不知情下使用的
+        雲端服務、應用程式或裝置，
+        可能帶來資料外洩和合規風險。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["雲端", "風險管理", "合規"]
+    related_terms: ["casb", "dlp"]
+
+  - id: "stager"
+    term_en: "Stager"
+    term_zh: "分階段載入器"
+    definitions:
+      brief: "分階段下載和執行惡意程式的小型載入器"
+      standard: |
+        分階段載入器是體積小的惡意程式元件，
+        先建立通訊並下載完整的惡意酬載，
+        常用於規避偵測和減少初始攻擊足跡。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["惡意程式", "載入器", "C2"]
+    related_terms: ["loader", "payload", "c2"]
+
+  - id: "swg"
+    term_en: "SWG"
+    term_zh: "安全網頁閘道"
+    full_name_en: "Secure Web Gateway"
+    definitions:
+      brief: "過濾和控制使用者網頁存取的安全解決方案"
+      standard: |
+        安全網頁閘道過濾使用者的網頁流量，
+        阻擋惡意網站、執行內容過濾、防止資料外洩，
+        是網路安全和合規的重要元件。
+    category: "technologies"
+    subcategory: "network_security"
+    tags: ["網頁安全", "內容過濾", "代理"]
+    related_terms: ["casb", "sase"]
+
+  - id: "lolbas"
+    term_en: "LOLBAS"
+    term_zh: "就地取材二進位檔"
+    full_name_en: "Living Off The Land Binaries and Scripts"
+    definitions:
+      brief: "攻擊者濫用系統內建工具進行攻擊的技術"
+      standard: |
+        LOLBAS 是指攻擊者利用作業系統內建的合法工具
+        （如 PowerShell、certutil、mshta）執行惡意行為，
+        因使用合法工具而難以被偵測。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["攻擊技術", "規避偵測", "Windows"]
+    related_terms: ["living_off_the_land", "fileless_attack"]
+    references:
+      official: "https://lolbas-project.github.io/"
+
+  - id: "payload"
+    term_en: "Payload"
+    term_zh: "惡意酬載"
+    definitions:
+      brief: "惡意程式中執行實際攻擊功能的程式碼"
+      standard: |
+        惡意酬載是惡意程式中執行實際惡意行為的核心程式碼，
+        如竊取資料、加密檔案、建立後門等，
+        通常由載入器或漏洞利用程式投放。
+    category: "technologies"
+    subcategory: "security_operations"
+    tags: ["惡意程式", "攻擊", "漏洞利用"]
+    related_terms: ["dropper", "loader", "exploit"]
+
+  - id: "container_security"
+    term_en: "Container Security"
+    term_zh: "容器安全"
+    definitions:
+      brief: "保護容器化應用程式和基礎架構的安全措施"
+      standard: |
+        容器安全涵蓋容器映像掃描、執行期保護、
+        網路分隔、存取控制等面向，
+        確保 Docker、Kubernetes 等容器環境的安全。
+    category: "technologies"
+    subcategory: "cloud_security"
+    tags: ["容器", "雲端", "DevSecOps"]
+    related_terms: ["cwpp", "cnapp"]
+
+  - id: "serverless"
+    term_en: "Serverless"
+    term_zh: "無伺服器運算"
+    definitions:
+      brief: "由雲端供應商管理基礎架構的運算模式"
+      standard: |
+        無伺服器運算讓開發者專注於程式碼，
+        由雲端供應商管理底層伺服器和擴展，
+        如 AWS Lambda、Azure Functions，帶來新的安全挑戰。
+    category: "technologies"
+    subcategory: "cloud_security"
+    tags: ["雲端", "FaaS", "架構"]
+    related_terms: ["cwpp", "cloud_security"]
+
+  - id: "cloud_security"
+    term_en: "Cloud Security"
+    term_zh: "雲端安全"
+    definitions:
+      brief: "保護雲端運算環境的安全措施和實務"
+      standard: |
+        雲端安全涵蓋保護雲端基礎架構、資料和應用程式的所有措施，
+        包括身分管理、資料加密、網路安全、合規等面向，
+        採用共同責任模式。
+    category: "technologies"
+    subcategory: "cloud_security"
+    tags: ["雲端", "IaaS", "共同責任"]
+    related_terms: ["cspm", "cwpp", "casb"]
+
+  - id: "ics"
+    term_en: "ICS"
+    term_zh: "工業控制系統"
+    full_name_en: "Industrial Control Systems"
+    definitions:
+      brief: "控制工業流程的電腦系統"
+      standard: |
+        工業控制系統是用於監控和控制工業流程的電腦系統，
+        包括 SCADA、DCS、PLC 等，
+        廣泛應用於能源、製造、水處理等關鍵基礎設施。
+    category: "technologies"
+    subcategory: "network_security"
+    tags: ["OT", "關鍵基礎設施", "工業"]
+    related_terms: ["scada", "ot", "critical_infrastructure"]
+
+  - id: "scada"
+    term_en: "SCADA"
+    term_zh: "監控與資料擷取系統"
+    full_name_en: "Supervisory Control and Data Acquisition"
+    definitions:
+      brief: "監控和控制工業設備的系統架構"
+      standard: |
+        SCADA 是用於遠端監控和控制工業設備的系統，
+        收集現場感測器資料並提供操作介面，
+        是電力、石油、水處理等產業的核心系統。
+    category: "technologies"
+    subcategory: "network_security"
+    tags: ["OT", "關鍵基礎設施", "監控"]
+    related_terms: ["ics", "ot", "critical_infrastructure"]
+
+  - id: "ot"
+    term_en: "OT"
+    term_zh: "營運技術"
+    full_name_en: "Operational Technology"
+    definitions:
+      brief: "用於監控和控制實體設備的硬體和軟體"
+      standard: |
+        營運技術是指用於監控和控制實體流程和設備的系統，
+        與資訊技術（IT）相對，
+        OT 安全是關鍵基礎設施保護的重要領域。
+    category: "technologies"
+    subcategory: "network_security"
+    tags: ["OT", "關鍵基礎設施", "工業"]
+    related_terms: ["ics", "scada"]

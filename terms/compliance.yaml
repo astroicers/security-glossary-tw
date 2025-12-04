@@ -205,3 +205,18 @@ terms:
     subcategory: "audit_report"
     tags: ["審計", "雲端", "信任服務準則"]
     related_terms: ["iso_27001"]
+
+  - id: "cpra"
+    term_en: "CPRA"
+    term_zh: "加州隱私權法"
+    full_name_en: "California Privacy Rights Act"
+    definitions:
+      brief: "擴展 CCPA 的加州隱私保護法規"
+      standard: |
+        加州隱私權法是 2020 年通過的加州公投提案，
+        擴展 CCPA 的保護範圍，新增敏感個人資訊分類、
+        限制資料保留和設立加州隱私保護局。
+    category: "compliance"
+    subcategory: "data_protection"
+    tags: ["隱私", "資料保護", "美國"]
+    related_terms: ["ccpa", "gdpr"]
