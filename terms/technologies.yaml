@@ -218,7 +218,7 @@ terms:
     category: "technologies"
     subcategory: "identity"
     tags: ["身分驗證", "帳號安全"]
-    related_terms: ["2fa", "sso"]
+    related_terms: ["two_factor_auth", "sso"]
     aliases:
       zh: ["多重驗證", "雙因子驗證", "2FA"]
     usage:
@@ -791,7 +791,7 @@ terms:
   # ------------------------------------------
   # 2024-12 新增術語（補充缺失的相關術語）
   # ------------------------------------------
-  - id: "2fa"
+  - id: "two_factor_auth"
     term_en: "2FA"
     term_zh: "雙因素驗證"
     full_name_en: "Two-Factor Authentication"
