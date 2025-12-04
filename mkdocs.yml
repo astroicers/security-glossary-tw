@@ -75,6 +75,5 @@ nav:
       - 🛡️ 技術名詞: glossary/technologies.md
       - 👤 威脅行為者: glossary/threat_actors.md
       - 🔓 漏洞類型: glossary/vulnerabilities.md
-  - 分類瀏覽:
-      - categories/index.md
+  - 🏷️ 標籤瀏覽: tags/index.md
   - API 文件: api.md

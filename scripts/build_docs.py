@@ -22,6 +22,7 @@ META_DIR = ROOT_DIR / "meta"
 DOCS_DIR = ROOT_DIR / "docs"
 GLOSSARY_DIR = DOCS_DIR / "glossary"
 CATEGORIES_DIR = DOCS_DIR / "categories"
+TAGS_DIR = DOCS_DIR / "tags"
 API_DIR = DOCS_DIR / "api" / "v1"
 API_TERMS_DIR = API_DIR / "terms"
 
@@ -192,7 +193,8 @@ def generate_category_page(cat_id: str, cat_terms: list[dict], categories: dict[
         term_en = term["term_en"]
         term_zh = term["term_zh"]
         brief = term.get("definitions", {}).get("brief", "")
-        lines.append(f"| [{term_en}]({term_id}/) | {term_zh} | {brief} |")
+        # Use ../ to go back to glossary directory (category pages are at glossary/category.md)
+        lines.append(f"| [{term_en}](../{term_id}/) | {term_zh} | {brief} |")
 
     lines.append("")
     return "\n".join(lines)
@@ -262,6 +264,35 @@ def generate_categories_index(terms: list[dict], categories: dict[str, dict]) ->
             "",
         ])
 
+    return "\n".join(lines)
+
+
+def generate_tags_index(terms: list[dict]) -> str:
+    """Generate tags index page."""
+    # Group terms by tag
+    by_tag: dict[str, list[dict]] = {}
+    for term in terms:
+        for tag in term.get("tags", []):
+            if tag not in by_tag:
+                by_tag[tag] = []
+            by_tag[tag].append(term)
+
+    lines = [
+        "# 🏷️ 標籤瀏覽",
+        "",
+        "依標籤瀏覽資安術語。",
+        "",
+        f"共 **{len(by_tag)}** 個標籤。",
+        "",
+        "| 標籤 | 術語數 |",
+        "|------|--------|",
+    ]
+
+    for tag in sorted(by_tag.keys()):
+        count = len(by_tag[tag])
+        lines.append(f"| {tag} | {count} |")
+
+    lines.append("")
     return "\n".join(lines)
 
 
@@ -402,6 +433,7 @@ def main():
     # Ensure directories exist
     GLOSSARY_DIR.mkdir(parents=True, exist_ok=True)
     CATEGORIES_DIR.mkdir(parents=True, exist_ok=True)
+    TAGS_DIR.mkdir(parents=True, exist_ok=True)
     API_DIR.mkdir(parents=True, exist_ok=True)
     API_TERMS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -449,6 +481,11 @@ def main():
     print("Generating categories index...")
     categories_index = generate_categories_index(terms, categories)
     (CATEGORIES_DIR / "index.md").write_text(categories_index, encoding="utf-8")
+
+    # Generate tags index
+    print("Generating tags index...")
+    tags_index = generate_tags_index(terms)
+    (TAGS_DIR / "index.md").write_text(tags_index, encoding="utf-8")
 
     # Generate API files
     print("Generating API files...")
