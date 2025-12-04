@@ -121,13 +121,17 @@ def generate_term_markdown(term: dict, categories: dict[str, dict]) -> str:
             lines.append(f"- [{rel_id}](../{rel_id}/index.md)")
         lines.append("")
 
-    # Tags
+    # Tags (clickable links to tag pages)
     tags = term.get("tags", [])
     if tags:
+        tag_links = []
+        for tag in tags:
+            slug = slugify(tag)
+            tag_links.append(f"[{tag}](../../tags/{slug}.md)")
         lines.extend([
             "## 標籤",
             "",
-            " ".join(f"`{tag}`" for tag in tags),
+            " ".join(tag_links),
             "",
         ])
 
@@ -393,6 +397,14 @@ GET /api/v1/categories.json
 
 回傳所有分類的列表。
 
+### 取得所有標籤
+
+```
+GET /api/v1/tags.json
+```
+
+回傳所有標籤及其術語數量，依使用次數排序。
+
 ## 回應格式
 
 ### 術語物件
@@ -577,6 +589,17 @@ def main():
     categories_json = list(categories.values())
     (API_DIR / "categories.json").write_text(
         json.dumps({"categories": categories_json, "count": len(categories_json)},
+                   ensure_ascii=False, indent=2),
+        encoding="utf-8"
+    )
+
+    # Tags
+    tags_json = [
+        {"tag": tag, "count": len(tag_terms), "term_ids": [t["id"] for t in tag_terms]}
+        for tag, tag_terms in sorted(by_tag.items(), key=lambda x: len(x[1]), reverse=True)
+    ]
+    (API_DIR / "tags.json").write_text(
+        json.dumps({"tags": tags_json, "count": len(tags_json)},
                    ensure_ascii=False, indent=2),
         encoding="utf-8"
     )
