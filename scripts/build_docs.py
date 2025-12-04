@@ -106,7 +106,7 @@ def generate_term_markdown(term: dict, categories: dict[str, dict]) -> str:
             "",
         ])
         for rel_id in related:
-            lines.append(f"- [{rel_id}](../{rel_id}/)")
+            lines.append(f"- [{rel_id}](../{rel_id}/index.md)")
         lines.append("")
 
     # Tags
@@ -194,7 +194,7 @@ def generate_category_page(cat_id: str, cat_terms: list[dict], categories: dict[
         term_zh = term["term_zh"]
         brief = term.get("definitions", {}).get("brief", "")
         # Category pages and term directories are in the same glossary/ directory
-        lines.append(f"| [{term_en}]({term_id}/) | {term_zh} | {brief} |")
+        lines.append(f"| [{term_en}]({term_id}/index.md) | {term_zh} | {brief} |")
 
     lines.append("")
     return "\n".join(lines)
@@ -260,7 +260,7 @@ def generate_categories_index(terms: list[dict], categories: dict[str, dict]) ->
             "",
             f"{cat_desc}",
             "",
-            f"共 **{count}** 個術語 → [查看全部](../glossary/)",
+            f"共 **{count}** 個術語 → [查看全部](../glossary/index.md)",
             "",
         ])
 
@@ -396,8 +396,8 @@ def generate_home_page(terms: list[dict], categories: dict[str, dict]) -> str:
 
 ## 🔍 快速開始
 
-- [瀏覽術語庫](glossary/) - 查看所有術語
-- [分類瀏覽](categories/) - 依分類查找
+- [瀏覽術語庫](glossary/index.md) - 查看所有術語
+- [分類瀏覽](categories/index.md) - 依分類查找
 - [API 文件](api.md) - 程式化存取
 
 ## 💡 用途
