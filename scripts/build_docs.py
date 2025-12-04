@@ -10,7 +10,9 @@ This script generates:
 
 from __future__ import annotations
 
+import hashlib
 import json
+import re
 from pathlib import Path
 
 import yaml
@@ -25,6 +27,16 @@ CATEGORIES_DIR = DOCS_DIR / "categories"
 TAGS_DIR = DOCS_DIR / "tags"
 API_DIR = DOCS_DIR / "api" / "v1"
 API_TERMS_DIR = API_DIR / "terms"
+
+
+def slugify(tag: str) -> str:
+    """Convert tag to safe filename."""
+    # If pure ASCII alphanumeric, use lowercase with underscores
+    if re.match(r'^[A-Za-z0-9\s\-_.]+$', tag):
+        return re.sub(r'[\s]+', '_', tag.lower()).strip('_')
+    # Chinese or mixed: use hash prefix
+    hash_prefix = hashlib.md5(tag.encode()).hexdigest()[:8]
+    return hash_prefix
 
 
 def load_categories() -> dict[str, dict]:
@@ -200,6 +212,31 @@ def generate_category_page(cat_id: str, cat_terms: list[dict], categories: dict[
     return "\n".join(lines)
 
 
+def generate_tag_page(tag: str, tag_terms: list[dict]) -> str:
+    """Generate a tag-specific page listing all terms with this tag."""
+    lines = [
+        f"# 🏷️ {tag}",
+        "",
+        f"標記為「{tag}」的術語，共 **{len(tag_terms)}** 個。",
+        "",
+        "[← 返回標籤列表](index.md)",
+        "",
+        "| 英文 | 中文 | 說明 |",
+        "|------|------|------|",
+    ]
+
+    for term in sorted(tag_terms, key=lambda t: t["term_en"].lower()):
+        term_id = term["id"]
+        term_en = term["term_en"]
+        term_zh = term["term_zh"]
+        brief = term.get("definitions", {}).get("brief", "")
+        # Link from tags/ directory to glossary/ directory
+        lines.append(f"| [{term_en}](../glossary/{term_id}/index.md) | {term_zh} | {brief} |")
+
+    lines.append("")
+    return "\n".join(lines)
+
+
 def generate_glossary_index(terms: list[dict], categories: dict[str, dict]) -> str:
     """Generate glossary index page (overview with category links)."""
     # Count terms per category
@@ -268,7 +305,7 @@ def generate_categories_index(terms: list[dict], categories: dict[str, dict]) ->
 
 
 def generate_tags_index(terms: list[dict]) -> str:
-    """Generate tags index page."""
+    """Generate tags index page with popular tags and clickable links."""
     # Group terms by tag
     by_tag: dict[str, list[dict]] = {}
     for term in terms:
@@ -277,6 +314,10 @@ def generate_tags_index(terms: list[dict]) -> str:
                 by_tag[tag] = []
             by_tag[tag].append(term)
 
+    # Sort by count descending for popular tags
+    sorted_by_count = sorted(by_tag.items(), key=lambda x: len(x[1]), reverse=True)
+    top_20 = sorted_by_count[:20]
+
     lines = [
         "# 🏷️ 標籤瀏覽",
         "",
@@ -284,13 +325,31 @@ def generate_tags_index(terms: list[dict]) -> str:
         "",
         f"共 **{len(by_tag)}** 個標籤。",
         "",
+        "## 🔥 熱門標籤",
+        "",
+    ]
+
+    # Popular tags as inline badges with links
+    popular_links = []
+    for tag, tag_terms in top_20:
+        count = len(tag_terms)
+        slug = slugify(tag)
+        popular_links.append(f"[{tag}]({slug}.md) ({count})")
+    lines.append(" · ".join(popular_links))
+    lines.append("")
+
+    # All tags table
+    lines.extend([
+        "## 所有標籤",
+        "",
         "| 標籤 | 術語數 |",
         "|------|--------|",
-    ]
+    ])
 
     for tag in sorted(by_tag.keys()):
         count = len(by_tag[tag])
-        lines.append(f"| {tag} | {count} |")
+        slug = slugify(tag)
+        lines.append(f"| [{tag}]({slug}.md) | {count} |")
 
     lines.append("")
     return "\n".join(lines)
@@ -482,10 +541,26 @@ def main():
     categories_index = generate_categories_index(terms, categories)
     (CATEGORIES_DIR / "index.md").write_text(categories_index, encoding="utf-8")
 
+    # Generate tags index and individual tag pages
+    print("Generating tags index and tag pages...")
+    by_tag: dict[str, list[dict]] = {}
+    for term in terms:
+        for tag in term.get("tags", []):
+            if tag not in by_tag:
+                by_tag[tag] = []
+            by_tag[tag].append(term)
+
     # Generate tags index
-    print("Generating tags index...")
     tags_index = generate_tags_index(terms)
     (TAGS_DIR / "index.md").write_text(tags_index, encoding="utf-8")
+
+    # Generate individual tag pages
+    for tag, tag_terms in by_tag.items():
+        slug = slugify(tag)
+        tag_content = generate_tag_page(tag, tag_terms)
+        (TAGS_DIR / f"{slug}.md").write_text(tag_content, encoding="utf-8")
+
+    print(f"  Generated {len(by_tag)} tag pages")
 
     # Generate API files
     print("Generating API files...")
