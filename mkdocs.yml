@@ -67,7 +67,14 @@ extra:
 nav:
   - 首頁: index.md
   - 術語庫:
-      - glossary/index.md
+      - 總覽: glossary/index.md
+      - ⚔️ 攻擊類型: glossary/attack_types.md
+      - ⚖️ 法規合規: glossary/compliance.md
+      - 📋 框架標準: glossary/frameworks.md
+      - 🦠 惡意程式: glossary/malware.md
+      - 🛡️ 技術名詞: glossary/technologies.md
+      - 👤 威脅行為者: glossary/threat_actors.md
+      - 🔓 漏洞類型: glossary/vulnerabilities.md
   - 分類瀏覽:
       - categories/index.md
   - API 文件: api.md

@@ -169,81 +169,65 @@ def generate_term_json(term: dict) -> dict:
     }
 
 
+def generate_category_page(cat_id: str, cat_terms: list[dict], categories: dict[str, dict]) -> str:
+    """Generate a category-specific glossary page."""
+    cat = categories.get(cat_id, {})
+    cat_name = cat.get("name_zh", cat_id)
+    cat_icon = cat.get("icon", "📚")
+    cat_desc = cat.get("description", "")
+
+    lines = [
+        f"# {cat_icon} {cat_name}",
+        "",
+        cat_desc,
+        "",
+        f"共 **{len(cat_terms)}** 個術語。",
+        "",
+        "| 英文 | 中文 | 說明 |",
+        "|------|------|------|",
+    ]
+
+    for term in sorted(cat_terms, key=lambda t: t["term_en"].lower()):
+        term_id = term["id"]
+        term_en = term["term_en"]
+        term_zh = term["term_zh"]
+        brief = term.get("definitions", {}).get("brief", "")
+        lines.append(f"| [{term_en}]({term_id}/) | {term_zh} | {brief} |")
+
+    lines.append("")
+    return "\n".join(lines)
+
+
 def generate_glossary_index(terms: list[dict], categories: dict[str, dict]) -> str:
-    """Generate glossary index page with left-side navigation."""
-    # Group by category first
-    by_category: dict[str, list[dict]] = {}
+    """Generate glossary index page (overview with category links)."""
+    # Count terms per category
+    counts: dict[str, int] = {}
     for term in terms:
         cat_id = term.get("category", "other")
-        if cat_id not in by_category:
-            by_category[cat_id] = []
-        by_category[cat_id].append(term)
-
-    # Build category order for navigation
-    sorted_categories = sorted(by_category.items())
-
-    # Generate left navigation links
-    nav_links = []
-    for cat_id, _ in sorted_categories:
-        cat = categories.get(cat_id, {})
-        cat_name = cat.get("name_zh", cat_id)
-        cat_icon = cat.get("icon", "📚")
-        # Use category ID as anchor for stability
-        nav_links.append(f"- [{cat_icon} {cat_name}](#{cat_id})")
+        counts[cat_id] = counts.get(cat_id, 0) + 1
 
     lines = [
         "# 術語庫",
         "",
-        "資安術語完整列表，點擊術語查看詳細說明。",
+        "資安術語完整列表，點擊分類查看詳細術語。",
         "",
         f"共收錄 **{len(terms)}** 個術語。",
         "",
-        '<div class="glossary-container" markdown>',
-        '<nav class="glossary-nav" markdown>',
+        "## 分類",
         "",
-        "**目錄**",
-        "",
+        "| 分類 | 術語數 |",
+        "|------|--------|",
     ]
 
-    # Add navigation links
-    lines.extend(nav_links)
-
-    lines.extend([
-        "",
-        "</nav>",
-        '<div class="glossary-content" markdown>',
-        "",
-    ])
-
-    # Generate sections
-    for cat_id, cat_terms in sorted_categories:
+    # Generate category links
+    for cat_id in sorted(counts.keys()):
         cat = categories.get(cat_id, {})
         cat_name = cat.get("name_zh", cat_id)
         cat_icon = cat.get("icon", "📚")
+        count = counts[cat_id]
+        lines.append(f"| [{cat_icon} {cat_name}]({cat_id}.md) | {count} |")
 
-        # Use attr_list syntax to set custom anchor ID
-        lines.extend([
-            f"## {cat_icon} {cat_name} {{#{cat_id}}}",
-            "",
-            "| 英文 | 中文 | 說明 |",
-            "|------|------|------|",
-        ])
-
-        for term in sorted(cat_terms, key=lambda t: t["term_en"].lower()):
-            term_id = term["id"]
-            term_en = term["term_en"]
-            term_zh = term["term_zh"]
-            brief = term.get("definitions", {}).get("brief", "")
-            lines.append(f"| [{term_en}]({term_id}/) | {term_zh} | {brief} |")
-
-        lines.append("")
-
-    # Close containers
-    lines.extend([
-        "</div>",
-        "</div>",
-    ])
-
+    lines.append("")
     return "\n".join(lines)
 
 
@@ -445,6 +429,21 @@ def main():
     print("Generating glossary index...")
     glossary_index = generate_glossary_index(terms, categories)
     (GLOSSARY_DIR / "index.md").write_text(glossary_index, encoding="utf-8")
+
+    # Generate category pages
+    print("Generating category pages...")
+    by_category: dict[str, list[dict]] = {}
+    for term in terms:
+        cat_id = term.get("category", "other")
+        if cat_id not in by_category:
+            by_category[cat_id] = []
+        by_category[cat_id].append(term)
+
+    for cat_id, cat_terms in by_category.items():
+        page_content = generate_category_page(cat_id, cat_terms, categories)
+        (GLOSSARY_DIR / f"{cat_id}.md").write_text(page_content, encoding="utf-8")
+
+    print(f"  Generated {len(by_category)} category pages")
 
     # Generate categories index
     print("Generating categories index...")
