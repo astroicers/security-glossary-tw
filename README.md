@@ -3,7 +3,7 @@
 > 台灣第一個開源、結構化、可機器讀取的繁體中文資安專有名詞庫
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Terms Count](https://img.shields.io/badge/術語數量-150+-blue.svg)]()
+[![Terms Count](https://img.shields.io/badge/術語數量-333-blue.svg)](https://astroicers.github.io/security-glossary-tw/glossary/)
 
 ---
 
@@ -21,7 +21,7 @@
 ### 方式 1：直接使用 YAML 檔案
 
 ```bash
-git clone https://github.com/your-org/security-glossary-tw.git
+git clone https://github.com/astroicers/security-glossary-tw.git
 ```
 
 ### 方式 2：Python 套件
@@ -53,8 +53,8 @@ issues = glossary.validate(text)
 ### 方式 3：JSON API
 
 ```
-https://your-org.github.io/security-glossary-tw/api/terms.json
-https://your-org.github.io/security-glossary-tw/api/terms/apt.json
+https://astroicers.github.io/security-glossary-tw/api/v1/terms.json
+https://astroicers.github.io/security-glossary-tw/api/v1/terms/apt.json
 ```
 
 ---
@@ -249,15 +249,9 @@ security-glossary-tw/
 
 ---
 
-## 🔗 相關專案
-
-- [security-weekly-report](https://github.com/your-org/security-weekly-report) - 使用本術語庫的資安週報產生器
-
----
-
 ## 📊 統計
 
-- 術語總數：150+
+- 術語總數：333
 - 分類數：7
-- 貢獻者：X
-- 最後更新：2024-12-XX
+- 標籤數：358
+- 最後更新：2024-12-04
