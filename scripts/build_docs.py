@@ -33,7 +33,11 @@ def slugify(tag: str) -> str:
     """Convert tag to safe filename."""
     # If pure ASCII alphanumeric, use lowercase with underscores
     if re.match(r'^[A-Za-z0-9\s\-_.]+$', tag):
-        return re.sub(r'[\s]+', '_', tag.lower()).strip('_')
+        slug = re.sub(r'[\s]+', '_', tag.lower()).strip('_')
+        # Avoid hidden files (starting with .) - use hash instead
+        if slug.startswith('.'):
+            return hashlib.md5(tag.encode()).hexdigest()[:8]
+        return slug
     # Chinese or mixed: use hash prefix
     hash_prefix = hashlib.md5(tag.encode()).hexdigest()[:8]
     return hash_prefix
