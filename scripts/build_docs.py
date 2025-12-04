@@ -193,8 +193,8 @@ def generate_category_page(cat_id: str, cat_terms: list[dict], categories: dict[
         term_en = term["term_en"]
         term_zh = term["term_zh"]
         brief = term.get("definitions", {}).get("brief", "")
-        # Use ../ to go back to glossary directory (category pages are at glossary/category.md)
-        lines.append(f"| [{term_en}](../{term_id}/) | {term_zh} | {brief} |")
+        # Category pages and term directories are in the same glossary/ directory
+        lines.append(f"| [{term_en}]({term_id}/) | {term_zh} | {brief} |")
 
     lines.append("")
     return "\n".join(lines)
