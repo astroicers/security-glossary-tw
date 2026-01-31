@@ -988,3 +988,271 @@ terms:
     related_terms: ["memory_injection", "dll_hijacking"]
     references:
       mitre_attack: "https://attack.mitre.org/techniques/T1055/"
+
+  # ------------------------------------------
+  # 2026-01 新增常見攻擊類型
+  # ------------------------------------------
+  - id: "tailgating"
+    term_en: "Tailgating"
+    term_zh: "尾隨攻擊"
+    definitions:
+      brief: "跟隨授權人員進入受限區域的物理安全攻擊"
+      standard: |
+        尾隨攻擊是一種物理安全威脅，攻擊者緊跟在授權人員身後，
+        趁門禁開啟時一起進入受限區域，無需自行驗證身分。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["物理安全", "社交工程", "門禁"]
+    related_terms: ["social_engineering", "piggybacking"]
+    aliases:
+      zh: ["尾隨入侵"]
+
+  - id: "piggybacking"
+    term_en: "Piggybacking"
+    term_zh: "搭便車攻擊"
+    definitions:
+      brief: "經授權人員同意進入受限區域的物理安全攻擊"
+      standard: |
+        搭便車攻擊與尾隨類似，但攻擊者取得授權人員的同意，
+        例如假裝是訪客、維修人員或送貨員，讓人幫忙開門。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["物理安全", "社交工程", "冒充"]
+    related_terms: ["tailgating", "social_engineering"]
+
+  - id: "shoulder_surfing"
+    term_en: "Shoulder Surfing"
+    term_zh: "肩窺攻擊"
+    definitions:
+      brief: "透過偷看他人螢幕或鍵盤竊取資訊"
+      standard: |
+        肩窺攻擊是攻擊者在公共場所偷看他人輸入密碼、PIN 碼，
+        或瀏覽機密文件的行為，是低技術但有效的資訊竊取方式。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["物理安全", "密碼竊取", "觀察"]
+    related_terms: ["credential_theft", "social_engineering"]
+
+  - id: "dumpster_diving"
+    term_en: "Dumpster Diving"
+    term_zh: "翻垃圾攻擊"
+    definitions:
+      brief: "從廢棄物中搜尋敏感資訊的攻擊手法"
+      standard: |
+        翻垃圾攻擊是從組織丟棄的垃圾中搜尋有價值的資訊，
+        如未妥善銷毀的文件、硬碟或其他包含敏感資料的物品。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["物理安全", "資訊蒐集", "偵察"]
+    related_terms: ["reconnaissance", "social_engineering"]
+
+  - id: "baiting"
+    term_en: "Baiting"
+    term_zh: "誘餌攻擊"
+    definitions:
+      brief: "利用好奇心誘使受害者使用惡意裝置"
+      standard: |
+        誘餌攻擊是將帶有惡意程式的 USB 隨身碟或光碟，
+        放置在目標可能會發現的地方，利用好奇心誘使其插入電腦。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["USB", "好奇心", "惡意程式"]
+    related_terms: ["social_engineering", "malware"]
+
+  - id: "rainbow_table_attack"
+    term_en: "Rainbow Table Attack"
+    term_zh: "彩虹表攻擊"
+    definitions:
+      brief: "使用預先計算的雜湊值表破解密碼"
+      standard: |
+        彩虹表攻擊使用預先計算好的雜湊值與明文對照表，
+        快速反查密碼雜湊值對應的原始密碼，
+        現代系統透過加鹽(salt)來防禦此攻擊。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["密碼破解", "雜湊", "預計算"]
+    related_terms: ["brute_force", "hash"]
+
+  - id: "dictionary_attack"
+    term_en: "Dictionary Attack"
+    term_zh: "字典攻擊"
+    definitions:
+      brief: "使用常見密碼清單嘗試破解的攻擊"
+      standard: |
+        字典攻擊使用預先建立的常見密碼清單進行嘗試，
+        比純暴力破解更有效率，因為許多使用者使用常見或簡單的密碼。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["密碼破解", "字典", "自動化"]
+    related_terms: ["brute_force", "password_spraying"]
+
+  - id: "birthday_attack"
+    term_en: "Birthday Attack"
+    term_zh: "生日攻擊"
+    definitions:
+      brief: "利用機率論攻擊雜湊函數的碰撞攻擊"
+      standard: |
+        生日攻擊基於生日悖論原理，在有限的樣本空間中，
+        找到兩個不同輸入產生相同雜湊值(碰撞)的機率遠高於預期，
+        可用於偽造數位簽章或憑證。
+    category: "attack_types"
+    subcategory: "advanced_attack"
+    tags: ["密碼學", "雜湊碰撞", "數學"]
+    related_terms: ["hash", "digital_signature"]
+
+  - id: "evil_twin"
+    term_en: "Evil Twin"
+    term_zh: "邪惡雙胞胎攻擊"
+    definitions:
+      brief: "設置假冒 Wi-Fi 熱點誘騙使用者連接"
+      standard: |
+        邪惡雙胞胎是攻擊者設置與合法 Wi-Fi 名稱相同的假冒熱點，
+        誘騙使用者連接後可攔截所有網路流量、竊取憑證或注入惡意內容。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["Wi-Fi", "中間人攻擊", "無線安全"]
+    related_terms: ["mitm", "rogue_ap"]
+    aliases:
+      zh: ["惡魔雙胞胎"]
+
+  - id: "rogue_ap"
+    term_en: "Rogue Access Point"
+    term_zh: "惡意存取點"
+    definitions:
+      brief: "未經授權設置在網路中的無線存取點"
+      standard: |
+        惡意存取點是未經授權連接到企業網路的無線設備，
+        可能是員工私自架設或攻擊者蓄意安裝，
+        可繞過網路安全控制或作為攻擊跳板。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["Wi-Fi", "無線安全", "內部威脅"]
+    related_terms: ["evil_twin"]
+
+  - id: "bluejacking"
+    term_en: "Bluejacking"
+    term_zh: "藍牙劫持"
+    definitions:
+      brief: "透過藍牙向附近裝置發送未經請求的訊息"
+      standard: |
+        藍牙劫持是透過藍牙功能向附近裝置發送訊息或名片的行為，
+        通常用於惡作劇，但也可能用於社交工程或散播惡意連結。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["藍牙", "無線安全", "行動裝置"]
+    related_terms: ["bluesnarfing"]
+
+  - id: "bluesnarfing"
+    term_en: "Bluesnarfing"
+    term_zh: "藍牙竊取"
+    definitions:
+      brief: "透過藍牙漏洞竊取裝置資料的攻擊"
+      standard: |
+        藍牙竊取利用藍牙協定漏洞，未經授權存取受害者裝置，
+        可竊取聯絡人、訊息、照片等敏感資料。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["藍牙", "無線安全", "資料竊取"]
+    related_terms: ["bluejacking"]
+
+  - id: "war_driving"
+    term_en: "War Driving"
+    term_zh: "戰爭駕駛"
+    definitions:
+      brief: "駕車尋找無線網路漏洞的偵察活動"
+      standard: |
+        戰爭駕駛是攻擊者駕車在城市中移動，
+        使用筆電和天線搜尋未加密或安全性不足的 Wi-Fi 網路，
+        記錄其位置供後續攻擊使用。
+    category: "attack_types"
+    subcategory: "network_attack"
+    tags: ["Wi-Fi", "偵察", "無線安全"]
+    related_terms: ["reconnaissance", "rogue_ap"]
+
+  - id: "sql_truncation"
+    term_en: "SQL Truncation Attack"
+    term_zh: "SQL 截斷攻擊"
+    definitions:
+      brief: "利用資料庫欄位長度限制的攻擊"
+      standard: |
+        SQL 截斷攻擊利用資料庫欄位的最大長度限制，
+        輸入超過限制的資料使其被截斷，
+        可能導致繞過唯一性檢查或覆蓋既有帳號。
+    category: "attack_types"
+    subcategory: "web_attack"
+    tags: ["SQL", "資料庫", "身分冒充"]
+    related_terms: ["sql_injection"]
+
+  - id: "subdomain_enumeration"
+    term_en: "Subdomain Enumeration"
+    term_zh: "子網域列舉"
+    definitions:
+      brief: "搜尋目標所有子網域的偵察技術"
+      standard: |
+        子網域列舉是資訊蒐集階段的技術，
+        透過 DNS 查詢、暴力猜測或搜尋引擎，
+        找出目標組織所有的子網域，發現潛在攻擊面。
+    category: "attack_types"
+    subcategory: "advanced_attack"
+    tags: ["偵察", "DNS", "資訊蒐集"]
+    related_terms: ["reconnaissance", "subdomain_takeover"]
+
+  - id: "reconnaissance"
+    term_en: "Reconnaissance"
+    term_zh: "偵察"
+    definitions:
+      brief: "攻擊前蒐集目標資訊的活動"
+      standard: |
+        偵察是攻擊者在發動攻擊前蒐集目標資訊的階段，
+        包括被動偵察（不直接接觸目標）和主動偵察（直接探測），
+        目的是了解目標的弱點和攻擊面。
+    category: "attack_types"
+    subcategory: "advanced_attack"
+    tags: ["資訊蒐集", "攻擊前置", "OSINT"]
+    related_terms: ["subdomain_enumeration", "osint"]
+    references:
+      mitre_attack: "https://attack.mitre.org/tactics/TA0043/"
+
+  - id: "osint"
+    term_en: "OSINT"
+    term_zh: "開源情報"
+    full_name_en: "Open Source Intelligence"
+    definitions:
+      brief: "從公開來源蒐集的情報資訊"
+      standard: |
+        開源情報是從公開可取得的來源蒐集和分析的資訊，
+        包括社群媒體、新聞、政府公告、網站等，
+        可用於攻擊偵察或防禦性威脅情報。
+    category: "attack_types"
+    subcategory: "advanced_attack"
+    tags: ["情報蒐集", "偵察", "公開資訊"]
+    related_terms: ["reconnaissance", "threat_intelligence"]
+
+  - id: "spim"
+    term_en: "SPIM"
+    term_zh: "即時通訊垃圾訊息"
+    full_name_en: "Spam over Instant Messaging"
+    definitions:
+      brief: "透過即時通訊軟體發送的垃圾訊息"
+      standard: |
+        即時通訊垃圾訊息是透過 LINE、WhatsApp、Facebook Messenger 等
+        即時通訊軟體發送的未經請求訊息，
+        常包含釣魚連結、詐騙廣告或惡意程式。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["垃圾訊息", "即時通訊", "詐騙"]
+    related_terms: ["phishing", "smishing"]
+
+  - id: "juice_jacking"
+    term_en: "Juice Jacking"
+    term_zh: "充電劫持"
+    definitions:
+      brief: "透過惡意公用充電站竊取資料的攻擊"
+      standard: |
+        充電劫持是在公共 USB 充電站植入惡意程式，
+        當使用者連接手機充電時，透過 USB 資料線竊取資料，
+        或在裝置上安裝惡意程式。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["USB", "行動裝置", "資料竊取"]
+    related_terms: ["baiting", "malware"]

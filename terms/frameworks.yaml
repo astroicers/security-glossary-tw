@@ -305,3 +305,180 @@ terms:
     subcategory: "compliance_framework"
     tags: ["資料保護", "分類", "政策"]
     related_terms: ["dlp", "pii"]
+
+  # ------------------------------------------
+  # 2026-01 新增基礎術語
+  # ------------------------------------------
+  - id: "cia_triad"
+    term_en: "CIA Triad"
+    term_zh: "CIA 三要素"
+    definitions:
+      brief: "資訊安全的三大核心原則：機密性、完整性、可用性"
+      standard: |
+        CIA 三要素是資訊安全的基礎模型：
+        機密性（Confidentiality）確保資料僅授權者可存取；
+        完整性（Integrity）確保資料未被未授權修改；
+        可用性（Availability）確保授權者可在需要時存取資料。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["基礎概念", "安全原則", "核心"]
+    related_terms: ["confidentiality", "integrity", "availability"]
+    aliases:
+      en: ["CIA Model", "Security Triad"]
+      zh: ["機密性完整性可用性", "資安三要素"]
+    metadata:
+      status: "approved"
+
+  - id: "attack_surface"
+    term_en: "Attack Surface"
+    term_zh: "攻擊面"
+    definitions:
+      brief: "系統中可能被攻擊者利用的所有潛在入口點"
+      standard: |
+        攻擊面是指系統、網路或組織中所有可能被攻擊者利用的入口點，
+        包括暴露的服務、API、使用者介面、第三方整合等。
+        攻擊面越大，潛在風險越高。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["風險評估", "基礎概念", "資產管理"]
+    related_terms: ["asm", "easm", "vulnerability_management"]
+    aliases:
+      zh: ["攻擊表面"]
+    metadata:
+      status: "approved"
+
+  - id: "defense_in_depth"
+    term_en: "Defense in Depth"
+    term_zh: "縱深防禦"
+    definitions:
+      brief: "部署多層安全控制以保護資產的策略"
+      standard: |
+        縱深防禦是一種資安策略，在多個層次部署安全控制措施，
+        即使單一層被突破，其他層仍能提供保護。
+        概念源自軍事防禦理論。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["安全策略", "基礎概念", "架構"]
+    related_terms: ["zero_trust", "security_control"]
+    aliases:
+      en: ["DiD", "Layered Security"]
+      zh: ["多層防禦", "深度防禦"]
+    metadata:
+      status: "approved"
+
+  - id: "security_control"
+    term_en: "Security Control"
+    term_zh: "安全控制措施"
+    definitions:
+      brief: "用於保護資訊系統的管理、操作或技術措施"
+      standard: |
+        安全控制措施是組織為保護資訊資產所實施的各種措施，
+        分為管理控制（政策）、操作控制（流程）、技術控制（工具）三類，
+        也可分為預防、偵測、回應、復原四種功能。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["基礎概念", "合規", "風險管理"]
+    related_terms: ["defense_in_depth", "nist_sp_800_53"]
+    aliases:
+      en: ["Control"]
+      zh: ["控制措施", "安全措施"]
+    metadata:
+      status: "approved"
+
+  - id: "risk_assessment"
+    term_en: "Risk Assessment"
+    term_zh: "風險評估"
+    definitions:
+      brief: "識別、分析和評估資安風險的系統化流程"
+      standard: |
+        風險評估是識別組織資產面臨的威脅和漏洞，
+        分析風險發生的可能性和潛在影響，
+        並評估風險等級以決定處置優先順序的過程。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["風險管理", "基礎概念", "合規"]
+    related_terms: ["risk_management", "vulnerability_assessment", "cvss"]
+    aliases:
+      zh: ["資安風險評估"]
+    metadata:
+      status: "approved"
+
+  # ------------------------------------------
+  # 2026-01 新增框架術語（第二批）
+  # ------------------------------------------
+  - id: "owasp"
+    term_en: "OWASP"
+    term_zh: "OWASP 基金會"
+    full_name_en: "Open Web Application Security Project"
+    definitions:
+      brief: "推廣網頁應用程式安全的非營利組織"
+      standard: |
+        OWASP 是一個致力於提升軟體安全的全球性非營利組織，
+        提供免費的工具、文件和社群資源。
+        其 OWASP Top 10 是網頁安全的重要參考標準。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["網頁安全", "社群", "標準"]
+    related_terms: ["owasp_top10", "owasp_api_top10"]
+    references:
+      other:
+        official: "https://owasp.org/"
+    metadata:
+      status: "approved"
+
+  - id: "owasp_api_top10"
+    term_en: "OWASP API Security Top 10"
+    term_zh: "OWASP API 安全十大風險"
+    definitions:
+      brief: "API 最常見的十大安全風險排名"
+      standard: |
+        OWASP API 安全 Top 10 列出 API 最常見和嚴重的安全風險，
+        包括物件層級授權失效（BOLA）、驗證失效、
+        資源消耗無限制等。2023 年版本是最新版。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["API 安全", "風險排名", "OWASP"]
+    related_terms: ["owasp_top10", "api_security", "bola"]
+    references:
+      other:
+        official: "https://owasp.org/API-Security/"
+    metadata:
+      status: "approved"
+
+  - id: "bola"
+    term_en: "BOLA"
+    term_zh: "物件層級授權失效"
+    full_name_en: "Broken Object Level Authorization"
+    definitions:
+      brief: "API 未正確驗證使用者對物件存取權限的漏洞"
+      standard: |
+        物件層級授權失效是 OWASP API Top 10 第一名的風險，
+        發生在 API 未正確驗證使用者是否有權存取特定物件時，
+        攻擊者可透過修改物件 ID 存取他人資料。
+    category: "frameworks"
+    subcategory: "assessment"
+    tags: ["API 安全", "授權", "OWASP"]
+    related_terms: ["owasp_api_top10", "idor", "broken_access_control"]
+    metadata:
+      status: "approved"
+
+  - id: "cis_benchmarks"
+    term_en: "CIS Benchmarks"
+    term_zh: "CIS 安全基準"
+    definitions:
+      brief: "針對各種系統的安全設定最佳實務指南"
+      standard: |
+        CIS 安全基準是由網際網路安全中心（CIS）發布的
+        系統安全設定指南，涵蓋作業系統、雲端平台、
+        應用程式等，是業界廣泛採用的安全強化標準。
+    category: "frameworks"
+    subcategory: "compliance_framework"
+    tags: ["安全基準", "強化", "合規"]
+    related_terms: ["security_baseline", "hardening"]
+    references:
+      other:
+        official: "https://www.cisecurity.org/cis-benchmarks"
+    metadata:
+      status: "approved"
+  # 注意：以下術語已存在於 compliance.yaml，不在此重複：
+  # nist_csf, iso_27001, soc2, pci_dss, gdpr, hipaa, ccpa

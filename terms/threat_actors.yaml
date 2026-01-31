@@ -914,3 +914,282 @@ terms:
     metadata:
       status: "approved"
       attribution_country: "North Korea"
+
+  # ------------------------------------------
+  # 2026-01 新增常見威脅行為者術語
+  # ------------------------------------------
+  - id: "script_kiddie"
+    term_en: "Script Kiddie"
+    term_zh: "腳本小子"
+    definitions:
+      brief: "使用現成工具進行攻擊的低技術駭客"
+      standard: |
+        腳本小子是指沒有深厚技術能力，
+        依賴他人開發的現成攻擊工具或腳本進行攻擊的人，
+        通常出於好奇或炫耀目的。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["低技術", "工具使用者", "業餘"]
+    related_terms: ["hacker"]
+
+  - id: "hacker"
+    term_en: "Hacker"
+    term_zh: "駭客"
+    definitions:
+      brief: "具有電腦技術專長，可進行系統入侵的人"
+      standard: |
+        駭客原指對電腦技術有深入研究的專家，
+        現今常用於描述進行網路攻擊的人，
+        依動機可分為白帽、黑帽和灰帽駭客。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["基礎概念", "技術專家"]
+    related_terms: ["white_hat", "black_hat", "gray_hat"]
+    usage:
+      preferred: true
+      avoid: ["黑客"]
+
+  - id: "white_hat"
+    term_en: "White Hat"
+    term_zh: "白帽駭客"
+    definitions:
+      brief: "以合法方式進行安全測試的道德駭客"
+      standard: |
+        白帽駭客是經過授權進行安全測試的專業人員，
+        協助組織發現和修復安全漏洞，
+        通常是滲透測試人員或安全研究人員。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["道德駭客", "授權測試", "防禦"]
+    related_terms: ["pentesting", "hacker"]
+    aliases:
+      zh: ["道德駭客"]
+
+  - id: "black_hat"
+    term_en: "Black Hat"
+    term_zh: "黑帽駭客"
+    definitions:
+      brief: "出於惡意目的進行非法入侵的駭客"
+      standard: |
+        黑帽駭客是出於金錢、政治或惡意目的，
+        未經授權入侵系統、竊取資料或造成破壞的駭客，
+        其行為通常違反法律。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["惡意", "犯罪", "非法"]
+    related_terms: ["hacker", "cybercriminal"]
+
+  - id: "gray_hat"
+    term_en: "Gray Hat"
+    term_zh: "灰帽駭客"
+    definitions:
+      brief: "介於白帽和黑帽之間的駭客"
+      standard: |
+        灰帽駭客可能未經授權入侵系統，
+        但目的不是造成傷害而是發現漏洞，
+        有時會在公開漏洞前通知組織，行為處於法律灰色地帶。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["非授權", "漏洞揭露"]
+    related_terms: ["white_hat", "black_hat", "bug_bounty"]
+
+  - id: "cybercriminal"
+    term_en: "Cybercriminal"
+    term_zh: "網路犯罪者"
+    definitions:
+      brief: "從事網路犯罪活動以牟利的個人或組織"
+      standard: |
+        網路犯罪者是利用網路技術從事違法活動的人或團體，
+        動機通常是金錢利益，活動包括詐騙、勒索、盜竊等。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["犯罪", "金錢動機"]
+    related_terms: ["black_hat", "ransomware_group"]
+
+  - id: "organized_crime"
+    term_en: "Organized Cybercrime"
+    term_zh: "組織化網路犯罪"
+    definitions:
+      brief: "有組織結構和分工的網路犯罪集團"
+      standard: |
+        組織化網路犯罪是具有類似企業結構的犯罪組織，
+        有明確的分工、管理層級和專業化角色，
+        從事大規模的勒索軟體、詐騙或盜竊活動。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["犯罪組織", "企業化", "分工"]
+    related_terms: ["ransomware_group", "cybercriminal"]
+
+  - id: "state_sponsored"
+    term_en: "State-Sponsored"
+    term_zh: "國家支持的"
+    definitions:
+      brief: "由國家政府資助或指揮的網路行動"
+      standard: |
+        國家支持的是指由政府直接或間接資助、訓練或指揮的網路攻擊，
+        通常具有充足資源和先進技術，目標是政治、軍事或經濟利益。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["國家級", "政府", "資源充足"]
+    related_terms: ["apt", "nation_state_actor"]
+
+  - id: "bug_bounty_hunter"
+    term_en: "Bug Bounty Hunter"
+    term_zh: "漏洞獎金獵人"
+    definitions:
+      brief: "參與漏洞獎勵計畫的安全研究人員"
+      standard: |
+        漏洞獎金獵人是參與企業漏洞獎勵計畫的獨立研究人員，
+        合法發現和回報軟體漏洞以獲取獎金，
+        是白帽駭客的一種。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["漏洞研究", "獎勵計畫", "白帽"]
+    related_terms: ["bug_bounty", "white_hat"]
+
+  - id: "penetration_tester"
+    term_en: "Penetration Tester"
+    term_zh: "滲透測試人員"
+    definitions:
+      brief: "受雇進行授權安全測試的專業人員"
+      standard: |
+        滲透測試人員是經過組織授權，
+        模擬攻擊者手法測試系統安全性的專業人員，
+        目的是找出漏洞並提供修補建議。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["授權測試", "專業服務", "白帽"]
+    related_terms: ["pentesting", "white_hat", "red_team"]
+    aliases:
+      zh: ["滲透測試員"]
+
+  - id: "red_team"
+    term_en: "Red Team"
+    term_zh: "紅隊"
+    definitions:
+      brief: "模擬真實攻擊者的內部安全測試團隊"
+      standard: |
+        紅隊是組織內部或外聘的安全團隊，
+        模擬真實威脅行為者的戰術、技術和程序，
+        對組織進行全面的攻擊模擬，測試防禦能力。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["攻擊模擬", "安全測試", "內部"]
+    related_terms: ["blue_team", "purple_team", "penetration_tester"]
+
+  - id: "blue_team"
+    term_en: "Blue Team"
+    term_zh: "藍隊"
+    definitions:
+      brief: "負責防禦和事件回應的安全團隊"
+      standard: |
+        藍隊是組織內部負責安全防禦的團隊，
+        包括安全監控、事件回應、威脅狩獵等工作，
+        在紅藍對抗中扮演防守角色。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["防禦", "監控", "事件回應"]
+    related_terms: ["red_team", "purple_team", "soc"]
+
+  - id: "purple_team"
+    term_en: "Purple Team"
+    term_zh: "紫隊"
+    definitions:
+      brief: "協調紅藍兩隊合作的安全團隊"
+      standard: |
+        紫隊是協調紅隊和藍隊合作的團隊，
+        確保攻擊模擬的成果能有效轉化為防禦改善，
+        促進攻防雙方的知識分享和持續改進。
+    category: "threat_actors"
+    subcategory: "actor_type"
+    tags: ["協調", "改善", "整合"]
+    related_terms: ["red_team", "blue_team"]
+
+  - id: "soc"
+    term_en: "SOC"
+    term_zh: "資安監控中心"
+    full_name_en: "Security Operations Center"
+    definitions:
+      brief: "全天候監控組織資安狀態的中央單位"
+      standard: |
+        資安監控中心是組織內負責 24/7 安全監控的單位，
+        負責偵測、分析和回應資安事件，
+        是藍隊運作的核心。
+    category: "threat_actors"
+    subcategory: "infrastructure"
+    tags: ["監控", "事件回應", "全天候"]
+    related_terms: ["blue_team", "siem"]
+
+  - id: "mssp"
+    term_en: "MSSP"
+    term_zh: "託管式安全服務供應商"
+    full_name_en: "Managed Security Service Provider"
+    definitions:
+      brief: "提供外包資安監控和管理服務的廠商"
+      standard: |
+        託管式安全服務供應商是提供外包資安服務的廠商，
+        服務包括安全監控、事件回應、漏洞管理等，
+        讓組織無需自建完整的安全團隊。
+    category: "threat_actors"
+    subcategory: "infrastructure"
+    tags: ["外包", "服務", "託管"]
+    related_terms: ["soc", "mdr"]
+
+  - id: "mdr"
+    term_en: "MDR"
+    term_zh: "託管式偵測與回應"
+    full_name_en: "Managed Detection and Response"
+    definitions:
+      brief: "結合自動化和人工分析的安全監控服務"
+      standard: |
+        託管式偵測與回應是進階的安全監控服務，
+        結合自動化工具和專業分析師的人工判斷，
+        提供威脅偵測、調查和回應服務。
+    category: "threat_actors"
+    subcategory: "infrastructure"
+    tags: ["偵測", "回應", "託管服務"]
+    related_terms: ["mssp", "edr"]
+
+  - id: "attribution"
+    term_en: "Attribution"
+    term_zh: "攻擊歸因"
+    definitions:
+      brief: "確定網路攻擊背後實際行為者的過程"
+      standard: |
+        攻擊歸因是分析和確定網路攻擊背後真正行為者的過程，
+        通常需要結合技術證據、情報資訊和政治脈絡，
+        是一項複雜且具爭議性的工作。
+    category: "threat_actors"
+    subcategory: "methodology"
+    tags: ["調查", "分析", "溯源"]
+    related_terms: ["threat_intelligence", "ioc"]
+
+  - id: "false_flag"
+    term_en: "False Flag"
+    term_zh: "假旗行動"
+    definitions:
+      brief: "攻擊者偽裝成其他組織的欺騙手法"
+      standard: |
+        假旗行動是攻擊者故意在攻擊中留下指向其他組織的痕跡，
+        目的是混淆歸因、嫁禍他人或引發地緣政治衝突，
+        使調查人員誤判攻擊來源。
+    category: "threat_actors"
+    subcategory: "methodology"
+    tags: ["欺騙", "歸因", "偽裝"]
+    related_terms: ["attribution"]
+
+  # 注意：kill_chain 已存在於 frameworks.yaml，此處不重複
+
+  - id: "diamond_model"
+    term_en: "Diamond Model"
+    term_zh: "鑽石模型"
+    definitions:
+      brief: "以四個核心元素分析入侵事件的框架"
+      standard: |
+        鑽石模型是分析網路入侵的框架，
+        包含對手、能力、基礎設施和受害者四個頂點，
+        用於理解攻擊事件的關係和脈絡。
+    category: "threat_actors"
+    subcategory: "methodology"
+    tags: ["框架", "分析", "威脅情報"]
+    related_terms: ["threat_intelligence", "kill_chain"]

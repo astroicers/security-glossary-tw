@@ -3,7 +3,7 @@
 > 台灣第一個開源、結構化、可機器讀取的繁體中文資安專有名詞庫
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Terms Count](https://img.shields.io/badge/術語數量-333-blue.svg)](https://astroicers.github.io/security-glossary-tw/glossary/)
+[![Terms Count](https://img.shields.io/badge/術語數量-437-blue.svg)](https://astroicers.github.io/security-glossary-tw/glossary/)
 
 ---
 
@@ -65,13 +65,13 @@ https://astroicers.github.io/security-glossary-tw/api/v1/terms/apt.json
 security-glossary-tw/
 │
 ├── terms/                          # 📚 術語定義 (YAML)
-│   ├── attack_types.yaml           # 攻擊類型 (~30)
-│   ├── vulnerabilities.yaml        # 漏洞類型 (~25)
-│   ├── threat_actors.yaml          # 威脅行為者 (~20)
-│   ├── malware.yaml                # 惡意程式 (~20)
-│   ├── technologies.yaml           # 技術名詞 (~30)
-│   ├── frameworks.yaml             # 框架標準 (~15)
-│   └── compliance.yaml             # 法規合規 (~10)
+│   ├── attack_types.yaml           # 攻擊類型 (79)
+│   ├── vulnerabilities.yaml        # 漏洞類型 (51)
+│   ├── threat_actors.yaml          # 威脅行為者 (66)
+│   ├── malware.yaml                # 惡意程式 (64)
+│   ├── technologies.yaml           # 技術名詞 (136)
+│   ├── frameworks.yaml             # 框架標準 (27)
+│   └── compliance.yaml             # 法規合規 (14)
 │
 ├── meta/                           # 📋 元資料
 │   ├── categories.yaml             # 分類定義
@@ -251,7 +251,7 @@ security-glossary-tw/
 
 ## 📊 統計
 
-- 術語總數：333
+- 術語總數：437
 - 分類數：7
-- 標籤數：358
-- 最後更新：2024-12-04
+- 標籤數：500+
+- 最後更新：2026-01-31

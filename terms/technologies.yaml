@@ -1659,3 +1659,1448 @@ terms:
   metadata:
     status: approved
     source: AI Generated (Weekly Report)
+
+# ------------------------------------------
+# 2026-01 新增基礎術語
+# ------------------------------------------
+- id: cybersecurity
+  term_en: Cybersecurity
+  term_zh: 網路安全
+  definitions:
+    brief: 保護資訊系統免受網路攻擊的實務與技術
+    standard: |
+      網路安全是指保護電腦系統、網路和資料免受未授權存取、
+      攻擊、損害或竊取的實務、技術和流程。
+      涵蓋人員、流程、技術三個面向。
+  category: technologies
+  subcategory: general
+  tags:
+  - 基礎概念
+  - 總稱
+  related_terms:
+  - information_security
+  - network_security
+  aliases:
+    en:
+    - Cyber Security
+    - Cyber-security
+    zh:
+    - 資訊安全
+    - 資安
+  metadata:
+    status: approved
+
+- id: incident_response
+  term_en: Incident Response
+  term_zh: 事件回應
+  definitions:
+    brief: 偵測、分析和處理資安事件的結構化流程
+    standard: |
+      事件回應是組織偵測、分析和處理資安事件的系統化方法，
+      目標是限制損害、縮短復原時間、降低成本。
+      典型流程包括準備、識別、遏制、根除、復原、檢討六階段。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - SOC
+  - 事件處理
+  - 基礎概念
+  related_terms:
+  - soc
+  - siem
+  aliases:
+    en:
+    - IR
+    zh:
+    - 資安事件回應
+    - 事件應變
+  metadata:
+    status: approved
+
+- id: threat_hunting
+  term_en: Threat Hunting
+  term_zh: 威脅獵捕
+  definitions:
+    brief: 主動搜尋潛伏在網路中未被偵測威脅的活動
+    standard: |
+      威脅獵捕是資安分析師主動搜尋網路中潛在威脅的活動，
+      不依賴自動化警報，而是基於假設驅動的調查，
+      目的是找出繞過現有安全控制的進階威脅。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - SOC
+  - 主動防禦
+  - APT
+  related_terms:
+  - soc
+  - threat_intelligence
+  - edr
+  aliases:
+    zh:
+    - 威脅狩獵
+    - 主動威脅搜尋
+  metadata:
+    status: approved
+
+- id: encryption_at_rest
+  term_en: Encryption at Rest
+  term_zh: 靜態加密
+  definitions:
+    brief: 對儲存中資料進行加密保護
+    standard: |
+      靜態加密是指對儲存在硬碟、資料庫、雲端儲存等
+      持久化媒體上的資料進行加密，
+      保護資料在儲存狀態下不被未授權存取。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 加密
+  - 資料保護
+  - 儲存
+  parent_term: encryption
+  relationship: subtype_of
+  related_terms:
+  - encryption
+  - encryption_in_transit
+  aliases:
+    zh:
+    - 儲存加密
+    - 落地加密
+  metadata:
+    status: approved
+
+- id: encryption_in_transit
+  term_en: Encryption in Transit
+  term_zh: 傳輸加密
+  definitions:
+    brief: 對網路傳輸中資料進行加密保護
+    standard: |
+      傳輸加密是指對在網路上傳輸的資料進行加密，
+      防止資料在傳輸過程中被竊聽或篡改。
+      常見實作包括 TLS/SSL、VPN 等。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 加密
+  - 資料保護
+  - 網路
+  parent_term: encryption
+  relationship: subtype_of
+  related_terms:
+  - encryption
+  - encryption_at_rest
+  - tls
+  aliases:
+    zh:
+    - 傳輸中加密
+    - 動態加密
+  metadata:
+    status: approved
+
+- id: security_awareness
+  term_en: Security Awareness
+  term_zh: 資安意識
+  definitions:
+    brief: 員工對資安風險和最佳實務的認知與警覺
+    standard: |
+      資安意識是指組織成員對資訊安全風險、政策和最佳實務的了解程度，
+      以及識別和回應潛在威脅的能力。
+      資安意識訓練是人員安全的重要環節。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 人員安全
+  - 訓練
+  - 基礎概念
+  related_terms:
+  - social_engineering
+  - phishing
+  aliases:
+    en:
+    - Security Awareness Training
+    zh:
+    - 資安意識訓練
+    - 安全意識
+  metadata:
+    status: approved
+
+- id: backup
+  term_en: Backup
+  term_zh: 備份
+  definitions:
+    brief: 複製資料以便在原始資料遺失時恢復
+    standard: |
+      備份是建立資料副本的過程，用於在原始資料遺失、
+      損壞或遭勒索軟體加密時恢復。
+      有效的備份策略應包括離線備份和定期測試復原。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 資料保護
+  - 災難復原
+  - 基礎概念
+  related_terms:
+  - disaster_recovery
+  - ransomware
+  aliases:
+    zh:
+    - 資料備份
+  metadata:
+    status: approved
+
+- id: disaster_recovery
+  term_en: Disaster Recovery
+  term_zh: 災難復原
+  definitions:
+    brief: 在重大事故後恢復關鍵系統運作的計畫與流程
+    standard: |
+      災難復原是組織在遭遇重大事故（如勒索軟體、天災、硬體故障）後，
+      恢復關鍵 IT 系統和業務運作的計畫與執行流程，
+      通常包含 RTO（復原時間目標）和 RPO（復原點目標）。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 業務持續
+  - 備份
+  - 基礎概念
+  related_terms:
+  - backup
+  - ransomware
+  aliases:
+    en:
+    - DR
+    zh:
+    - 災害復原
+    - DR 計畫
+  metadata:
+    status: approved
+
+# ------------------------------------------
+# 2026-01 新增術語（第二批）
+# ------------------------------------------
+- id: ethical_hacking
+  term_en: Ethical Hacking
+  term_zh: 道德駭客
+  definitions:
+    brief: 經授權模擬惡意攻擊以發現系統弱點的行為
+    standard: |
+      道德駭客是指在獲得組織授權的情況下，
+      使用與惡意駭客相同的技術和工具來測試系統安全性，
+      目的是在攻擊者之前發現並修補漏洞。又稱白帽駭客。
+  category: technologies
+  subcategory: security_testing
+  tags:
+  - 滲透測試
+  - 白帽
+  - 安全評估
+  related_terms:
+  - pentesting
+  - red_team
+  - vulnerability_assessment
+  aliases:
+    en:
+    - White Hat Hacking
+    zh:
+    - 白帽駭客
+    - 合法入侵測試
+  metadata:
+    status: approved
+
+- id: ip_address
+  term_en: IP Address
+  term_zh: IP 位址
+  full_name_en: Internet Protocol Address
+  definitions:
+    brief: 網路上識別裝置的唯一數字位址
+    standard: |
+      IP 位址是網際網路協定中用於識別網路裝置的唯一數字標識，
+      分為 IPv4（32 位元）和 IPv6（128 位元）兩種格式。
+      在資安中常用於追蹤攻擊來源和實施存取控制。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網路基礎
+  - 識別
+  related_terms:
+  - firewall
+  - network_monitoring
+  aliases:
+    zh:
+    - 網路位址
+    - IP 地址
+  metadata:
+    status: approved
+
+- id: cryptography
+  term_en: Cryptography
+  term_zh: 密碼學
+  definitions:
+    brief: 使用數學技術保護資訊安全的科學
+    standard: |
+      密碼學是研究如何使用數學演算法保護資訊機密性、
+      完整性和真實性的科學。
+      涵蓋對稱加密、非對稱加密、雜湊函數、數位簽章等技術。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 加密
+  - 基礎概念
+  - 數學
+  related_terms:
+  - encryption
+  - aes
+  - rsa
+  - tls
+  aliases:
+    zh:
+    - 加密學
+  metadata:
+    status: approved
+
+- id: hash
+  term_en: Hash
+  term_zh: 雜湊
+  definitions:
+    brief: 將任意長度資料轉換為固定長度摘要的函數
+    standard: |
+      雜湊函數將任意長度的輸入轉換為固定長度的輸出（雜湊值），
+      具有單向性（無法從雜湊值還原原始資料）。
+      常用於密碼儲存、資料完整性驗證和數位簽章。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 加密
+  - 完整性
+  - 密碼
+  related_terms:
+  - cryptography
+  - encryption
+  aliases:
+    en:
+    - Hash Function
+    - Hashing
+    zh:
+    - 雜湊函數
+    - 哈希
+  metadata:
+    status: approved
+
+- id: digital_signature
+  term_en: Digital Signature
+  term_zh: 數位簽章
+  definitions:
+    brief: 用於驗證數位文件真實性和完整性的加密機制
+    standard: |
+      數位簽章使用非對稱加密技術，讓發送者可以「簽署」文件，
+      接收者可以驗證文件確實來自發送者且未被篡改。
+      廣泛用於軟體發布、電子合約和安全通訊。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 加密
+  - 驗證
+  - 完整性
+  related_terms:
+  - cryptography
+  - rsa
+  - pki
+  aliases:
+    zh:
+    - 電子簽章
+  metadata:
+    status: approved
+
+- id: pki
+  term_en: PKI
+  term_zh: 公開金鑰基礎架構
+  full_name_en: Public Key Infrastructure
+  definitions:
+    brief: 管理數位憑證和公開金鑰的系統架構
+    standard: |
+      公開金鑰基礎架構是一套用於建立、管理、發布、
+      撤銷數位憑證的系統，支援安全的電子通訊。
+      包含憑證授權中心（CA）、註冊中心（RA）等元件。
+  category: technologies
+  subcategory: identity
+  tags:
+  - 憑證
+  - 加密
+  - 身分驗證
+  related_terms:
+  - digital_signature
+  - tls
+  - certificate
+  metadata:
+    status: approved
+
+- id: certificate
+  term_en: Digital Certificate
+  term_zh: 數位憑證
+  definitions:
+    brief: 用於證明公開金鑰擁有者身分的電子文件
+    standard: |
+      數位憑證是由憑證授權中心（CA）簽發的電子文件，
+      將公開金鑰與擁有者身分綁定。
+      HTTPS 網站使用 SSL/TLS 憑證來建立安全連線。
+  category: technologies
+  subcategory: identity
+  tags:
+  - PKI
+  - 身分驗證
+  - HTTPS
+  related_terms:
+  - pki
+  - tls
+  aliases:
+    en:
+    - SSL Certificate
+    - TLS Certificate
+    zh:
+    - 憑證
+    - SSL 憑證
+  metadata:
+    status: approved
+
+- id: business_continuity
+  term_en: Business Continuity
+  term_zh: 業務持續
+  definitions:
+    brief: 確保組織在災難後能持續運作的計畫與能力
+    standard: |
+      業務持續是組織在遭遇重大事故時維持關鍵業務運作的能力，
+      包含業務持續計畫（BCP）的制定、測試和維護。
+      與災難復原相輔相成，災難復原著重 IT 系統，業務持續著重整體營運。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 業務持續
+  - 風險管理
+  - 規劃
+  related_terms:
+  - disaster_recovery
+  - backup
+  - risk_management
+  aliases:
+    en:
+    - BCP
+    - Business Continuity Planning
+    zh:
+    - 業務連續性
+    - 營運持續
+  metadata:
+    status: approved
+
+- id: security_policy
+  term_en: Security Policy
+  term_zh: 資安政策
+  definitions:
+    brief: 定義組織資訊安全要求和規範的正式文件
+    standard: |
+      資安政策是組織制定的正式文件，
+      定義資訊安全的目標、責任、規範和程序。
+      是資訊安全管理系統（ISMS）的基礎。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 政策
+  - 治理
+  - 合規
+  related_terms:
+  - isms
+  - security_control
+  - risk_management
+  aliases:
+    zh:
+    - 安全政策
+    - 資訊安全政策
+  metadata:
+    status: approved
+
+- id: access_log
+  term_en: Access Log
+  term_zh: 存取日誌
+  definitions:
+    brief: 記錄系統或資源存取活動的日誌
+    standard: |
+      存取日誌記錄使用者或系統對資源的存取活動，
+      包含時間、來源、目標、操作類型等資訊。
+      是安全監控、事件調查和合規稽核的重要資料來源。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 日誌
+  - 監控
+  - 稽核
+  related_terms:
+  - audit_log
+  - siem
+  - soc
+  aliases:
+    zh:
+    - 存取紀錄
+  metadata:
+    status: approved
+
+- id: security_baseline
+  term_en: Security Baseline
+  term_zh: 安全基準
+  definitions:
+    brief: 系統或應用程式應達到的最低安全設定標準
+    standard: |
+      安全基準是組織定義的最低安全設定要求，
+      確保所有系統符合一致的安全標準。
+      常見的基準包括 CIS Benchmarks、DISA STIG 等。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 設定管理
+  - 合規
+  - 標準
+  related_terms:
+  - hardening
+  - misconfiguration
+  - security_control
+  aliases:
+    zh:
+    - 安全基線
+  metadata:
+    status: approved
+
+- id: hardening
+  term_en: System Hardening
+  term_zh: 系統強化
+  definitions:
+    brief: 減少系統攻擊面的安全設定過程
+    standard: |
+      系統強化是透過移除不必要的服務、關閉未使用的埠、
+      套用安全設定等方式，減少系統潛在弱點的過程。
+      是縱深防禦的重要環節。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 設定管理
+  - 攻擊面
+  - 防禦
+  related_terms:
+  - security_baseline
+  - attack_surface
+  - defense_in_depth
+  aliases:
+    en:
+    - Hardening
+    zh:
+    - 強化
+    - 安全強化
+  metadata:
+    status: approved
+
+- id: segmentation
+  term_en: Network Segmentation
+  term_zh: 網路分段
+  definitions:
+    brief: 將網路劃分為較小區段以限制威脅擴散
+    standard: |
+      網路分段是將大型網路劃分為較小、隔離的區段，
+      限制攻擊者的橫向移動能力。
+      可透過 VLAN、防火牆、微分段等技術實現。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網路安全
+  - 隔離
+  - 橫向移動
+  related_terms:
+  - firewall
+  - lateral_movement
+  - zero_trust
+  aliases:
+    en:
+    - Segmentation
+    - Microsegmentation
+    zh:
+    - 網路隔離
+    - 微分段
+  metadata:
+    status: approved
+
+- id: threat_modeling
+  term_en: Threat Modeling
+  term_zh: 威脅建模
+  definitions:
+    brief: 系統性識別和評估系統潛在威脅的方法
+    standard: |
+      威脅建模是在設計階段識別應用程式或系統可能面臨的威脅，
+      評估風險並規劃對策的系統化方法。
+      常用方法包括 STRIDE、PASTA、DREAD 等。
+  category: technologies
+  subcategory: application_security
+  tags:
+  - 安全設計
+  - SDLC
+  - 風險評估
+  related_terms:
+  - stride
+  - dread
+  - risk_assessment
+  aliases:
+    zh:
+    - 威脅模型
+  metadata:
+    status: approved
+
+- id: secure_coding
+  term_en: Secure Coding
+  term_zh: 安全程式設計
+  definitions:
+    brief: 在開發過程中遵循安全最佳實務的程式設計方法
+    standard: |
+      安全程式設計是在軟體開發過程中考慮安全性，
+      遵循最佳實務避免引入漏洞的開發方法。
+      包含輸入驗證、輸出編碼、錯誤處理等實務。
+  category: technologies
+  subcategory: application_security
+  tags:
+  - DevSecOps
+  - SDLC
+  - 開發
+  related_terms:
+  - sast
+  - owasp_top10
+  - input_validation
+  aliases:
+    en:
+    - Secure Development
+    zh:
+    - 安全開發
+    - 安全編碼
+  metadata:
+    status: approved
+
+- id: devsecops
+  term_en: DevSecOps
+  term_zh: DevSecOps
+  definitions:
+    brief: 將安全整合到 DevOps 流程中的方法論
+    standard: |
+      DevSecOps 是將安全實務整合到軟體開發和維運流程的方法，
+      強調「左移」安全（在開發早期考慮安全）、
+      自動化安全測試和持續安全監控。
+  category: technologies
+  subcategory: application_security
+  tags:
+  - 開發
+  - 自動化
+  - CI/CD
+  related_terms:
+  - sast
+  - dast
+  - sbom
+  - secure_coding
+  aliases:
+    zh:
+    - 開發安全維運
+  metadata:
+    status: approved
+
+- id: data_masking
+  term_en: Data Masking
+  term_zh: 資料遮蔽
+  definitions:
+    brief: 隱藏敏感資料的部分內容以保護隱私
+    standard: |
+      資料遮蔽是將敏感資料替換為虛假但格式相似的資料，
+      用於在非生產環境中使用或顯示資料時保護隱私。
+      例如將信用卡號顯示為 **** **** **** 1234。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 資料保護
+  - 隱私
+  - 合規
+  related_terms:
+  - dlp
+  - pii
+  - encryption
+  aliases:
+    en:
+    - Data Obfuscation
+    zh:
+    - 資料脫敏
+  metadata:
+    status: approved
+
+- id: tokenization
+  term_en: Tokenization
+  term_zh: 代碼化
+  definitions:
+    brief: 以無意義的代碼取代敏感資料的保護技術
+    standard: |
+      代碼化是將敏感資料（如信用卡號）替換為無意義的代碼（token），
+      原始資料儲存在安全的 token vault 中。
+      與加密不同，token 與原始資料沒有數學關係。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 資料保護
+  - 支付安全
+  - PCI DSS
+  related_terms:
+  - encryption
+  - data_masking
+  - pci_dss
+  aliases:
+    zh:
+    - 權杖化
+    - Token 化
+  metadata:
+    status: approved
+
+- id: log_management
+  term_en: Log Management
+  term_zh: 日誌管理
+  definitions:
+    brief: 收集、儲存、分析和保留系統日誌的流程
+    standard: |
+      日誌管理是集中收集、正規化、儲存和分析來自
+      各種系統和應用程式日誌的流程。
+      是安全監控、事件調查和合規的基礎。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 日誌
+  - SIEM
+  - 監控
+  related_terms:
+  - siem
+  - audit_log
+  - access_log
+  aliases:
+    zh:
+    - 日誌集中管理
+  metadata:
+    status: approved
+
+- id: security_audit
+  term_en: Security Audit
+  term_zh: 資安稽核
+  definitions:
+    brief: 評估組織資安控制措施有效性的系統性檢查
+    standard: |
+      資安稽核是對組織的資安政策、程序和控制措施
+      進行系統性評估的過程，驗證是否符合安全標準和法規要求。
+      可分為內部稽核和外部稽核。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 合規
+  - 稽核
+  - 評估
+  related_terms:
+  - security_control
+  - isms
+  - risk_assessment
+  aliases:
+    zh:
+    - 安全稽核
+    - 資訊安全稽核
+  metadata:
+    status: approved
+
+# ------------------------------------------
+# 2026-01 新增常見基礎術語（第三批）
+# ------------------------------------------
+- id: information_security
+  term_en: Information Security
+  term_zh: 資訊安全
+  definitions:
+    brief: 保護資訊資產免受未授權存取、使用、揭露、破壞的實務
+    standard: |
+      資訊安全是保護資訊及其基礎設施免受未授權存取、使用、揭露、
+      中斷、修改或破壞的實務，以確保機密性、完整性和可用性。
+      涵蓋人員、流程和技術三個面向。
+  category: technologies
+  subcategory: general
+  tags:
+  - 基礎概念
+  - CIA
+  related_terms:
+  - cybersecurity
+  - cia_triad
+  aliases:
+    en:
+    - InfoSec
+    zh:
+    - 資安
+  metadata:
+    status: approved
+
+- id: confidentiality
+  term_en: Confidentiality
+  term_zh: 機密性
+  definitions:
+    brief: 確保資訊僅被授權人員存取的特性
+    standard: |
+      機密性是 CIA 三要素之一，確保資訊只能被授權人員存取。
+      透過存取控制、加密、分類等措施保護，
+      防止資訊被未授權的個人、實體或流程取得。
+  category: technologies
+  subcategory: general
+  tags:
+  - CIA
+  - 基礎概念
+  - 資料保護
+  related_terms:
+  - cia_triad
+  - encryption
+  - access_control
+  metadata:
+    status: approved
+
+- id: integrity
+  term_en: Integrity
+  term_zh: 完整性
+  definitions:
+    brief: 確保資訊在儲存和傳輸過程中不被未授權修改
+    standard: |
+      完整性是 CIA 三要素之一，確保資訊的正確性和完整性。
+      透過雜湊、數位簽章、變更管理等措施保護，
+      防止資訊被未授權修改或篡改。
+  category: technologies
+  subcategory: general
+  tags:
+  - CIA
+  - 基礎概念
+  - 資料保護
+  related_terms:
+  - cia_triad
+  - hash
+  - digital_signature
+  metadata:
+    status: approved
+
+- id: availability
+  term_en: Availability
+  term_zh: 可用性
+  definitions:
+    brief: 確保資訊和系統在需要時可被存取使用
+    standard: |
+      可用性是 CIA 三要素之一，確保授權使用者能在需要時存取資訊和系統。
+      透過備份、高可用架構、DDoS 防護等措施保護，
+      防止服務中斷影響業務運作。
+  category: technologies
+  subcategory: general
+  tags:
+  - CIA
+  - 基礎概念
+  - 業務持續
+  related_terms:
+  - cia_triad
+  - backup
+  - disaster_recovery
+  - ddos
+  metadata:
+    status: approved
+
+- id: encryption
+  term_en: Encryption
+  term_zh: 加密
+  definitions:
+    brief: 將資料轉換為無法讀取形式以保護機密性的過程
+    standard: |
+      加密是使用演算法和金鑰將明文轉換為密文的過程，
+      只有擁有正確金鑰的人才能解密還原。
+      是保護資料機密性的核心技術。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 加密
+  - 資料保護
+  - 基礎概念
+  related_terms:
+  - aes
+  - rsa
+  - tls
+  - cryptography
+  aliases:
+    zh:
+    - 加密技術
+  metadata:
+    status: approved
+
+- id: decryption
+  term_en: Decryption
+  term_zh: 解密
+  definitions:
+    brief: 將加密後的密文還原為可讀明文的過程
+    standard: |
+      解密是將密文轉換回原始明文的過程，
+      需要使用正確的解密金鑰和演算法。
+      是加密的反向操作。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 加密
+  - 資料保護
+  related_terms:
+  - encryption
+  - cryptography
+  metadata:
+    status: approved
+
+- id: symmetric_encryption
+  term_en: Symmetric Encryption
+  term_zh: 對稱式加密
+  definitions:
+    brief: 加解密使用相同金鑰的加密方式
+    standard: |
+      對稱式加密使用相同的金鑰進行加密和解密，
+      效率高、適合大量資料加密。
+      代表演算法包括 AES、DES、3DES 等。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 加密
+  - 密碼學
+  related_terms:
+  - aes
+  - asymmetric_encryption
+  - cryptography
+  aliases:
+    zh:
+    - 對稱加密
+  metadata:
+    status: approved
+
+- id: asymmetric_encryption
+  term_en: Asymmetric Encryption
+  term_zh: 非對稱式加密
+  definitions:
+    brief: 使用公私金鑰對進行加解密的加密方式
+    standard: |
+      非對稱式加密使用一對數學相關的金鑰：公開金鑰加密、私密金鑰解密。
+      解決了對稱加密的金鑰分發問題，但效能較低。
+      代表演算法包括 RSA、ECC 等。
+  category: technologies
+  subcategory: data_security
+  tags:
+  - 加密
+  - 密碼學
+  - 公開金鑰
+  related_terms:
+  - rsa
+  - symmetric_encryption
+  - pki
+  aliases:
+    zh:
+    - 非對稱加密
+    - 公開金鑰加密
+  metadata:
+    status: approved
+
+- id: port
+  term_en: Port
+  term_zh: 通訊埠
+  definitions:
+    brief: 網路通訊中識別特定服務或程序的數字端點
+    standard: |
+      通訊埠是網路協定中用於識別特定服務或程序的 16 位元數字（0-65535）。
+      常見埠號如 HTTP(80)、HTTPS(443)、SSH(22)、RDP(3389)。
+      防火牆常透過控制通訊埠來限制網路存取。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網路基礎
+  - 服務
+  related_terms:
+  - firewall
+  - ip_address
+  aliases:
+    en:
+    - Network Port
+    zh:
+    - 埠
+    - 連接埠
+  metadata:
+    status: approved
+
+- id: protocol
+  term_en: Protocol
+  term_zh: 通訊協定
+  definitions:
+    brief: 網路通訊中裝置間交換資料的標準規則
+    standard: |
+      通訊協定是定義網路裝置間如何通訊的標準規則集，
+      包含資料格式、傳輸順序、錯誤處理等規範。
+      常見協定如 TCP/IP、HTTP、DNS、SMTP 等。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網路基礎
+  - 標準
+  related_terms:
+  - tcp_ip
+  - http
+  - tls
+  aliases:
+    zh:
+    - 協定
+    - 網路協定
+  metadata:
+    status: approved
+
+- id: domain_name
+  term_en: Domain Name
+  term_zh: 網域名稱
+  definitions:
+    brief: 用於識別網站的人類可讀文字位址
+    standard: |
+      網域名稱是網際網路上用於識別網站的文字位址（如 example.com），
+      透過 DNS 系統轉換為 IP 位址。
+      網域名稱的安全管理是防止釣魚和劫持的重要環節。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網路基礎
+  - DNS
+  related_terms:
+  - dns
+  - ip_address
+  - typosquatting
+  - domain_hijacking
+  aliases:
+    en:
+    - Domain
+    zh:
+    - 網域
+    - 域名
+  metadata:
+    status: approved
+
+- id: dns
+  term_en: DNS
+  term_zh: 網域名稱系統
+  full_name_en: Domain Name System
+  definitions:
+    brief: 將網域名稱轉換為 IP 位址的分散式系統
+    standard: |
+      網域名稱系統是網際網路的「電話簿」，
+      將人類可讀的網域名稱轉換為電腦使用的 IP 位址。
+      DNS 安全對防止釣魚、劫持攻擊至關重要。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網路基礎
+  - 基礎設施
+  related_terms:
+  - domain_name
+  - dns_spoofing
+  - dns_hijacking
+  aliases:
+    zh:
+    - 域名系統
+  metadata:
+    status: approved
+
+- id: ssl
+  term_en: SSL
+  term_zh: 安全通訊端層
+  full_name_en: Secure Sockets Layer
+  definitions:
+    brief: 早期用於保護網路通訊的加密協定（已棄用）
+    standard: |
+      SSL 是早期用於保護網路通訊的加密協定，
+      現已因安全漏洞被 TLS 取代。
+      但「SSL」一詞仍常被用於泛指安全連線或憑證。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 加密
+  - 通訊協定
+  - 已棄用
+  related_terms:
+  - tls
+  - certificate
+  metadata:
+    status: approved
+
+- id: https
+  term_en: HTTPS
+  term_zh: 安全超文字傳輸協定
+  full_name_en: Hypertext Transfer Protocol Secure
+  definitions:
+    brief: 使用 TLS 加密的安全網頁傳輸協定
+    standard: |
+      HTTPS 是 HTTP 協定的安全版本，使用 TLS 加密傳輸內容。
+      確保瀏覽器與網站間的通訊機密性和完整性，
+      現代網站應一律使用 HTTPS。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網頁安全
+  - 加密
+  - 傳輸協定
+  related_terms:
+  - tls
+  - ssl
+  - certificate
+  metadata:
+    status: approved
+
+- id: packet
+  term_en: Packet
+  term_zh: 封包
+  definitions:
+    brief: 網路傳輸中的資料單元
+    standard: |
+      封包是網路中傳輸資料的基本單元，
+      包含標頭（來源/目的位址等資訊）和內容（實際資料）。
+      防火牆和 IDS/IPS 透過檢查封包來過濾和偵測威脅。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網路基礎
+  - 傳輸
+  related_terms:
+  - firewall
+  - ids
+  - network_monitoring
+  aliases:
+    zh:
+    - 資料封包
+    - 網路封包
+  metadata:
+    status: approved
+
+- id: bandwidth
+  term_en: Bandwidth
+  term_zh: 頻寬
+  definitions:
+    brief: 網路連線的資料傳輸能力
+    standard: |
+      頻寬是網路連線在單位時間內可傳輸的最大資料量，
+      通常以 Mbps 或 Gbps 為單位。
+      DDoS 攻擊常透過耗盡頻寬來癱瘓目標服務。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網路基礎
+  - 效能
+  - DDoS
+  related_terms:
+  - ddos
+  - network_monitoring
+  metadata:
+    status: approved
+
+- id: waf
+  term_en: WAF
+  term_zh: 網頁應用程式防火牆
+  full_name_en: Web Application Firewall
+  definitions:
+    brief: 保護網頁應用程式免受攻擊的專用防火牆
+    standard: |
+      網頁應用程式防火牆專門保護網頁應用程式，
+      過濾和監控 HTTP 流量，防禦 SQL 注入、XSS 等攻擊。
+      可部署於網路邊界或雲端。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網頁安全
+  - 防火牆
+  - 應用層
+  related_terms:
+  - firewall
+  - sql_injection
+  - xss
+  - owasp_top10
+  metadata:
+    status: approved
+
+- id: dmz
+  term_en: DMZ
+  term_zh: 非軍事區
+  full_name_en: Demilitarized Zone
+  definitions:
+    brief: 位於內外網路之間的緩衝區域
+    standard: |
+      非軍事區是網路架構中介於外部網路和內部網路之間的區域，
+      放置對外服務（如網頁伺服器、郵件伺服器），
+      提供額外的安全隔離層。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網路架構
+  - 隔離
+  - 防火牆
+  related_terms:
+  - firewall
+  - segmentation
+  aliases:
+    zh:
+    - 隔離區
+  metadata:
+    status: approved
+
+- id: nat
+  term_en: NAT
+  term_zh: 網路位址轉換
+  full_name_en: Network Address Translation
+  definitions:
+    brief: 轉換內外網路 IP 位址的技術
+    standard: |
+      網路位址轉換是將內部私有 IP 位址轉換為外部公開 IP 位址的技術，
+      讓多台內部裝置共用一個公開 IP 上網。
+      也提供一定程度的安全隱藏效果。
+  category: technologies
+  subcategory: network_security
+  tags:
+  - 網路基礎
+  - 路由器
+  - IP
+  related_terms:
+  - firewall
+  - ip_address
+  metadata:
+    status: approved
+
+- id: virus_definition
+  term_en: Virus Definition
+  term_zh: 病毒定義檔
+  definitions:
+    brief: 防毒軟體用於識別惡意程式的特徵資料庫
+    standard: |
+      病毒定義檔是防毒軟體用於識別已知惡意程式的特徵碼資料庫，
+      需要定期更新以偵測新型威脅。
+      現代防毒也結合行為分析來偵測未知威脅。
+  category: technologies
+  subcategory: endpoint_security
+  tags:
+  - 防毒
+  - 特徵碼
+  - 更新
+  related_terms:
+  - antivirus
+  - malware
+  aliases:
+    en:
+    - Virus Signature
+    - Malware Definition
+    zh:
+    - 病毒碼
+    - 特徵碼
+  metadata:
+    status: approved
+
+- id: sandbox
+  term_en: Sandbox
+  term_zh: 沙箱
+  definitions:
+    brief: 隔離執行可疑程式以進行安全分析的環境
+    standard: |
+      沙箱是一個隔離的執行環境，用於安全地執行和分析可疑程式，
+      觀察其行為而不影響實際系統。
+      常用於惡意程式分析和電子郵件附件檢測。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 惡意程式分析
+  - 隔離
+  - 動態分析
+  related_terms:
+  - malware
+  - edr
+  - detonation
+  metadata:
+    status: approved
+
+- id: whitelist
+  term_en: Whitelist
+  term_zh: 白名單
+  definitions:
+    brief: 預先核准可允許的項目清單
+    standard: |
+      白名單是預先核准的項目清單，只有清單中的項目才被允許。
+      應用於應用程式控制、電子郵件過濾、網路存取控制等場景。
+      與黑名單相反，採取「預設拒絕」策略。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 存取控制
+  - 策略
+  - 應用程式控制
+  related_terms:
+  - blacklist
+  - access_control
+  aliases:
+    en:
+    - Allowlist
+    zh:
+    - 允許清單
+  metadata:
+    status: approved
+
+- id: blacklist
+  term_en: Blacklist
+  term_zh: 黑名單
+  definitions:
+    brief: 已知有害或應禁止的項目清單
+    standard: |
+      黑名單是已知有害或應禁止的項目清單，符合清單的項目會被阻擋。
+      應用於阻擋惡意 IP、網域、程式等。
+      與白名單相反，採取「預設允許」策略。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 存取控制
+  - 策略
+  - 威脅情報
+  related_terms:
+  - whitelist
+  - ioc
+  - threat_intelligence
+  aliases:
+    en:
+    - Blocklist
+    - Denylist
+    zh:
+    - 黑名單
+    - 封鎖清單
+  metadata:
+    status: approved
+
+- id: forensics
+  term_en: Digital Forensics
+  term_zh: 數位鑑識
+  definitions:
+    brief: 收集和分析數位證據以調查資安事件的科學
+    standard: |
+      數位鑑識是識別、收集、分析和呈現數位證據的科學和程序，
+      用於調查資安事件、網路犯罪或訴訟支援。
+      需遵循嚴格的證據鏈程序以確保證據效力。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 調查
+  - 事件回應
+  - 證據
+  related_terms:
+  - incident_response
+  - soc
+  - malware
+  aliases:
+    en:
+    - Computer Forensics
+    - Cyber Forensics
+    zh:
+    - 電腦鑑識
+    - 資安鑑識
+  metadata:
+    status: approved
+
+- id: signature
+  term_en: Signature
+  term_zh: 特徵碼
+  definitions:
+    brief: 用於識別特定惡意程式或攻擊的特徵模式
+    standard: |
+      特徵碼是惡意程式或攻擊的獨特識別模式，
+      安全工具透過比對特徵碼來偵測已知威脅。
+      特徵碼偵測有效但無法偵測零日或變種威脅。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 偵測
+  - 惡意程式
+  - IDS/IPS
+  related_terms:
+  - virus_definition
+  - ids
+  - antivirus
+  aliases:
+    zh:
+    - 簽章
+    - 特徵
+  metadata:
+    status: approved
+
+- id: heuristic
+  term_en: Heuristic Analysis
+  term_zh: 啟發式分析
+  definitions:
+    brief: 透過行為模式偵測未知惡意程式的技術
+    standard: |
+      啟發式分析是透過分析程式行為和特徵，
+      而非依賴特徵碼來偵測可疑程式的技術。
+      可偵測變種和部分未知威脅，但可能產生誤報。
+  category: technologies
+  subcategory: security_operations
+  tags:
+  - 偵測
+  - 行為分析
+  - 防毒
+  related_terms:
+  - antivirus
+  - signature
+  - edr
+  aliases:
+    zh:
+    - 啟發式偵測
+    - 行為啟發
+  metadata:
+    status: approved
+
+- id: bug_bounty
+  term_en: Bug Bounty
+  term_zh: 漏洞獎勵計畫
+  definitions:
+    brief: 企業獎勵外部研究人員發現和回報漏洞的計畫
+    standard: |
+      漏洞獎勵計畫是企業邀請外部安全研究人員發現和負責任地回報漏洞，
+      並提供金錢獎勵的計畫。知名平台包括 HackerOne、Bugcrowd 等。
+      是補充內部安全測試的有效方式。
+  category: technologies
+  subcategory: security_testing
+  tags:
+  - 漏洞揭露
+  - 社群
+  - 獎勵
+  related_terms:
+  - pentesting
+  - responsible_disclosure
+  - vulnerability
+  aliases:
+    en:
+    - Bug Bounty Program
+    - VDP
+    zh:
+    - 漏洞懸賞
+  metadata:
+    status: approved
+
+- id: responsible_disclosure
+  term_en: Responsible Disclosure
+  term_zh: 負責任揭露
+  definitions:
+    brief: 發現漏洞後先通知廠商再公開的揭露方式
+    standard: |
+      負責任揭露是安全研究人員發現漏洞後，
+      先私下通知廠商並給予合理修補時間，
+      再公開漏洞詳情的做法。平衡了公共安全和廠商修補需求。
+  category: technologies
+  subcategory: security_testing
+  tags:
+  - 漏洞揭露
+  - 道德
+  - 流程
+  related_terms:
+  - bug_bounty
+  - vulnerability
+  - cve
+  aliases:
+    en:
+    - Coordinated Disclosure
+    zh:
+    - 協調揭露
+  metadata:
+    status: approved
