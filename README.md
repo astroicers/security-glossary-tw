@@ -1,5 +1,9 @@
 # Security Glossary TW - 繁體中文資安術語庫
 
+> **注意**：此專案已遷移至 Monorepo 架構。新位置：`~/projects/security-weekly-mcp/packages/glossary/`
+
+---
+
 > 台灣第一個開源、結構化、可機器讀取的繁體中文資安專有名詞庫
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
