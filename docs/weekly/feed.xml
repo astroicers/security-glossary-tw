@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>資安週報 | Security Weekly TW</title>
+    <link>https://astroicers.github.io/security-glossary-tw/weekly/</link>
+    <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
+    <language>zh-TW</language>
+    <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Sun, 15 Feb 2026 02:09:18 +0800</lastBuildDate>
+    <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/01/27 - 2026/02/03</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-05.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-05</guid>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：一般
+本週收錄 15 則事件、10 個漏洞
+
+重點新聞：
+• Notepad++ Hosting Breach Attributed to China-Linked Lotus...
+• Researchers Find 341 Malicious ClawHub Skills Stealing Da...
+• OpenClaw Bug Enables One-Click Remote Code Execution via ...</description>
+    </item>
+    <item>
+      <title>資安週報 2026/01/01 - 2026/01/07</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-01.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-01</guid>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 2 則事件、3 個漏洞
+
+重點新聞：
+• 測試資安事件</description>
+    </item>
+  </channel>
+</rss>
