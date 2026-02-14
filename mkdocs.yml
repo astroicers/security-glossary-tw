@@ -8,6 +8,7 @@ repo_url: https://github.com/astroicers/security-glossary-tw
 
 theme:
   name: material
+  custom_dir: docs/overrides
   language: zh-TW
   palette:
     - scheme: default

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://astroicers.github.io/security-glossary-tw/sitemap.xml

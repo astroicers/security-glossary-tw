@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {% if page %}
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title }} - 繁體中文資安術語庫">
+  <meta property="og:description" content="{{ page.meta.description | default(config.site_description) }}">
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  <meta property="og:site_name" content="Security Glossary TW">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:image" content="https://astroicers.github.io/security-glossary-tw/assets/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }} - 繁體中文資安術語庫">
+  <meta name="twitter:description" content="{{ page.meta.description | default(config.site_description) }}">
+  <meta name="twitter:image" content="https://astroicers.github.io/security-glossary-tw/assets/og-image.png">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Security Glossary TW",
+    "alternateName": "繁體中文資安術語庫",
+    "description": "{{ config.site_description }}",
+    "url": "{{ config.site_url }}",
+    "inLanguage": "zh-TW",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Astroicers",
+      "url": "https://github.com/astroicers"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "{{ config.site_url }}?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+    {% if page.meta and page.meta.term_data %}
+  <!-- JSON-LD for Term Pages -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    "name": "{{ page.meta.term_en }}",
+    "alternateName": "{{ page.meta.term_zh }}",
+    "description": "{{ page.meta.description }}",
+    "inDefinedTermSet": {
+      "@type": "DefinedTermSet",
+      "name": "Security Glossary TW",
+      "url": "{{ config.site_url }}"
+    },
+    "url": "{{ page.canonical_url }}"
+  }
+  </script>
+    {% endif %}
+  {% endif %}
+{% endblock %}

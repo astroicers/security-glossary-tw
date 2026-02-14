@@ -75,7 +75,17 @@ def generate_term_markdown(term: dict, categories: dict[str, dict]) -> str:
     category_name = category.get("name_zh", category_id)
     category_icon = category.get("icon", "📚")
 
+    # Escape quotes in brief for YAML front matter
+    brief_escaped = brief.replace('"', '\\"')
+
     lines = [
+        "---",
+        f'description: "{brief_escaped}"',
+        f'term_en: "{term_en}"',
+        f'term_zh: "{term_zh}"',
+        "term_data: true",
+        "---",
+        "",
         f"# {term_en}",
         "",
         f"**{term_zh}**",

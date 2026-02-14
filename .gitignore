@@ -13,5 +13,7 @@ site/
 
 # Generated docs (from build_docs.py)
 docs/
-# But keep stylesheets (source files)
+# But keep source files
 !docs/stylesheets/
+!docs/overrides/
+!docs/robots.txt
