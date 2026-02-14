@@ -1,0 +1,56 @@
+name: 術語修正 / Term Correction
+description: 回報術語錯誤或建議修正
+title: "[修正] "
+labels: ["bug", "correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝您協助改善術語庫的品質！
+
+  - type: input
+    id: term_id
+    attributes:
+      label: 術語 ID
+      description: 需要修正的術語 ID
+      placeholder: "例如: apt"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: 問題類型
+      options:
+        - 翻譯錯誤
+        - 定義不準確
+        - 拼字錯誤
+        - 分類錯誤
+        - 連結失效
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_content
+    attributes:
+      label: 目前內容
+      description: 目前有問題的內容
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: 建議修正
+      description: 您建議的修正內容
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 參考資料
+      description: 支持您修正建議的參考來源
+    validations:
+      required: false

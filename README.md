@@ -6,7 +6,9 @@
 
 > 台灣第一個開源、結構化、可機器讀取的繁體中文資安專有名詞庫
 
+[![CI](https://github.com/astroicers/security-glossary-tw/actions/workflows/validate.yml/badge.svg)](https://github.com/astroicers/security-glossary-tw/actions/workflows/validate.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Terms Count](https://img.shields.io/badge/術語數量-437-blue.svg)](https://astroicers.github.io/security-glossary-tw/glossary/)
 
 ---

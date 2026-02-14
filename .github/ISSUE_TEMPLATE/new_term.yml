@@ -1,0 +1,71 @@
+name: 新增術語 / New Term Request
+description: 建議新增資安術語至術語庫
+title: "[術語] "
+labels: ["enhancement", "new-term"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝您協助擴充繁體中文資安術語庫！
+
+  - type: input
+    id: term_en
+    attributes:
+      label: 英文術語
+      description: 術語的英文名稱
+      placeholder: "例如: Zero Trust"
+    validations:
+      required: true
+
+  - type: input
+    id: term_zh
+    attributes:
+      label: 中文翻譯
+      description: 建議的繁體中文翻譯
+      placeholder: "例如: 零信任"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分類
+      description: 術語所屬的分類
+      options:
+        - attack_types (攻擊類型)
+        - vulnerabilities (漏洞類型)
+        - threat_actors (威脅行為者)
+        - malware (惡意程式)
+        - technologies (技術名詞)
+        - frameworks (框架標準)
+        - compliance (法規合規)
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition
+    attributes:
+      label: 定義說明
+      description: 簡短定義（30 字以內）
+      placeholder: "例如: 預設不信任任何存取請求的安全架構"
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 參考資料
+      description: 提供相關參考連結或來源
+      placeholder: |
+        - https://...
+        - NIST SP 800-207
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 使用情境
+      description: 這個術語通常在什麼情況下使用？
+    validations:
+      required: false
