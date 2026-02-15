@@ -77,4 +77,5 @@ nav:
       - 👤 威脅行為者: glossary/threat_actors.md
       - 🔓 漏洞類型: glossary/vulnerabilities.md
   - 🏷️ 標籤瀏覽: tags/index.md
+  - 📰 資安週報: weekly/index.md
   - API 文件: api.md
