@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/01/27 - 2026/02/03</title>
+    <meta name="description" content="資安週報 2026-01-27 - 2026-02-03">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/01/27 - 2026/02/03</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-05 · 發布日期：2026-02-03</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #22c55e;">一般</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">15</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">10</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 檢視本週高風險漏洞並評估影響</li>
+<li>🟡 確認系統已套用最新安全更新</li>
+<li>🟢 持續監控資安威脅趨勢</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (15)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/02/notepad-hosting-breach-attributed-to.html" target="_blank" rel="noopener">Notepad++ Hosting Breach Attributed to China-Linked Lotus Blossom Hacking Group</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-03</p>
+            <p>A China-linked threat actor known as Lotus Blossom has been attributed with medium confidence to the recently discovered compromise of the infrastructure hosting Notepad++.
+The attack enabled the stat...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/02/researchers-find-341-malicious-clawhub.html" target="_blank" rel="noopener">Researchers Find 341 Malicious ClawHub Skills Stealing Data from OpenClaw Users</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-02</p>
+            <p>A security audit of 2,857 skills on ClawHub has found 341 malicious skills across multiple campaigns, according to new findings from Koi Security, exposing users to new supply chain risks.
+ClawHub is ...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/02/openclaw-bug-enables-one-click-remote.html" target="_blank" rel="noopener">OpenClaw Bug Enables One-Click Remote Code Execution via Malicious Link</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-02</p>
+            <p>A high-severity security flaw has been disclosed in OpenClaw (formerly referred to as Clawdbot and Moltbot) that could allow remote code execution (RCE) through a crafted malicious link.
+The issue, wh...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/02/microsoft-begins-ntlm-phase-out-with.html" target="_blank" rel="noopener">Microsoft Begins NTLM Phase-Out With Three-Stage Plan to Move Windows to Kerberos</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-02</p>
+            <p>Microsoft has announced a three-phase approach to phase out New Technology LAN Manager (NTLM) as part of its efforts to shift Windows environments toward stronger, Kerberos-based options.
+The developm...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/02/weekly-recap-proxy-botnet-office-zero.html" target="_blank" rel="noopener">⚡ Weekly Recap: Proxy Botnet, Office Zero-Day, MongoDB Ransoms, AI Hijacks &amp; New Threats</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-02</p>
+            <p>Every week brings new discoveries, attacks, and defenses that shape the state of cybersecurity. Some threats are stopped quickly, while others go unseen until they cause real damage.
+Sometimes a singl...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/shinyhunters-branded-extortion-activity-expands-escalates/" target="_blank" rel="noopener">ShinyHunters-Branded Extortion Activity Expands, Escalates</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-02-02</p>
+            <p>&lt;p&gt;Hackers rely on evolved vishing and login harvesting to compromise SSO credentials for unauthorized MFA enrollment.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://www.securityweek.com/shinyhunters-branded-extort...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/open-vsx-publisher-account-hijacked-in-fresh-glassworm-attack/" target="_blank" rel="noopener">Open VSX Publisher Account Hijacked in Fresh GlassWorm Attack</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-02-02</p>
+            <p>&lt;p&gt;A hacker published malicious versions of four established VS Code extensions to distribute a GlassWorm malware loader.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://www.securityweek.com/open-vsx-publisher-accou...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/default-ics-credentials-exploited-in-destructive-attack-on-polish-energy-facilities/" target="_blank" rel="noopener">Default ICS Credentials Exploited in Destructive Attack on Polish Energy Facilities</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-02-02</p>
+            <p>&lt;p&gt;Poland’s CERT has published a report on the recent attack, providing new details on targeted ICS and attribution.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://www.securityweek.com/default-ics-credentials-explo...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/cyber-insights-2026-malware-and-cyberattacks-in-the-age-of-ai/" target="_blank" rel="noopener">Cyber Insights 2026: Malware and Cyberattacks in the Age of AI</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-02-02</p>
+            <p>&lt;p&gt;Security leaders share how artificial intelligence is changing malware, ransomware, and identity-led intrusions, and how defenses must evolve.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://www.securityweek.com/...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/over-1400-mongodb-databases-ransacked-by-threat-actor/" target="_blank" rel="noopener">Over 1,400 MongoDB Databases Ransacked by Threat Actor</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-02-02</p>
+            <p>&lt;p&gt;Of 3,100 unprotected MongoDB instances, half remain compromised, most of them by a single threat actor.&lt;/p&gt;
+&lt;p&gt;The post &lt;a href=&quot;https://www.securityweek.com/over-1400-mongodb-databases-ransacked-b...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/cloud-security/attackers-harvest-dropbox-logins-fake-pdf-lures" target="_blank" rel="noopener">Attackers Harvest Dropbox Logins Via Fake PDF Lures</a></h3>
+            <p class="event-meta">Dark Reading · 2026-02-02</p>
+            <p>A malware-free phishing campaign targets corporate inboxes and asks employees to view &amp;quot;request orders,&amp;quot; ultimately leading to Dropbox credential theft....</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/cybersecurity-operations/county-pays-600k-wrongfully-jailed-pen-testers" target="_blank" rel="noopener">County Pays $600K to Wrongfully Jailed Pen Testers</a></h3>
+            <p class="event-meta">Dark Reading · 2026-02-02</p>
+            <p>Iowa police arrested two penetration testers in 2019 for doing their jobs, highlighting the risk to security professionals in red teaming exercises....</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/application-security/chinese-hackers-hijack-notepad-updates-6-months" target="_blank" rel="noopener">Chinese Hackers Hijack Notepad++ Updates for 6 Months</a></h3>
+            <p class="event-meta">Dark Reading · 2026-02-02</p>
+            <p>State-sponsored threat actors compromised the popular code editor&#x27;s hosting provider to redirect targeted users to malicious downloads....</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/cyberattacks-data-breaches/shinyhunters-expands-scope-saas-extortion-attacks" target="_blank" rel="noopener">ShinyHunters Expands Scope of SaaS Extortion Attacks</a></h3>
+            <p class="event-meta">Dark Reading · 2026-02-02</p>
+            <p>Following its attacks on Salesforce instances last year, members of the cybercrime group have broadened their targeting and gotten more aggressive with extortion tactics....</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/remote-workforce/torq-moves-socs-soar-ai-powered-hyper-automation" target="_blank" rel="noopener">Torq Moves SOCs Beyond SOAR With AI-Powered Hyper Automation</a></h3>
+            <p class="event-meta">Dark Reading · 2026-01-30</p>
+            <p>Investors poured $140 million into Torq&#x27;s Series D Round, raising the startup&#x27;s valuation to $1.2 billion, to bring AI-based &amp;quot;hyper automation&amp;quot; to SOCs....</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (10)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1448" target="_blank">CVE-2026-1448</a></td>
+            <td>A vulnerability was detected in D-Link DIR-615 up to 4.10. This impacts an unknown function of the f...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1449" target="_blank">CVE-2026-1449</a></td>
+            <td>A flaw has been found in Hisense TransTech Smart Bus Management System up to 20260113. Affected is t...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24477" target="_blank">CVE-2026-24477</a></td>
+            <td>AnythingLLM is an application that turns pieces of content into context that any LLM can use as refe...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-41726" target="_blank">CVE-2025-41726</a></td>
+            <td>A low privileged remote attacker can execute arbitrary code by sending specially crafted calls to th...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-41727" target="_blank">CVE-2025-41727</a></td>
+            <td>A local low privileged attacker can bypass the authentication of the Device Manager user interface, ...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2020-36938" target="_blank">CVE-2020-36938</a></td>
+            <td>WinAVR version 20100110 contains an insecure permissions vulnerability that allows authenticated use...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2020-36939" target="_blank">CVE-2020-36939</a></td>
+            <td>Cassandra Web 0.5.0 contains a directory traversal vulnerability that allows unauthenticated attacke...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2020-36942" target="_blank">CVE-2020-36942</a></td>
+            <td>Victor CMS 1.0 contains a file upload vulnerability that allows authenticated users to upload malici...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2020-36951" target="_blank">CVE-2020-36951</a></td>
+            <td>Phpscript-sgh 0.1.0 contains a time-based blind SQL injection vulnerability in the admin interface t...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-47902" target="_blank">CVE-2021-47902</a></td>
+            <td>Testa Online Test Management System 3.4.7 contains a SQL injection vulnerability that allows attacke...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>N/A</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
