@@ -41,8 +41,13 @@ hide:
 
   // 已知的週報列表（由 CI 自動更新）
   const reports = [
+    { id: 'SEC-WEEKLY-2026-07', title: '2026 年第 7 週', date: '2026-02-10' },
+    { id: 'SEC-WEEKLY-2026-06', title: '2026 年第 6 週', date: '2026-02-03' },
     { id: 'SEC-WEEKLY-2026-05', title: '2026 年第 5 週', date: '2026-01-27' },
-    { id: 'SEC-WEEKLY-2026-01', title: '2026 年第 1 週', date: '2026-01-06' },
+    { id: 'SEC-WEEKLY-2026-04', title: '2026 年第 4 週', date: '2026-01-20' },
+    { id: 'SEC-WEEKLY-2026-03', title: '2026 年第 3 週', date: '2026-01-13' },
+    { id: 'SEC-WEEKLY-2026-02', title: '2026 年第 2 週', date: '2026-01-06' },
+    { id: 'SEC-WEEKLY-2026-01', title: '2026 年第 1 週', date: '2026-01-01' },
   ];
 
   if (reports.length === 0) {
