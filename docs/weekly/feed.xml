@@ -6,8 +6,53 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 16 Feb 2026 21:28:28 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Feb 2026 13:30:55 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/02/11 - 2026/02/18</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-W07.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-W07</guid>
+      <pubDate>Wed, 18 Feb 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：一般
+本週收錄 15 則事件、20 個漏洞
+
+重點新聞：
+• Supply Chain Attack Embeds Malware in Android Devices
+• Poland Energy Survives Attack on Wind, Solar Infrastructure
+• RMM Abuse Explodes as Hackers Ditch Malware
+
+相關術語：Wiper, Persistence, Malware, C2, Security Control</description>
+    </item>
+    <item>
+      <title>資安週報 2026/02/10 - 2026/02/16</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-07.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-07</guid>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 7 則事件、7 個漏洞
+
+重點新聞：
+• Google Chrome 零時差漏洞 CVE-2026-2441 遭利用
+• Ivanti EPMM 零時差漏洞攻擊荷蘭政府機構
+• 中國駭客發動 Notepad++ 供應鏈攻擊
+
+相關術語：Use-After-Free, CVSS, CVE, Vulnerability, RCE</description>
+    </item>
+    <item>
+      <title>資安週報 2026/02/03 - 2026/02/09</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-06.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-06</guid>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 6 則事件、8 個漏洞
+
+重點新聞：
+• 微軟 2 月 Patch Tuesday 修補 6 個零時差漏洞
+• 超過 13.5 萬個 OpenClaw AI 實例暴露於網路
+• NGINX 網路流量劫持攻擊活動
+
+相關術語：KEV, Vulnerability, RCE, CVSS, CVE</description>
+    </item>
     <item>
       <title>資安週報 2026/01/27 - 2026/02/03</title>
       <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-05.html</link>
@@ -19,18 +64,67 @@
 重點新聞：
 • Notepad++ Hosting Breach Attributed to China-Linked Lotus...
 • Researchers Find 341 Malicious ClawHub Skills Stealing Da...
-• OpenClaw Bug Enables One-Click Remote Code Execution via ...</description>
+• OpenClaw Bug Enables One-Click Remote Code Execution via ...
+
+相關術語：Security Audit, RCE, Cybersecurity, HTTPS, MFA</description>
     </item>
     <item>
-      <title>資安週報 2026/01/01 - 2026/01/07</title>
-      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-01.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-01</guid>
-      <pubDate>Thu, 08 Jan 2026 00:00:00 +0800</pubDate>
+      <title>資安週報 2026/01/20 - 2026/01/26</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-04.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-04</guid>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0800</pubDate>
       <description>威脅等級：升高
-本週收錄 2 則事件、3 個漏洞
+本週收錄 7 則事件、3 個漏洞
 
 重點新聞：
-• 測試資安事件</description>
+• Everest 勒索軟體同時攻擊三家台灣企業
+• Nike 遭 WorldLeaks 竊取 1.4TB 內部資料
+• Nissan 遭 Everest 勒索軟體攻擊竊取 900GB 資料</description>
+    </item>
+    <item>
+      <title>資安週報 2026/01/13 - 2026/01/19</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-03.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-03</guid>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 6 則事件、3 個漏洞
+
+重點新聞：
+• Target 860GB 原始碼遭竊並在暗網販售
+• Grubhub 遭入侵並面臨勒索
+• Qilin 勒索軟體 1 月份攻擊量居冠
+
+相關術語：Data Exfiltration, Qilin</description>
+    </item>
+    <item>
+      <title>資安週報 2026/01/06 - 2026/01/12</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-02.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-02</guid>
+      <pubDate>Tue, 13 Jan 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 6 則事件、5 個漏洞
+
+重點新聞：
+• 微軟 2026 年 1 月 Patch Tuesday 修補 114 個漏洞含 3 個零時差
+• 中國加劇對台灣基礎設施網路攻擊
+• CrazyHunter 勒索軟體攻擊台灣 6 家醫療機構
+
+相關術語：CVE, Salt Typhoon, Vulnerability, Use-After-Free</description>
+    </item>
+    <item>
+      <title>資安週報 2026/01/01 - 2026/01/05</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-01.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-01</guid>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：一般
+本週收錄 5 則事件、4 個漏洞
+
+重點新聞：
+• 2026 年資安威脅趨勢展望：AI 驅動攻擊成主流
+• 台灣每天遭受 263 萬次網路攻擊
+• CISA 新增兩個已知被利用漏洞至 KEV 清單
+
+相關術語：Qilin</description>
     </item>
   </channel>
 </rss>

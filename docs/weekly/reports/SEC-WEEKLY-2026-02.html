@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/01/06 - 2026/01/12</title>
+    <meta name="description" content="資安週報 2026-01-06 - 2026-01-12">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/01/06 - 2026/01/12</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-02 · 發布日期：2026-01-13</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #eab308;">升高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">6</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">5</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即套用微軟 2026 年 1 月 Patch Tuesday 更新，優先處理 CVE-2026-20805</li>
+<li>🔴 檢視 Microsoft Office 預覽窗格設定，考慮在高風險環境中停用</li>
+<li>🔴 醫療機構加強防範 CrazyHunter <a href="https://astroicers.github.io/security-glossary-tw/glossary/ransomware" class="term-link" title="勒索軟體">勒索軟體</a>，強化端點防護</li>
+<li>🟡 審查郵件系統安全設定，防範 <a href="https://astroicers.github.io/security-glossary-tw/glossary/apt" class="term-link" title="進階持續性威脅">APT</a> 組織滲透</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (6)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://krebsonsecurity.com/2026/01/patch-tuesday-january-2026-edition/" target="_blank" rel="noopener">微軟 2026 年 1 月 Patch Tuesday 修補 114 個漏洞含 3 個零時差</a></h3>
+            <p class="event-meta">Krebs on Security · 2026-01-09</p>
+            <p>微軟發布 2026 年首個 Patch Tuesday 更新，修補 114 個漏洞，其中包含 1 個已被積極利用的零時差漏洞（<a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-20805）和 2 個已公開揭露的零時差漏洞。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.bankinfosecurity.asia/china-intensifies-cyberattacks-on-taiwan-infrastructure-a-30457" target="_blank" rel="noopener">中國加劇對台灣基礎設施網路攻擊</a></h3>
+            <p class="event-meta">BankInfoSecurity · 2026-01-10</p>
+            <p>台灣國安局報告顯示，2025 年中國對台灣關鍵基礎設施發動平均每天 263 萬次入侵嘗試，較 2024 年增加 6%。能源部門和醫療系統年增幅最高。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://industrialcyber.co/ransomware/crazyhunter-ransomware-escalates-with-advanced-intrusion-tactics-six-taiwan-healthcare-victims-confirmed/" target="_blank" rel="noopener">CrazyHunter 勒索軟體攻擊台灣 6 家醫療機構</a></h3>
+            <p class="event-meta">Industrial Cyber · 2026-01-08</p>
+            <p>CrazyHunter 勒索軟體集團以進階入侵技術攻擊台灣醫療產業，已確認 6 家醫療機構受害。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/in-other-news-8000-ransomware-attacks-china-hacked-us-gov-emails-idhs-breach-impacts-700k/" target="_blank" rel="noopener">Salt Typhoon 駭入美國國會郵件系統</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-01-10</p>
+            <p>中國駭客組織 <a href="https://astroicers.github.io/security-glossary-tw/glossary/salt_typhoon" class="term-link" title="Salt Typhoon">Salt Typhoon</a> 入侵美國眾議院關鍵委員會員工使用的電子郵件系統，目標包括中國、外交事務、情報和軍事委員會的幕僚。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.cm-alliance.com/cybersecurity-blog/major-cyber-attacks-data-breaches-ransomware-attacks-in-january-2026" target="_blank" rel="noopener">RansomHouse 攻擊 Apple 供應商立訊精密</a></h3>
+            <p class="event-meta">CM Alliance · 2026-01-08</p>
+            <p>1 月 8 日 RansomHouse 勒索軟體集團宣布對立訊精密（Luxshare）發動攻擊，該公司為 Apple iPhone 和 iPad 提供組裝服務。攻擊採用雙重勒索手法。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.brightdefense.com/resources/recent-data-breaches/" target="_blank" rel="noopener">BreachForums 資料庫外洩 32 萬會員資料</a></h3>
+            <p class="event-meta">Bright Defense · 2026-01-09</p>
+            <p>駭客論壇 BreachForums 的資料庫在網上外洩，包含 323,988 名會員的使用者名稱、密碼、電子郵件地址、IP 位址和註冊日期。...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (5)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20805" target="_blank">CVE-2026-20805</a></td>
+            <td>Windows Desktop Window Manager 資訊揭露漏洞（已被利用）...</td>
+            <td style="color: #eab308; font-weight: 600;">MEDIUM</td>
+            <td>5.5</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20952" target="_blank">CVE-2026-20952</a></td>
+            <td>Microsoft Office 遠端程式碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>8.4</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20944" target="_blank">CVE-2026-20944</a></td>
+            <td>Microsoft Word 遠端程式碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>8.4</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20854" target="_blank">CVE-2026-20854</a></td>
+            <td>Windows LSASS <a href="https://astroicers.github.io/security-glossary-tw/glossary/use_after_free" class="term-link" title="釋放後使用">Use-After-Free</a> <a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21265" target="_blank">CVE-2026-21265</a></td>
+            <td>Windows Secure Boot 安全功能繞過漏洞...</td>
+            <td style="color: #eab308; font-weight: 600;">MEDIUM</td>
+            <td>6.4</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (6)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/salt_typhoon" target="_blank">Salt Typhoon</a></h3>
+                <p class="term-zh">Salt Typhoon</p>
+                <p class="term-def">針對美國電信業的中國國家級駭客組織</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/use_after_free" target="_blank">Use-After-Free</a></h3>
+                <p class="term-zh">釋放後使用</p>
+                <p class="term-def">程式使用已釋放記憶體區域的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/ransomware" target="_blank">Ransomware</a></h3>
+                <p class="term-zh">勒索軟體</p>
+                <p class="term-def">加密受害者資料並要求贖金的惡意程式</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/apt" target="_blank">APT</a></h3>
+                <p class="term-zh">進階持續性威脅</p>
+                <p class="term-def">國家級駭客組織發動的長期網路攻擊</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

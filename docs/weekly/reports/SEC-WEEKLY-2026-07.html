@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/02/10 - 2026/02/16</title>
+    <meta name="description" content="資安週報 2026-02-10 - 2026-02-16">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/02/10 - 2026/02/16</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-07 · 發布日期：2026-02-17</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #eab308;">升高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">7</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">7</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 更新 Google Chrome 至 145.0.7632.75 以上版本</li>
+<li>🔴 立即修補 Ivanti EPMM 零時差漏洞 CVE-2026-1281 和 CVE-2026-1340</li>
+<li>🔴 更新 BeyondTrust Remote Support/PRA 產品修補 CVE-2026-1731</li>
+<li>🔴 檢視軟體自動更新機制，評估供應鏈攻擊風險</li>
+<li>🟡 評估 AI 代理和自動化工具的設定檔保護措施</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (7)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/" target="_blank" rel="noopener">Google Chrome 零時差漏洞 CVE-2026-2441 遭利用</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-11</p>
+            <p>Google 發布 Chrome 安全更新修補零時差漏洞 <a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-2441（<a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 8.8），該漏洞為 CSS 處理中的 <a href="https://astroicers.github.io/security-glossary-tw/glossary/use_after_free" class="term-link" title="釋放後使用">use-after-free</a> 問題，已被發現遭野外利用。攻擊者可透過特製 HTML 頁面在沙箱內執行任意程式碼。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.globalsecuritymag.fr/cve-2026-1281-a-critical-threat-to-enterprise-mobile-management.html" target="_blank" rel="noopener">Ivanti EPMM 零時差漏洞攻擊荷蘭政府機構</a></h3>
+            <p class="event-meta">Global Security Mag · 2026-02-12</p>
+            <p>荷蘭資料保護局及司法委員會證實遭受資料外洩攻擊，攻擊者利用 Ivanti EPMM 零時差漏洞 CVE-2026-1281 及 CVE-2026-1340 實現未授權遠端程式碼執行，員工姓名、電子郵件及電話號碼外洩。此為針對歐洲政府機構的更大規模攻擊活動。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/security" target="_blank" rel="noopener">中國駭客發動 Notepad++ 供應鏈攻擊</a></h3>
+            <p class="event-meta">iThome · 2026-02-13</p>
+            <p>中國國家級駭客針對開源文字編輯器 Notepad++ 發動軟體供應鏈攻擊，劫持特定自動更新流量，攻擊主機商底層設施。菲律賓、越南、台灣等東亞多國均有特定目標遭鎖定。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">BeyondTrust 重大 RCE 漏洞 CVE-2026-1731</a></h3>
+            <p class="event-meta">CISA · 2026-02-14</p>
+            <p>BeyondTrust 修補 Remote Support 和 Privileged Remote Access 產品中的重大 <a href="https://astroicers.github.io/security-glossary-tw/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a> <a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>（CVSS 9.9）。該漏洞允許未授權遠端攻擊者執行任意作業系統命令，CISA 要求聯邦機構於 2 月 16 日前完成修補。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.blackfog.com/the-state-of-ransomware-2026/" target="_blank" rel="noopener">新型勒索軟體 Reynolds 使用 BYOVD 繞過 EDR</a></h3>
+            <p class="event-meta">BlackFog · 2026-02-12</p>
+            <p>新型勒索軟體 Reynolds 被發現內建 BYOVD（Bring Your Own Vulnerable Driver）功能，可利用已知存在漏洞的驅動程式來停用端點偵測和回應（<a href="https://astroicers.github.io/security-glossary-tw/glossary/edr" class="term-link" title="端點偵測與回應">EDR</a>）安全工具，提升攻擊成功率。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://cyberrecaps.com/news/cybersecurity-news-february-10-2026/" target="_blank" rel="noopener">ZeroDayRAT 間諜軟體竊取 AI 代理設定</a></h3>
+            <p class="event-meta">Cyber Recaps · 2026-02-10</p>
+            <p>資安研究人員發現新型間諜軟體 ZeroDayRAT 不僅執行傳統資料竊取，更首度竊取受害者的 AI <a href="https://astroicers.github.io/security-glossary-tw/glossary/proxy" class="term-link" title="代理伺服器">代理</a>（如 OpenClaw）設定檔。Hudson Rock 表示此為資訊竊取程式演進的重要里程碑，標誌從竊取瀏覽器憑證轉向竊取 AI 代理的「靈魂」和身份。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.brightdefense.com/resources/recent-data-breaches/" target="_blank" rel="noopener">Eurail 資料外洩暴露護照與健康資料</a></h3>
+            <p class="event-meta">Bright Defense · 2026-02-11</p>
+            <p>歐洲鐵路旅遊公司 Eurail B.V. 證實資料外洩事件，未授權存取客戶資料庫導致敏感資料外洩，包含姓名、聯絡資訊、住址、出生日期，部分旅客的護照資料、銀行帳戶參考及健康資料亦遭外洩。...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (7)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2441" target="_blank">CVE-2026-2441</a></td>
+            <td>Google Chrome CSS Use-After-Free 漏洞（已被利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1281" target="_blank">CVE-2026-1281</a></td>
+            <td>Ivanti EPMM RCE 漏洞（已被利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1731" target="_blank">CVE-2026-1731</a></td>
+            <td>BeyondTrust Remote Support/PRA OS 命令注入漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.9</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21643" target="_blank">CVE-2026-21643</a></td>
+            <td>Fortinet FortiClientEMS 任意程式碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.1</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-24423" target="_blank">CVE-2026-24423</a></td>
+            <td>SmarterTools SmarterMail 認證缺失漏洞（勒索軟體利用）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1340" target="_blank">CVE-2026-1340</a></td>
+            <td>Ivanti EPMM 第二個 RCE 漏洞（已被利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.1</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40551" target="_blank">CVE-2025-40551</a></td>
+            <td>SolarWinds Web Help Desk 反序列化漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (7)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/use_after_free" target="_blank">Use-After-Free</a></h3>
+                <p class="term-zh">釋放後使用</p>
+                <p class="term-def">程式使用已釋放記憶體區域的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/rce" target="_blank">RCE</a></h3>
+                <p class="term-zh">遠端程式碼執行</p>
+                <p class="term-def">攻擊者可遠端在目標系統執行任意程式碼的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/edr" target="_blank">EDR</a></h3>
+                <p class="term-zh">端點偵測與回應</p>
+                <p class="term-def">監控端點設備以偵測和回應威脅的安全解決方案</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/proxy" target="_blank">Proxy</a></h3>
+                <p class="term-zh">代理伺服器</p>
+                <p class="term-def">作為中介轉發網路請求的伺服器</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
