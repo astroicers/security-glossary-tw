@@ -39,35 +39,41 @@ hide:
   const reportList = document.getElementById('report-list');
   const reportsDir = 'reports/';
 
-  // 已知的週報列表（由 CI 自動更新）
-  const reports = [
-    { id: 'SEC-WEEKLY-2026-07', title: '2026 年第 7 週', date: '2026-02-10' },
-    { id: 'SEC-WEEKLY-2026-06', title: '2026 年第 6 週', date: '2026-02-03' },
-    { id: 'SEC-WEEKLY-2026-05', title: '2026 年第 5 週', date: '2026-01-27' },
-    { id: 'SEC-WEEKLY-2026-04', title: '2026 年第 4 週', date: '2026-01-20' },
-    { id: 'SEC-WEEKLY-2026-03', title: '2026 年第 3 週', date: '2026-01-13' },
-    { id: 'SEC-WEEKLY-2026-02', title: '2026 年第 2 週', date: '2026-01-06' },
-    { id: 'SEC-WEEKLY-2026-01', title: '2026 年第 1 週', date: '2026-01-01' },
-  ];
-
-  if (reports.length === 0) {
-    reportList.innerHTML = '<p>尚無週報，請訂閱 RSS 以獲取最新通知。</p>';
-    return;
-  }
-
-  let html = '<div class="report-grid">';
-  reports.forEach(report => {
-    html += `
-      <a href="${reportsDir}${report.id}.html" class="report-card">
-        <div class="report-id">${report.id}</div>
-        <div class="report-title">${report.title}</div>
-        <div class="report-date">${report.date}</div>
-      </a>
-    `;
-  });
-  html += '</div>';
-
-  reportList.innerHTML = html;
+  // 從 feed.xml 動態讀取週報清單
+  fetch('feed.xml')
+    .then(r => r.text())
+    .then(xml => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(xml, 'application/xml');
+      const items = doc.querySelectorAll('item');
+      if (items.length === 0) {
+        reportList.innerHTML = '<p>尚無週報，請訂閱 RSS 以獲取最新通知。</p>';
+        return;
+      }
+      let html = '<div class="report-grid">';
+      items.forEach(item => {
+        const title = item.querySelector('title').textContent;
+        const guid = item.querySelector('guid').textContent;
+        const pubDate = item.querySelector('pubDate').textContent;
+        const date = new Date(pubDate).toISOString().slice(0, 10);
+        const weekMatch = guid.match(/(\d+)$/);
+        const weekNum = weekMatch ? weekMatch[1] : '';
+        const year = guid.match(/(\d{4})/);
+        const yearStr = year ? year[1] : '';
+        html += `
+          <a href="${reportsDir}${guid}.html" class="report-card">
+            <div class="report-id">${guid}</div>
+            <div class="report-title">${yearStr} 年第 ${parseInt(weekNum)} 週</div>
+            <div class="report-date">${date}</div>
+          </a>
+        `;
+      });
+      html += '</div>';
+      reportList.innerHTML = html;
+    })
+    .catch(() => {
+      reportList.innerHTML = '<p>無法載入週報清單，請<a href="feed.xml">查看 RSS Feed</a>。</p>';
+    });
 })();
 </script>
 
