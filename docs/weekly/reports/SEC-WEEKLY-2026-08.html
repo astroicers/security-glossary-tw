@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/02/17 - 2026/02/23</title>
+    <meta name="description" content="資安週報 2026-02-17 - 2026-02-23">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/02/17 - 2026/02/23</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-08 · 發布日期：2026-02-23</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #eab308;">升高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">15</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">7</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即修補CISA KEV漏洞</li>
+<li>🔴 部署AI輔助威脅檢測</li>
+<li>🔴 加強FortiGate和網路設備安全</li>
+<li>🟡 制定勒索軟體回應計畫</li>
+<li>🟡 評估供應商安全風險</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (15)</h2>
+            
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">Notepad++ 零日漏洞遭廣泛利用</a></h3>
+            <p class="event-meta"> · 2026-02-13</p>
+            <p><a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2025-15556，<a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.8分，CISA已列入KEV目錄，攻擊者可透過惡意文件執行任意代碼...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">Microsoft Windows 零日漏洞被利用</a></h3>
+            <p class="event-meta"> · 2026-02-11</p>
+            <p>CVE-2026-26119，關鍵級別漏洞，已被納入CISA KEV目錄，影響企業安全...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">Ivanti EPMM 雙重零日漏洞</a></h3>
+            <p class="event-meta"> · 2026-02-15</p>
+            <p>CVE-2026-1281 與 CVE-2026-1340，CVSS 9.8分，遠程代碼執行，已列入KEV...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">SolarWinds Web Help Desk 關鍵漏洞</a></h3>
+            <p class="event-meta"> · 2026-02-12</p>
+            <p>多個CVSS 9.8分漏洞，聯邦機構須於2026年2月24日前修補...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">Apple dyld 零日漏洞被商業間諜軟體利用</a></h3>
+            <p class="event-meta"> · 2026-02-18</p>
+            <p>CVE-2026-20700，CVSS 7.8分，記憶體損壞漏洞，疑似國家級攻擊者利用...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">BeyondTrust 漏洞用於勒索軟體攻擊</a></h3>
+            <p class="event-meta"> · 2026-02-10</p>
+            <p>CVE-2026-1731，遠程代碼執行漏洞，公開概念驗證後24小時內被利用...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">Chrome 緊急安全更新</a></h3>
+            <p class="event-meta"> · 2026-02-20</p>
+            <p>修補高嚴重性堆積緩衝區溢位漏洞，攻擊者可使瀏覽器崩潰或執行代碼...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">AI助力的大規模FortiGate攻擊</a></h3>
+            <p class="event-meta"> · 2026-02-18</p>
+            <p>俄語威脅行為者利用生成式AI入侵55國超過600台FortiGate設備...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">PayPal 資料外洩事件</a></h3>
+            <p class="event-meta"> · 2026-02-19</p>
+            <p>洩露客戶社會安全號碼、生日和企業個人資料，造成身份盜用高風險...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">密西西比大學醫學中心勒索軟體攻擊</a></h3>
+            <p class="event-meta"> · 2026-02-17</p>
+            <p>UMMC關閉全州所有診所，遭受勒索軟體攻擊影響醫療服務...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">Advantest 勒索軟體攻擊</a></h3>
+            <p class="event-meta"> · 2026-02-21</p>
+            <p>Advantest公司網路遭勒索軟體攻擊，可能影響客戶和員工資料...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">Ascom遭Hellcat勒索軟體攻擊</a></h3>
+            <p class="event-meta"> · 2026-02-22</p>
+            <p>44GB資料被竊取，包含原始碼、專案細節和機密文件...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">Cloudflare全球服務中斷6小時</a></h3>
+            <p class="event-meta"> · 2026-02-21</p>
+            <p>2月21日發生全球服務中斷，原因為密碼輪換錯誤導致級聯故障...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">首個使用生成式AI的Android惡意軟體</a></h3>
+            <p class="event-meta"> · 2026-02-20</p>
+            <p>研究人員發現利用Google Gemini模型適應不同設備持久化的Android惡意軟體...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="#" target="_blank" rel="noopener">FBI警告ATM提款機攻擊激增</a></h3>
+            <p class="event-meta"> · 2026-02-16</p>
+            <p>2025年造成超過2000萬美元損失，自2020年以來共發生1900起事件...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (7)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-15556" target="_blank">CVE-2025-15556</a></td>
+            <td>Notepad++ 代碼執行零日漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-26119" target="_blank">CVE-2026-26119</a></td>
+            <td>Microsoft Windows <a href="https://astroicers.github.io/security-glossary-tw/glossary/zero_day" class="term-link" title="零日漏洞">零日漏洞</a>...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1281" target="_blank">CVE-2026-1281</a></td>
+            <td>Ivanti EPMM 遠程代碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1340" target="_blank">CVE-2026-1340</a></td>
+            <td>Ivanti EPMM 遠程代碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20700" target="_blank">CVE-2026-20700</a></td>
+            <td>Apple dyld 記憶體損壞漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1731" target="_blank">CVE-2026-1731</a></td>
+            <td>BeyondTrust 未經身份驗證的遠程代碼執行...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.1</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40552" target="_blank">CVE-2025-40552</a></td>
+            <td>SolarWinds Web Help Desk 關鍵漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (3)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/zero_day" target="_blank">Zero-Day</a></h3>
+                <p class="term-zh">零日漏洞</p>
+                <p class="term-def">尚未有修補程式的漏洞</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

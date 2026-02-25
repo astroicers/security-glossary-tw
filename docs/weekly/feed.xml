@@ -6,22 +6,22 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 18 Feb 2026 13:30:55 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Feb 2026 21:09:41 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
     <item>
-      <title>資安週報 2026/02/11 - 2026/02/18</title>
-      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-W07.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-W07</guid>
-      <pubDate>Wed, 18 Feb 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：一般
-本週收錄 15 則事件、20 個漏洞
+      <title>資安週報 2026/02/17 - 2026/02/23</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-08.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-08</guid>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 15 則事件、7 個漏洞
 
 重點新聞：
-• Supply Chain Attack Embeds Malware in Android Devices
-• Poland Energy Survives Attack on Wind, Solar Infrastructure
-• RMM Abuse Explodes as Hackers Ditch Malware
+• Notepad++ 零日漏洞遭廣泛利用
+• Microsoft Windows 零日漏洞被利用
+• Ivanti EPMM 雙重零日漏洞
 
-相關術語：Wiper, Persistence, Malware, C2, Security Control</description>
+相關術語：CVSS, CVE, Zero-Day</description>
     </item>
     <item>
       <title>資安週報 2026/02/10 - 2026/02/16</title>
