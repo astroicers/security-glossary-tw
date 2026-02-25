@@ -138,11 +138,11 @@
                 <div class="label">威脅等級</div>
             </div>
             <div class="summary-card">
-                <div class="value">15</div>
+                <div class="value">12</div>
                 <div class="label">資安事件</div>
             </div>
             <div class="summary-card">
-                <div class="value">7</div>
+                <div class="value">10</div>
                 <div class="label">漏洞數量</div>
             </div>
         </div>
@@ -151,165 +151,169 @@
             <h2>行動建議</h2>
             <div class="actions">
                 <ul>
-                    <li>🔴 立即修補CISA KEV漏洞</li>
-<li>🔴 部署AI輔助威脅檢測</li>
-<li>🔴 加強FortiGate和網路設備安全</li>
-<li>🟡 制定勒索軟體回應計畫</li>
-<li>🟡 評估供應商安全風險</li>
+                    <li>🔴 立即修補 Dell RecoverPoint CVE-2026-22769（CVSS 10.0，已過 CISA 期限）及 Ivanti EPMM CVE-2026-1281/1340</li>
+<li>🔴 更新 BeyondTrust Remote Support/PRA 修補 CVE-2026-1731，檢查系統是否已遭植入 VShell 或 SparkRAT 後門</li>
+<li>🔴 更新 Google Chrome 至最新版本，修補 Roundcube Webmail 雙重零時差漏洞</li>
+<li>🔴 針對 Silver Fox APT 攻擊，加強台灣企業對報稅和電子發票主題釣魚郵件的警覺</li>
+<li>🟡 檢視所有 FortiGate 設備管理介面暴露情況，確保啟用多因素驗證並定期更新韌體</li>
+<li>🟡 評估 AI 代理和自動化工具的設定檔保護措施，因應 PromptSpy 等新型威脅</li>
 
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2>資安新聞 (15)</h2>
+            <h2>資安新聞 (12)</h2>
             
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">Notepad++ 零日漏洞遭廣泛利用</a></h3>
-            <p class="event-meta"> · 2026-02-13</p>
-            <p><a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2025-15556，<a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.8分，CISA已列入KEV目錄，攻擊者可透過惡意文件執行任意代碼...</p>
+            <h3><a href="https://thehackernews.com/2026/02/ai-assisted-threat-actor-compromises.html" target="_blank" rel="noopener">AI 輔助大規模 FortiGate 攻擊波及 55 國</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-18</p>
+            <p>俄語系威脅行為者利用商用生成式 AI 服務入侵 55 國超過 600 台 FortiGate 設備。攻擊者針對弱密碼、未啟用多因素驗證及暴露管理介面的設備，歷時約 5 週部署勒索軟體。Amazon 揭露該攻擊活動使用 AI 產生攻擊工具。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">Microsoft Windows 零日漏洞被利用</a></h3>
-            <p class="event-meta"> · 2026-02-11</p>
-            <p>CVE-2026-26119，關鍵級別漏洞，已被納入CISA KEV目錄，影響企業安全...</p>
+            <h3><a href="https://www.ithome.com.tw/news/173975" target="_blank" rel="noopener">Dell RecoverPoint CVSS 10.0 零時差漏洞遭中國 APT 利用</a></h3>
+            <p class="event-meta">iThome · 2026-02-18</p>
+            <p>Dell RecoverPoint for Virtual Machines 存在硬編碼 Tomcat Manager 憑證漏洞（<a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-22769，<a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 10.0），攻擊者可取得 root 存取權限。疑似中國 <a href="https://astroicers.github.io/security-glossary-tw/glossary/apt" class="term-link" title="進階持續性威脅">APT</a> 組織在漏洞揭露前已利用超過一年。CISA 以極短 3 天期限加入 <a href="https://astroicers.github.io/security-glossary-tw/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a> 清單。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">Ivanti EPMM 雙重零日漏洞</a></h3>
-            <p class="event-meta"> · 2026-02-15</p>
-            <p>CVE-2026-1281 與 CVE-2026-1340，CVSS 9.8分，遠程代碼執行，已列入KEV...</p>
+            <h3><a href="https://thehackernews.com/2026/02/beyondtrust-flaw-used-for-web-shells.html" target="_blank" rel="noopener">BeyondTrust CVE-2026-1731 遭大規模利用部署後門</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-20</p>
+            <p>Palo Alto Networks Unit 42 證實 BeyondTrust Remote Support 和 Privileged Remote Access 的 CVE-2026-1731（CVSS 9.1）遭大規模利用。攻擊者在 <a href="https://astroicers.github.io/security-glossary-tw/glossary/poc" class="term-link" title="概念驗證">PoC</a> 公開後 24 小時內開始部署 VShell、SparkRAT 和 <a href="https://astroicers.github.io/security-glossary-tw/glossary/webshell" class="term-link" title="網頁後門">Web Shell</a> <a href="https://astroicers.github.io/security-glossary-tw/glossary/backdoor" class="term-link" title="後門">後門</a>，使用 <a href="https://astroicers.github.io/security-glossary-tw/glossary/dns" class="term-link" title="網域名稱系統">DNS</a> 通道外洩資料，已確認 5 國受害。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">SolarWinds Web Help Desk 關鍵漏洞</a></h3>
-            <p class="event-meta"> · 2026-02-12</p>
-            <p>多個CVSS 9.8分漏洞，聯邦機構須於2026年2月24日前修補...</p>
+            <h3><a href="https://www.ithome.com.tw/news/174048" target="_blank" rel="noopener">Silver Fox APT 以報稅通知鎖定台灣企業散播 Winos 4.0</a></h3>
+            <p class="event-meta">iThome · 2026-02-22</p>
+            <p>中國駭客組織 Silver Fox 針對台灣組織發動攻擊，偽冒稅務稽核通知和雲端電子發票誘餌散播 Winos 4.0（ValleyRAT）<a href="https://astroicers.github.io/security-glossary-tw/glossary/malware" class="term-link" title="惡意程式">惡意程式</a>。攻擊手法較先前更為精密，簡單 <a href="https://astroicers.github.io/security-glossary-tw/glossary/ioc" class="term-link" title="入侵指標">IOC</a> 封鎖已不足以防禦。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">Apple dyld 零日漏洞被商業間諜軟體利用</a></h3>
-            <p class="event-meta"> · 2026-02-18</p>
-            <p>CVE-2026-20700，CVSS 7.8分，記憶體損壞漏洞，疑似國家級攻擊者利用...</p>
+            <h3><a href="https://thehackernews.com/2026/02/cisa-adds-two-actively-exploited.html" target="_blank" rel="noopener">Roundcube Webmail 雙重零時差漏洞加入 CISA KEV</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-20</p>
+            <p>CISA 將兩個遭利用的 Roundcube Webmail 漏洞加入 KEV 清單：CVE-2025-49113（反序列化遠端程式碼執行）和 CVE-2025-68461（跨站腳本攻擊）。聯邦機構須於 2026 年 3 月 13 日前完成修補。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">BeyondTrust 漏洞用於勒索軟體攻擊</a></h3>
-            <p class="event-meta"> · 2026-02-10</p>
-            <p>CVE-2026-1731，遠程代碼執行漏洞，公開概念驗證後24小時內被利用...</p>
+            <h3><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">Apple dyld 零時差漏洞遭商業間諜軟體利用</a></h3>
+            <p class="event-meta">CISA · 2026-02-18</p>
+            <p>Apple 修補動態連結器 dyld 中的緩衝區溢位漏洞（CVE-2026-20700，CVSS 7.8），該漏洞已遭疑似國家級攻擊者使用商業間諜軟體利用。影響 macOS 和 iOS 多項產品。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">Chrome 緊急安全更新</a></h3>
-            <p class="event-meta"> · 2026-02-20</p>
-            <p>修補高嚴重性堆積緩衝區溢位漏洞，攻擊者可使瀏覽器崩潰或執行代碼...</p>
+            <h3><a href="https://www.ithome.com.tw/news/174003" target="_blank" rel="noopener">圓山大飯店資訊系統遭入侵</a></h3>
+            <p class="event-meta">iThome · 2026-02-23</p>
+            <p>台北圓山大飯店證實其資訊系統於農曆春節期間遭未授權存取，客戶資料疑似外洩。飯店呼籲顧客提防利用外洩資訊的詐騙行為。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">AI助力的大規模FortiGate攻擊</a></h3>
-            <p class="event-meta"> · 2026-02-18</p>
-            <p>俄語威脅行為者利用生成式AI入侵55國超過600台FortiGate設備...</p>
+            <h3><a href="https://thehackernews.com/2026/02/lazarus-group-uses-medusa-ransomware-in.html" target="_blank" rel="noopener">Lazarus Group 以 Medusa 勒索軟體攻擊美國醫療機構</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-22</p>
+            <p>Symantec 和 Carbon Black 揭露北韓 Lazarus Group（<a href="https://astroicers.github.io/security-glossary-tw/glossary/lazarus_group" class="term-link" title="拉撒路集團">Diamond Sleet</a> / Pompilus）開始使用 Medusa 勒索軟體攻擊美國醫療機構和中東實體，同時部署 Comebacker 後門和 Blindingcan <a href="https://astroicers.github.io/security-glossary-tw/glossary/rat" class="term-link" title="遠端存取木馬">RAT</a>，標誌 Lazarus 勒索軟體策略的重大轉變。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">PayPal 資料外洩事件</a></h3>
-            <p class="event-meta"> · 2026-02-19</p>
-            <p>洩露客戶社會安全號碼、生日和企業個人資料，造成身份盜用高風險...</p>
+            <h3><a href="https://www.securityweek.com/" target="_blank" rel="noopener">密西西比大學醫學中心勒索軟體攻擊</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-02-17</p>
+            <p>UMMC 遭勒索軟體攻擊，被迫關閉全州所有診所，嚴重影響醫療服務。此為本週針對關鍵基礎設施的重大攻擊事件。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">密西西比大學醫學中心勒索軟體攻擊</a></h3>
-            <p class="event-meta"> · 2026-02-17</p>
-            <p>UMMC關閉全州所有診所，遭受勒索軟體攻擊影響醫療服務...</p>
+            <h3><a href="https://www.ithome.com.tw/news/174036" target="_blank" rel="noopener">Conduent 資料外洩擴大至 2,500 萬人</a></h3>
+            <p class="event-meta">iThome · 2026-02-23</p>
+            <p>IT 外包商 Conduent 的資料外洩事件顯著擴大，受影響人數超過 2,500 萬，外洩資料包含姓名、地址、社會安全號碼和醫療資訊。多個美國州政府系統可能受影響，恐成為史上最大規模的美國政府相關資料外洩。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">Advantest 勒索軟體攻擊</a></h3>
-            <p class="event-meta"> · 2026-02-21</p>
-            <p>Advantest公司網路遭勒索軟體攻擊，可能影響客戶和員工資料...</p>
+            <h3><a href="https://www.ithome.com.tw/news/174001" target="_blank" rel="noopener">PromptSpy：首個利用 Google Gemini 的 Android 惡意軟體</a></h3>
+            <p class="event-meta">iThome · 2026-02-20</p>
+            <p>ESET 研究人員披露新型 Android <a href="https://astroicers.github.io/security-glossary-tw/glossary/spyware" class="term-link" title="間諜軟體">間諜軟體</a> PromptSpy，可與 Google Gemini AI 互動以適應不同 Android 裝置的持久化機制。這是首例行動惡意軟體利用生成式 AI 進行營運適應的記錄。...</p>
         </div>
         
         <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">Ascom遭Hellcat勒索軟體攻擊</a></h3>
-            <p class="event-meta"> · 2026-02-22</p>
-            <p>44GB資料被竊取，包含原始碼、專案細節和機密文件...</p>
-        </div>
-        
-        <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">Cloudflare全球服務中斷6小時</a></h3>
-            <p class="event-meta"> · 2026-02-21</p>
-            <p>2月21日發生全球服務中斷，原因為密碼輪換錯誤導致級聯故障...</p>
-        </div>
-        
-        <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">首個使用生成式AI的Android惡意軟體</a></h3>
-            <p class="event-meta"> · 2026-02-20</p>
-            <p>研究人員發現利用Google Gemini模型適應不同設備持久化的Android惡意軟體...</p>
-        </div>
-        
-        <div class="event-card">
-            <h3><a href="#" target="_blank" rel="noopener">FBI警告ATM提款機攻擊激增</a></h3>
-            <p class="event-meta"> · 2026-02-16</p>
-            <p>2025年造成超過2000萬美元損失，自2020年以來共發生1900起事件...</p>
+            <h3><a href="https://thehackernews.com/" target="_blank" rel="noopener">Cloudflare 全球服務中斷 6 小時</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-21</p>
+            <p>Cloudflare 於 2 月 21 日發生全球服務中斷，持續約 6 小時，原因為密碼輪換錯誤導致級聯故障，影響全球眾多網站和服務。...</p>
         </div>
         
         </section>
 
         <section>
-            <h2>漏洞追蹤 (7)</h2>
+            <h2>漏洞追蹤 (10)</h2>
             <table>
                 <thead>
                     <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
                 </thead>
                 <tbody>
         <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-15556" target="_blank">CVE-2025-15556</a></td>
-            <td>Notepad++ 代碼執行零日漏洞...</td>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22769" target="_blank">CVE-2026-22769</a></td>
+            <td>Dell RecoverPoint for VMs 硬編碼憑證漏洞...</td>
             <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
-            <td>9.8</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-26119" target="_blank">CVE-2026-26119</a></td>
-            <td>Microsoft Windows <a href="https://astroicers.github.io/security-glossary-tw/glossary/zero_day" class="term-link" title="零日漏洞">零日漏洞</a>...</td>
-            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
-            <td>9.0</td>
+            <td>10.0</td>
         </tr>
         
         <tr>
             <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1281" target="_blank">CVE-2026-1281</a></td>
-            <td>Ivanti EPMM 遠程代碼執行漏洞...</td>
+            <td>Ivanti EPMM 遠端程式碼執行漏洞（已遭利用）...</td>
             <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
             <td>9.8</td>
         </tr>
         
         <tr>
             <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1340" target="_blank">CVE-2026-1340</a></td>
-            <td>Ivanti EPMM 遠程代碼執行漏洞...</td>
+            <td>Ivanti EPMM 第二個 <a href="https://astroicers.github.io/security-glossary-tw/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a> <a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>（已遭利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1731" target="_blank">CVE-2026-1731</a></td>
+            <td>BeyondTrust Remote Support/PRA OS 命令注入漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.1</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-15556" target="_blank">CVE-2025-15556</a></td>
+            <td>Notepad++ 供應鏈攻擊零時差漏洞...</td>
             <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
             <td>9.8</td>
         </tr>
         
         <tr>
             <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20700" target="_blank">CVE-2026-20700</a></td>
-            <td>Apple dyld 記憶體損壞漏洞...</td>
+            <td>Apple dyld 緩衝區溢位漏洞（已遭利用）...</td>
             <td style="color: #f97316; font-weight: 600;">HIGH</td>
             <td>7.8</td>
         </tr>
         
         <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1731" target="_blank">CVE-2026-1731</a></td>
-            <td>BeyondTrust 未經身份驗證的遠程代碼執行...</td>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49113" target="_blank">CVE-2025-49113</a></td>
+            <td>Roundcube Webmail 反序列化 RCE 漏洞（已遭利用）...</td>
             <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
-            <td>9.1</td>
+            <td>9.0</td>
         </tr>
         
         <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-40552" target="_blank">CVE-2025-40552</a></td>
-            <td>SolarWinds Web Help Desk 關鍵漏洞...</td>
-            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
-            <td>9.8</td>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68461" target="_blank">CVE-2025-68461</a></td>
+            <td>Roundcube Webmail 跨站腳本漏洞（已遭利用）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.5</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2441" target="_blank">CVE-2026-2441</a></td>
+            <td>Google Chrome CSS <a href="https://astroicers.github.io/security-glossary-tw/glossary/use_after_free" class="term-link" title="釋放後使用">Use-After-Free</a> 漏洞（已遭利用）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-7694" target="_blank">CVE-2024-7694</a></td>
+            <td>TeamT5 ThreatSonar Anti-<a href="https://astroicers.github.io/security-glossary-tw/glossary/ransomware" class="term-link" title="勒索軟體">Ransomware</a> 檔案上傳漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.0</td>
         </tr>
         </tbody>
             </table>
@@ -317,9 +321,21 @@
 
         
         <section class="terms-section">
-            <h2>📚 本期術語 (3)</h2>
+            <h2>📚 本期術語 (17)</h2>
             <div class="terms-grid">
                 
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/apt" target="_blank">APT</a></h3>
+                <p class="term-zh">進階持續性威脅</p>
+                <p class="term-def">國家級駭客組織發動的長期網路攻擊</p>
+            </div>
+            
             <div class="term-card">
                 <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" target="_blank">CVSS</a></h3>
                 <p class="term-zh">通用漏洞評分系統</p>
@@ -333,9 +349,39 @@
             </div>
             
             <div class="term-card">
-                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/zero_day" target="_blank">Zero-Day</a></h3>
-                <p class="term-zh">零日漏洞</p>
-                <p class="term-def">尚未有修補程式的漏洞</p>
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/dns" target="_blank">DNS</a></h3>
+                <p class="term-zh">網域名稱系統</p>
+                <p class="term-def">將網域名稱轉換為 IP 位址的分散式系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/backdoor" target="_blank">Backdoor</a></h3>
+                <p class="term-zh">後門</p>
+                <p class="term-def">繞過正常驗證機制的隱藏存取方式</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/webshell" target="_blank">Webshell</a></h3>
+                <p class="term-zh">網頁後門</p>
+                <p class="term-def">植入網站伺服器的惡意腳本，提供遠端存取</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/poc" target="_blank">PoC</a></h3>
+                <p class="term-zh">概念驗證</p>
+                <p class="term-def">證明漏洞可被利用的示範程式碼</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/ioc" target="_blank">IoC</a></h3>
+                <p class="term-zh">入侵指標</p>
+                <p class="term-def">用於識別系統是否遭入侵的技術證據</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/malware" target="_blank">Malware</a></h3>
+                <p class="term-zh">惡意程式</p>
+                <p class="term-def">設計用來損害系統或竊取資料的軟體總稱</p>
             </div>
             
             </div>

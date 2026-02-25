@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/02/24 - 2026/03/01</title>
+    <meta name="description" content="資安週報 2026-02-24 - 2026-03-01">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/02/24 - 2026/03/01</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-09 · 發布日期：2026-02-25</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #eab308;">升高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">10</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即更新 SolarWinds Serv-U 至最新版本，修補 4 個嚴重 RCE 漏洞</li>
+<li>🔴 修補 Soliton FileZen CVE-2026-25108（已遭利用），停用不必要的防毒檢查功能</li>
+<li>🔴 加強台灣企業對報稅和電子發票主題釣魚郵件的監控，部署 Winos 4.0/ValleyRAT IOC</li>
+<li>🔴 確認 Ivanti EPMM（3/1 期限）和 Dell RecoverPoint（已過期限）修補狀態</li>
+<li>🟡 評估組織對 CISA 資安情報和漏洞協調服務的依賴程度，建立替代情報來源</li>
+<li>🟡 參考 CrowdStrike 29 分鐘突破時間數據，檢視偵測和回應能力是否足以應對</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (10)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/news/174048" target="_blank" rel="noopener">Silver Fox APT 以報稅誘餌鎖定台灣散播 Winos 4.0</a></h3>
+            <p class="event-meta">iThome · 2026-02-25</p>
+            <p>中國駭客組織 Silver Fox 發動針對台灣組織的攻擊活動，偽冒稅務稽核通知和雲端電子發票誘餌散播 Winos 4.0（ValleyRAT）<a href="https://astroicers.github.io/security-glossary-tw/glossary/malware" class="term-link" title="惡意程式">惡意程式</a>。手法較先前更為精密隱蔽，簡單 <a href="https://astroicers.github.io/security-glossary-tw/glossary/ioc" class="term-link" title="入侵指標">IOC</a> 封鎖已不足以防禦。Fortinet 報告指出台灣企業為主要攻擊目標。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/02/lazarus-group-uses-medusa-ransomware-in.html" target="_blank" rel="noopener">Lazarus Group 以 Medusa 勒索軟體攻擊美國醫療和中東目標</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-24</p>
+            <p>Symantec 和 Carbon Black 揭露北韓 <a href="https://astroicers.github.io/security-glossary-tw/glossary/lazarus_group" class="term-link" title="拉撒路集團">Lazarus Group</a> 開始使用 Medusa 勒索軟體攻擊美國醫療機構和中東實體。攻擊同時部署 Comebacker <a href="https://astroicers.github.io/security-glossary-tw/glossary/backdoor" class="term-link" title="後門">後門</a>、Blindingcan <a href="https://astroicers.github.io/security-glossary-tw/glossary/rat" class="term-link" title="遠端存取木馬">RAT</a> 和 Infohook <a href="https://astroicers.github.io/security-glossary-tw/glossary/infostealer" class="term-link" title="資訊竊取程式">資訊竊取程式</a>。此標誌 Lazarus 從傳統網路間諜轉向勒索軟體即服務（<a href="https://astroicers.github.io/security-glossary-tw/glossary/raas" class="term-link" title="勒索軟體即服務">RaaS</a>）生態系。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/02/solarwinds-patches-4-critical-serv-u.html" target="_blank" rel="noopener">SolarWinds Serv-U 修補 4 個嚴重 RCE 漏洞</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-25</p>
+            <p>SolarWinds 發布更新修補 Serv-U 15.5 檔案傳輸軟體中 4 個嚴重安全漏洞，可允許攻擊者以 root 權限執行遠端程式碼。鑑於 SolarWinds 在企業環境中的廣泛部署，組織應立即修補。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/02/cisa-confirms-active-exploitation-of.html" target="_blank" rel="noopener">CISA 確認 FileZen CVE-2026-25108 遭活躍利用</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-24</p>
+            <p>CISA 將 Soliton Systems FileZen 的 OS 命令注入漏洞 <a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-25108（<a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 8.7）加入 <a href="https://astroicers.github.io/security-glossary-tw/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a> 清單，確認已遭活躍利用。啟用防毒檢查選項時，已驗證使用者可透過特製 HTTP 請求執行任意 OS 命令。聯邦機構須於 3 月 17 日前完成修補。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/news/174036" target="_blank" rel="noopener">Conduent 資料外洩擴大至超過 2,500 萬人</a></h3>
+            <p class="event-meta">iThome · 2026-02-25</p>
+            <p>IT 外包商 Conduent 的資料外洩事件持續擴大，受影響人數超過 2,500 萬。外洩資料包含姓名、地址、社會安全號碼和醫療資訊。多個美國州政府系統可能受影響，恐成為史上最大規模的美國政府相關資料外洩事件。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/news/174032" target="_blank" rel="noopener">酷澎資料外洩影響逾 20 萬台灣用戶</a></h3>
+            <p class="event-meta">iThome · 2026-02-25</p>
+            <p>數位發展部數位產業署確認 2025 年 11 月酷澎（Coupang）資料外洩事件影響超過 20 萬台灣用戶，個人資料遭未授權存取。台灣主管機關已介入調查。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/02/apt28-targeted-european-entities-using.html" target="_blank" rel="noopener">APT28 以 Webhook 巨集惡意軟體攻擊歐洲實體</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-24</p>
+            <p>俄羅斯國家資助駭客組織 APT28（<a href="https://astroicers.github.io/security-glossary-tw/glossary/apt28" class="term-link" title="APT28">Fancy Bear</a>）以新型 Webhook 巨集惡意軟體攻擊西歐和中歐實體。此為該組織對歐洲機構持續攻擊活動的最新行動。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/02/defense-contractor-employee-jailed-for.html" target="_blank" rel="noopener">前國防承包商員工因出售 8 個零時差漏洞給俄羅斯被判刑</a></h3>
+            <p class="event-meta">The Hacker News · 2026-02-25</p>
+            <p>前美國國防承包商 L3Harris 員工 Peter Williams 因出售 8 個零時差漏洞給俄羅斯零時差仲介商被判處 87 個月（逾 7 年）有期徒刑。美國財政部同時制裁涉案俄羅斯仲介商。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://cyberscoop.com/crowdstrike-annual-global-threat-report-attack-breakout-time/" target="_blank" rel="noopener">CrowdStrike 報告：攻擊者 29 分鐘內即可橫向移動</a></h3>
+            <p class="event-meta">CyberScoop · 2026-02-24</p>
+            <p>CrowdStrike 2026 年全球威脅報告揭露，平均攻擊突破時間（從初始入侵到橫向移動）降至 29 分鐘，較前年提速 65%。AI 驅動攻擊顯著增加，憑證濫用和安全盲點為主要推手。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://cyberscoop.com/cisa-personnel-cuts-trump-second-term-analysis/" target="_blank" rel="noopener">CISA 人力危機：一年內流失三分之一人員</a></h3>
+            <p class="event-meta">CyberScoop · 2026-02-25</p>
+            <p>美國 CISA 在過去一年流失約三分之一人力。跨黨派議員和業界代表均表達擔憂，認為該機構已無法因應重大網路危機。此人力流失可能影響全球資安情報分享和漏洞協調機制。...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (8)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25108" target="_blank">CVE-2026-25108</a></td>
+            <td>Soliton FileZen OS 命令注入漏洞（已遭利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>8.7</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-27211" target="_blank">CVE-2026-27211</a></td>
+            <td>Cloud Hypervisor 主機檔案外洩漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-2038" target="_blank">CVE-2026-2038</a></td>
+            <td>GFI Archiver 驗證繞過漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49113" target="_blank">CVE-2025-49113</a></td>
+            <td>Roundcube Webmail 反序列化 <a href="https://astroicers.github.io/security-glossary-tw/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a> <a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>（已遭利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68461" target="_blank">CVE-2025-68461</a></td>
+            <td>Roundcube Webmail 跨站腳本漏洞（已遭利用）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.5</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22769" target="_blank">CVE-2026-22769</a></td>
+            <td>Dell RecoverPoint for VMs 硬編碼憑證漏洞（已過期限）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1281" target="_blank">CVE-2026-1281</a></td>
+            <td>Ivanti EPMM 遠端程式碼執行漏洞（持續利用中）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-1731" target="_blank">CVE-2026-1731</a></td>
+            <td>BeyondTrust RS/PRA OS 命令注入漏洞（持續擴大利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.1</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (13)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/ioc" target="_blank">IoC</a></h3>
+                <p class="term-zh">入侵指標</p>
+                <p class="term-def">用於識別系統是否遭入侵的技術證據</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/malware" target="_blank">Malware</a></h3>
+                <p class="term-zh">惡意程式</p>
+                <p class="term-def">設計用來損害系統或竊取資料的軟體總稱</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/raas" target="_blank">RaaS</a></h3>
+                <p class="term-zh">勒索軟體即服務</p>
+                <p class="term-def">將勒索軟體以服務形式提供給其他犯罪者的商業模式</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/infostealer" target="_blank">Infostealer</a></h3>
+                <p class="term-zh">資訊竊取程式</p>
+                <p class="term-def">專門竊取敏感資訊的惡意程式</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/rat" target="_blank">RAT</a></h3>
+                <p class="term-zh">遠端存取木馬</p>
+                <p class="term-def">允許攻擊者遠端控制受感染系統的惡意程式</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/backdoor" target="_blank">Backdoor</a></h3>
+                <p class="term-zh">後門</p>
+                <p class="term-def">繞過正常驗證機制的隱藏存取方式</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/lazarus_group" target="_blank">Lazarus Group</a></h3>
+                <p class="term-zh">拉撒路集團</p>
+                <p class="term-def">北韓國家級駭客組織，以金融竊盜聞名</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
