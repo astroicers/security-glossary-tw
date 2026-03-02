@@ -6,22 +6,22 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 26 Feb 2026 14:13:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 09:37:22 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
     <item>
       <title>資安週報 2026-02-24 - 2026-03-02</title>
       <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-09.html</link>
       <guid isPermaLink="false">SEC-WEEKLY-2026-09</guid>
-      <pubDate>Thu, 26 Feb 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：一般
-本週收錄 15 則事件、18 個漏洞
+      <pubDate>Mon, 02 Mar 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 12 則事件、8 個漏洞
 
 重點新聞：
-• Microsoft 二月 Patch Tuesday 修復 60 個漏洞包含 6 個零日
-• n8n 工作流程平台關鍵漏洞允許遠程命令執行
-• Dell RecoverPoint 最高嚴重性漏洞遭中國相關威脅行為者利用
+• Cisco SD-WAN零日漏洞遭威脅行為者長期利用
+• Google Chrome零日漏洞遭野外利用
+• RoundCube郵件系統多個漏洞遭活躍利用
 
-相關術語：CVSS, CVE, IoC, Malware, Zero-Day</description>
+相關術語：CVE, CVSS, Vulnerability</description>
     </item>
     <item>
       <title>資安週報 2026/02/17 - 2026/02/23</title>
