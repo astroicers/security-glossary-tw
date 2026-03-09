@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026-03-03 - 2026-03-09</title>
+    <meta name="description" content="資安週報 2026-03-03 - 2026-03-09">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026-03-03 - 2026-03-09</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-10 · 發布日期：2026-03-09</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #ef4444;">嚴重</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">15</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">13</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即修補所有 CVSS 10.0 關鍵漏洞，特別是 n8n 和 Cisco 防火牆漏洞</li>
+<li>🔴 根據 CISA KEV 清單要求，在指定期限前修補所有 KEV <a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a></li>
+<li>🔴 檢查並更新所有 VMware Aria Operations 實例</li>
+<li>🔴 強化電信和製造業關鍵基礎設施的勒索軟體防護</li>
+<li>🟡 部署額外監控以偵測伊朗相關威脅活動</li>
+<li>🟡 更新 Android 設備安全補丁至最新版本</li>
+<li>🟡 檢查 Chrome 瀏覽器擴展權限並更新至最新版本</li>
+<li>🟡 加強憑證管理和多因子認證部署</li>
+<li>🟡 建立或更新勒索軟體事件應變程序</li>
+<li>🟢 針對 DDoS 攻擊加強網路基礎設施防護</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (15)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/01/critical-n8n-vulnerability-cvss-100.html" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">The Hacker News · 2026-03-05</p>
+            <p>n8n "Ni8mare" 漏洞允許未認證遠端代碼執行，影響全球約 10 萬台伺服器...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.abstract.security/blog/critical-cisco-vulnerabilities-cve-2026-20079-and-cve-2026-20131" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">Abstract Security · 2026-03-04</p>
+            <p>Cisco 發布防火牆管理中心兩個 <a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 10.0 關鍵漏洞，可導致任意代碼執行...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/03/cisa-adds-actively-exploited-vmware.html" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">The Hacker News · 2026-03-03</p>
+            <p>CISA 將 VMware Aria Operations 遠端代碼執行漏洞加入 <a href="https://astroicers.github.io/security-glossary-tw/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a> 清單...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/03/hikvision-and-rockwell-automation-cvss.html" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">The Hacker News · 2026-03-05</p>
+            <p>Hikvision 和 Rockwell Automation CVSS 9.8 漏洞被加入 CISA KEV 清單...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">Security Week · 2026-03-06</p>
+            <p>Android 發布重大安全更新，修復 129 個漏洞，包括 10 個關鍵漏洞...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">The Hacker News · 2026-03-07</p>
+            <p>Chrome Gemini 面板發現高危漏洞，允許低權限擴展注入代碼...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">Security Week · 2026-03-08</p>
+            <p>AI 發現 Firefox 22 個新漏洞，其中 14 個被歸類為高危...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://members.asicentral.com/news/industry-news/march-2026/cybersecurity-experts-warn-of-increased-risk-of-attacks-from-iran-linked-hackers/" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">ASI Central · 2026-03-03</p>
+            <p>網路安全專家警告伊朗相關駭客攻擊風險增加...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://bostoninstituteofanalytics.org/blog/weekly-global-cybersecurity-threat-update-major-incidents-and-security-trends-28-feb-6-march-2026/" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">Boston Institute of Analytics · 2026-03-04</p>
+            <p>美國聯邦通信委員會敦促電信業者加強網路安全，勒索軟體攻擊增長四倍...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.blackfog.com/the-state-of-ransomware-2026/" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">BlackFog · 2026-03-05</p>
+            <p>製造業成為勒索軟體主要目標，佔 2025 年攻擊目標超過 50%...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://purplesec.us/breach-report/" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">Purple Security · 2026-03-06</p>
+            <p>多家組織遭受勒索軟體攻擊，包括 <a href="https://astroicers.github.io/security-glossary-tw/glossary/qilin" class="term-link" title="Qilin 勒索軟體組織">Qilin</a>、<a href="https://astroicers.github.io/security-glossary-tw/glossary/akira" class="term-link" title="Akira 勒索軟體">Akira</a> 等威脅組織活動...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://bostoninstituteofanalytics.org/blog/weekly-global-cybersecurity-threat-update-major-incidents-and-security-trends-28-feb-6-march-2026/" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">Boston Institute of Analytics · 2026-03-07</p>
+            <p>政治動機網路攻擊頻率增加，<a href="https://astroicers.github.io/security-glossary-tw/glossary/ddos" class="term-link" title="分散式阻斷服務攻擊">DDoS</a> 攻擊目標政府和關鍵基礎設施...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.helpnetsecurity.com/2026/03/03/cloudflare-cyber-threat-report-2026/" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">Help Net Security · 2026-03-03</p>
+            <p>Cloudflare 追蹤每日 2300 億次威脅，機器人佔登入嘗試的 94%...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://dev.to/tiamatenity/cve-2026-28446-cvss-98-openclaw-voice-extension-rce-what-you-need-to-know-n2i" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">TheHackerWire · 2026-03-08</p>
+            <p>OpenClaw 語音擴展發現遠端代碼執行漏洞 <a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-28446...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.thehackerwire.com/cve-2026-0006-critical-rce-via-heap-buffer-overflow/" target="_blank" rel="noopener"></a></h3>
+            <p class="event-meta">TheHackerWire · 2026-03-02</p>
+            <p>堆緩衝區溢出漏洞 CVE-2026-0006 允許遠端代碼執行，無需用戶交互...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (13)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21858" target="_blank">CVE-2026-21858</a></td>
+            <td>n8n 未認證遠端代碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20079" target="_blank">CVE-2026-20079</a></td>
+            <td>Cisco 安全防火牆管理中心漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20131" target="_blank">CVE-2026-20131</a></td>
+            <td>Cisco 安全防火牆管理中心漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-22719" target="_blank">CVE-2026-22719</a></td>
+            <td>VMware Aria Operations 命令注入漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.1</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2017-7921" target="_blank">CVE-2017-7921</a></td>
+            <td>Hikvision 產品認證繞過漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2021-22681" target="_blank">CVE-2021-22681</a></td>
+            <td>Rockwell Automation 憑證保護不足漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0006" target="_blank">CVE-2026-0006</a></td>
+            <td>堆緩衝區溢出漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28446" target="_blank">CVE-2026-28446</a></td>
+            <td>OpenClaw 語音擴展遠端代碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-30860" target="_blank">CVE-2026-30860</a></td>
+            <td>關鍵漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.9</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20122" target="_blank">CVE-2026-20122</a></td>
+            <td>Cisco SD-WAN 管理器任意檔案覆寫漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.1</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (7)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/akira" target="_blank">Akira</a></h3>
+                <p class="term-zh">Akira 勒索軟體</p>
+                <p class="term-def">2023 年出現的快速成長勒索軟體組織</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/qilin" target="_blank">Qilin</a></h3>
+                <p class="term-zh">Qilin 勒索軟體組織</p>
+                <p class="term-def">採用 RaaS 模式的勒索軟體犯罪組織</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/ddos" target="_blank">DDoS</a></h3>
+                <p class="term-zh">分散式阻斷服務攻擊</p>
+                <p class="term-def">利用大量流量癱瘓目標服務的攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
