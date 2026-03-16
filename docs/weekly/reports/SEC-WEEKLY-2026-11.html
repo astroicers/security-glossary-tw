@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 - 第11週</title>
+    <meta name="description" content="資安週報 2026-03-10 - 2026-03-16">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 - 第11週</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-11 · 發布日期：2026-03-16</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #eab308;">升高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">15</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">20</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 檢查並更新所有系統安全補丁</li>
+<li>🟡 檢視和強化網路監控措施</li>
+<li>🟡 進行員工資安意識訓練</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (15)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/03/openclaw-ai-agent-flaws-could-enable.html" target="_blank" rel="noopener">OpenClaw AI Agent Flaws Could Enable Prompt Injection and Data Exfiltration</a></h3>
+            <p class="event-meta">The Hacker News · </p>
+            <p>China's National Computer Network Emergency Response Technical Team (CNCERT) has issued a warning about the security stemming from the use of OpenClaw (formerly Clawdbot and Moltbot), an open-source a...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/03/glassworm-supply-chain-attack-abuses-72.html" target="_blank" rel="noopener">GlassWorm Supply-Chain Attack Abuses 72 Open VSX Extensions to Target Developers</a></h3>
+            <p class="event-meta">The Hacker News · </p>
+            <p><a href="https://astroicers.github.io/security-glossary-tw/glossary/cybersecurity" class="term-link" title="網路安全">Cybersecurity</a> researchers have flagged a new iteration of the GlassWorm campaign that they say represents a "significant escalation" in how it propagates through the Open VSX registry.
+"Instead of req...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/03/chinese-hackers-target-southeast-asian.html" target="_blank" rel="noopener">Chinese Hackers Target Southeast Asian Militaries with AppleChris and MemFun Malware</a></h3>
+            <p class="event-meta">The Hacker News · </p>
+            <p>A suspected China-based <a href="https://astroicers.github.io/security-glossary-tw/glossary/cyber_espionage" class="term-link" title="網路間諜活動">cyber espionage</a> operation has targeted Southeast Asian military organizations as part of a <a href="https://astroicers.github.io/security-glossary-tw/glossary/state_sponsored" class="term-link" title="國家支持的">state-sponsored</a> campaign that dates back to at least 2020.
+Palo Alto Networks Unit 42...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://krebsonsecurity.com/2026/03/iran-backed-hackers-claim-wiper-attack-on-medtech-firm-stryker/" target="_blank" rel="noopener">Iran-Backed Hackers Claim Wiper Attack on Medtech Firm Stryker</a></h3>
+            <p class="event-meta">Krebs on Security · </p>
+            <p>A <a href="https://astroicers.github.io/security-glossary-tw/glossary/hacktivist" class="term-link" title="駭客行動主義者">hacktivist</a> group with links to Iran's intelligence agencies is claiming responsibility for a data-wiping attack against Stryker, a global medical technology company based in Michigan. News reports o...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://krebsonsecurity.com/2026/03/microsoft-patch-tuesday-march-2026-edition/" target="_blank" rel="noopener">Microsoft Patch Tuesday, March 2026 Edition</a></h3>
+            <p class="event-meta">Krebs on Security · </p>
+            <p>Microsoft Corp. today pushed security updates to fix at least 77 vulnerabilities in its Windows operating systems and other software. There are no pressing "<a href="https://astroicers.github.io/security-glossary-tw/glossary/zero_day" class="term-link" title="零日漏洞">zero-day</a>" flaws this month (compared to Feb...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/loblaw-data-breach-impacts-customer-information/" target="_blank" rel="noopener">Loblaw Data Breach Impacts Customer Information</a></h3>
+            <p class="event-meta">SecurityWeek · </p>
+            <p><p>Personal information such as names, email addresses, and phone numbers was accessed by hackers.</p>
+<p>The post <a href="<a href="https://astroicers.github.io/security-glossary-tw/glossary/https" class="term-link" title="安全超文字傳輸協定">https</a>://www.securityweek.com/loblaw-data-breach-impacts-customer-information...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/critical-hpe-aos-cx-vulnerability-allows-admin-password-resets/" target="_blank" rel="noopener">Critical HPE AOS-CX Vulnerability Allows Admin Password Resets</a></h3>
+            <p class="event-meta">SecurityWeek · </p>
+            <p><p>The <a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" class="term-link" title="漏洞">vulnerability</a> can be exploited remotely, without authentication, to circumvent existing <a href="https://astroicers.github.io/security-glossary-tw/glossary/authentication" class="term-link" title="身分驗證">authentication</a> controls.</p>
+<p>The post <a href="https://www.securityweek.com/critical-hpe-aos-cx-vulner...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/starbucks-data-breach-impacts-employees/" target="_blank" rel="noopener">Starbucks Data Breach Impacts Employees</a></h3>
+            <p class="event-meta">SecurityWeek · </p>
+            <p><p>Starbucks said the incident involved <a href="https://astroicers.github.io/security-glossary-tw/glossary/phishing" class="term-link" title="網路釣魚">phishing</a> attacks targeting an employee portal, affecting hundreds.</p>
+<p>The post <a href="https://www.securityweek.com/starbucks-data-breach-impacts-employees...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/vulnerabilities-threats/fake-pocs-risks-cisco-sd-wan" target="_blank" rel="noopener">Fake PoCs, Misunderstood Risks Cause Cisco SD-WAN Chaos</a></h3>
+            <p class="event-meta">Dark Reading · </p>
+            <p>The excitement around Cisco's latest SD-WAN bugs has inspired some light fraud, misunderstandings, and overlooked risks....</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/threat-intelligence/data-gap-why-nonprofit-cyber-incidents-go-underreported" target="_blank" rel="noopener">The Data Gap: Why Nonprofit Cyber Incidents Go Underreported</a></h3>
+            <p class="event-meta">Dark Reading · </p>
+            <p>Threat actors target nonprofits due to security gaps and highly coveted information, but a lack of sufficient data makes it difficult to grasp the entire picture....</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/cyber-risk/cyberattackers-dont-care-about-good-causes" target="_blank" rel="noopener">Cyberattackers Don&#x27;t Care About Good Causes</a></h3>
+            <p class="event-meta">Dark Reading · </p>
+            <p>Sightline Security's founder and advisory board discuss how cybersecurity poses significant problems for nonprofits and suggest ways the industry can help....</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.schneier.com/blog/archives/2026/03/upcoming-speaking-engagements-54.html" target="_blank" rel="noopener">Upcoming Speaking Engagements</a></h3>
+            <p class="event-meta">Schneier on Security · </p>
+            <p><p>This is a current list of where and when I am scheduled to speak:</p>
+<ul>
+<li>I’m giving the <a href="https://www.chu.cam.ac.uk/event/computer-science-lecture-2026/">Ross Anderson Lecture</a> at t...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.schneier.com/blog/archives/2026/03/friday-squid-blogging-increased-squid-population-in-the-falklands.html" target="_blank" rel="noopener">Friday Squid Blogging: Increased Squid Population in the Falklands</a></h3>
+            <p class="event-meta">Schneier on Security · </p>
+            <p><p>Some <a href="https://www.undercurrentnews.com/2026/02/26/encouraging-scientific-survey-boosts-hopes-for-south-atlantic-squid-fishery/">good news</a>: squid stocks seem to be recovering in the wate...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.schneier.com/blog/archives/2026/03/academia-and-the-ai-brain-drain.html" target="_blank" rel="noopener">Academia and the “AI Brain Drain”</a></h3>
+            <p class="event-meta">Schneier on Security · </p>
+            <p><p>In 2025, Google, Amazon, Microsoft and Meta collectively spent US$380 billion on building artificial-intelligence tools. That number is expected to surge still higher this year, to $650 billion, to...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.infosecurity-magazine.com/news/interpol-operation-synergia3-94/" target="_blank" rel="noopener">Interpol&#x27;s &#x27;Operation Synergia III&#x27; Nets 94 Arrests in Major Cybercrime Sweep</a></h3>
+            <p class="event-meta">Infosecurity Magazine · </p>
+            <p>A new law enforcement operation against phishing and <a href="https://astroicers.github.io/security-glossary-tw/glossary/ransomware" class="term-link" title="勒索軟體">ransomware</a> operators led to the takedown of 45,000 malicious IP addresses...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (20)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3799" target="_blank">CVE-2026-3799</a></td>
+            <td>...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3801" target="_blank">CVE-2026-3801</a></td>
+            <td>...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3802" target="_blank">CVE-2026-3802</a></td>
+            <td>...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3803" target="_blank">CVE-2026-3803</a></td>
+            <td>...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3804" target="_blank">CVE-2026-3804</a></td>
+            <td>...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3807" target="_blank">CVE-2026-3807</a></td>
+            <td>...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3808" target="_blank">CVE-2026-3808</a></td>
+            <td>...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3809" target="_blank">CVE-2026-3809</a></td>
+            <td>...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3810" target="_blank">CVE-2026-3810</a></td>
+            <td>...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-41756" target="_blank">CVE-2025-41756</a></td>
+            <td>...</td>
+            <td style="color: #22c55e; font-weight: 600;">LOW</td>
+            <td>8.1</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (10)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cybersecurity" target="_blank">Cybersecurity</a></h3>
+                <p class="term-zh">網路安全</p>
+                <p class="term-def">保護資訊系統免受網路攻擊的實務與技術</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/state_sponsored" target="_blank">State-Sponsored</a></h3>
+                <p class="term-zh">國家支持的</p>
+                <p class="term-def">由國家政府資助或指揮的網路行動</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cyber_espionage" target="_blank">Cyber Espionage</a></h3>
+                <p class="term-zh">網路間諜活動</p>
+                <p class="term-def">透過網路入侵竊取機密資訊的活動</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/hacktivist" target="_blank">Hacktivist</a></h3>
+                <p class="term-zh">駭客行動主義者</p>
+                <p class="term-def">基於政治或社會理念進行網路攻擊的駭客</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/zero_day" target="_blank">Zero-Day</a></h3>
+                <p class="term-zh">零日漏洞</p>
+                <p class="term-def">尚未有修補程式的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/https" target="_blank">HTTPS</a></h3>
+                <p class="term-zh">安全超文字傳輸協定</p>
+                <p class="term-def">使用 TLS 加密的安全網頁傳輸協定</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/authentication" target="_blank">Authentication</a></h3>
+                <p class="term-zh">身分驗證</p>
+                <p class="term-def">驗證使用者或系統身分的過程</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/phishing" target="_blank">Phishing</a></h3>
+                <p class="term-zh">網路釣魚</p>
+                <p class="term-def">透過偽造信件或網站騙取敏感資訊的攻擊手法</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/ransomware" target="_blank">Ransomware</a></h3>
+                <p class="term-zh">勒索軟體</p>
+                <p class="term-def">加密受害者資料並要求贖金的惡意程式</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

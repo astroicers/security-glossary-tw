@@ -6,8 +6,23 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 09 Mar 2026 09:41:09 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 09:37:21 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 - 第11週</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-11.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-11</guid>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 15 則事件、20 個漏洞
+
+重點新聞：
+• OpenClaw AI Agent Flaws Could Enable Prompt Injection and...
+• GlassWorm Supply-Chain Attack Abuses 72 Open VSX Extensio...
+• Chinese Hackers Target Southeast Asian Militaries with Ap...
+
+相關術語：Cybersecurity, State-Sponsored, Cyber Espionage, Hacktivist, Zero-Day</description>
+    </item>
     <item>
       <title>資安週報 2026-03-03 - 2026-03-09</title>
       <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-10.html</link>
