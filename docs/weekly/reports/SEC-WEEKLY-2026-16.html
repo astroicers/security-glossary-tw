@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/04/13 - 2026/04/19</title>
+    <meta name="description" content="資安週報 2026-04-13 - 2026-04-19">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/04/13 - 2026/04/19</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-16 · 發布日期：2026-04-19</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #ef4444;">嚴重</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">10</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">6</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即部署 Microsoft 4 月 Patch Tuesday 更新，優先處理 CVE-2026-33824（CVSS 9.8）與 SharePoint 零時差</li>
+<li>🔴 Cisco Catalyst SD-WAN Manager 須於 4 月 23 日前完成三個 KEV 漏洞修補</li>
+<li>🔴 稽核所有第三方整合工具（如 Context.ai 類型服務）的存取權限，限制最小化授權</li>
+<li>🔴 所有管理介面強制啟用 MFA，BePrime 事件顯示缺乏 MFA 可導致大規模設備被控</li>
+<li>🟡 PaperCut 環境更新修補 CVE-2023-27351，防範 Cl0p/LockBit 勒索軟體利用</li>
+<li>🟡 OT/ICS 與公用事業環境加強網路分隔與異常流量監控，防範 Snow 惡意程式家族入侵</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (10)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-april-2026-patch-tuesday-fixes-167-flaws-2-zero-days/" target="_blank" rel="noopener">Microsoft 4 月 Patch Tuesday：修補 163 個 CVE，含 SharePoint 零時差 CVE-2026-32201</a></h3>
+            <p class="event-meta">BleepingComputer · 2026-04-14</p>
+            <p>Microsoft 於 4 月 14-15 日發布史上最大規模之一的 Patch Tuesday，修補 163 個漏洞（含 2 個零時差），其中 SharePoint Server 零時差 CVE-2026-32201 已遭積極利用，CISA 要求聯邦機構於 4 月 28 日前完成修補。Windows IKE Service Extensions <a href="https://astroicers.github.io/security-glossary-tw/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a> <a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-33824（<a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://sharkstriker.com/blog/april-2026-data-breaches/" target="_blank" rel="noopener">Itron 公用事業平台遭 Snow 惡意程式家族感染（Snowbelt/Snowglaze/Snowbasin）</a></h3>
+            <p class="event-meta">SharkStriker · 2026-04-13</p>
+            <p>全球公用事業與智慧城市平台商 Itron 於 4 月 13 日發現遭未授權存取，攻擊者植入 Snow 惡意程式家族（Snowbelt、Snowglaze、Snowbasin）建立持久化存取，影響全球多個城市的公用事業管理系統。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://sharkstriker.com/blog/april-2026-data-breaches/" target="_blank" rel="noopener">Vercel 透過 Context.ai 第三方工具供應鏈攻擊：API 金鑰、原始碼外洩</a></h3>
+            <p class="event-meta">SharkStriker · 2026-04-19</p>
+            <p>前端部署平台 Vercel 於 4 月 19 日確認遭供應鏈攻擊，攻擊者透過入侵第三方工具 Context.ai 的帳號取得 Vercel 系統存取，竊取存取金鑰、原始碼、API 金鑰、內部部署憑證及資料庫資料。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://sharkstriker.com/blog/april-2026-data-breaches/" target="_blank" rel="noopener">Autovista 勒索軟體攻擊：歐洲及澳洲汽車資料服務癱瘓</a></h3>
+            <p class="event-meta">SharkStriker · 2026-04-15</p>
+            <p>汽車資料服務商 Autovista 遭勒索軟體攻擊，癱瘓 Eurotax、Schwacke、Glass's、Rødboka 等在歐洲及澳洲的資料驅動應用服務，影響汽車評估與保險業務。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://sharkstriker.com/blog/april-2026-data-breaches/" target="_blank" rel="noopener">Spring Lake Park 學區遭勒索軟體攻擊：全校停課</a></h3>
+            <p class="event-meta">SharkStriker · 2026-04-13</p>
+            <p>明尼蘇達州 Spring Lake Park 學區於 4 月 13 日遭勒索軟體攻擊，被迫關閉所有學校停課，啟動事件應變程序，為本週最受關注的美國教育機構攻擊事件。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/04/cisa-adds-8-exploited-flaws-to-kev-sets.html" target="_blank" rel="noopener">CISA 4 月 20 日新增 8 個 KEV：Cisco SD-WAN、PaperCut、JetBrains TeamCity</a></h3>
+            <p class="event-meta">The Hacker News · 2026-04-20</p>
+            <p>CISA 於 4 月 20 日一次性新增 8 個漏洞至 <a href="https://astroicers.github.io/security-glossary-tw/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a>，包含 3 個 Cisco Catalyst SD-WAN Manager 漏洞（須於 4/23 前修補）、PaperCut CVE-2023-27351（與 Cl0p/<a href="https://astroicers.github.io/security-glossary-tw/glossary/lockbit" class="term-link" title="LockBit 勒索軟體">LockBit</a> 勒索軟體相關）、JetBrains TeamCity CVE-2024-27199，以及 Kentico、Quest KACE、Zimbra <a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>（須於...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.helpnetsecurity.com/2026/04/21/cisa-flags-another-cisco-catalyst-sd-wan-manager-bug-as-exploited-cve-2026-20133/" target="_blank" rel="noopener">Cisco Catalyst SD-WAN Manager 第三個漏洞 CVE-2026-20133 確認遭利用</a></h3>
+            <p class="event-meta">Help Net Security · 2026-04-21</p>
+            <p>CISA 額外確認 Cisco Catalyst SD-WAN Manager 第三個積極利用漏洞 CVE-2026-20133（敏感資訊洩漏），三個 SD-WAN 漏洞（20122/20128/20133）聯邦修補截止日均為 4 月 23 日。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://sharkstriker.com/blog/april-2026-data-breaches/" target="_blank" rel="noopener">BePrime 資安公司自身遭入侵：1858 台網路設備被控，監控鏡頭遭存取</a></h3>
+            <p class="event-meta">SharkStriker · 2026-04-20</p>
+            <p>4 月 20 日攻擊者入侵缺乏 <a href="https://astroicers.github.io/security-glossary-tw/glossary/mfa" class="term-link" title="多因子驗證">MFA</a> 保護的 BePrime 管理員帳號，透過 API 金鑰取得控制 1858 台網路設備及 2600+ 台連網設備，外洩 12.6GB 資料（含明文憑證、交易紀錄、資安稽核報告）並取得即時監控鏡頭存取權。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://sharkstriker.com/blog/april-2026-data-breaches/" target="_blank" rel="noopener">公用事業網路攻擊威脅升溫：Itron 事件顯示智慧城市基礎設施高風險</a></h3>
+            <p class="event-meta">SharkStriker · 2026-04-14</p>
+            <p>Itron 遭攻擊顯示智慧城市與公用事業管理系統（電網、水務、智慧電表）成為高價值攻擊目標。Snow 惡意程式家族的多變體設計（Snowbelt/Snowglaze/Snowbasin）顯示攻擊者針對 <a href="https://astroicers.github.io/security-glossary-tw/glossary/ot" class="term-link" title="營運技術">OT</a>/<a href="https://astroicers.github.io/security-glossary-tw/glossary/ics" class="term-link" title="工業控制系統">ICS</a> 環境部署客製化持久化工具。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://cyberprivacylab.com/recent-data-breaches-2026/" target="_blank" rel="noopener">資安公司自身成為攻擊目標：BePrime 事件警示業界</a></h3>
+            <p class="event-meta">CyberPrivacyLab · 2026-04-20</p>
+            <p>BePrime 事件凸顯資安公司自身成為高價值攻擊目標——攻擊者透過入侵資安廠商可一次性取得大量客戶網路設備管理權限，為典型的「掌鑰者攻擊」手法。...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (6)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-33824" target="_blank">CVE-2026-33824</a></td>
+            <td>Windows IKE Service Extensions RCE（CVSS 9.8）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32201" target="_blank">CVE-2026-32201</a></td>
+            <td>Microsoft SharePoint Server 零時差偽造漏洞...</td>
+            <td style="color: #eab308; font-weight: 600;">MEDIUM</td>
+            <td>6.5</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20122" target="_blank">CVE-2026-20122</a></td>
+            <td>Cisco Catalyst SD-WAN Manager 特權 API 濫用...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.5</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20128" target="_blank">CVE-2026-20128</a></td>
+            <td>Cisco Catalyst SD-WAN Manager 密碼可還原儲存...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.5</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20133" target="_blank">CVE-2026-20133</a></td>
+            <td>Cisco Catalyst SD-WAN Manager 敏感資訊洩漏...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.5</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-27351" target="_blank">CVE-2023-27351</a></td>
+            <td>PaperCut NG/MF 不當驗證（與 Cl0p/LockBit 相關）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.2</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (9)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/rce" target="_blank">RCE</a></h3>
+                <p class="term-zh">遠端程式碼執行</p>
+                <p class="term-def">攻擊者可遠端在目標系統執行任意程式碼的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/lockbit" target="_blank">LockBit</a></h3>
+                <p class="term-zh">LockBit 勒索軟體</p>
+                <p class="term-def">全球最活躍的 RaaS 勒索軟體家族之一</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/mfa" target="_blank">MFA</a></h3>
+                <p class="term-zh">多因子驗證</p>
+                <p class="term-def">要求使用者提供兩種以上驗證因子的身分驗證方式</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/ics" target="_blank">ICS</a></h3>
+                <p class="term-zh">工業控制系統</p>
+                <p class="term-def">控制工業流程的電腦系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/ot" target="_blank">OT</a></h3>
+                <p class="term-zh">營運技術</p>
+                <p class="term-def">用於監控和控制實體設備的硬體和軟體</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

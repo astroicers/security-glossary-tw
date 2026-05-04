@@ -6,8 +6,113 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 16 Mar 2026 09:37:21 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 22:39:53 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/04/28 - 2026/05/04</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-18.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-18</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：嚴重
+本週收錄 12 則事件、10 個漏洞
+
+重點新聞：
+• cPanel CVE-2026-41940 遭勒索軟體 Sorry 積極利用，逾兩萬台伺服器淪陷
+• Linux 核心「Copy Fail」CVE-2026-31431 本地提權漏洞影響主流發行版
+• TeamPCP「Mini Shai-Hulud」供應鏈攻擊波及 SAP、Lightning、Intercom 套件
+
+相關術語：KEV, CVSS, CVE, Ransomware, APT</description>
+    </item>
+    <item>
+      <title>資安週報 2026/04/20 - 2026/04/26</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-17.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-17</guid>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：嚴重
+本週收錄 12 則事件、6 個漏洞
+
+重點新聞：
+• Oracle 4 月 CPU：修補 241 個 CVE，28 個產品家族 481 項更新
+• CISA 新增 8 個 KEV：Cisco SD-WAN 限期聯邦機構 4 天完成修補
+• Microsoft Defender 三個零時差（BlueHammer/RedSun/UnDefend）均已用於攻擊
+
+相關術語：CVSS, CVE, KEV, Vulnerability, DevSecOps</description>
+    </item>
+    <item>
+      <title>資安週報 2026/04/13 - 2026/04/19</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-16.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-16</guid>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：嚴重
+本週收錄 10 則事件、6 個漏洞
+
+重點新聞：
+• Microsoft 4 月 Patch Tuesday：修補 163 個 CVE，含 SharePoint 零時差...
+• Itron 公用事業平台遭 Snow 惡意程式家族感染（Snowbelt/Snowglaze/Snowbasin）
+• Vercel 透過 Context.ai 第三方工具供應鏈攻擊：API 金鑰、原始碼外洩
+
+相關術語：CVSS, CVE, RCE, Vulnerability, LockBit</description>
+    </item>
+    <item>
+      <title>資安週報 2026年第15週</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-15.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-15</guid>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 7 則事件、5 個漏洞
+
+重點新聞：
+• CPUID 供應鏈攻擊
+• Adobe Acrobat Reader 主動利用漏洞
+• 執法部門使用廣告數據監控 5 億台設備
+
+相關術語：RAT, CVSS, Vulnerability, CVE</description>
+    </item>
+    <item>
+      <title>資安週報 2026-W14</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-14.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-14</guid>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 15 則事件、48 個漏洞
+
+重點新聞：
+• Iran-Linked Hackers Breach FBI Director’s Personal Email,...
+• Citrix NetScaler Under Active Recon for CVE-2026-3055 (CV...
+• TA446 Deploys DarkSword iOS Exploit Kit in Targeted Spear...
+
+相關術語：Input Validation, CVSS, CVE, Vulnerability, Reconnaissance</description>
+    </item>
+    <item>
+      <title>資安週報 2026/03/23 - 2026/03/29</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-13.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-13</guid>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 10 則事件、4 個漏洞
+
+重點新聞：
+• Citrix NetScaler CVE-2026-3055（CitrixBleed 3）：CVSS 9.3 記憶...
+• Checkmarx 供應鏈攻擊：GitHub 儲存庫遭入侵，資料現身暗網
+• CanisterWorm 資料清除蠕蟲：針對伊朗時區系統發動攻擊
+
+相關術語：KEV, CVSS, CVE, SAML, Malware</description>
+    </item>
+    <item>
+      <title>資安週報 2026-03-17 - 2026-03-23</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-12.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-12</guid>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 15 則事件、12 個漏洞
+
+重點新聞：
+• 
+• 
+• 
+
+相關術語：KEV, CVE, Vulnerability, XSS</description>
+    </item>
     <item>
       <title>資安週報 - 第11週</title>
       <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-11.html</link>
