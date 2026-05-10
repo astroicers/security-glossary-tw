@@ -94,3 +94,48 @@ class TestTermSearch:
         # 使用內部 _terms_by_name 索引
         if hasattr(glossary, "_terms_by_name"):
             assert "phishing" in glossary._terms_by_name or "Phishing" in glossary._terms_by_name
+
+
+class TestFindTerms:
+    """SPEC-001 DW-2: find_terms() 回傳 match"""
+
+    def test_find_terms_returns_match(self, glossary):
+        """find_terms() 對已知術語名稱的文本回傳至少一個 match"""
+        matches = glossary.find_terms("APT 組織發動攻擊")
+        assert len(matches) >= 1, "應至少比對到 APT"
+        term_ids = [m.term_id for m in matches]
+        assert "apt" in term_ids
+
+    def test_find_terms_empty_text(self, glossary):
+        """find_terms() 對空字串回傳空列表（邊界情況）"""
+        matches = glossary.find_terms("")
+        assert matches == []
+
+    def test_find_terms_no_match(self, glossary):
+        """find_terms() 對無術語文本回傳空列表"""
+        matches = glossary.find_terms("天氣今天很好")
+        assert isinstance(matches, list)
+
+
+class TestValidate:
+    """SPEC-001 DW-3: validate() 對包含禁止用詞的文本回傳 ValidationIssue"""
+
+    def test_validate_forbidden_term(self, glossary):
+        """validate() 對禁止用詞回傳 ValidationIssue"""
+        issues = glossary.validate("黑客入侵系統")
+        assert len(issues) >= 1
+        texts = [i.text for i in issues]
+        assert "黑客" in texts
+
+    def test_validate_clean_text(self, glossary):
+        """validate() 對合規文本回傳空列表"""
+        issues = glossary.validate("駭客利用漏洞入侵")
+        assert isinstance(issues, list)
+        forbidden = [i for i in issues if i.text == "黑客"]
+        assert len(forbidden) == 0
+
+    def test_validate_returns_suggestion(self, glossary):
+        """validate() 回傳建議改用的用詞"""
+        issues = glossary.validate("黑客")
+        assert len(issues) >= 1
+        assert any("駭客" in i.suggestion for i in issues)
