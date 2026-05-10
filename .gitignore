@@ -25,5 +25,6 @@ docs/api/
 .asp-telemetry.jsonl
 .asp-fact-check.md
 .asp-review-calibration.jsonl
+.asp-test-result.json
 .ai_profile
 .claude/
