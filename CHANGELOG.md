@@ -6,8 +6,15 @@
 
 ## [Unreleased]
 
+### Added
+- 新增 ASP 合規文件：`docs/adr/ADR-001-initial-technology-stack.md`（Accepted）
+- 新增 SPEC-001 核心 API 規格：`docs/specs/SPEC-001-glossary-core.md`（含 7 欄位 + Done When）
+- 新增 `requirements.txt` 列出 runtime 依賴（pyyaml, pydantic, rapidfuzz）
+- 新增測試覆蓋：`TestFindTerms`（3 項）、`TestValidate`（3 項）對應 SPEC-001 DW-2/DW-3
+
 ### Changed
-- 更新 README：移除 Monorepo 遷移警告，修正術語數量至實際值（428）
+- 更新 README：移除 Monorepo 遷移警告，修正術語數量至實際值（428），新增 `pending/` 說明
+- 更新 `.gitignore`：改為精確排除 docs 子目錄（保留 docs/adr、docs/specs）
 
 ---
 
