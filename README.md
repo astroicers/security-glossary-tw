@@ -1,15 +1,11 @@
 # Security Glossary TW - 繁體中文資安術語庫
 
-> **注意**：此專案已遷移至 Monorepo 架構。新位置：`~/projects/security-weekly-mcp/packages/glossary/`
-
----
-
 > 台灣第一個開源、結構化、可機器讀取的繁體中文資安專有名詞庫
 
 [![CI](https://github.com/astroicers/security-glossary-tw/actions/workflows/validate.yml/badge.svg)](https://github.com/astroicers/security-glossary-tw/actions/workflows/validate.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Terms Count](https://img.shields.io/badge/術語數量-437-blue.svg)](https://astroicers.github.io/security-glossary-tw/glossary/)
+[![Terms Count](https://img.shields.io/badge/術語數量-428-blue.svg)](https://astroicers.github.io/security-glossary-tw/glossary/)
 
 ---
 
@@ -75,13 +71,16 @@ security-glossary-tw/
 │   ├── vulnerabilities.yaml        # 漏洞類型 (51)
 │   ├── threat_actors.yaml          # 威脅行為者 (66)
 │   ├── malware.yaml                # 惡意程式 (64)
-│   ├── technologies.yaml           # 技術名詞 (136)
+│   ├── technologies.yaml           # 技術名詞 (127)
 │   ├── frameworks.yaml             # 框架標準 (27)
 │   └── compliance.yaml             # 法規合規 (14)
 │
+├── pending/                        # ⏳ 待審術語
+│   └── YYYY-MM-DD-{term_id}.yaml   # 待審核術語檔案
+│
 ├── meta/                           # 📋 元資料
 │   ├── categories.yaml             # 分類定義
-│   ├── aliases.yaml                # 別名對照表
+│   ├── relationships.yaml          # 術語關聯定義
 │   └── style_guide.yaml            # 用詞風格指南
 │
 ├── src/                            # 🐍 Python 套件
@@ -204,13 +203,13 @@ security-glossary-tw/
 
 | 分類 ID | 中文名稱 | 數量 |
 |---------|----------|------|
-| `attack_types` | 攻擊類型 | ~30 |
-| `vulnerabilities` | 漏洞類型 | ~25 |
-| `threat_actors` | 威脅行為者 | ~20 |
-| `malware` | 惡意程式 | ~20 |
-| `technologies` | 技術名詞 | ~30 |
-| `frameworks` | 框架標準 | ~15 |
-| `compliance` | 法規合規 | ~10 |
+| `attack_types` | 攻擊類型 | 79 |
+| `vulnerabilities` | 漏洞類型 | 51 |
+| `threat_actors` | 威脅行為者 | 66 |
+| `malware` | 惡意程式 | 64 |
+| `technologies` | 技術名詞 | 127 |
+| `frameworks` | 框架標準 | 27 |
+| `compliance` | 法規合規 | 14 |
 
 ---
 
@@ -257,7 +256,7 @@ security-glossary-tw/
 
 ## 📊 統計
 
-- 術語總數：437
+- 術語總數：428
 - 分類數：7
 - 標籤數：500+
-- 最後更新：2026-01-31
+- 最後更新：2026-05-10

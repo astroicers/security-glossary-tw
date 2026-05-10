@@ -11,10 +11,18 @@ __pycache__/
 # MkDocs generated site
 site/
 
-# Generated docs (from build_docs.py)
-docs/
-# But keep source files
-!docs/stylesheets/
-!docs/overrides/
-!docs/robots.txt
-!docs/weekly/
+# Generated docs (from build_docs.py) — exclude only generated subdirs
+docs/glossary/
+docs/tags/
+docs/api/
+# Keep source/authored files
+# docs/stylesheets/, docs/overrides/, docs/robots.txt, docs/weekly/,
+# docs/adr/, docs/specs/ are intentionally tracked
+.asp-session-briefing.json
+.asp-audit-baseline.json
+.asp-bypass-log.ndjson
+.asp-telemetry.jsonl
+.asp-fact-check.md
+.asp-review-calibration.jsonl
+.ai_profile
+.claude/

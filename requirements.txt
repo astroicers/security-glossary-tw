@@ -1,0 +1,11 @@
+# Runtime dependencies (pinned for reproducibility)
+pyyaml>=6.0
+pydantic>=2.0
+rapidfuzz>=3.0
+
+# Development dependencies (install with: pip install -e ".[dev]")
+# pytest>=7.0
+# pytest-cov>=4.0
+# black>=23.0
+# ruff>=0.1.0
+# mypy>=1.0
