@@ -19,6 +19,7 @@ docs/api/
 # docs/stylesheets/, docs/overrides/, docs/robots.txt, docs/weekly/,
 # docs/adr/, docs/specs/ are intentionally tracked
 .asp-session-briefing.json
+.asp-gate-state.json
 .asp-audit-baseline.json
 .asp-bypass-log.ndjson
 .asp-telemetry.jsonl
