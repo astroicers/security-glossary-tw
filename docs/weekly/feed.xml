@@ -6,8 +6,23 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 04 May 2026 22:39:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 09:43:32 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/05/05 - 2026/05/11</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-19.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-19</guid>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 12 則事件、10 個漏洞
+
+重點新聞：
+• PAN-OS 零時漏洞遭中國國家級 APT 組織主動利用
+• Ivanti EPMM CVE-2026-6973 零時漏洞遭主動利用
+• ShinyHunters 兩度入侵 Canvas LMS，影響全美 9,000 所學校
+
+相關術語：APT, CVE, OT, Authentication Bypass</description>
+    </item>
     <item>
       <title>資安週報 2026/04/28 - 2026/05/04</title>
       <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-18.html</link>

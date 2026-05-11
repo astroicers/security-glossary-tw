@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/05/05 - 2026/05/11</title>
+    <meta name="description" content="資安週報 2026-05-05 - 2026-05-11">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/05/05 - 2026/05/11</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-19 · 發布日期：2026-05-11</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #f97316;">高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">12</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">10</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即修補 Palo Alto PAN-OS 零時漏洞，防範中國 APT 組織間諜攻擊（期限：2026-05-12）</li>
+<li>🔴 更新 Ivanti EPMM 修補 CVE-2026-6973 遠端程式碼執行零時漏洞（期限：2026-05-12）</li>
+<li>🔴 更新 Linux 系統核心修補 Dirty Frag 本機提權漏洞，防止後入侵提權（期限：2026-05-15）</li>
+<li>🔴 更換所有 D-Link DIR-605L/600L EOL 路由器，消除 <a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.8 硬編碼後門風險（期限：2026-05-31）</li>
+<li>🟡 稽核並修補 GeoVision IP 攝影機（CVE-2026-42364，CVSS 9.9 OS 命令注入漏洞）（期限：2026-05-19）</li>
+<li>🟡 審查所有 WordPress 外掛，立即停用含後門的轉址外掛並全站掃描（期限：2026-05-19）</li>
+<li>🟡 更新 NetBox 至 4.5.5+ 修補 Jinja2 沙盒繞過 <a href="https://astroicers.github.io/security-glossary-tw/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a> <a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a> CVE-2026-29514（期限：2026-05-19）</li>
+<li>🟡 審查雲端環境所有 API 金鑰與存取憑證，防範 PCPJack 類型蠕蟲橫向擴散（期限：2026-05-19）</li>
+<li>🟢 強化員工對 ClickFix 社交工程攻擊的識別訓練，建立禁止手動執行不明終端機指令的政策（期限：2026-05-31）</li>
+<li>🟢 評估 OT/<a href="https://astroicers.github.io/security-glossary-tw/glossary/ics" class="term-link" title="工業控制系統">ICS</a> 環境的網路隔離狀態，建立離線備援操作程序因應關鍵基礎設施攻擊情境（期限：2026-05-31）</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (12)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://unit42.paloaltonetworks.com/threat-brief-pan-os-captive-portal-zero-day/" target="_blank" rel="noopener">PAN-OS 零時漏洞遭中國國家級 APT 組織主動利用</a></h3>
+            <p class="event-meta">Unit 42 / SecurityWeek / CyberScoop · 2026-05-07</p>
+            <p>Palo Alto Networks PAN-OS Captive Portal 發現未授權遠端程式碼執行零時漏洞，攻擊者可取得 root 存取權限。Unit 42 與多家資安廠商確認此漏洞已遭具中國國家級駭客特徵的 <a href="https://astroicers.github.io/security-glossary-tw/glossary/apt" class="term-link" title="進階持續性威脅">APT</a> 組織主動利用，進行間諜活動。CISA 與 CIS 已發出緊急修補警示。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/05/ivanti-epmm-cve-2026-6973-rce-under.html" target="_blank" rel="noopener">Ivanti EPMM CVE-2026-6973 零時漏洞遭主動利用</a></h3>
+            <p class="event-meta">The Hacker News / SecurityWeek / CyberScoop · 2026-05-07</p>
+            <p>Ivanti Endpoint Manager Mobile（EPMM）存在 <a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-6973 遠端程式碼執行漏洞，攻擊者可取得管理員層級存取權限。此漏洞已遭主動利用，Ivanti 已緊急釋出修補程式。企業 MDM 平台遭攻擊可能導致大規模裝置管理權限外洩。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/cyberattack-hits-canvas-system-used-by-thousands-of-schools-as-finals-loom/" target="_blank" rel="noopener">ShinyHunters 兩度入侵 Canvas LMS，影響全美 9,000 所學校</a></h3>
+            <p class="event-meta">Dark Reading / SecurityWeek / Krebs on Security · 2026-05-08</p>
+            <p>ShinyHunters 駭客組織於期末考試前夕對 Instructure Canvas 學習管理系統發動兩波攻擊，造成約 9,000 所學校的師生資料外洩。此事件凸顯教育機構對第三方雲端服務商的高度依賴風險，並引發關於供應商安全標準的廣泛討論。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/cyberattacks-data-breaches/trellix-source-code-breach-highlights-growing-supply-chain-threats" target="_blank" rel="noopener">Trellix 原始碼儲存庫遭勒索軟體組織入侵</a></h3>
+            <p class="event-meta">SecurityWeek / Dark Reading · 2026-05-08</p>
+            <p>勒索軟體組織聲稱成功入侵資安廠商 Trellix 的原始碼儲存庫，此事件引發資安社群對資安廠商自身安全性的高度關注。若原始碼外洩屬實，攻擊者可能利用其分析 Trellix 產品弱點，進而策劃更精準的後續攻擊。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.elastic.co/security-labs/copy-fail-and-dirtyfrag" target="_blank" rel="noopener">Linux Dirty Frag（Copy Fail）本機提權漏洞影響主流發行版</a></h3>
+            <p class="event-meta">iThome / Elastic Security Labs / Microsoft Security Blog / CERT/CC · 2026-05-08</p>
+            <p>Linux 核心頁面快取中發現 Dirty Frag（又稱 Copy Fail）本機提權漏洞，影響自 2017 年起的核心版本，包含 Ubuntu、Debian、Fedora、RHEL 等主流發行版。微軟與 Elastic Security 均確認此漏洞可有效提升後入侵（post-compromise）風險，且概念驗證程式碼已在修補程式釋出前公開流出。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.elastic.co/security-labs/tclbanker-brazilian-banking-trojan" target="_blank" rel="noopener">TCLBANKER 銀行木馬程式透過 WhatsApp 與 Outlook 蠕蟲機制散播</a></h3>
+            <p class="event-meta">The Hacker News / Elastic Security Labs · 2026-05-07</p>
+            <p>Elastic Security Labs 揭露 TCLBANKER 巴西銀行木馬程式，透過 WhatsApp 和 Outlook 的蠕蟲傳播機制擴散，專門針對金融平台使用者竊取銀行登入憑證。此惡意程式具備螢幕覆蓋、鍵盤側錄及遠端控制能力，對金融機構員工與客戶構成嚴重威脅。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/05/pcpjack-credential-stealer-exploits-5.html" target="_blank" rel="noopener">PCPJack 蠕蟲型憑證竊取程式橫向擴散至雲端系統</a></h3>
+            <p class="event-meta">The Hacker News / SecurityWeek / Dark Reading / Infosecurity Magazine · 2026-05-07</p>
+            <p>PCPJack 是一個利用 5 個 CVE 漏洞進行橫向擴散的蠕蟲型憑證竊取惡意程式，可在受感染系統中取代既有的 TeamPCP 惡意程式後竊取雲端 API 金鑰、存取憑證等機密。此攻擊活動顯示雲端環境中的橫向移動威脅持續升高。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.infosecurity-magazine.com/news/openai-anthropic-llms-critical/" target="_blank" rel="noopener">Dragos 示警：LLM 已被用於規劃關鍵基礎設施網路攻擊</a></h3>
+            <p class="event-meta">Infosecurity Magazine · 2026-05-07</p>
+            <p>工控資安廠商 Dragos 發出警告，攻擊者已開始利用 OpenAI 和 Anthropic 的大型語言模型輔助對關鍵基礎設施發動網路攻擊，但目前尚未能突破 <a href="https://astroicers.github.io/security-glossary-tw/glossary/ot" class="term-link" title="營運技術">OT</a>（操作技術）系統防線。此趨勢顯示 AI 輔助攻擊正從實驗階段走向實戰應用。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/polish-security-agency-reports-ics-breaches-at-five-water-treatment-plants/" target="_blank" rel="noopener">波蘭五個水處理廠工業控制系統遭網路入侵</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-05-08</p>
+            <p>波蘭安全機構（ABW）通報五個水處理廠的工業控制系統遭到網路入侵，此事件發生於 CISA 呼籲關鍵基礎設施運營商建立離線作業能力的背景下，再次凸顯水資源設施的網路安全脆弱性。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/news/security" target="_blank" rel="noopener">WordPress 轉址外掛潛藏多年後門，逾 7 萬網站面臨惡意程式風險</a></h3>
+            <p class="event-meta">iThome · 2026-05-08</p>
+            <p>WordPress 熱門轉址外掛被發現藏有多年潛伏的後門程式，逾 7 萬個安裝此外掛的網站面臨被植入惡意程式的風險。攻擊者可透過該後門遠端執行指令、散播惡意程式或進行流量劫持。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/endpoint-security/microsoft-edge-stores-passwords-in-process-memory-posing-enterprise-risk" target="_blank" rel="noopener">Microsoft Edge 密碼以明文形式暴露於進程記憶體</a></h3>
+            <p class="event-meta">Dark Reading / TechNews 資安 · 2026-05-05</p>
+            <p>資安研究人員發現 Microsoft Edge 瀏覽器在執行期間將用戶密碼以明文形式存放於進程記憶體中，攻擊者若能讀取 Edge 進程記憶體即可取得所有儲存的密碼。微軟表示此為設計決策而非漏洞，但企業資安團隊對此高度關注。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/news/security" target="_blank" rel="noopener">加拿大查獲利用簡訊廣播器發動大規模釣魚攻擊的犯罪活動</a></h3>
+            <p class="event-meta">iThome · 2026-05-08</p>
+            <p>加拿大執法機構查獲一起利用簡訊廣播器（SMS Blaster）發動大規模釣魚攻擊的犯罪活動。攻擊者透過偽裝合法行動基地臺，利用 2G 網路安全弱點，在人口密集區域對大量手機發送假冒銀行與政府機構的釣魚簡訊。...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (10)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42364" target="_blank">CVE-2026-42364</a></td>
+            <td>GeoVision IP 攝影機 DDNS 設定 OS 命令注入漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.9</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42373" target="_blank">CVE-2026-42373</a></td>
+            <td>D-Link DIR-605L 硬編碼 Telnet 後門憑證...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42374" target="_blank">CVE-2026-42374</a></td>
+            <td>D-Link DIR-600L B1 硬編碼 Telnet 後門憑證...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42375" target="_blank">CVE-2026-42375</a></td>
+            <td>D-Link DIR-600L A1 硬編碼 Telnet 後門憑證...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-29514" target="_blank">CVE-2026-29514</a></td>
+            <td>NetBox 遠端程式碼執行漏洞（Jinja2 沙盒繞過）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7748" target="_blank">CVE-2026-7748</a></td>
+            <td>Totolink N300RH 遠端緩衝區溢位漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7717" target="_blank">CVE-2026-7717</a></td>
+            <td>Totolink WA300 遠端緩衝區溢位漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42365" target="_blank">CVE-2026-42365</a></td>
+            <td>GeoVision IP 攝影機 Session Cookie 可猜測驗證繞過...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.6</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42226" target="_blank">CVE-2026-42226</a></td>
+            <td>n8n 工作流程平台憑證未授權存取漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.5</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32834" target="_blank">CVE-2026-32834</a></td>
+            <td>WordPress Easy PayPal Events & Tickets QR Code <a href="https://astroicers.github.io/security-glossary-tw/glossary/authentication_bypass" class="term-link" title="驗證繞過">驗證繞過</a>...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.5</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (8)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/apt" target="_blank">APT</a></h3>
+                <p class="term-zh">進階持續性威脅</p>
+                <p class="term-def">國家級駭客組織發動的長期網路攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/ot" target="_blank">OT</a></h3>
+                <p class="term-zh">營運技術</p>
+                <p class="term-def">用於監控和控制實體設備的硬體和軟體</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/authentication_bypass" target="_blank">Authentication Bypass</a></h3>
+                <p class="term-zh">驗證繞過</p>
+                <p class="term-def">繞過身分驗證機制取得未授權存取的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/rce" target="_blank">RCE</a></h3>
+                <p class="term-zh">遠端程式碼執行</p>
+                <p class="term-def">攻擊者可遠端在目標系統執行任意程式碼的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/ics" target="_blank">ICS</a></h3>
+                <p class="term-zh">工業控制系統</p>
+                <p class="term-def">控制工業流程的電腦系統</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
