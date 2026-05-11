@@ -482,3 +482,85 @@ terms:
       status: "approved"
   # 注意：以下術語已存在於 compliance.yaml，不在此重複：
   # nist_csf, iso_27001, soc2, pci_dss, gdpr, hipaa, ccpa
+
+  - id: "nist_sp_800_171"
+    term_en: "NIST SP 800-171"
+    term_zh: "NIST SP 800-171"
+    full_name_en: "NIST Special Publication 800-171"
+    definitions:
+      brief: "保護非聯邦系統中受控非機密資訊的 NIST 標準"
+      standard: |
+        NIST SP 800-171 定義保護聯邦受控非機密資訊（CUI）的安全需求，
+        適用於儲存、處理或傳輸 CUI 的非聯邦系統，
+        是美國國防承包商（CMMC 前身）和政府供應鏈的重要合規要求。
+    category: "frameworks"
+    subcategory: "nist_framework"
+    tags: ["NIST", "CUI", "美國政府", "供應鏈"]
+    related_terms: ["nist_csf", "cmmc"]
+    references:
+      other:
+        official: "https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final"
+    metadata:
+      status: "approved"
+
+  - id: "ptes"
+    term_en: "PTES"
+    term_zh: "滲透測試執行標準"
+    full_name_en: "Penetration Testing Execution Standard"
+    definitions:
+      brief: "提供滲透測試完整流程與技術指引的行業標準"
+      standard: |
+        滲透測試執行標準（PTES）定義滲透測試的七個階段，
+        包含前期交涉、情報收集、威脅建模、漏洞分析、
+        漏洞利用、後滲透及報告撰寫，
+        是業界廣泛參考的滲透測試方法論框架。
+    category: "frameworks"
+    subcategory: "testing_methodology"
+    tags: ["滲透測試", "方法論", "資安評估"]
+    related_terms: ["pentesting", "owasp_testing_guide"]
+    references:
+      other:
+        official: "http://www.pentest-standard.org/"
+    metadata:
+      status: "approved"
+
+  - id: "tiber_eu"
+    term_en: "TIBER-EU"
+    term_zh: "歐盟威脅情報紅隊演練"
+    full_name_en: "Threat Intelligence-Based Ethical Red Teaming"
+    definitions:
+      brief: "歐盟央行主導的金融業威脅導向紅隊演練框架"
+      standard: |
+        TIBER-EU 是歐洲央行（ECB）發布的威脅情報驅動紅隊演練框架，
+        要求基於真實威脅情報模擬進階攻擊者對金融機構核心系統的攻擊，
+        是歐盟金融業網路韌性測試的主要標準，
+        已被多個歐洲國家監管機構採用。
+    category: "frameworks"
+    subcategory: "testing_methodology"
+    tags: ["紅隊", "金融業", "歐盟", "威脅情報"]
+    related_terms: ["red_team", "threat_intelligence", "dora_eu"]
+    references:
+      other:
+        official: "https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/html/index.en.html"
+    metadata:
+      status: "approved"
+
+  - id: "owasp_testing_guide"
+    term_en: "OWASP Testing Guide"
+    term_zh: "OWASP 測試指南"
+    definitions:
+      brief: "OWASP 提供的完整網頁應用程式安全測試方法論"
+      standard: |
+        OWASP 測試指南（OTG）是開放網路應用程式安全專案（OWASP）發布的
+        網頁應用程式安全測試完整方法論，
+        涵蓋資訊收集、設定測試、身份驗證、
+        授權、輸入驗證等十餘個測試分類，
+        是業界最廣泛採用的網頁應用安全測試參考標準。
+    category: "frameworks"
+    subcategory: "testing_methodology"
+    tags: ["OWASP", "Web 安全", "測試", "方法論"]
+    related_terms: ["owasp_top10", "pentesting", "ptes"]
+    references:
+      owasp: "https://owasp.org/www-project-web-security-testing-guide/"
+    metadata:
+      status: "approved"

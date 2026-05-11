@@ -3000,3 +3000,124 @@ terms:
     - 漏洞懸賞
   metadata:
     status: approved
+
+- id: secrets_management
+  term_en: Secrets Management
+  term_zh: 機密資訊管理
+  definitions:
+    brief: 安全儲存、存取和輪換 API 金鑰與憑證的系統
+    standard: |
+      機密資訊管理是安全儲存、存取控制和自動輪換
+      API 金鑰、密碼、憑證和加密金鑰等敏感資訊的系統，
+      常見工具包括 HashiCorp Vault、AWS Secrets Manager 和 Azure Key Vault。
+  category: technologies
+  subcategory: identity_access
+  tags:
+  - 憑證管理
+  - 金鑰管理
+  - DevSecOps
+  related_terms:
+  - pki
+  - privileged_access_management
+  metadata:
+    status: approved
+
+- id: csp_header
+  term_en: CSP
+  term_zh: 內容安全政策
+  full_name_en: Content Security Policy
+  definitions:
+    brief: 限制瀏覽器可載入資源來源以防範 XSS 的 HTTP 標頭
+    standard: |
+      內容安全政策（CSP）是 HTTP 回應標頭，
+      允許網站管理員控制瀏覽器可載入的資源來源，
+      有效降低跨站腳本（XSS）和資料注入攻擊的風險，
+      透過白名單機制限制腳本、樣式和其他資源的來源。
+  category: technologies
+  subcategory: web_security
+  tags:
+  - HTTP 標頭
+  - XSS 防護
+  - 瀏覽器安全
+  related_terms:
+  - xss
+  - hsts
+  aliases:
+    en:
+    - Content Security Policy
+    zh:
+    - 內容安全策略
+  metadata:
+    status: approved
+
+- id: dmarc
+  term_en: DMARC
+  term_zh: 電子郵件驗證機制
+  full_name_en: Domain-based Message Authentication, Reporting, and Conformance
+  definitions:
+    brief: 防止電子郵件偽造的驗證協定（整合 SPF+DKIM）
+    standard: |
+      DMARC 是電子郵件驗證協定，
+      基於 SPF 和 DKIM 建構，
+      讓網域擁有者定義未通過驗證郵件的處理政策（監控/隔離/拒絕），
+      有效防止網域冒用和電子郵件詐騙。
+  category: technologies
+  subcategory: email_security
+  tags:
+  - 電子郵件安全
+  - 網域驗證
+  - 反釣魚
+  related_terms:
+  - spf
+  - dkim
+  - email_security
+  metadata:
+    status: approved
+
+- id: spf
+  term_en: SPF
+  term_zh: 寄件者政策框架
+  full_name_en: Sender Policy Framework
+  definitions:
+    brief: 驗證郵件伺服器是否有權代表網域發信的機制
+    standard: |
+      寄件者政策框架（SPF）是 DNS 電子郵件驗證機制，
+      網域管理員在 DNS 中發布授權的郵件伺服器清單，
+      收件端伺服器可驗證寄件端 IP 是否在授權清單內，
+      防止未授權伺服器偽造網域發送郵件。
+  category: technologies
+  subcategory: email_security
+  tags:
+  - 電子郵件安全
+  - DNS
+  - 反垃圾郵件
+  related_terms:
+  - dkim
+  - dmarc
+  - email_security
+  metadata:
+    status: approved
+
+- id: dkim
+  term_en: DKIM
+  term_zh: 網域金鑰識別郵件
+  full_name_en: DomainKeys Identified Mail
+  definitions:
+    brief: 以數位簽章驗證電子郵件完整性與來源的協定
+    standard: |
+      網域金鑰識別郵件（DKIM）使用公開金鑰密碼學
+      為電子郵件加入數位簽章，
+      收件端可透過 DNS 查詢驗證簽章，
+      確認郵件內容未被竄改且確實由宣稱的網域發送。
+  category: technologies
+  subcategory: email_security
+  tags:
+  - 電子郵件安全
+  - 數位簽章
+  - 密碼學
+  related_terms:
+  - spf
+  - dmarc
+  - email_security
+  metadata:
+    status: approved

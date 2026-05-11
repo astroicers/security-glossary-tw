@@ -1256,3 +1256,69 @@ terms:
     subcategory: "social_engineering"
     tags: ["USB", "行動裝置", "資料竊取"]
     related_terms: ["baiting", "malware"]
+
+  - id: "adversarial_ai"
+    term_en: "Adversarial AI Attack"
+    term_zh: "對抗性 AI 攻擊"
+    definitions:
+      brief: "透過精心設計的輸入欺騙 AI 模型做出錯誤判斷"
+      standard: |
+        對抗性 AI 攻擊是透過在輸入資料中加入人類難以察覺的微小擾動，
+        使機器學習模型產生錯誤輸出的攻擊技術，
+        廣泛應用於欺騙影像辨識、語音識別及自動駕駛系統。
+    category: "attack_types"
+    subcategory: "ai_attack"
+    tags: ["AI", "機器學習", "模型欺騙"]
+    related_terms: ["prompt_injection"]
+    metadata:
+      status: "approved"
+
+  - id: "prompt_injection"
+    term_en: "Prompt Injection"
+    term_zh: "提示注入"
+    definitions:
+      brief: "透過惡意輸入操控 AI 語言模型執行非預期指令"
+      standard: |
+        提示注入是針對大型語言模型（LLM）的攻擊技術，
+        攻擊者將惡意指令嵌入輸入提示中，
+        使模型忽略原始系統指令並執行攻擊者設計的行為，
+        如洩漏系統提示或繞過安全限制。
+    category: "attack_types"
+    subcategory: "ai_attack"
+    tags: ["AI", "LLM", "提示工程"]
+    related_terms: ["adversarial_ai"]
+    metadata:
+      status: "approved"
+
+  - id: "deepfake_attack"
+    term_en: "Deepfake Attack"
+    term_zh: "深偽攻擊"
+    definitions:
+      brief: "利用 AI 生成假冒音訊或影片進行詐騙的攻擊"
+      standard: |
+        深偽攻擊使用生成對抗網路（GAN）或深度學習技術，
+        合成高度逼真的假冒影片或音訊，
+        常用於商業電子郵件詐騙（BEC）、政治操弄或身份偽造。
+    category: "attack_types"
+    subcategory: "social_engineering"
+    tags: ["AI", "深偽", "詐騙", "身份偽造"]
+    related_terms: ["social_engineering", "bec"]
+    metadata:
+      status: "approved"
+
+  - id: "cache_poisoning"
+    term_en: "Cache Poisoning"
+    term_zh: "快取投毒"
+    definitions:
+      brief: "將惡意資料注入快取系統影響後續請求的攻擊"
+      standard: |
+        快取投毒攻擊透過操控 HTTP 標頭或請求參數，
+        將惡意回應存入快取伺服器，
+        使後續存取相同資源的使用者收到攻擊者控制的惡意內容，
+        常與 DNS 投毒或 Web 快取欺騙結合使用。
+    category: "attack_types"
+    subcategory: "web_attack"
+    tags: ["快取", "HTTP", "Web 攻擊"]
+    related_terms: ["dns_poisoning", "web_cache_deception"]
+    metadata:
+      status: "approved"

@@ -1193,3 +1193,147 @@ terms:
     subcategory: "methodology"
     tags: ["框架", "分析", "威脅情報"]
     related_terms: ["threat_intelligence", "kill_chain"]
+
+  - id: "apt43"
+    term_en: "APT43"
+    term_zh: "APT43"
+    definitions:
+      brief: "北韓國家級 APT 組織，專注竊密與加密貨幣竊取"
+      standard: |
+        APT43 是北韓國家支持的 APT 組織，
+        又稱 Kimsuky 或 Velvet Chollima，
+        以魚叉式網路釣魚為主要手法，
+        針對政府機關、智庫和外交單位進行情報竊取，
+        並從事加密貨幣竊取以資助政府行動。
+    category: "threat_actors"
+    subcategory: "nation_state"
+    tags: ["北韓", "APT", "加密貨幣", "間諜活動"]
+    related_terms: ["apt38", "lazarus_group"]
+    metadata:
+      status: "approved"
+
+  - id: "apt40"
+    term_en: "APT40"
+    term_zh: "APT40"
+    definitions:
+      brief: "中國國家級 APT 組織，針對海事與國防產業"
+      standard: |
+        APT40 是中國國家安全部（MSS）關聯的 APT 組織，
+        又稱 BRONZE MOHAWK 或 Leviathan，
+        主要針對海事、造船、航太和國防產業，
+        以及與南海主權爭議相關的政府機關。
+    category: "threat_actors"
+    subcategory: "nation_state"
+    tags: ["中國", "APT", "海事", "國防"]
+    related_terms: ["apt41"]
+    metadata:
+      status: "approved"
+
+  - id: "apt38"
+    term_en: "APT38"
+    term_zh: "APT38"
+    definitions:
+      brief: "北韓國家級組織，與 Lazarus 相關，專注金融機構攻擊"
+      standard: |
+        APT38 是北韓國家支持的 APT 組織，
+        與 Lazarus Group 存在重疊但運作獨立，
+        專門針對全球金融機構，
+        透過 SWIFT 銀行系統攻擊竊取數億美元，
+        是目前已知最具破壞力的金融網路犯罪組織之一。
+    category: "threat_actors"
+    subcategory: "nation_state"
+    tags: ["北韓", "APT", "金融", "SWIFT"]
+    related_terms: ["lazarus_group", "apt43"]
+    metadata:
+      status: "approved"
+
+  - id: "midnight_blizzard"
+    term_en: "Midnight Blizzard"
+    term_zh: "Midnight Blizzard"
+    definitions:
+      brief: "俄羅斯 SVR 關聯 APT 組織，前稱 Nobelium"
+      standard: |
+        Midnight Blizzard 是俄羅斯對外情報局（SVR）關聯的 APT 組織，
+        微軟將其前稱 Nobelium，另稱 APT29 或 Cozy Bear，
+        負責 2020 年 SolarWinds 供應鏈攻擊，
+        持續針對政府機關、外交單位和科技公司進行間諜行動。
+    category: "threat_actors"
+    subcategory: "nation_state"
+    tags: ["俄羅斯", "SVR", "APT29", "供應鏈攻擊"]
+    related_terms: ["cozy_bear", "apt29"]
+    aliases:
+      en: ["Nobelium", "APT29", "IRON HEMLOCK", "Dark Halo"]
+    metadata:
+      status: "approved"
+
+  - id: "fancy_bear"
+    term_en: "Fancy Bear"
+    term_zh: "Fancy Bear"
+    definitions:
+      brief: "俄羅斯 GRU 關聯 APT28 組織的別稱"
+      standard: |
+        Fancy Bear 是 CrowdStrike 對俄羅斯軍事情報局（GRU）
+        關聯的 APT28 組織的命名，
+        以針對政府機關、選舉基礎設施和軍事目標的攻擊聞名，
+        曾干預 2016 年美國總統大選和 2016 年法國大選。
+    category: "threat_actors"
+    subcategory: "nation_state"
+    tags: ["俄羅斯", "GRU", "APT28", "選舉干預"]
+    related_terms: ["cozy_bear", "midnight_blizzard"]
+    aliases:
+      en: ["APT28", "Sofacy", "STRONTIUM", "Pawn Storm"]
+    metadata:
+      status: "approved"
+
+  - id: "cozy_bear"
+    term_en: "Cozy Bear"
+    term_zh: "Cozy Bear"
+    definitions:
+      brief: "俄羅斯 SVR 關聯 APT29 組織的別稱"
+      standard: |
+        Cozy Bear 是 CrowdStrike 對俄羅斯對外情報局（SVR）
+        關聯的 APT29 組織的命名，
+        即微軟所稱的 Midnight Blizzard，
+        以高度隱蔽的長期間諜行動和複雜的惡意程式工具鏈著稱。
+    category: "threat_actors"
+    subcategory: "nation_state"
+    tags: ["俄羅斯", "SVR", "APT29", "間諜活動"]
+    related_terms: ["fancy_bear", "midnight_blizzard"]
+    aliases:
+      en: ["APT29", "Midnight Blizzard", "Nobelium", "The Dukes"]
+    metadata:
+      status: "approved"
+
+  - id: "cl0p_group"
+    term_en: "Cl0p"
+    term_zh: "Cl0p 勒索組織"
+    definitions:
+      brief: "以大規模 MOVEit 漏洞攻擊聞名的勒索軟體組織"
+      standard: |
+        Cl0p 是以勒索軟體即服務（RaaS）模式運作的網路犯罪組織，
+        以大規模利用零日漏洞（如 MOVEit、GoAnywhere、Accellion）
+        進行資料勒索攻擊著稱，
+        2023 年 MOVEit 漏洞攻擊影響全球逾 2,500 個組織。
+    category: "threat_actors"
+    subcategory: "cybercrime_group"
+    tags: ["勒索軟體", "RaaS", "MOVEit", "資料勒索"]
+    related_terms: ["ransomware", "lockbit"]
+    metadata:
+      status: "approved"
+
+  - id: "medusa_group"
+    term_en: "Medusa Ransomware Group"
+    term_zh: "Medusa 勒索組織"
+    definitions:
+      brief: "採用雙重勒索策略並維護資料洩漏網站的勒索組織"
+      standard: |
+        Medusa 是自 2022 年活躍的勒索軟體組織，
+        採用雙重勒索策略（加密資料同時威脅公開洩漏），
+        維護「Medusa Blog」資料洩漏網站，
+        攻擊目標涵蓋教育、醫療、政府及製造業等多個產業。
+    category: "threat_actors"
+    subcategory: "cybercrime_group"
+    tags: ["勒索軟體", "雙重勒索", "資料洩漏"]
+    related_terms: ["ransomware", "cl0p_group"]
+    metadata:
+      status: "approved"

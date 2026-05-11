@@ -7,6 +7,14 @@
 ## [Unreleased]
 
 ### Added
+- 新增 40 個術語，術語庫總數達 471 個（attack_types +4、vulnerabilities +8、threat_actors +8、malware +10、technologies +5、frameworks +4、compliance +4）
+- attack_types：新增 adversarial_ai、prompt_injection、deepfake_attack、cache_poisoning
+- vulnerabilities：新增 toctou、heap_spray、weak_cryptography、graphql_injection、log4shell、printnightmare、proxylogon、spring4shell
+- threat_actors：新增 apt43、apt40、apt38、midnight_blizzard、fancy_bear、cozy_bear、cl0p_group、medusa_group
+- malware：新增 xworm、stealc、banshee_stealer、gh0strat、snake_malware、goldmax、industroyer、triton、finfisher、netsupport_rat
+- technologies：新增 secrets_management、csp_header、dmarc、spf、dkim
+- frameworks：新增 nist_sp_800_171、ptes、tiber_eu、owasp_testing_guide
+- compliance：新增 dora_eu、appi、tw_cyber_security_act、nis2
 - 新增 ASP 合規文件：`docs/adr/ADR-001-initial-technology-stack.md`（Accepted）
 - 新增 SPEC-001 核心 API 規格：`docs/specs/SPEC-001-glossary-core.md`（含 7 欄位 + Done When）
 - 新增 `requirements.txt` 列出 runtime 依賴（pyyaml, pydantic, rapidfuzz）

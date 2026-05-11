@@ -790,3 +790,146 @@ terms:
     subcategory: "general"
     tags: ["弱點", "風險評估", "安全評估"]
     related_terms: ["pentesting", "vulnerability_management"]
+
+  - id: "toctou"
+    term_en: "TOCTOU"
+    term_zh: "競態條件時序攻擊"
+    full_name_en: "Time-of-Check to Time-of-Use"
+    definitions:
+      brief: "在檢查與使用間的時間差中插入惡意操作的漏洞"
+      standard: |
+        TOCTOU 是競態條件（Race Condition）的一種，
+        在程式對資源進行安全檢查後、實際使用前的時間差中，
+        攻擊者可替換資源以繞過安全檢查，
+        常見於檔案系統操作和並行程式設計中。
+    category: "vulnerabilities"
+    subcategory: "race_condition"
+    tags: ["競態條件", "時序", "並發"]
+    related_terms: ["race_condition", "privilege_escalation"]
+    metadata:
+      status: "approved"
+
+  - id: "heap_spray"
+    term_en: "Heap Spray"
+    term_zh: "堆積噴射"
+    definitions:
+      brief: "向記憶體堆積區大量寫入程式碼提高漏洞利用率"
+      standard: |
+        堆積噴射是一種記憶體漏洞利用輔助技術，
+        攻擊者向記憶體堆積區域大量填充含有 shellcode 的資料，
+        提高控制流程劫持後執行惡意程式碼的機率，
+        常與緩衝區溢位或 use-after-free 漏洞搭配使用。
+    category: "vulnerabilities"
+    subcategory: "memory_corruption"
+    tags: ["記憶體", "漏洞利用", "Shellcode"]
+    related_terms: ["buffer_overflow", "use_after_free"]
+    metadata:
+      status: "approved"
+
+  - id: "weak_cryptography"
+    term_en: "Weak Cryptography"
+    term_zh: "弱加密演算法"
+    definitions:
+      brief: "使用已知存在弱點的加密演算法或金鑰長度不足"
+      standard: |
+        弱加密是指使用 MD5、SHA-1、DES、RC4 等已知存在安全弱點的演算法，
+        或使用不足以抵抗暴力破解的短金鑰長度，
+        導致加密資料可被有效率地破解或偽造。
+    category: "vulnerabilities"
+    subcategory: "cryptographic"
+    tags: ["加密", "密碼學", "金鑰"]
+    related_terms: ["cryptography", "hash_function"]
+    metadata:
+      status: "approved"
+
+  - id: "graphql_injection"
+    term_en: "GraphQL Injection"
+    term_zh: "GraphQL 注入"
+    definitions:
+      brief: "透過惡意 GraphQL 查詢存取未授權資料的漏洞"
+      standard: |
+        GraphQL 注入是利用 GraphQL API 的設計缺陷，
+        透過惡意查詢或變更操作存取未授權的資料，
+        常見問題包括過度深層查詢（DoS）、
+        批次查詢濫用和欄位級別的存取控制不當。
+    category: "vulnerabilities"
+    subcategory: "injection"
+    tags: ["GraphQL", "API", "注入"]
+    related_terms: ["sql_injection", "api_security"]
+    metadata:
+      status: "approved"
+
+  - id: "log4shell"
+    term_en: "Log4Shell"
+    term_zh: "Log4Shell 漏洞"
+    definitions:
+      brief: "Log4j JNDI 注入 RCE 漏洞（CVE-2021-44228）"
+      standard: |
+        Log4Shell 是 Apache Log4j 2 日誌庫中的嚴重 RCE 漏洞，
+        攻擊者可透過日誌記錄觸發 JNDI 查找，
+        載入遠端惡意程式碼，CVSS 評分 10.0，
+        影響全球數百萬個使用 Log4j 的 Java 應用程式。
+    category: "vulnerabilities"
+    subcategory: "known_vulnerability"
+    tags: ["Log4j", "Java", "RCE", "JNDI"]
+    related_terms: ["rce", "jndi_injection"]
+    references:
+      cve: "https://nvd.nist.gov/vuln/detail/CVE-2021-44228"
+    metadata:
+      status: "approved"
+
+  - id: "printnightmare"
+    term_en: "PrintNightmare"
+    term_zh: "列印多工緩衝處理器漏洞"
+    definitions:
+      brief: "Windows 列印多工緩衝處理器 RCE 漏洞"
+      standard: |
+        PrintNightmare 是 Windows 列印多工緩衝處理器（Print Spooler）服務中的嚴重漏洞，
+        允許攻擊者遠端執行任意程式碼並取得 SYSTEM 權限，
+        涵蓋 CVE-2021-34527 和 CVE-2021-1675。
+    category: "vulnerabilities"
+    subcategory: "known_vulnerability"
+    tags: ["Windows", "Print Spooler", "RCE", "權限提升"]
+    related_terms: ["rce", "privilege_escalation"]
+    references:
+      cve: "https://nvd.nist.gov/vuln/detail/CVE-2021-34527"
+    metadata:
+      status: "approved"
+
+  - id: "proxylogon"
+    term_en: "ProxyLogon"
+    term_zh: "ProxyLogon 漏洞"
+    definitions:
+      brief: "Microsoft Exchange SSRF 漏洞（CVE-2021-26855）"
+      standard: |
+        ProxyLogon 是 Microsoft Exchange Server 中的嚴重漏洞鏈，
+        以 CVE-2021-26855 SSRF 漏洞為入口，
+        結合後續 CVE 可實現未驗證 RCE，
+        被 HAFNIUM 等多個 APT 組織大規模利用。
+    category: "vulnerabilities"
+    subcategory: "known_vulnerability"
+    tags: ["Microsoft Exchange", "SSRF", "RCE"]
+    related_terms: ["ssrf", "rce"]
+    references:
+      cve: "https://nvd.nist.gov/vuln/detail/CVE-2021-26855"
+    metadata:
+      status: "approved"
+
+  - id: "spring4shell"
+    term_en: "Spring4Shell"
+    term_zh: "Spring4Shell 漏洞"
+    definitions:
+      brief: "Spring Framework 遠端程式碼執行漏洞"
+      standard: |
+        Spring4Shell（CVE-2022-22965）是 Spring Framework 中的嚴重 RCE 漏洞，
+        攻擊者可透過資料繫結功能濫用，
+        在特定部署條件下實現任意程式碼執行，
+        影響 Spring MVC 和 Spring WebFlux 應用程式。
+    category: "vulnerabilities"
+    subcategory: "known_vulnerability"
+    tags: ["Spring", "Java", "RCE"]
+    related_terms: ["rce", "log4shell"]
+    references:
+      cve: "https://nvd.nist.gov/vuln/detail/CVE-2022-22965"
+    metadata:
+      status: "approved"

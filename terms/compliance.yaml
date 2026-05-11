@@ -220,3 +220,74 @@ terms:
     subcategory: "data_protection"
     tags: ["隱私", "資料保護", "美國"]
     related_terms: ["ccpa", "gdpr"]
+
+  - id: "dora_eu"
+    term_en: "DORA"
+    term_zh: "歐盟數位作業韌性法"
+    full_name_en: "Digital Operational Resilience Act"
+    definitions:
+      brief: "歐盟金融業數位作業韌性與 ICT 風險管理法規"
+      standard: |
+        歐盟數位作業韌性法（DORA）是 2023 年生效的歐盟法規，
+        要求銀行、保險公司和投資公司等金融機構
+        強化 ICT 風險管理、事件報告、韌性測試和第三方風險管控，
+        於 2025 年 1 月 17 日起強制執行。
+    category: "compliance"
+    subcategory: "financial_regulation"
+    tags: ["歐盟", "金融業", "ICT 風險", "韌性"]
+    related_terms: ["nis2", "tiber_eu"]
+    metadata:
+      status: "approved"
+
+  - id: "appi"
+    term_en: "APPI"
+    term_zh: "日本個人資訊保護法"
+    full_name_en: "Act on the Protection of Personal Information"
+    definitions:
+      brief: "日本規範個人資訊蒐集與處理的隱私保護法律"
+      standard: |
+        日本個人資訊保護法（APPI）是日本規範個人資訊處理的基本法律，
+        2022 年修正版強化個人資訊外洩通報義務、
+        跨境資料傳輸規範和假名化資料保護，
+        適用於蒐集、使用或提供個人資訊的企業和組織。
+    category: "compliance"
+    subcategory: "data_protection"
+    tags: ["日本", "隱私", "個人資料", "亞太"]
+    related_terms: ["gdpr", "pdpa"]
+    metadata:
+      status: "approved"
+
+  - id: "tw_cyber_security_act"
+    term_en: "Taiwan Cyber Security Management Act"
+    term_zh: "台灣資通安全管理法"
+    definitions:
+      brief: "台灣規範政府機關與關鍵基礎設施資安義務的法律"
+      standard: |
+        台灣資通安全管理法（2018 年施行）規範政府機關和關鍵基礎設施提供者
+        的資安責任義務，包含資安長設置、資安計畫訂定、
+        事件通報時效和資安稽核等要求，
+        由數位發展部資安署負責推動執行。
+    category: "compliance"
+    subcategory: "national_regulation"
+    tags: ["台灣", "政府機關", "關鍵基礎設施", "資安義務"]
+    related_terms: ["nis2", "pdpa"]
+    metadata:
+      status: "approved"
+
+  - id: "nis2"
+    term_en: "NIS2"
+    term_zh: "歐盟 NIS2 指令"
+    full_name_en: "Network and Information Security Directive 2"
+    definitions:
+      brief: "歐盟強化網路與資訊系統安全的第二版指令"
+      standard: |
+        NIS2 指令是歐盟 2022 年通過的網路與資訊安全指令，
+        擴大適用範圍至更多產業（能源、交通、醫療、數位基礎設施等），
+        要求強化資安風險管理措施、事件通報義務和供應鏈安全，
+        成員國須於 2024 年 10 月 17 日前完成國內法轉換。
+    category: "compliance"
+    subcategory: "eu_regulation"
+    tags: ["歐盟", "網路安全", "關鍵基礎設施", "供應鏈"]
+    related_terms: ["dora_eu", "gdpr"]
+    metadata:
+      status: "approved"
