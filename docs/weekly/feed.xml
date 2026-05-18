@@ -6,8 +6,23 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 11 May 2026 09:43:32 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 18 May 2026 09:47:37 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/05/12 - 2026/05/18</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-20.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-20</guid>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 12 則事件、12 個漏洞
+
+重點新聞：
+• Cisco Catalyst SD-WAN CVE-2026-20182 滿分漏洞遭 UAT-8616 積極利用
+• Microsoft Exchange Server 零時差 CVE-2026-42897 遭在野利用
+• NGINX CVE-2026-42945 堆積緩衝區溢位（CVSS 9.2）已遭在野利用
+
+相關術語：KEV, CVE, CVSS, XSS, PoC</description>
+    </item>
     <item>
       <title>資安週報 2026/05/05 - 2026/05/11</title>
       <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-19.html</link>
