@@ -6,8 +6,23 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 18 May 2026 09:47:37 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 May 2026 09:51:15 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/05/18 - 2026/05/24</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-21.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-21</guid>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 15 則事件、10 個漏洞
+
+重點新聞：
+• GitHub 內部儲存庫遭 TeamPCP 竊取近 4,000 個
+• Drupal Core SQL 注入漏洞（CVE-2026-9082）遭積極利用，CISA 列入 KEV
+• CISA 承包商外洩 AWS GovCloud 憑證至公開 GitHub
+
+相關術語：KEV, CVSS, CVE, Vulnerability, Digital Certificate</description>
+    </item>
     <item>
       <title>資安週報 2026/05/12 - 2026/05/18</title>
       <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-20.html</link>
@@ -290,21 +305,6 @@
 • CrazyHunter 勒索軟體攻擊台灣 6 家醫療機構
 
 相關術語：CVE, Salt Typhoon, Vulnerability, Use-After-Free</description>
-    </item>
-    <item>
-      <title>資安週報 2026/01/01 - 2026/01/05</title>
-      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-01.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-01</guid>
-      <pubDate>Tue, 06 Jan 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：一般
-本週收錄 5 則事件、4 個漏洞
-
-重點新聞：
-• 2026 年資安威脅趨勢展望：AI 驅動攻擊成主流
-• 台灣每天遭受 263 萬次網路攻擊
-• CISA 新增兩個已知被利用漏洞至 KEV 清單
-
-相關術語：Qilin</description>
     </item>
   </channel>
 </rss>
