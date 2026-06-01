@@ -6,8 +6,23 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 25 May 2026 09:51:15 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2026 09:53:02 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/05/25 - 2026/05/31</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-22.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-22</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 13 則事件、7 個漏洞
+
+重點新聞：
+• 台灣EVERY8D企業簡訊平台遭駭，F-ISAC啟動黃燈級供應鏈危機應變
+• UAT-8616駭客組織利用Cisco Catalyst SD-WAN滿分漏洞（CVE-2026-20182，CV...
+• Palo Alto PAN-OS GlobalProtect身份驗證繞過漏洞（CVE-2026-0257）遭積極利...
+
+相關術語：CVSS, CVE, C2, MFA, Kimsuky</description>
+    </item>
     <item>
       <title>資安週報 2026/05/18 - 2026/05/24</title>
       <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-21.html</link>
@@ -290,21 +305,6 @@
 • Qilin 勒索軟體 1 月份攻擊量居冠
 
 相關術語：Data Exfiltration, Qilin</description>
-    </item>
-    <item>
-      <title>資安週報 2026/01/06 - 2026/01/12</title>
-      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-02.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-02</guid>
-      <pubDate>Tue, 13 Jan 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：升高
-本週收錄 6 則事件、5 個漏洞
-
-重點新聞：
-• 微軟 2026 年 1 月 Patch Tuesday 修補 114 個漏洞含 3 個零時差
-• 中國加劇對台灣基礎設施網路攻擊
-• CrazyHunter 勒索軟體攻擊台灣 6 家醫療機構
-
-相關術語：CVE, Salt Typhoon, Vulnerability, Use-After-Free</description>
     </item>
   </channel>
 </rss>
