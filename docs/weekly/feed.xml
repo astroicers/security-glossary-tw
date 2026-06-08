@@ -6,8 +6,23 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://astroicers.github.io/security-glossary-tw/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 01 Jun 2026 09:53:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 09:55:17 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/06/01 - 2026/06/07</title>
+      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-23.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-23</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 13 則事件、12 個漏洞
+
+重點新聞：
+• Miasma蠕蟲供應鏈攻擊入侵73個Microsoft GitHub儲存庫
+• Cisco Catalyst SD-WAN Manager CVE-2026-20245零時差漏洞遭積極利用（全年...
+• IronWorm與Miasma雙波攻擊衝擊npm生態系，逾700個程式碼庫遭汙染
+
+相關術語：CVSS, OAuth, Cybersecurity, Vulnerability, SSRF</description>
+    </item>
     <item>
       <title>資安週報 2026/05/25 - 2026/05/31</title>
       <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-22.html</link>
@@ -290,21 +305,6 @@
 • Everest 勒索軟體同時攻擊三家台灣企業
 • Nike 遭 WorldLeaks 竊取 1.4TB 內部資料
 • Nissan 遭 Everest 勒索軟體攻擊竊取 900GB 資料</description>
-    </item>
-    <item>
-      <title>資安週報 2026/01/13 - 2026/01/19</title>
-      <link>https://astroicers.github.io/security-glossary-tw/weekly/reports/SEC-WEEKLY-2026-03.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-03</guid>
-      <pubDate>Tue, 20 Jan 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：升高
-本週收錄 6 則事件、3 個漏洞
-
-重點新聞：
-• Target 860GB 原始碼遭竊並在暗網販售
-• Grubhub 遭入侵並面臨勒索
-• Qilin 勒索軟體 1 月份攻擊量居冠
-
-相關術語：Data Exfiltration, Qilin</description>
     </item>
   </channel>
 </rss>

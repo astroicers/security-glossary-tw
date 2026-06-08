@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/06/01 - 2026/06/07</title>
+    <meta name="description" content="資安週報 2026-06-01 - 2026-06-07">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/06/01 - 2026/06/07</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-23 · 發布日期：2026-06-08</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #eab308;">升高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">13</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">12</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即修補Cisco SD-WAN Manager <a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-20245（暫無patch，實施網路隔離與ACL管控），期限 2026-06-09</li>
+<li>🔴 更新WordPress Everest Forms Pro至最新版（CVE-2026-3300，CVSS 9.8，已遭積極利用），期限 2026-06-09</li>
+<li>🔴 於2026-06-19前修補SolarWinds Serv-U（CVE-2026-28318，KEV政府機關強制期限）</li>
+<li>🔴 全面稽核npm及GitHub Actions工作流程，排除Miasma/IronWorm供應鏈感染風險，期限 2026-06-10</li>
+<li>🟡 修補Cisco Unified CM CVE-2026-20230 SSRF漏洞（PoC已公開），期限 2026-06-12</li>
+<li>🟡 部署Chrome 149更新，修補429個漏洞（含逾100個嚴重或高危），期限 2026-06-10</li>
+<li>🟡 更新Claude Code GitHub Action至最新版並審查工作流程機密存取範圍，期限 2026-06-10</li>
+<li>🟡 對社交媒體帳號啟用FIDO2硬體安全金鑰，防範AI機器人帳號劫持攻擊，期限 2026-06-15</li>
+<li>🟢 對員工進行中國間諜社交工程識別培訓（五眼聯盟示警），限制職務資訊在公開平台曝露，期限 2026-06-30</li>
+<li>🟢 檢查關鍵基礎設施ATG系統是否有網際網路曝露介面，更換預設密碼，期限 2026-06-20</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (13)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/miasma-worm-hits-73-microsoft-github.html" target="_blank" rel="noopener">Miasma蠕蟲供應鏈攻擊入侵73個Microsoft GitHub儲存庫</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-06</p>
+            <p>自我複製的Miasma供應鏈蠕蟲感染微軟旗下73個GitHub儲存庫，涵蓋Azure、Azure-Samples、Microsoft、MicrosoftDocs四個組織。攻擊者利用postinstall腳本機制植入惡意程式，並透過GitHub Actions工作流程進行自我複製傳播，GitHub已緊急停用受影響儲存庫。同週npm生態系亦遭IronWorm與Miasma雙波攻擊，逾50個合法套件遭汙...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/cisco-warns-of-7th-sd-wan-zero-day-exploited-in-2026/" target="_blank" rel="noopener">Cisco Catalyst SD-WAN Manager CVE-2026-20245零時差漏洞遭積極利用（全年第7個）</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-06-05</p>
+            <p>Cisco警告Catalyst SD-WAN Manager存在高危漏洞CVE-2026-20245（<a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 7.8），可允許攻擊者以root身份執行任意指令，目前無修補程式可用，是2026年Cisco SD-WAN系列遭利用的第7個零時差漏洞，影響On-Prem、Cloud-Pro、Cloud及FedRAMP等所有部署類型。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/ironworm-and-new-miasma-worm-variant.html" target="_blank" rel="noopener">IronWorm與Miasma雙波攻擊衝擊npm生態系，逾700個程式碼庫遭汙染</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-05</p>
+            <p>JFrog揭露兩波npm供應鏈攻擊：IronWorm以Rust語言撰寫，透過eBPF核心rootkit隱藏自身，可竊取超過80種機密資料（含GitHub <a href="https://astroicers.github.io/security-glossary-tw/glossary/oauth" class="term-link" title="OAuth 授權協定">OAuth</a> token、雲端平台憑證）並透過Tor傳送；Miasma蠕蟲則感染逾90版本的@redhat-cloud-services套件，在CI/CD環境中自我複製擴散。兩波攻擊合計汙染逾700個GitHub程式碼庫。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/hackers-exploit-critical-everest-forms.html" target="_blank" rel="noopener">Everest Forms Pro CVE-2026-3300（CVSS 9.8）遭積極利用，可完全接管WordPress網站</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-05</p>
+            <p>WordPress表單外掛Everest Forms Pro（約4,000個活躍安裝）存在遠端程式碼執行漏洞CVE-2026-3300，CVSS評分高達9.8，影響1.9.12及以下所有版本。攻擊者已積極利用此漏洞執行任意程式碼並完全接管受影響網站，Wordfence於3個月前已通報並取得修補，但仍有大量網站未更新。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html" target="_blank" rel="noopener">CISA將SolarWinds Serv-U CVE-2026-28318 DoS漏洞列入已知遭利用漏洞清單（KEV）</a></h3>
+            <p class="event-meta">The Hacker News / CISA · 2026-06-06</p>
+            <p>CISA確認SolarWinds Serv-U多協定檔案伺服器存在高危DoS漏洞CVE-2026-28318（CVSS 7.5），攻擊者無需驗證即可透過使用Content-Encoding: deflate標頭的特製POST請求讓Serv-U服務崩潰。已列入KEV，政府機關修補期限為2026-06-19。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://krebsonsecurity.com/2026/06/hackers-used-metas-ai-support-bot-to-seize-instagram-accounts/" target="_blank" rel="noopener">Meta AI支援機器人遭利用劫持高知名度Instagram帳號</a></h3>
+            <p class="event-meta">Krebs on Security · 2026-06-01</p>
+            <p>駭客透過社交工程手法欺騙Meta AI支援聊天機器人，偽造受害者身份並誘使其重設帳號密碼，成功接管多個知名Instagram帳號（含美國太空部隊指揮士官長、歐巴馬白宮帳號），並發布親伊朗圖文。Telegram上已出現詳細操作教學，攻擊工具化程度高。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/five-eyes-chinese-spies-target-government-military-staff-with-fake-job-opportunities/" target="_blank" rel="noopener">五眼聯盟示警：中國間諜透過求職平台系統性鎖定政府及軍方人員</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-06-05</p>
+            <p>美英加澳紐五眼聯盟發布聯合警示，中國情報官員在LinkedIn等求職平台偽裝成獵頭顧問，系統性地鎖定具備機密或特權資訊存取權的政府、軍方及國防承包商人員，誘導其提供機密資訊或招募為長期眼線。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://unit42.paloaltonetworks.com/active-exploitation-of-pan-os-cve-2026-0257/" target="_blank" rel="noopener">Palo Alto Networks CVE-2026-0257遭積極利用，初始風險遭低估</a></h3>
+            <p class="event-meta">Unit 42 / CyberScoop · 2026-06-05</p>
+            <p>Palo Alto Networks PAN-OS漏洞CVE-2026-0257在初期被低估其影響，但Unit 42與SentinelOne隨後確認已遭積極利用。TA4922（中國關聯威脅行為者）等攻擊組織已將此漏洞納入武器庫，凸顯漏洞評估初期低估的潛在風險。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/ai-agent-uncovers-21-zero-days-in.html" target="_blank" rel="noopener">AI代理以約1,000美元成本自動發現FFmpeg 21個零時差漏洞</a></h3>
+            <p class="event-meta">The Hacker News / iThome · 2026-06-06</p>
+            <p>資安業者depthfirst透過自主AI代理，以約1,000美元成本自動掃描廣泛應用的開源影音函式庫FFmpeg，發現21個零時差漏洞；同週Google Chrome 149亦修補創紀錄的429個漏洞（逾100個為嚴重或高危）。AI輔助漏洞挖掘能力的快速商業化正重新定義弱點揭露的速度與規模。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/news/176415" target="_blank" rel="noopener">聯合國WFP系統遭駭，約60萬加薩家庭受益人資料外洩</a></h3>
+            <p class="event-meta">iThome · 2026-06-08</p>
+            <p>聯合國世界糧食計畫署（WFP）系統遭駭，約60萬加薩家庭的受益人資料外洩，被認為是迄今最大規模的人道救援組織受益人資料外洩事件。受影響資料包括脆弱人口的個人識別資訊，可能對受益人安全造成直接威脅。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/claude-code-github-action-flaw-let-one.html" target="_blank" rel="noopener">Claude Code GitHub Action提示注入漏洞允許儲存庫劫持</a></h3>
+            <p class="event-meta">The Hacker News / Microsoft Security Blog · 2026-06-04</p>
+            <p>資安研究員RyotaK（GMO <a href="https://astroicers.github.io/security-glossary-tw/glossary/cybersecurity" class="term-link" title="網路安全">Cybersecurity</a>）發現Anthropic Claude Code GitHub Action存在提示注入漏洞，攻擊者僅需開啟一個GitHub Issue即可劫持使用該Action的公開儲存庫並存取工作流程機密。由於Anthropic自身的Action儲存庫亦使用相同工作流程，潛在影響範圍涵蓋所有下游使用者。Anthropic已完成修補。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://infosecu.technews.tw/2026/06/06/taipower-electiricity-is-getting-attacked-by-hacker/" target="_blank" rel="noopener">台電揭露每日平均遭受3萬次駭客攻擊，台灣能源關鍵基礎設施持續承壓</a></h3>
+            <p class="event-meta">TechNews 資安 · 2026-06-06</p>
+            <p>台灣電力公司（台電）在DSET論壇上揭露，隨地緣政治風險升溫，台電每日平均遭受約3萬次駭客攻擊。同週美國CISA與FBI亦示警自動儲槽計量系統（ATG）遭鎖定，惡意行為者企圖遠端修改儲槽設定並停用警報，顯示全球關鍵基礎設施面臨持續高強度威脅。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/pcpjack-hijacks-230-aws-google-cloud.html" target="_blank" rel="noopener">PCPJack劫持230台AWS/GCP/Azure雲端伺服器建立隱密SMTP中繼網路</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-05</p>
+            <p>威脅行為者PCPJack劫持橫跨美國、歐洲、亞洲的230台商業雲端伺服器（AWS、Google Cloud、Azure），將其悄悄轉換為SMTP電子郵件中繼代理，每5分鐘同步至下游消費端，用於大規模傳送垃圾郵件或網路釣魚攻擊，且難以透過來源IP封鎖識別。...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (12)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-3300" target="_blank">CVE-2026-3300</a></td>
+            <td>WordPress Everest Forms Pro 遠端程式碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45247" target="_blank">CVE-2026-45247</a></td>
+            <td>Mirasvit Full Page Cache Warmer 反序列化遠端程式碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20245" target="_blank">CVE-2026-20245</a></td>
+            <td>Cisco Catalyst SD-WAN Manager 任意指令執行零時差漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-28318" target="_blank">CVE-2026-28318</a></td>
+            <td>SolarWinds Serv-U 不受控資源消耗阻斷服務漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.5</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0257" target="_blank">CVE-2026-0257</a></td>
+            <td>Palo Alto Networks PAN-OS 遠端程式碼執行漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20230" target="_blank">CVE-2026-20230</a></td>
+            <td>Cisco Unified CM 伺服器端請求偽造（<a href="https://astroicers.github.io/security-glossary-tw/glossary/ssrf" class="term-link" title="伺服器端請求偽造">SSRF</a>）<a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.6</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-47294" target="_blank">CVE-2026-47294</a></td>
+            <td>Microsoft SharePoint 反序列化遠端程式碼執行漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-48595" target="_blank">CVE-2025-48595</a></td>
+            <td>Android Framework 整數溢出本機權限提升漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0492" target="_blank">CVE-2022-0492</a></td>
+            <td>Linux Kernel cgroups v1 不當驗證權限提升漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-10206" target="_blank">CVE-2026-10206</a></td>
+            <td>D-Link DI-8400 堆疊型緩衝區溢出漏洞...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (6)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/oauth" target="_blank">OAuth</a></h3>
+                <p class="term-zh">OAuth 授權協定</p>
+                <p class="term-def">允許第三方應用程式安全存取使用者資源的授權標準</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cybersecurity" target="_blank">Cybersecurity</a></h3>
+                <p class="term-zh">網路安全</p>
+                <p class="term-def">保護資訊系統免受網路攻擊的實務與技術</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/ssrf" target="_blank">SSRF</a></h3>
+                <p class="term-zh">伺服器端請求偽造</p>
+                <p class="term-def">利用伺服器發送請求存取內部資源的攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://astroicers.github.io/security-glossary-tw/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
