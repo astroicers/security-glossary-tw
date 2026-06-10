@@ -12,7 +12,7 @@ hide:
 
 [**訂閱 RSS Feed**](feed.xml){ .md-button .md-button--primary }
 
-**Feed URL**: `https://astroicers.github.io/security-glossary-tw/weekly/feed.xml`
+**Feed URL**: `https://glossary.astroicers.link/weekly/feed.xml`
 
 ---
 
