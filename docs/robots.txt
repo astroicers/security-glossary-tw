@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://astroicers.github.io/security-glossary-tw/sitemap.xml
+Sitemap: https://glossary.astroicers.link/sitemap.xml

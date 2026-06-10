@@ -5,7 +5,7 @@
 [![CI](https://github.com/astroicers/security-glossary-tw/actions/workflows/validate.yml/badge.svg)](https://github.com/astroicers/security-glossary-tw/actions/workflows/validate.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Terms Count](https://img.shields.io/badge/術語數量-428-blue.svg)](https://astroicers.github.io/security-glossary-tw/glossary/)
+[![Terms Count](https://img.shields.io/badge/術語數量-428-blue.svg)](https://glossary.astroicers.link/glossary/)
 
 ---
 
@@ -55,8 +55,8 @@ issues = glossary.validate(text)
 ### 方式 3：JSON API
 
 ```
-https://astroicers.github.io/security-glossary-tw/api/v1/terms.json
-https://astroicers.github.io/security-glossary-tw/api/v1/terms/apt.json
+https://glossary.astroicers.link/api/v1/terms.json
+https://glossary.astroicers.link/api/v1/terms/apt.json
 ```
 
 ---

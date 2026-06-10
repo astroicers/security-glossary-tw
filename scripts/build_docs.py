@@ -443,7 +443,7 @@ GET /api/v1/tags.json
 ### JavaScript
 
 ```javascript
-fetch('https://astroicers.github.io/security-glossary-tw/api/v1/terms/apt.json')
+fetch('https://glossary.astroicers.link/api/v1/terms/apt.json')
   .then(response => response.json())
   .then(term => {
     console.log(term.term_zh); // 進階持續性威脅
@@ -456,7 +456,7 @@ fetch('https://astroicers.github.io/security-glossary-tw/api/v1/terms/apt.json')
 import requests
 
 resp = requests.get(
-    'https://astroicers.github.io/security-glossary-tw/api/v1/terms/apt.json'
+    'https://glossary.astroicers.link/api/v1/terms/apt.json'
 )
 term = resp.json()
 print(term['term_zh'])  # 進階持續性威脅

@@ -56,7 +56,7 @@ site = [
 
 [project.urls]
 Homepage = "https://github.com/astroicers/security-glossary-tw"
-Documentation = "https://astroicers.github.io/security-glossary-tw/"
+Documentation = "https://glossary.astroicers.link/"
 Repository = "https://github.com/astroicers/security-glossary-tw"
 Issues = "https://github.com/astroicers/security-glossary-tw/issues"
 
