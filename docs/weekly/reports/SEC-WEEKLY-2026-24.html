@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/06/09 - 2026/06/15</title>
+    <meta name="description" content="資安週報 2026-06-09 - 2026-06-15">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/06/09 - 2026/06/15</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-24 · 發布日期：2026-06-15</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #f97316;">高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">13</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 【立即】修補 CVE-2026-35273（Oracle PeopleSoft）、CVE-2026-10520（Ivanti Sentry）、CVE-2026-20253（Splunk Enterprise）三項 CVSS 9.8 危急漏洞，此三項均已確認遭野外利用或列入 CISA KEV，不得延遲。</li>
+<li>🔴 【立即】更新所有 Chromium 系瀏覽器（Chrome、Microsoft Edge）至最新版本以修補 CVE-2026-11645（CISA KEV，已遭野外利用），並強制啟用自動更新機制。</li>
+<li>🔴 【本週】優先部署 Microsoft 六月 Patch Tuesday 更新，特別關注零時差漏洞及 Exchange Ghost-Sender 郵件偽造漏洞（已確認遭野外利用）的修補。建議測試後 7 天內完成關鍵系統更新。</li>
+<li>🟡 【本週】稽核組織內 AI 代理工具（Coding Agent、LLM 工具組、LangGraph）的供應鏈完整性，限制 AI 代理的系統存取權限，套用 LangGraph 最新安全更新，防範 Agentjacking 攻擊。</li>
+<li>🟡 【本週】使用 Arch Linux AUR 的開發者應立即稽核近期安裝的套件，對所有可能受影響的機器進行完整掃描，並重設系統憑證、SSH 金鑰及 API 存取金鑰。</li>
+<li>🟡 【本月】稽核組織 Linux 伺服器的 PAM 模組與 SSH 設定檔完整性，部署以行為為基礎的 Linux 端點偵測（<a href="https://glossary.astroicers.link/glossary/edr" class="term-link" title="端點偵測與回應">EDR</a>）以識別潛在長期潛伏後門，定期執行 FIM（檔案完整性監控）。</li>
+<li>🟡 【本月】評估現有漏洞管理流程是否符合 CISA BOD 26-02 新指令要求，建立以實際風險情境（而非純 CVSS 分數）為基礎的漏洞優先排序機制，高風險漏洞目標應在 3 天內完成修補。</li>
+<li>🟢 強化勒索軟體防護縱深：加強網路分段（特別是 SMB 橫向移動路徑）、確保關鍵資料有可驗證的離線備份、監控異常的 SMB 和 RDP 連線模式，以應對 The Gentlemen 等蠕蟲式勒索軟體。</li>
+<li>🟢 修補 Cisco Catalyst SD-WAN Manager（CVE-2026-20245）及 Arista EOS（CVE-2026-7473）的 CISA KEV <a href="https://glossary.astroicers.link/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>，聯邦機構須於 2026-06-23 前完成，一般企業應納入近期修補計畫。</li>
+<li>🟢 關鍵基礎設施營運商（水務、能源等）應強化 OT/IT <a href="https://glossary.astroicers.link/glossary/segmentation" class="term-link" title="網路分段">網路隔離</a>，審查 <a href="https://glossary.astroicers.link/glossary/scada" class="term-link" title="監控與資料擷取系統">SCADA</a>/<a href="https://glossary.astroicers.link/glossary/ics" class="term-link" title="工業控制系統">ICS</a> 及 RTKBase 系統的外部存取控制，輪換所有系統憑證，參考 Handala 攻擊事件加強防禦。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (13)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/shinyhunters-exploits-oracle-peoplesoft.html" target="_blank" rel="noopener">ShinyHunters 利用 Oracle PeopleSoft 零時差漏洞（CVE-2026-35273）大規模入侵大學與企業</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-11</p>
+            <p>駭客組織 ShinyHunters 自 5 月底起積極利用 Oracle PeopleSoft 零時差漏洞 <a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-35273（CISA <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a>），已入侵逾百家大學與企業，竊取大量敏感資料後向受害者勒索。Oracle 已於 6 月 10 日發布緩解措施，但尚未正式承認野外利用情況。Mandiant 與 Google 威脅情報團隊（GTIG）均已確認此漏洞遭主動利用。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.darkreading.com/vulnerabilities-threats/max-severity-ivanti-flaw-exploited-24-hours-after-disclosure" target="_blank" rel="noopener">Ivanti Sentry OS 命令注入漏洞（CVE-2026-10520）公開 24 小時內遭野外利用</a></h3>
+            <p class="event-meta">Dark Reading · 2026-06-11</p>
+            <p>Ivanti Sentry（前身 MobileIron Sentry）OS 命令注入漏洞 CVE-2026-10520 已被 CISA 列入 KEV 清單，允許遠端未授權攻擊者以 root 權限執行任意程式碼。蜜罐已偵測到利用嘗試，攻擊者似乎事先已完成目標基礎架構踩點，於揭露後 24 小時內即發動攻擊。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html" target="_blank" rel="noopener">Splunk Enterprise 重大 RCE 漏洞 CVE-2026-20253（CVSS 9.8）允許未授權遠端執行程式碼</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-13</p>
+            <p>Splunk 發布 6 月安全更新，修補 CVE-2026-20253（<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.8），影響 Splunk Enterprise 10.2.4 以下及 10.0.7 以下版本。未授權攻擊者可利用此漏洞建立或截斷任意檔案，進而達成遠端程式碼執行。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://krebsonsecurity.com/2026/06/a-record-breaking-patch-tuesday-for-june-2026/" target="_blank" rel="noopener">Microsoft 六月 Patch Tuesday 破紀錄修補 206 個 CVE，含 Exchange 郵件偽造零時差</a></h3>
+            <p class="event-meta">Krebs on Security · 2026-06-09</p>
+            <p>Microsoft 六月 Patch Tuesday 修補創紀錄的 206 個漏洞，研究人員指出 AI 輔助漏洞發現已加速漏洞揭露速度與規模。修補內容涵蓋 <a href="https://glossary.astroicers.link/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a>、權限提升與零時差漏洞，包括 Microsoft Exchange「Ghost-Sender」郵件偽造漏洞，可讓攻擊者冒充任意電子郵件地址，已證實遭野外惡意利用。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/over-400-arch-linux-aur-packages.html" target="_blank" rel="noopener">Arch Linux AUR 逾 400 個套件遭供應鏈攻擊，植入資訊竊取程式與 eBPF Rootkit</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-12</p>
+            <p>攻擊者接管 Arch User Repository（AUR）逾 400 個套件，改寫建置腳本以在開發者機器上安裝憑證竊取程式及 eBPF <a href="https://glossary.astroicers.link/glossary/rootkit" class="term-link" title="根套件">rootkit</a>。惡意程式具備自動化憑證竊取能力，並利用 eBPF 技術在核心層級隱藏活動，使端點偵測工具難以察覺。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/chrome-149-update-patches-28-vulnerabilities/" target="_blank" rel="noopener">Google Chromium V8 越界讀寫漏洞（CVE-2026-11645）遭野外利用，列入 CISA KEV</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-06-12</p>
+            <p>Google Chromium V8 JavaScript 引擎存在越界讀寫漏洞 CVE-2026-11645，可讓遠端攻擊者透過惡意 HTML 頁面在沙箱內執行任意程式碼，影響 Chrome、Edge、Opera 等多款 Chromium 系瀏覽器。Chrome 149 更新已同步修補 28 個漏洞，CISA 已要求聯邦機構於 6 月 23 日前完成修補。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/the-gentlemen-ransomware-claims-478.html" target="_blank" rel="noopener">The Gentlemen 勒索組織宣稱 478 名受害者，惡意程式具蠕蟲式橫向擴散能力</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-11</p>
+            <p>The Gentlemen 新興勒索軟體組織以積極招募成員策略快速成長，目前宣稱已有 478 名受害者，成為活躍度第二高的勒索組織。其惡意程式具備蠕蟲式橫向移動能力，能在受害網路內自動擴散，並採用雙重勒索策略同時加密資料與威脅公開外洩。Krebs on Security 獨家調查其幕後組成。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.infosecuritymagazine.com/news/new-agentjacking-attacks-could-hijack-ai/" target="_blank" rel="noopener">新型 Agentjacking 攻擊可挾持 AI 程式撰寫代理執行惡意程式碼，LangGraph 同週揭露 RCE 漏洞鏈</a></h3>
+            <p class="event-meta">Infosecurity Magazine · 2026-06-11</p>
+            <p>資安研究人員揭露 Agentjacking 攻擊手法，可透過惡意提示注入或竄改工具定義，誘騙 AI 程式撰寫代理（如 OpenClaw）在開發者機器上執行任意程式碼或洩漏敏感資料。LangGraph 同週亦揭露三個已修補漏洞，包含可導致遠端程式碼執行的嚴重漏洞鏈，AI 工具供應鏈安全問題日趨嚴峻。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/china-linked-hackers-backdoored-linux.html" target="_blank" rel="noopener">中國駭客組織 VPanda 在 Linux 登入系統植入後門長達近十年</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-12</p>
+            <p>Sygnia 研究發現 China-nexus 威脅組織 VPanda 在 Linux 登入軟體（<a href="https://glossary.astroicers.link/glossary/pam" class="term-link" title="特權存取管理">PAM</a>/SSH）植入後門，長達近十年未被偵測，得以持續存取受害系統而不留下明顯痕跡。此攻擊手法鎖定防禦者較少監控的作業系統核心元件，凸顯 Linux 系統基礎元件完整性驗證的重要性。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/iranian-cyber-group-handala-claims-cal-water-hack/" target="_blank" rel="noopener">伊朗 Handala 入侵美國加州水務局，竊取 5GB 資料含客戶個資與 RTKBase 憑證</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-06-12</p>
+            <p>伊朗 Handala 駭客組織聲稱成功入侵美國加州水務局（Cal Water），竊取逾 5GB 資料，包含客戶個人資訊及 RTKBase 平台的操作憑證。此事件再次凸顯水務等關鍵基礎設施面臨的網路攻擊威脅，<a href="https://glossary.astroicers.link/glossary/ot" class="term-link" title="營運技術">OT</a>/IT 融合環境的安全防護急需加強。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/interpol-operation-takes-down-sniper-dz.html" target="_blank" rel="noopener">INTERPOL「Operation Ramz」打擊 Sniper Dz 網路釣魚即服務平台，逮捕管理者</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-12</p>
+            <p>INTERPOL 代號 Operation Ramz 的行動成功瓦解運作十年的 Sniper Dz PhaaS（網路釣魚即服務）平台，逮捕其管理者。Group-IB 揭露 Sniper Dz 曾為大量網路犯罪者提供現成釣魚工具組與基礎架構，影響數百萬潛在受害者。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.infosecuritymagazine.com/news/ransomware-payment-crypto-laundering/" target="_blank" rel="noopener">Europol 瓦解 AudiA6 加密貨幣洗錢服務，多個勒索軟體組織受波及</a></h3>
+            <p class="event-meta">Infosecurity Magazine · 2026-06-12</p>
+            <p>Europol 聯合 FBI 等機構查扣 AudiA6 暗網加密貨幣洗錢服務的網域並逮捕嫌疑人。AudiA6 長期為多個勒索軟體組織提供贖金洗錢管道，此次行動將影響相關勒索組織的資金流通能力，是繼 2024 年 <a href="https://glossary.astroicers.link/glossary/lockbit" class="term-link" title="LockBit 勒索軟體">LockBit</a> 後規模最大的勒索生態打擊行動之一。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://cyberscoop.com/cisa-vulnerability-remediation-directive-bod-26-02/" target="_blank" rel="noopener">CISA 發布新漏洞修補指令，高風險漏洞需 3 天內完成修補，標誌漏洞管理策略重大轉變</a></h3>
+            <p class="event-meta">CISA / CyberScoop · 2026-06-10</p>
+            <p>CISA 發布新版 Binding Operational Directive（BOD 26-02），要求聯邦機構依實際風險而非 CVSS 嚴重性分數排序漏洞修補優先順序。同時滿足四項高風險條件的漏洞須在 3 天內完成修補，此政策標誌著美國政府漏洞管理策略的重大轉變，業界普遍預期此模式將成為行業最佳實踐。...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (8)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35273" target="_blank">CVE-2026-35273</a></td>
+            <td>Oracle PeopleSoft Enterprise PeopleTools 缺少關鍵功能驗證漏洞（★ CISA KEV）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-10520" target="_blank">CVE-2026-10520</a></td>
+            <td>Ivanti Sentry OS 命令注入漏洞，可允許遠端未授權 Root 執行（★ CISA KEV）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20253" target="_blank">CVE-2026-20253</a></td>
+            <td>Splunk Enterprise 未授權遠端程式碼執行漏洞，CVSS 9.8...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11645" target="_blank">CVE-2026-11645</a></td>
+            <td>Google Chromium V8 越界讀寫漏洞，可透過惡意網頁在沙箱內執行任意程式碼（★ CISA KEV）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20245" target="_blank">CVE-2026-20245</a></td>
+            <td>Cisco Catalyst SD-WAN Manager 輸出編碼不當漏洞，可允許本地 Root 命令執行（★ CISA KEV）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-7473" target="_blank">CVE-2026-7473</a></td>
+            <td>Arista EOS 不完整比較漏洞，導致意外隧道封包解封裝與轉發（★ CISA KEV）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.5</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46444" target="_blank">CVE-2026-46444</a></td>
+            <td>Flowise LLM 平台 OpenAI Assistants Vector Store API 端點缺乏驗證中介層...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11522" target="_blank">CVE-2026-11522</a></td>
+            <td>Tenda 多款路由器（W20E/AC18/CX12L）Stack-Based <a href="https://glossary.astroicers.link/glossary/buffer_overflow" class="term-link" title="緩衝區溢位">Buffer Overflow</a> 可遠端執行任意程式碼...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (14)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/rce" target="_blank">RCE</a></h3>
+                <p class="term-zh">遠端程式碼執行</p>
+                <p class="term-def">攻擊者可遠端在目標系統執行任意程式碼的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/rootkit" target="_blank">Rootkit</a></h3>
+                <p class="term-zh">根套件</p>
+                <p class="term-def">隱藏惡意活動並維持特權存取的工具集</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/pam" target="_blank">PAM</a></h3>
+                <p class="term-zh">特權存取管理</p>
+                <p class="term-def">管理和監控特權帳號存取的安全解決方案</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ot" target="_blank">OT</a></h3>
+                <p class="term-zh">營運技術</p>
+                <p class="term-def">用於監控和控制實體設備的硬體和軟體</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/lockbit" target="_blank">LockBit</a></h3>
+                <p class="term-zh">LockBit 勒索軟體</p>
+                <p class="term-def">全球最活躍的 RaaS 勒索軟體家族之一</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/buffer_overflow" target="_blank">Buffer Overflow</a></h3>
+                <p class="term-zh">緩衝區溢位</p>
+                <p class="term-def">程式寫入資料超過緩衝區大小的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/edr" target="_blank">EDR</a></h3>
+                <p class="term-zh">端點偵測與回應</p>
+                <p class="term-def">監控端點設備以偵測和回應威脅的安全解決方案</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
