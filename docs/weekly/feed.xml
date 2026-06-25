@@ -6,22 +6,22 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://glossary.astroicers.link/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 24 Jun 2026 21:49:05 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 09:02:48 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
     <item>
       <title>資安週報 2026/06/15 - 2026/06/21</title>
       <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-25.html</link>
       <guid isPermaLink="false">SEC-WEEKLY-2026-25</guid>
-      <pubDate>Mon, 22 Jun 2026 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0800</pubDate>
       <description>威脅等級：升高
-本週收錄 12 則事件、10 個漏洞
+本週收錄 14 則事件、13 個漏洞
 
 重點新聞：
 • FortiBleed：86,644 台 Fortinet 設備憑證大規模外洩，台灣受影響全球第三
 • Splunk CVE-2026-20253（CVSS 9.8）列入 CISA KEV，少量漏洞利用已確認
-• Operation Endgame 國際執法：瓦解 SocGholish 殭屍網路，清除近 15,000 個 Wo...
+• ShapedPlugin WordPress 套件供應鏈攻擊（CVE-2026-49777，CVSS 10.0）：...
 
-相關術語：VPN, KEV, CVE, Exploit, EDR</description>
+相關術語：VPN, KEV, CVE, CVSS, Webshell</description>
     </item>
     <item>
       <title>資安週報 2026/06/09 - 2026/06/15</title>

@@ -129,7 +129,7 @@
 
         <header>
             <h1>資安週報 2026/06/15 - 2026/06/21</h1>
-            <p class="meta">報告編號：SEC-WEEKLY-2026-25 · 發布日期：2026-06-22</p>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-25 · 發布日期：2026-06-25</p>
         </header>
 
         <div class="summary-grid">
@@ -138,11 +138,11 @@
                 <div class="label">威脅等級</div>
             </div>
             <div class="summary-card">
-                <div class="value">12</div>
+                <div class="value">14</div>
                 <div class="label">資安事件</div>
             </div>
             <div class="summary-card">
-                <div class="value">10</div>
+                <div class="value">13</div>
                 <div class="label">漏洞數量</div>
             </div>
         </div>
@@ -151,7 +151,10 @@
             <h2>行動建議</h2>
             <div class="actions">
                 <ul>
-                    <li>🔴 立即修補 Splunk Enterprise CVE-2026-20253（CISA KEV，截止 2026-06-21）。隔離 PostgreSQL 側車服務端口，確認 Splunk 未暴露於公開網際網路。</li>
+                    <li>🔴 立即稽核使用 ShapedPlugin 付費外掛（Product Slider Pro、Real Testimonials Pro、Smart Post Show Pro）的 WordPress 網站，視所有 4 月至 6 月間更新的網站為已受感染，掃描惡意程式、移除可疑帳號、輪換 WordPress / 資料庫 / SMTP <a href="https://glossary.astroicers.link/glossary/certificate" class="term-link" title="數位憑證">憑證</a>，並重新產生所有雙因素驗證金鑰。</li>
+<li>🔴 立即套用 Check Point Security Gateway hotfix 以修補 CVE-2026-50751（CISA KEV，Qilin 勒索軟體積極利用），停用或限制 IKEv1 VPN 設定，台灣企業需特別關注（TWCERT/CC 已於 6 月 15 日發布警報）。</li>
+<li>🔴 立即修補 Splunk Enterprise CVE-2026-20253（CISA KEV，截止 2026-06-21）。隔離 PostgreSQL 側車服務端口，確認 Splunk 未暴露於公開網際網路。</li>
+<li>🔴 升級所有 NGINX 實例至 1.31.2 或 1.30.3，修補 CVE-2026-42530 及 CVE-2026-42055（均 CVSS 9.2）。若無法立即升級，HTTP/3 環境應從 listen 指令移除 quic，HTTP/2 代理環境應調整 ignore_invalid_headers 及 large_client_header_buffers 設定。</li>
 <li>🔴 稽核所有 Fortinet FortiGate / FortiOS 設備：更新至最新 FortiOS 版本、停用外部暴露管理介面、啟用多因素驗證、輪換所有管理員憑證。台灣企業尤需優先處理（全球第三大受影響國）。</li>
 <li>🔴 修補 Joomla Content Editor CVE-2026-48907（CISA KEV，截止 2026-06-19）。稽核所有使用 Joomla 的公開網站，禁用或更新受影響套件。</li>
 <li>🟡 更新 Spring AI 至 1.0.9（1.0.x 分支）或 1.1.8（1.1.x 分支），修補 CVE-2026-47835 SQL 注入漏洞（影響 AI 向量資料庫元件）。</li>
@@ -164,7 +167,7 @@
         </section>
 
         <section>
-            <h2>資安新聞 (12)</h2>
+            <h2>資安新聞 (14)</h2>
             
         <div class="event-card">
             <h3><a href="https://www.ithome.com.tw/news/10366855" target="_blank" rel="noopener">FortiBleed：86,644 台 Fortinet 設備憑證大規模外洩，台灣受影響全球第三</a></h3>
@@ -179,9 +182,21 @@
         </div>
         
         <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/shapedplugin-wordpress-pro-plugins.html" target="_blank" rel="noopener">ShapedPlugin WordPress 套件供應鏈攻擊（CVE-2026-49777，CVSS 10.0）：三款付費外掛植入後門</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-15</p>
+            <p>攻擊者入侵 ShapedPlugin 的建置與發布管線，自 5 月 21 日起將後門植入 Product Slider Pro、Real Testimonials Pro 及 Smart Post Show Pro 三款 WordPress 付費外掛。惡意程式具備 <a href="https://glossary.astroicers.link/glossary/webshell" class="term-link" title="網頁後門">webshell</a> 遠端執行、REST API 任意檔案寫入、竊取管理員憑證與 TOTP 雙因素驗證金鑰等能力，<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 評分達滿分 1...</p>
+        </div>
+        
+        <div class="event-card">
             <h3><a href="https://thehackernews.com/2026/06/operation-endgame-disrupts-socgholish.html" target="_blank" rel="noopener">Operation Endgame 國際執法：瓦解 SocGholish 殭屍網路，清除近 15,000 個 WordPress 受害網站</a></h3>
             <p class="event-meta">The Hacker News · 2026-06-19</p>
             <p>荷蘭、加拿大、德國、美國聯合執法行動「Operation Endgame」成功瓦解與 Evil Corp 有關聯的 SocGholish 惡意下載器基礎設施，共清除 14,971 個受感染 WordPress 網站。SocGholish 長期偽裝成瀏覽器更新，作為勒索軟體的初始存取工具。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/f5-patches-two-critical-nginx-open.html" target="_blank" rel="noopener">F5 發布 NGINX 緊急帶外修補：HTTP/3 與 HTTP/2 模組均存在 CVSS 9.2 遠端程式碼執行漏洞</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-18</p>
+            <p>F5 於 6 月 17 日發布 NGINX 帶外緊急安全修補，修復 CVE-2026-42530（HTTP/3 <a href="https://glossary.astroicers.link/glossary/use_after_free" class="term-link" title="釋放後使用">use-after-free</a>，CVSS 9.2）及 CVE-2026-42055（HTTP/2 代理模組堆積溢位，CVSS 9.2），均允許遠端未驗證攻擊者發動拒絕服務攻擊或在特定條件下執行任意程式碼。NGINX 廣泛部署於全球 Web 伺服器、反向代理及 Kubernetes Ingr...</p>
         </div>
         
         <div class="event-card">
@@ -223,7 +238,7 @@
         <div class="event-card">
             <h3><a href="https://www.ithome.com.tw/news/10366851" target="_blank" rel="noopener">M365 Copilot 提示注入資訊外洩攻擊：點擊連結即可誘導 AI 助理洩漏企業敏感資料</a></h3>
             <p class="event-meta">iThome 資安 · 2026-06-18</p>
-            <p>資安研究人員揭露結合提示注入漏洞與 M365 Copilot 的新型攻擊手法，攻擊者可透過惡意連結誘導 AI 助理自動提取並洩漏企業的敏感資料，無需傳統釣魚攻擊的複雜步驟，對擁有大量 Copilot 授權的企業構成重大威脅。...</p>
+            <p>資安研究人員揭露結合提示注入漏洞與 M365 Copilot 的新型攻擊手法，攻擊者可透過惡意連結誘導 AI 助理自動提取並洩漏企業的敏感資料，無需傳統網路釣魚攻擊的複雜步驟，對擁有大量 Copilot 授權的企業構成重大威脅。...</p>
         </div>
         
         <div class="event-card">
@@ -241,12 +256,19 @@
         </section>
 
         <section>
-            <h2>漏洞追蹤 (10)</h2>
+            <h2>漏洞追蹤 (14)</h2>
             <table>
                 <thead>
                     <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
                 </thead>
                 <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-49777" target="_blank">CVE-2026-49777</a></td>
+            <td>ShapedPlugin WordPress 付費外掛供應鏈後門（滿分 CVSS 10.0）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
         <tr>
             <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20253" target="_blank">CVE-2026-20253</a></td>
             <td>Splunk Enterprise 缺少關鍵功能驗證漏洞...</td>
@@ -259,6 +281,27 @@
             <td>Joomla Content Editor 不當存取控制漏洞...</td>
             <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
             <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-50751" target="_blank">CVE-2026-50751</a></td>
+            <td>Check Point Security Gateway IKEv1 VPN 身份驗證繞過漏洞（CISA KEV，<a href="https://glossary.astroicers.link/glossary/qilin" class="term-link" title="Qilin 勒索軟體組織">Qilin</a> 勒索軟體積極利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42530" target="_blank">CVE-2026-42530</a></td>
+            <td>F5 NGINX HTTP/3 use-after-free 遠端程式碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.2</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-42055" target="_blank">CVE-2026-42055</a></td>
+            <td>F5 NGINX HTTP/2 代理與 gRPC 模組堆積溢位遠端程式碼執行漏洞...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.2</td>
         </tr>
         
         <tr>
@@ -288,41 +331,13 @@
             <td style="color: #f97316; font-weight: 600;">HIGH</td>
             <td>7.8</td>
         </tr>
-        
-        <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-0063" target="_blank">CVE-2026-0063</a></td>
-            <td>Android PhoneInterfaceManager 本機權限提升漏洞...</td>
-            <td style="color: #f97316; font-weight: 600;">HIGH</td>
-            <td>7.8</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48294" target="_blank">CVE-2026-48294</a></td>
-            <td>Adobe Acrobat Chrome 擴充功能跨來源資料洩露漏洞（UXSS）...</td>
-            <td style="color: #f97316; font-weight: 600;">HIGH</td>
-            <td>7.4</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35295" target="_blank">CVE-2026-35295</a></td>
-            <td>Oracle WebCenter Sites 遠端低權限用戶接管漏洞...</td>
-            <td style="color: #f97316; font-weight: 600;">HIGH</td>
-            <td>7.5</td>
-        </tr>
-        
-        <tr>
-            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11409" target="_blank">CVE-2026-11409</a></td>
-            <td>TP-Link TL-WR940N v6 作業系統指令注入漏洞...</td>
-            <td style="color: #f97316; font-weight: 600;">HIGH</td>
-            <td>7.2</td>
-        </tr>
         </tbody>
             </table>
         </section>
 
         
         <section class="terms-section">
-            <h2>📚 本期術語 (9)</h2>
+            <h2>📚 本期術語 (14)</h2>
             <div class="terms-grid">
                 
             <div class="term-card">
@@ -341,6 +356,24 @@
                 <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
                 <p class="term-zh">通用漏洞揭露</p>
                 <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/webshell" target="_blank">Webshell</a></h3>
+                <p class="term-zh">網頁後門</p>
+                <p class="term-def">植入網站伺服器的惡意腳本，提供遠端存取</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/use_after_free" target="_blank">Use-After-Free</a></h3>
+                <p class="term-zh">釋放後使用</p>
+                <p class="term-def">程式使用已釋放記憶體區域的漏洞</p>
             </div>
             
             <div class="term-card">
@@ -365,18 +398,6 @@
                 <h3><a href="https://glossary.astroicers.link/glossary/apt" target="_blank">APT</a></h3>
                 <p class="term-zh">進階持續性威脅</p>
                 <p class="term-def">國家級駭客組織發動的長期網路攻擊</p>
-            </div>
-            
-            <div class="term-card">
-                <h3><a href="https://glossary.astroicers.link/glossary/sandbox" target="_blank">Sandbox</a></h3>
-                <p class="term-zh">沙箱</p>
-                <p class="term-def">隔離執行可疑程式以進行安全分析的環境</p>
-            </div>
-            
-            <div class="term-card">
-                <h3><a href="https://glossary.astroicers.link/glossary/hardening" target="_blank">System Hardening</a></h3>
-                <p class="term-zh">系統強化</p>
-                <p class="term-def">減少系統攻擊面的安全設定過程</p>
             </div>
             
             </div>
