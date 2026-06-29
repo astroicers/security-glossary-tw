@@ -6,8 +6,23 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://glossary.astroicers.link/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 25 Jun 2026 09:08:40 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 09:21:04 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/06/22 - 2026/06/28</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-26.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-26</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：升高
+本週收錄 10 則事件、9 個漏洞
+
+重點新聞：
+• Ubiquiti UniFi OS 三重滿分漏洞（CVE-2026-34908/34909/34910，CVSS ...
+• Operation Endgame 第二波國際聯合執法（Europol，6 月 24 日）：StealC、Amad...
+• PTC Windchill CVE-2026-12569（CVSS 9.3）史上首次 PTC 產品列入 CISA ...
+
+相關術語：CVE, KEV, StealC, Webshell, CVSS</description>
+    </item>
     <item>
       <title>資安週報 2026/06/15 - 2026/06/21</title>
       <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-25.html</link>
@@ -292,21 +307,6 @@
 • 中國駭客發動 Notepad++ 供應鏈攻擊
 
 相關術語：Use-After-Free, CVSS, CVE, Vulnerability, RCE</description>
-    </item>
-    <item>
-      <title>資安週報 2026/02/03 - 2026/02/09</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-06.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-06</guid>
-      <pubDate>Tue, 10 Feb 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：升高
-本週收錄 6 則事件、8 個漏洞
-
-重點新聞：
-• 微軟 2 月 Patch Tuesday 修補 6 個零時差漏洞
-• 超過 13.5 萬個 OpenClaw AI 實例暴露於網路
-• NGINX 網路流量劫持攻擊活動
-
-相關術語：KEV, Vulnerability, RCE, CVSS, CVE</description>
     </item>
   </channel>
 </rss>

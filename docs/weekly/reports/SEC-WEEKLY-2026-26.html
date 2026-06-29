@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/06/22 - 2026/06/28</title>
+    <meta name="description" content="資安週報 2026-06-22 - 2026-06-28">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/06/22 - 2026/06/28</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-26 · 發布日期：2026-06-29</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #eab308;">升高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">10</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">9</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即升級所有 Ubiquiti UniFi OS 設備，套用 SAB-064 修補版本以修補 CVE-2026-34908、CVE-2026-34909、CVE-2026-34910（均 CVSS 10.0，CISA KEV）。搜尋管理介面中是否存在「John Sim」等異常管理員帳號，稽核 6 月 23 日後的所有系統變更記錄。</li>
+<li>🔴 立即套用 PTC Windchill 11.0 M030 及 13.1.1 修補版本（CVE-2026-12569，CISA KEV，截止 2026-06-28）。掃描 /Windchill/login/ 目錄是否存在可疑 JSP 檔案，稽核 6 月 18 日後的所有存取記錄，確認 Windchill 服務未直接暴露於網際網路。</li>
+<li>🔴 套用 Cisco 6 月 3 日釋出的 Unified CM 修補程式（CVE-2026-20230，CISA KEV，截止 2026-06-28）。若無法立即升級，應停用 WebDialer 服務以消除攻擊向量。搜尋非預期的 .jsp 或 .jspx 檔案於 Unified CM 應用程式目錄。</li>
+<li>🔴 升級 Lantronix EDS5000 至 2.2.0.0R1（CVE-2025-67038，CISA KEV，截止 2026-06-26）。稽核工廠 OT/IT 邊界中所有 Lantronix 設備的網路存取記錄，確認是否有自 4 月 5 日起的可疑連線活動，並考慮將設備管理介面移至獨立的 OT 管理網段。</li>
+<li>🔴 立即套用 Cisco Catalyst SD-WAN Manager 修補程式（CVE-2026-20262，CVSS 9.9，CISA KEV，截止 2026-06-29）。稽核 SD-WAN 管理介面的存取記錄，確認所有管理員帳號活動的合法性。</li>
+<li>🔴 稽核所有 GitHub Actions CI/CD 工作流程，識別並修補 Cordyceps 揭露的三類漏洞模式：（1）pull_request_target 觸發器未隔離不受信任代碼；（2）過度授權的工作流程 GITHUB_TOKEN；（3）未固定的協力廠商 Actions 版本。使用 StepSecurity Harden-Runner 或 Zizmor 等工具進行自動化掃描。</li>
+<li>🟡 更新所有 Linux 系統核心以修補 CVE-2026-46331（pedit COW）。在 Ubuntu 等預設啟用無特權使用者命名空間的發行版上此漏洞更易被利用，應評估是否限制 unprivileged_userns_clone（`sysctl kernel.unprivileged_userns_clone=0`）作為暫時緩解措施。</li>
+<li>🟡 盤點並汰換使用 D-Link DIR-850L 及 DIR-818LW 等已停止支援路由器的網路設備。如無法立即汰換，應關閉遠端管理介面、變更預設憑證，並監控是否有異常的 DNS 設定變更（AryStinger 殭屍網路利用 DNS 竄改重導流量）。</li>
+<li>🟡 針對使用 Microsoft Teams 的環境強化外部通訊安全策略：限制外部使用者發起通訊請求，禁止或限制畫面共享功能，並訓練員工識別 MuddyWater 式的社交工程攻擊（透過 Teams 建立信任後進行畫面共享以竊取憑證）。</li>
+<li>🟢 藉 Operation Endgame 執法行動扣押 2,700 萬筆遭竊憑證的機會，主動掃描組織帳號是否出現在本次行動回收的憑證集中。許多 StealC 及 Amadey 受害者帳號可能在相關平台上被告知，應預防性輪換高風險帳號密碼並啟用多因素驗證。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (10)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/critical-ubiquiti-vulnerabilities-in-attackers-crosshairs/" target="_blank" rel="noopener">Ubiquiti UniFi OS 三重滿分漏洞（CVE-2026-34908/34909/34910，CVSS 10.0）：Mirai/Gaafgyt 殭屍網路偽造管理員帳號，CISA 啟動三日緊急修補令</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-06-23</p>
+            <p>CISA 於 6 月 23 日將 Ubiquiti UniFi OS 三個滿分漏洞一併列入 <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a>，並依 BOD 26-04 要求聯邦機構於 6 月 26 日前完成修補——史上最短的聯邦修補期限之一。三個漏洞可鏈式組合：CVE-2026-34908（不當存取控制）作為未驗證初始立足點，CVE-2026-34909（路徑穿越）讀取並篡改底層作業系統檔案，<a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-34910（輸入驗證不足）注...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.europol.europa.eu/media-press/newsroom/news/global-cyber-strike-disrupts-socgholish-amadey-and-stealc-malware-networks" target="_blank" rel="noopener">Operation Endgame 第二波國際聯合執法（Europol，6 月 24 日）：StealC、Amadey、SocGholish 基礎設施瓦解，扣押 4,100 萬歐元加密資產</a></h3>
+            <p class="event-meta">Europol · 2026-06-24</p>
+            <p>Europol 協調德、法、荷、加、英、美多國執法機關及 Bitdefender、Bitsight、ESET、Microsoft 等資安廠商，於 6 月 24 日公布 Operation Endgame 第二波行動成果。此波行動針對 <a href="https://glossary.astroicers.link/glossary/stealc" class="term-link" title="StealC">StealC</a> 竊密程式即服務、Amadey 惡意程式載入器及 SocGholish 惡意下載器後端基礎設施，共摧毀 326 台伺服器、查扣 142 個網域、凍結 4,...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html" target="_blank" rel="noopener">PTC Windchill CVE-2026-12569（CVSS 9.3）史上首次 PTC 產品列入 CISA KEV：攻擊者部署 JSP Webshell 竊取製造業研發資料</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-25</p>
+            <p>PTC 確認旗下 Windchill PDMLink 及 FlexPLM 企業產品生命週期管理（PLM）平台遭到利用，CVE-2026-12569 為不受信任資料的不安全反序列化漏洞（<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.3），無需任何憑證即可透過網路執行任意程式碼。攻擊者在 /Windchill/login/ 目錄下植入 JSP <a href="https://glossary.astroicers.link/glossary/webshell" class="term-link" title="網頁後門">Webshell</a>，用於指令執行與資料竊取，目標為掌握大量製造設計圖、供應鏈及研發機密的製造...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/cisco-unified-cm-flaw-exploited-after.html" target="_blank" rel="noopener">Cisco Unified Communications Manager CVE-2026-20230 遭積極利用：WebDialer SSRF 鏈接 Webshell，CISA 設 6 月 28 日修補期限</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-25</p>
+            <p>Cisco Unified CM 的 WebDialer 服務存在伺服器端請求偽造（<a href="https://glossary.astroicers.link/glossary/ssrf" class="term-link" title="伺服器端請求偽造">SSRF</a>）<a href="https://glossary.astroicers.link/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>，可連鎖提升為偽造 Apache Axis 服務並寫入 Webshell 的根層級代碼執行路徑。資安公司 Defused 的蜜罐於 6 月 21 日至 22 日週末首次觀察到自動化掃描，攻擊者透過 Tor 發動攻擊並植入 Webshell。CISA 於 6 月 25 日將 CVE-2026-20230...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github.html" target="_blank" rel="noopener">Cordyceps CI/CD 供應鏈漏洞：300+ 知名開源專案（含微軟、Google）工作流程可被免費帳號攻擊者劫持</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-24</p>
+            <p>資安公司 Novee Security 揭露名為 Cordyceps 的系統性 CI/CD 工作流程漏洞類別，掃描約 30,000 個高影響力 GitHub 儲存庫後，確認逾 300 個存在完全可利用的攻擊鏈，受影響對象包含微軟 Azure Sentinel、Google AI Agent Development Kit、Apache、Cloudflare 及 Python 軟體基金會等知名專案。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/iranian-apt-intrusion-masquerades-as-chaos-ransomware-attack/" target="_blank" rel="noopener">MuddyWater 伊朗 APT 以 Chaos 勒索軟體為偽旗，透過 Microsoft Teams 植入 Darkcomp 後門竊取機密</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-06-24</p>
+            <p>Rapid7 研究人員揭露伊朗情報安全部（MOIS）旗下 <a href="https://glossary.astroicers.link/glossary/apt" class="term-link" title="進階持續性威脅">APT</a> 組織 MuddyWater（又稱 Mango Sandstorm）以 Chaos 勒索軟體偽旗掩蓋間諜行動。攻擊者透過 Microsoft Teams 與受害員工建立畫面共享連線，藉此竊取憑證、操控多因素驗證保護並接管帳號，從未部署加密勒索軟體，而是將 Chaos 相關程式作為偽旗植入以混淆歸因。後門程式 Darkcomp（Game...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/cisa-warns-critical-lantronix-eds5000.html" target="_blank" rel="noopener">Lantronix EDS5000 CVE-2025-67038（CVSS 9.8）：OT 環境工業設備伺服器自 4 月起遭 Chaya_006 針對性利用</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-25</p>
+            <p>Forescout Research Vedere Labs 發現威脅行為者 Chaya_006 自 4 月 5 日起即針對 Lantronix EDS5000 工業設備伺服器的 CVE-2025-67038 展開利用。EDS5000 是連接工業控制系統（PLC、RTU、感測器等）與 IP 網路的工業級設備伺服器，位於 <a href="https://glossary.astroicers.link/glossary/ot" class="term-link" title="營運技術">OT</a> 與 IT 邊界的關鍵通訊路徑，遭入侵後可中斷工業流程、竊取生產資料或以此...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/arystinger-malware-infects-4300-legacy.html" target="_blank" rel="noopener">AryStinger 殭屍網路：4,300 台老舊 D-Link 路由器遭入侵建構偵察代理，南韓台灣東南亞高風險</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-22</p>
+            <p>資安研究人員揭露名為 AryStinger 的殭屍網路，利用 13 年前揭露的漏洞（CVE-2013-3307 等）入侵 D-Link DIR-850L 及 DIR-818LW 路由器，累計感染逾 4,300 台設備。殭屍網路主要用於偵察規模化掃描——控制器可向數百台節點下發掃描任務以繪製目標網路圖，並具備竄改 <a href="https://glossary.astroicers.link/glossary/dns" class="term-link" title="網域名稱系統">DNS</a> 設定的能力，可將受害者流量導向網路釣魚頁面或監聽所有流量。地理分布以南韓（48...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html" target="_blank" rel="noopener">Linux CVE-2026-46331「pedit COW」本機提權：PoC 一天內公開，無特權用戶可污染頁面快取取得 root</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-26</p>
+            <p>Linux 核心流量控制子系統 tc 中的 act_pedit 封包編輯行動存在頁面快取損毀漏洞（CVE-2026-46331，俗稱 pedit COW）。tcf_pedit_act() 在計算寫入時複製（COW）範圍時遺漏了型別化鍵值在執行期加入的偏移量，導致寫入未私有化的共享頁面快取，可污染記憶體中的 setuid root 二進位檔（如 /bin/su）並注入 <a href="https://glossary.astroicers.link/glossary/payload" class="term-link" title="惡意酬載">Payload</a> 取得 root...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://grafana.com/blog/grafana-security-update-post-incident-review-for-github-workflow-vulnerability-and-whats-next/" target="_blank" rel="noopener">Grafana Labs 發布 TanStack npm 供應鏈攻擊事後檢討：Mandiant 確認無代碼竄改或客戶資料外洩</a></h3>
+            <p class="event-meta">Grafana Labs · 2026-06-23</p>
+            <p>Grafana Labs 於 6 月 23 日發布 5 月 TanStack npm 供應鏈攻擊事後檢討報告。攻擊者透過被入侵的 GitHub CI 令牌存取並下載 Grafana 源代碼庫，並提出勒索要求遭拒。Mandiant 完成獨立稽核後確認：無公開儲存庫或生產版本代碼遭竄改，無客戶正式環境或 Grafana Cloud 平台受影響，Grafana 已大幅強化 GitHub Actions ...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (9)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34908" target="_blank">CVE-2026-34908</a></td>
+            <td>Ubiquiti UniFi OS 不當存取控制漏洞（CISA KEV，CVSS 10.0）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34909" target="_blank">CVE-2026-34909</a></td>
+            <td>Ubiquiti UniFi OS 路徑穿越漏洞（CISA KEV，CVSS 10.0）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-34910" target="_blank">CVE-2026-34910</a></td>
+            <td>Ubiquiti UniFi OS 輸入驗證不足指令注入漏洞（CISA KEV，CVSS 10.0）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-67038" target="_blank">CVE-2025-67038</a></td>
+            <td>Lantronix EDS5000 作業系統指令注入漏洞（CISA KEV，CVSS 9.8）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20262" target="_blank">CVE-2026-20262</a></td>
+            <td>Cisco Catalyst SD-WAN Manager 遠端程式碼執行漏洞（CISA KEV，CVSS 9.9）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.9</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-12569" target="_blank">CVE-2026-12569</a></td>
+            <td>PTC Windchill PDMLink／FlexPLM 不安全反序列化遠端程式碼執行漏洞（CISA KEV，CVSS 9.3）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20230" target="_blank">CVE-2026-20230</a></td>
+            <td>Cisco Unified Communications Manager WebDialer SSRF 至根層級代碼執行漏洞（CISA KEV，CVSS 8.6）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.6</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46331" target="_blank">CVE-2026-46331</a></td>
+            <td>Linux 核心 tc act_pedit 頁面快取損毀本機提權漏洞（pedit COW，公開 <a href="https://glossary.astroicers.link/glossary/poc" class="term-link" title="概念驗證">PoC</a>）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-0492" target="_blank">CVE-2022-0492</a></td>
+            <td>Linux 核心 cgroup_release_agent_write 權限提升漏洞（CISA KEV 二度確認）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (12)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/stealc" target="_blank">StealC</a></h3>
+                <p class="term-zh">StealC</p>
+                <p class="term-def">以訂閱制提供的資訊竊密程式（MaaS 模式）</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/webshell" target="_blank">Webshell</a></h3>
+                <p class="term-zh">網頁後門</p>
+                <p class="term-def">植入網站伺服器的惡意腳本，提供遠端存取</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ssrf" target="_blank">SSRF</a></h3>
+                <p class="term-zh">伺服器端請求偽造</p>
+                <p class="term-def">利用伺服器發送請求存取內部資源的攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/apt" target="_blank">APT</a></h3>
+                <p class="term-zh">進階持續性威脅</p>
+                <p class="term-def">國家級駭客組織發動的長期網路攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ot" target="_blank">OT</a></h3>
+                <p class="term-zh">營運技術</p>
+                <p class="term-def">用於監控和控制實體設備的硬體和軟體</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/dns" target="_blank">DNS</a></h3>
+                <p class="term-zh">網域名稱系統</p>
+                <p class="term-def">將網域名稱轉換為 IP 位址的分散式系統</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
