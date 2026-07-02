@@ -6,7 +6,7 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://glossary.astroicers.link/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 29 Jun 2026 09:21:04 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 11:09:16 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
     <item>
       <title>資安週報 2026/06/22 - 2026/06/28</title>
@@ -27,7 +27,7 @@
       <title>資安週報 2026/06/15 - 2026/06/21</title>
       <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-25.html</link>
       <guid isPermaLink="false">SEC-WEEKLY-2026-25</guid>
-      <pubDate>Thu, 25 Jun 2026 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0800</pubDate>
       <description>威脅等級：升高
 本週收錄 14 則事件、14 個漏洞
 
