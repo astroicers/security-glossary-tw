@@ -6,8 +6,23 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://glossary.astroicers.link/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 02 Jul 2026 11:09:16 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 09:20:33 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/06/29 - 2026/07/05</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-27.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-27</guid>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 8 則事件、8 個漏洞
+
+重點新聞：
+• SimpleHelp CVE-2026-48558（CVSS 10.0，CISA KEV）：OIDC 令牌偽造繞過...
+• Adobe ColdFusion 七個 CVSS 10.0 滿分漏洞（7 月 1 日釋出修補）：CVE-2026-...
+• Progress Kemp LoadMaster CVE-2026-8037（CVSS 9.6）：watchTow...
+
+相關術語：MSP, Loader, MFA, KEV, CVE</description>
+    </item>
     <item>
       <title>資安週報 2026/06/22 - 2026/06/28</title>
       <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-26.html</link>
@@ -292,21 +307,6 @@
 • BeyondTrust CVE-2026-1731 遭大規模利用部署後門
 
 相關術語：KEV, APT, CVSS, CVE, DNS</description>
-    </item>
-    <item>
-      <title>資安週報 2026/02/10 - 2026/02/16</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-07.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-07</guid>
-      <pubDate>Tue, 17 Feb 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：升高
-本週收錄 7 則事件、7 個漏洞
-
-重點新聞：
-• Google Chrome 零時差漏洞 CVE-2026-2441 遭利用
-• Ivanti EPMM 零時差漏洞攻擊荷蘭政府機構
-• 中國駭客發動 Notepad++ 供應鏈攻擊
-
-相關術語：Use-After-Free, CVSS, CVE, Vulnerability, RCE</description>
     </item>
   </channel>
 </rss>

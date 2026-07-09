@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/06/29 - 2026/07/05</title>
+    <meta name="description" content="資安週報 2026-06-29 - 2026-07-05">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/06/29 - 2026/07/05</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-27 · 發布日期：2026-07-06</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #f97316;">高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即升級所有 SimpleHelp 伺服器至 5.5.16 或 6.0 RC2（CVE-2026-48558，CVSS 10.0，CISA KEV，截止 2026-07-02）。稽核 SimpleHelp 管理介面中的技術員帳號清單，刪除任何非由內部人員建立的帳號，並輪換所有技術員帳號密碼。特別注意使用 OIDC 驗證的部署——這是唯一的漏洞觸發條件。啟用 SimpleHelp 稽核記錄並回溯稽核過去 2 週的存取記錄。</li>
+<li>🔴 立即套用 Adobe ColdFusion 修補程式（APSB26-64），升級至 ColdFusion 2025 Update 10 或 ColdFusion 2023 Update 21（7 個 CVSS 10.0 <a href="https://glossary.astroicers.link/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>，CVE-2026-48282 已確認遭利用）。優先確認 ColdFusion 伺服器是否面向網際網路，掃描 Web 根目錄是否有未預期的 .cfm/.jsp 及可執行檔，稽核 6 月 30 日後的所有檔案系統變更記錄。</li>
+<li>🔴 立即套用 Microsoft SharePoint Server 5 月修補程式（CVE-2026-45659，CVSS 8.8，CISA KEV，截止 2026-07-04，KB5002863/KB5002868/KB5002870）。即使已套用修補，必須輪換 SharePoint 伺服器的 ASP.NET machineKey——Storm-2603 的歷史 ToolShell 攻擊模式顯示攻擊者在補丁前可能已竊取金鑰以維持持久化存取。回溯稽核 5 月 2026 後的所有 SharePoint 存取記錄，確認是否有可疑的 Site Member 帳號活動。</li>
+<li>🔴 立即升級 Progress Kemp LoadMaster 至 GA v7.2.63.2 或 LTSF v7.2.54.18（CVE-2026-8037，CVSS 9.6，利用活動自 6 月 29 日起已開始）。若暫無法升級，停用或嚴格限制 LoadMaster API 存取（漏洞需 API 啟用）。稽核 6 月 29 日後的 LoadMaster 管理存取記錄，確認是否有來自未知 IP 的可疑存取。</li>
+<li>🔴 全面稽核組織 FortiGate 防火牆是否受 FortiBleed 行動影響：（1）搜尋是否有主動使用 'diagnose sniffer <a href="https://glossary.astroicers.link/glossary/packet" class="term-link" title="封包">packet</a>' 指令的異常診斷活動；（2）確認所有 FortiGate 管理介面是否開啟於網際網路並限縮存取；（3）重置所有 FortiGate 管理員密碼並啟用多因素驗證；（4）若組織曾使用 FortiClient EMS 7.4.5-7.4.6，立即套用修補並稽核是否有可疑可執行檔執行記錄。</li>
+<li>🔴 立即升級 Fortinet FortiClient EMS 至受影響版本以外的修補版本（CVE-2026-35616）。稽核 EMS 伺服器上是否存在名稱含 'FortiEndpoint_Patch.exe' 或類似偽裝名稱的可執行檔。搜尋端點行為記錄中是否有異常的瀏覽器憑證存取與 HTTP POST 外洩活動，特別是能源業環境。</li>
+<li>🟡 針對本週 Adobe ColdFusion、SimpleHelp、LoadMaster 三個 CVSS 10.0/9.6 漏洞的武器化時間壓縮趨勢，重新評估並優化組織的修補週期策略：（1）建立邊界設備與網際網路面向服務的緊急修補流程，目標在漏洞公告後 24 小時內完成；（2）訂閱 CISA KEV RSS 或 API 通知並設定即時告警；（3）針對高風險產品（ColdFusion、SharePoint、Fortinet、Progress 等）建立優先修補清單並追蹤版本狀態。</li>
+<li>🟡 針對 <a href="https://glossary.astroicers.link/glossary/msp" class="term-link" title="託管服務提供商">MSP</a> 及使用 RMM 工具（SimpleHelp、ConnectWise、Kaseya 等）的組織，加強 RMM 平台的存取控制稽核：（1）盤點所有 RMM 平台的身份驗證機制，確認 <a href="https://glossary.astroicers.link/glossary/sso" class="term-link" title="單一登入">SSO</a>/OIDC 設定安全性；（2）實施 RMM 存取的條件式存取策略（IP <a href="https://glossary.astroicers.link/glossary/whitelist" class="term-link" title="白名單">白名單</a>、設備合規性）；（3）定期稽核 RMM 技術員帳號清單；（4）評估是否有受管客戶端點需要額外告知 SimpleHelp 事件潛在影響。</li>
+<li>🟡 鑒於 Supermicro 台灣伺服器異常運輸調查事件，重新稽核組織高價值伺服器硬體的採購、運輸與驗收流程：（1）確認供應商硬體固件版本完整性；（2）對關鍵基礎設施伺服器實施到貨後固件稽核；（3）評估是否引入硬體供應鏈信任驗證機制（如 NIST SP 800-193 平台固件彈性）。</li>
+<li>🟢 針對 FBI 警告的勒索軟體集團與 TeamPCP 工業化攻擊聯盟趨勢，強化組織的勒索軟體防禦縱深：（1）確認所有關鍵業務系統的離線備份策略並定期測試還原流程；（2）強化端點偵測（<a href="https://glossary.astroicers.link/glossary/edr" class="term-link" title="端點偵測與回應">EDR</a>）規則以識別 DLL 搜尋順序劫持（Storm-2603 / Warlock 攻擊手法）；（3）審查 Microsoft 365 / 本地 SharePoint 的稽核記錄保留政策，確保至少 90 天可追溯；（4）對高階主管與 IT 人員實施勒索軟體社會工程演練。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (8)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html" target="_blank" rel="noopener">SimpleHelp CVE-2026-48558（CVSS 10.0，CISA KEV）：OIDC 令牌偽造繞過身份驗證，攻擊者植入 TaskWeaver 與 Djinn Stealer 竊密程式，MSP 供應鏈面臨全面淪陷風險</a></h3>
+            <p class="event-meta">The Hacker News · 2026-06-30</p>
+            <p>CISA 於 6 月 29 日將 SimpleHelp 遠端監控與管理（RMM）軟體的 <a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-48558 列入 <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a>，設定聯邦機構 7 月 2 日修補期限——僅 3 天。漏洞根源在於 SimpleHelp 啟用 OpenID Connect（OIDC）驗證時，接受 OIDC 令牌卻完全跳過簽章驗證，未驗證攻擊者可偽造含任意身份聲明的令牌、自行建立具備管理員權限的技術員帳號，並繞過 M...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/adobe-patches-7-cvss-100-flaws-in.html" target="_blank" rel="noopener">Adobe ColdFusion 七個 CVSS 10.0 滿分漏洞（7 月 1 日釋出修補）：CVE-2026-48282 路徑穿越遭披露後數小時內即遭利用</a></h3>
+            <p class="event-meta">The Hacker News · 2026-07-01</p>
+            <p>Adobe 於 7 月 1 日在安全公告 APSB26-64 中披露 ColdFusion 2023/2025 與 Campaign Classic v7 共 9 個漏洞，其中 7 個 CVSS 10.0 滿分，均可達成未驗證遠端任意程式碼執行。CVE-2026-48282（路徑穿越，<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 10.0）於公告釋出後數小時內即觀察到積極利用活動，攻擊者可讀取或覆寫伺服器上任意檔案；CVE-2026...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html" target="_blank" rel="noopener">Progress Kemp LoadMaster CVE-2026-8037（CVSS 9.6）：watchTowr 揭露 Pre-Auth 堆積未初始化至 RCE 的完整攻擊鏈，利用活動於 PoC 發布當日（6/29）即開始</a></h3>
+            <p class="event-meta">The Hacker News · 2026-07-01</p>
+            <p>watchTowr Labs 於 6 月 29 日發布 CVE-2026-8037 的完整技術分析，揭露 Progress Kemp LoadMaster 應用程式交付控制器存在前驗證（Pre-Auth）作業系統指令注入漏洞（CVSS 9.6）。漏洞位於 escape_quotes() 函數：該函數使用 malloc() 分配緩衝區但遺漏空終止符，在後續 sprintf/system() 鏈中，s...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html" target="_blank" rel="noopener">Microsoft SharePoint CVE-2026-45659（CVSS 8.8，CISA KEV）：中國連結威脅行為者 Storm-2603 利用反序列化 RCE 部署 Warlock 勒索軟體</a></h3>
+            <p class="event-meta">The Hacker News · 2026-07-01</p>
+            <p>CISA 於 7 月 1 日將 Microsoft SharePoint Server 的 CVE-2026-45659 列入 KEV，設定聯邦機構 7 月 4 日（美國國慶日）前修補的史上最緊迫時限之一。此漏洞為不受信任資料的反序列化缺陷（CVSS 8.8），僅需 Site Member 最低權限即可在 SharePoint Server 上執行任意程式碼，全面遠端接管目標系統。微軟已於 5 月...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/fortibleed-credential-theft-linked-to.html" target="_blank" rel="noopener">FortiBleed 憑證竊取行動歸因：SOCRadar 確認 INC 與 Lynx 勒索軟體集團在幕後，43 萬台 FortiGate 防火牆遭掃描、354 台完整淪陷並已有 12 起勒索軟體部署</a></h3>
+            <p class="event-meta">The Hacker News · 2026-07-03</p>
+            <p>SOCRadar 與 The <a href="https://glossary.astroicers.link/glossary/hacker" class="term-link" title="駭客">Hacker</a> News 於 7 月 3 日發布 FortiBleed 行動的完整歸因分析，揭露此大規模 Fortinet 防火牆憑證竊取行動與 INC 及 Lynx 兩個勒索軟體組織存在直接連結。FortiBleed 威脅行為者使用自製 Golang 工具 FortigateSniffer，濫用 FortiOS 原生診斷封包擷取指令被動攔截 24 種協定的身份驗證流量...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.esentire.com/blog/fortinet-vulnerability-cve-2026-35616-and-ekz-stealer-attacking-obfuscating-compilers-with-binary-ninja-workflows" target="_blank" rel="noopener">Fortinet FortiClient EMS CVE-2026-35616 遭積極利用：EKZ Stealer 偽裝成官方修補程式植入能源業客戶，竊取 Chromium 及 Firefox 瀏覽器憑證</a></h3>
+            <p class="event-meta">eSentire · 2026-07-01</p>
+            <p>eSentire 威脅回應小組披露 Fortinet FortiClient EMS（端點管理伺服器）身份驗證繞過漏洞 CVE-2026-35616 遭積極利用，鎖定能源、公用事業及廢棄物處理業客戶。攻擊者利用此不當存取控制漏洞繞過 API 身份驗證並取得特權存取，隨後投放偽裝成官方修補程式（FortiEndpoint_Patch.exe）的 EKZ Stealer <a href="https://glossary.astroicers.link/glossary/malware" class="term-link" title="惡意程式">惡意程式</a>。EKZ Steale...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/security" target="_blank" rel="noopener">FBI 警告勒索軟體集團與 TeamPCP 建立工業化攻擊聯盟：專業分工「攻擊組裝線」模式預警將引發空前規模的勒索事件</a></h3>
+            <p class="event-meta">iThome · 2026-07-03</p>
+            <p>FBI 與資安研究人員於 7 月 3 日警告，勒索軟體集團正與名為 TeamPCP 的專業駭客組織建立正式合作聯盟，形成高度分工的「攻擊工業化」模型。在此架構下，TeamPCP 負責技術突破——包括零時差漏洞開發、初始存取取得及防禦規避——而勒索軟體集團則專注於後期的橫向移動、資料竊取與勒索軟體部署。這種專業分工大幅降低了每個參與者的技術門檻，同時提升整體攻擊效率與成功率。研究人員警告此合作模式與...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.theregister.com/legal/2026/07/02/trouble-keeps-finding-supermicro-as-strange-server-shipments-attract-police-attention-in-taiwan-and-singapore/5265520" target="_blank" rel="noopener">Supermicro 台灣與新加坡伺服器異常運輸事件：警方介入調查，供應鏈安全可信任性再受質疑</a></h3>
+            <p class="event-meta">The Register · 2026-07-02</p>
+            <p>The Register 於 7 月 2 日報導 Supermicro 在台灣與新加坡的異常伺服器運輸批次吸引警方注意並展開調查。具體細節目前仍在調查中，但此事件引發對科技供應鏈完整性的廣泛擔憂。Supermicro 為全球最大伺服器製造商之一，其主要製造與組裝設施位於台灣，該公司自 2018 年 Bloomberg「超級微型間諜晶片」報導事件以來，一直處於供應鏈安全審查的核心。此次事件再次凸顯全...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (8)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48558" target="_blank">CVE-2026-48558</a></td>
+            <td>SimpleHelp RMM OIDC 身份驗證繞過漏洞（CISA KEV，CVSS 10.0）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48282" target="_blank">CVE-2026-48282</a></td>
+            <td>Adobe ColdFusion 路徑穿越漏洞（CVSS 10.0，披露後數小時即遭利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48276" target="_blank">CVE-2026-48276</a></td>
+            <td>Adobe ColdFusion 不受限制檔案上傳漏洞（CVSS 10.0）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8037" target="_blank">CVE-2026-8037</a></td>
+            <td>Progress Kemp LoadMaster Pre-Auth 作業系統指令注入漏洞（CVSS 9.6，積極利用中）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.6</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-45659" target="_blank">CVE-2026-45659</a></td>
+            <td>Microsoft SharePoint Server 反序列化遠端程式碼執行漏洞（CISA KEV，CVSS 8.8）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-35616" target="_blank">CVE-2026-35616</a></td>
+            <td>Fortinet FortiClient EMS API 身份驗證繞過漏洞（已遭積極利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48283" target="_blank">CVE-2026-48283</a></td>
+            <td>Adobe ColdFusion 不受限制檔案上傳漏洞（CVSS 10.0，第二個）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48286" target="_blank">CVE-2026-48286</a></td>
+            <td>Adobe Campaign Classic 不當授權漏洞（CVSS 10.0）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (11)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/hacker" target="_blank">Hacker</a></h3>
+                <p class="term-zh">駭客</p>
+                <p class="term-def">具有電腦技術專長，可進行系統入侵的人</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/malware" target="_blank">Malware</a></h3>
+                <p class="term-zh">惡意程式</p>
+                <p class="term-def">設計用來損害系統或竊取資料的軟體總稱</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/packet" target="_blank">Packet</a></h3>
+                <p class="term-zh">封包</p>
+                <p class="term-def">網路傳輸中的資料單元</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/whitelist" target="_blank">Whitelist</a></h3>
+                <p class="term-zh">白名單</p>
+                <p class="term-def">預先核准可允許的項目清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/sso" target="_blank">SSO</a></h3>
+                <p class="term-zh">單一登入</p>
+                <p class="term-def">使用者只需登入一次即可存取多個應用程式</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/msp" target="_blank">MSP</a></h3>
+                <p class="term-zh">託管服務提供商</p>
+                <p class="term-def">為企業提供 IT 基礎設施和服務管理的外包商</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
