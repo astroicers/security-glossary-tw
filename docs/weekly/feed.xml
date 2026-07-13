@@ -6,8 +6,23 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://glossary.astroicers.link/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 09 Jul 2026 09:20:33 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 09:30:40 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/07/06 - 2026/07/12</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-28.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-28</guid>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 8 則事件、8 個漏洞
+
+重點新聞：
+• JADEPUFFER：全球首個全自主 AI 代理勒索軟體，利用 Langflow CVE-2025-3248 無需...
+• CISA KEV 7 月 7 日批次入庫 4 個漏洞（截止日 7/10）：Joomla 雙 CVSS 10.0 頁...
+• UNK_MassTraction（中國系 APT）鎖定北美大學 Roundcube 郵件伺服器：CVE-2024-...
+
+相關術語：Lateral Movement, KEV, CVSS, CVE, IDOR</description>
+    </item>
     <item>
       <title>資安週報 2026/06/29 - 2026/07/05</title>
       <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-27.html</link>
@@ -292,21 +307,6 @@
 • RoundCube郵件系統多個漏洞遭活躍利用
 
 相關術語：CVE, CVSS, Vulnerability</description>
-    </item>
-    <item>
-      <title>資安週報 2026/02/17 - 2026/02/23</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-08.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-08</guid>
-      <pubDate>Mon, 23 Feb 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：升高
-本週收錄 12 則事件、10 個漏洞
-
-重點新聞：
-• AI 輔助大規模 FortiGate 攻擊波及 55 國
-• Dell RecoverPoint CVSS 10.0 零時差漏洞遭中國 APT 利用
-• BeyondTrust CVE-2026-1731 遭大規模利用部署後門
-
-相關術語：KEV, APT, CVSS, CVE, DNS</description>
     </item>
   </channel>
 </rss>

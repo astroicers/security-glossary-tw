@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/07/06 - 2026/07/12</title>
+    <meta name="description" content="資安週報 2026-07-06 - 2026-07-12">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/07/06 - 2026/07/12</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-28 · 發布日期：2026-07-13</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #f97316;">高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即升級所有 Joomla 網站的 SP Page Builder 至 6.6.2（CVE-2026-48908，CVSS 10.0，CISA KEV，截止 2026-07-10）及 Page Builder CK 至 3.6.0（CVE-2026-56290，CVSS 10.0）。升級後執行：（1）搜尋 /images/sppagebuilder/ 及 /media/com_pagebuilderck/ 目錄中的所有 .php 檔案；（2）稽核 Joomla 後台超級管理員帳號清單，立即刪除任何電子郵件含 @secure.local 或未知來源的帳號；（3）檢查網頁伺服器存取記錄中是否有針對 uploadCustomIcon 端點的異常 POST 請求；（4）全面審查所有已安裝 Joomla 外掛的版本狀態。</li>
+<li>🔴 立即升級 Gitea Docker 至 1.26.3（CVE-2026-20896，CVSS 9.8，公告後第 13 天已確認積極利用）。升級後：（1）確認 GITEA__service__ENABLE_REVERSE_PROXY_AUTHENTICATION 設定為 false；（2）稽核程式碼倉庫存取記錄，特別關注來自 ProtonVPN 或 Tor 出口節點 IP 的異常存取；（3）稽核所有倉庫中未授權的分支、提交或 Deploy Key 修改；（4）輪換可能已洩漏的部署令牌、API 金鑰及 CI/CD 機密；（5）若組織以 Gitea 儲存 IaC 或基礎設施組態，應視為高風險優先處理。</li>
+<li>🔴 對 JADEPUFFER AI 代理勒索軟體攻擊向量執行緊急資產盤點：（1）識別組織內所有 Langflow 部署，確認已升級至 1.3.0 以上（修補 CVE-2025-3248）並套用 CVE-2026-55255 最新修補程式（CISA KEV 截止 2026-07-10）；（2）盤點所有 Nacos 組態管理伺服器，確認是否面向網際網路或僅允許內部存取；（3）稽核 AI 服務 API 金鑰（OpenAI、Anthropic、Azure AI 等）、雲端供應商憑證是否存在異常使用記錄；（4）為 AI 開發平台（Langflow、Flowise、n8n 等）建立存取異常告警機制。</li>
+<li>🔴 Accenture 外洩事件後置作業（適用所有與 Accenture 有業務往來的台灣企業）：（1）主動聯繫 Accenture 台灣確認合作專案是否受影響；（2）稽核 Azure 租用戶存取記錄，特別關注 7 月 6 日後涉及 Accenture 相關帳號的異常操作；（3）若 Accenture 曾取得組織 Azure PAT、SSH 金鑰或其他憑證，應立即輪換；（4）在 Azure Active Directory 中稽核外部來賓帳號（Guest accounts）的存取記錄。</li>
+<li>🔴 立即修補 Citrix NetScaler ADC/Gateway（CitrixBleed 2.0，CVE-2026-8451，CVSS 8.8，自 7 月 1 日起持續遭積極利用）：（1）確認版本並升級至 14.1-72.61 或 13.1-63.18 以上；（2）確認設備是否配置為 SAML Identity Provider（漏洞觸發前提）；（3）稽核 7 月 1 日後的 NetScaler 作業階段記錄，搜尋來自 146.70.139.154 或類似掃描 IP 的請求；（4）若 SAML IdP 功能未實際使用，可暫時停用作為緩解措施並立即規劃升級。</li>
+<li>🟡 針對 Oracle E-Business Suite（CVE-2026-46817，CVSS 9.8，積極利用中）：（1）確認 EBS 版本（12.2.3-12.2.15）並立即套用 Oracle 2026 年 5 月 <a href="https://glossary.astroicers.link/glossary/csp_header" class="term-link" title="內容安全政策">CSP</a> 修補程式；（2）確認 Oracle Payments File Transmission 元件是否暴露於網際網路，若是應立即限制存取；（3）稽核 6 月 27 日後的 EBS 存取記錄，搜尋針對 Payments 模組的未授權 HTTP 請求；（4）使用 EBS 處理金融支付業務的台灣金融機構及製造業，應提升稽核頻率並考慮暫時限制 Payments 模組的外部存取。</li>
+<li>🟡 防範 HalluSquatting AI <a href="https://glossary.astroicers.link/glossary/supply_chain_attack" class="term-link" title="供應鏈攻擊">供應鏈攻擊</a>，建立 AI 輔助程式開發的套件安全驗證流程：（1）在 CI/CD 管線加入套件完整性驗證步驟（npm audit、pip-audit、dependabot 等）；（2）建立組織核准套件清單（<a href="https://glossary.astroicers.link/glossary/whitelist" class="term-link" title="白名單">allowlist</a>），AI 助理建議安裝的套件需先驗證是否存在於官方正式清單；（3）評估採用私有套件倉庫（如 Artifactory、Nexus）作為 AI 建議套件的中間審核層；（4）要求開發人員在安裝 AI 建議套件前，手動確認套件的發布者、首次發布時間及下載量等可信度指標。</li>
+<li>🟡 針對 UNK_MassTraction 大學及研究機構 Roundcube 攻擊，台灣學術機構及科研單位應執行：（1）確認 Roundcube 版本並升級（修補 CVE-2024-42009 及 CVE-2025-49113）；（2）稽核 Roundcube 伺服器上的異常 PHP 檔案，特別關注近期修改時間戳記的檔案；（3）在電子郵件閘道加強教職員及研究人員帳號的登入異常偵測；（4）半導體、國防科技、量子計算等敏感研究領域應視此為高風險威脅，考慮通報 TWCERT/CC。</li>
+<li>🟢 依 BeyondTrust CVE-2026-40138（CVSS 9.2，自主托管版本尚未修補）：若組織使用 BeyondTrust Remote Support 或 PRA 自主托管版本，立即升級至 RS 25.3.3 或 PRA 25.3.3。目前雖無確認利用活動，但 BeyondTrust 具有高知名度（CVE-2024-12356 曾被利用攻擊美國財政部），應在漏洞遭積極利用前完成預防性修補，並確認雲端托管版本已驗證 4 月修補已生效。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (8)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion" target="_blank" rel="noopener">JADEPUFFER：全球首個全自主 AI 代理勒索軟體，利用 Langflow CVE-2025-3248 無需人工干預完成偵察、橫向移動、資料竊取至資料庫加密的完整攻擊鏈</a></h3>
+            <p class="event-meta">Sysdig · 2026-07-07</p>
+            <p>Sysdig 研究人員於 7 月 7 日揭露 JADEPUFFER，這是全球首個有文字記錄的完全自主 AI 代理勒索軟體攻擊案例。JADEPUFFER 利用 Langflow 的 <a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2025-3248（缺失身份驗證漏洞，<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.8，已於 2025 年 5 月列入 CISA <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a>，但大量伺服器從未更新）作為初始進入點，接著啟動一個大型語言模型代理自主執行完整攻擊鏈：偵察目標網路、竊取 ...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html" target="_blank" rel="noopener">CISA KEV 7 月 7 日批次入庫 4 個漏洞（截止日 7/10）：Joomla 雙 CVSS 10.0 頁面建構器外掛已大規模遭植入 PHP Web Shell，隱藏超管帳號後門廣泛佈置</a></h3>
+            <p class="event-meta">The Hacker News · 2026-07-07</p>
+            <p>CISA 於 7 月 7 日將 4 個積極遭利用的漏洞列入 KEV，設定 7 月 10 日修補截止日。CVE-2026-48908（JoomShaper SP Page Builder，CVSS 10.0）：攻擊者透過未驗證 POST 至 'index.php?option=com_sppagebuilder&task=asset.uploadCustomIcon' 上傳 PHP Web Shel...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/suspected-china-aligned-hackers-exploit.html" target="_blank" rel="noopener">UNK_MassTraction（中國系 APT）鎖定北美大學 Roundcube 郵件伺服器：CVE-2024-42009 XSS + CVE-2025-49113 反序列化漏洞鏈竊取天文物理與國家安全研究郵件，植入 SquareShell 及 VShell Go 後門</a></h3>
+            <p class="event-meta">The Hacker News · 2026-07-08</p>
+            <p>Proofpoint 研究人員於 7 月 8 日發布報告，揭露被追蹤為 UNK_MassTraction 的中國系威脅行為者自 2026 年 5 月起發動針對美國與加拿大大學的網路間諜行動，目標鎖定天文物理、粒子物理及國家安全研究機構的郵件基礎設施。攻擊鏈串聯兩個已知漏洞：CVE-2024-42009（Roundcube 跨站腳本漏洞）注入 JavaScript 載荷竊取瀏覽器儲存的 Roundc...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/accenture-confirms-data-breach-after-hacker-claims-source-code-theft/" target="_blank" rel="noopener">Accenture 確認資料外洩：駭客「888」竊取 35GB 含原始碼、RSA/SSH 私鑰及 Azure 存取憑證，全球 IT 顧問供應鏈客戶面臨雲端橫向滲透風險</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-07-08</p>
+            <p>7 月 6 日，擁有出售竊取資料前科的知名駭客「888」在網路犯罪論壇發文，聲稱竊得 Accenture 35GB 資料並以 Monero（門羅幣）要求贖金。外洩資料涵蓋原始碼、<a href="https://glossary.astroicers.link/glossary/rsa" class="term-link" title="RSA 加密演算法">RSA</a> 私鑰、SSH 私鑰、Azure 個人存取令牌（PAT）、Azure 儲存體存取金鑰及基礎設施組態檔案。Accenture 於 7 月 8 日確認遭受入侵並表示已完成整治，聲稱對財務及營運無影響。然而，外洩憑證的高敏...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/" target="_blank" rel="noopener">CitrixBleed 2.0（CVE-2026-8451，CVSS 8.8）：NetScaler SAML IdP XML 解析器越界讀取，watchTowr 技術分析發布後不到 24 小時即遭積極利用，SAML 設定組織面臨作業階段令牌洩漏風險</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-07-07</p>
+            <p>Citrix 於 6 月 30 日修補並由 watchTowr Labs 同步發布完整技術分析的 CVE-2026-8451，本週持續造成廣泛攻擊活動。漏洞源自 NetScaler ADC/Gateway 在啟用 <a href="https://glossary.astroicers.link/glossary/saml" class="term-link" title="SAML 身分驗證協定">SAML</a> Identity Provider 角色時的 XML 解析器缺陷：XML 屬性值後若緊接換行字元，解析器不寫入空終止符，導致後續記憶體讀取超出緩衝區邊界，攻擊者可洩漏相鄰堆積記...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html" target="_blank" rel="noopener">Gitea Docker CVE-2026-20896（CVSS 9.8）：單一 HTTP 標頭繞過完整身份驗證，公告後第 13 天確認積極探測，6,200 台暴露實例面臨原始碼與 CI/CD 機密外洩</a></h3>
+            <p class="event-meta">The Hacker News · 2026-07-08</p>
+            <p>Sysdig 研究人員於 7 月 7-8 日確認 CVE-2026-20896 遭到積極利用，第一個野外利用嘗試追蹤至 ProtonVPN 出口節點，顯示攻擊者使用匿名化基礎設施進行初始偵察。漏洞源自 Gitea Docker 映像檔預設信任來自任意來源 IP 的 'X-WEBAUTH-USER' HTTP 標頭——未驗證的網際網路客戶端只需加入此標頭並指定目標使用者名稱，即可完全繞過身份驗證並以...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/hallusquatting-turns-ai-hallucinations-into-botnet-delivery-mechanism/amp/" target="_blank" rel="noopener">HalluSquatting：研究人員驗證 LLM 幻覺可被系統性武器化，誘使 AI 程式開發助理自動安裝殭屍網路惡意程式，Aikido 確認假套件已擴散至 237 個專案</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-07-07</p>
+            <p>SecurityWeek 及 The <a href="https://glossary.astroicers.link/glossary/hacker" class="term-link" title="駭客">Hacker</a> News 於 7 月 7-8 日報導 HalluSquatting 最新研究：攻擊者透過提示注入（<a href="https://glossary.astroicers.link/glossary/prompt_injection" class="term-link" title="提示注入">prompt injection</a>）手段主動引導 AI 程式開發助理幻覺出特定的不存在套件名稱，讓預先在 npm/PyPI 等套件庫中登記惡意套件的攻擊者實現大規模殭屍網路散布。具體機制：攻擊者分析目標 AI 助理（如 GitHub Copilot、C...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/4523810/five-eyes-cyber-security-agencies-statement/" target="_blank" rel="noopener">Five Eyes 情報聯盟聯合聲明：AI 驅動網路攻擊能力已達「數月而非數年」門檻，JADEPUFFER 首案同週曝光印證警告成真</a></h3>
+            <p class="event-meta">NSA · 2026-07-07</p>
+            <p>美英澳紐加「五眼聯盟」情報機構聯合聲明本週隨 JADEPUFFER 首案曝光再度受到全球資安界廣泛引用。聲明核心論點：前沿 AI 模型已超越目前業界預期，能夠在偵察、漏洞分析、攻擊向量生成及防禦規避等環節顯著放大攻擊者能力，且這一威脅的成熟時間線是「數月而非數年」。五眼聯盟特別警告三個面向：（1）AI 大幅降低技術門檻，使低技術攻擊者能執行過去需要專業技能的複雜攻擊；（2）AI 縮短漏洞揭露至武器...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (8)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48908" target="_blank">CVE-2026-48908</a></td>
+            <td>JoomShaper SP Page Builder 未限制任意檔案上傳漏洞（CVSS 10.0，CISA KEV，7/10 截止）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56290" target="_blank">CVE-2026-56290</a></td>
+            <td>Balbooa Page Builder CK（Joomla）未限制任意檔案上傳漏洞（CVSS 10.0，CISA KEV，7/10 截止）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48282" target="_blank">CVE-2026-48282</a></td>
+            <td>Adobe ColdFusion 路徑穿越任意程式碼執行漏洞（CVSS 10.0，CISA KEV，積極利用中）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20896" target="_blank">CVE-2026-20896</a></td>
+            <td>Gitea Docker 映像檔 X-WEBAUTH-USER 標頭身份驗證繞過漏洞（CVSS 9.8，積極利用中）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-46817" target="_blank">CVE-2026-46817</a></td>
+            <td>Oracle E-Business Suite Payments 模組未驗證遠端接管漏洞（CVSS 9.8，積極利用中）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-40138" target="_blank">CVE-2026-40138</a></td>
+            <td>BeyondTrust Remote Support / PRA 前驗證身份驗證繞過漏洞（CVSS 9.2）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.2</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8451" target="_blank">CVE-2026-8451</a></td>
+            <td>Citrix NetScaler ADC/Gateway「CitrixBleed 2.0」SAML IdP 前驗證越界讀取漏洞（CVSS 8.8，積極利用中）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-55255" target="_blank">CVE-2026-55255</a></td>
+            <td>Langflow AI 工作流程平台 <a href="https://glossary.astroicers.link/glossary/idor" class="term-link" title="不安全直接物件參考">IDOR</a> 授權繞過漏洞（CVSS 8.4，CISA KEV，7/10 截止）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.4</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (11)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/rsa" target="_blank">RSA</a></h3>
+                <p class="term-zh">RSA 加密演算法</p>
+                <p class="term-def">廣泛使用的非對稱式加密演算法</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/saml" target="_blank">SAML</a></h3>
+                <p class="term-zh">SAML 身分驗證協定</p>
+                <p class="term-def">企業單一登入的身分驗證標準</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/prompt_injection" target="_blank">Prompt Injection</a></h3>
+                <p class="term-zh">提示注入</p>
+                <p class="term-def">透過惡意輸入操控 AI 語言模型執行非預期指令</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/hacker" target="_blank">Hacker</a></h3>
+                <p class="term-zh">駭客</p>
+                <p class="term-def">具有電腦技術專長，可進行系統入侵的人</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/idor" target="_blank">IDOR</a></h3>
+                <p class="term-zh">不安全直接物件參考</p>
+                <p class="term-def">透過修改參數存取未授權資源的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/csp_header" target="_blank">CSP</a></h3>
+                <p class="term-zh">內容安全政策</p>
+                <p class="term-def">限制瀏覽器可載入資源來源以防範 XSS 的 HTTP 標頭</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/whitelist" target="_blank">Whitelist</a></h3>
+                <p class="term-zh">白名單</p>
+                <p class="term-def">預先核准可允許的項目清單</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
