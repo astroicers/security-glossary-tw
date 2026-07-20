@@ -6,8 +6,23 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://glossary.astroicers.link/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 13 Jul 2026 09:30:40 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 09:26:21 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/07/13 - 2026/07/19</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-29.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-29</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：嚴重
+本週收錄 8 則事件、8 個漏洞
+
+重點新聞：
+• Microsoft 7 月 Patch Tuesday 史上最大規模（622 CVE，3 個零時差）：ShareP...
+• SonicWall SMA1000 雙零時差（CVE-2026-15409 SSRF CVSS 10.0 + CV...
+• CISA 緊急預警 SharePoint Server 多 CVE 串聯遭積極利用：攻擊鏈竊取 IIS 機器金鑰後...
+
+相關術語：CVE, RCE, Vulnerability, CVSS, KEV</description>
+    </item>
     <item>
       <title>資安週報 2026/07/06 - 2026/07/12</title>
       <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-28.html</link>
@@ -292,21 +307,6 @@
 • 
 
 相關術語：CVSS, KEV, Akira, Qilin, DDoS</description>
-    </item>
-    <item>
-      <title>資安週報 2026-02-24 - 2026-03-02</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-09.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-09</guid>
-      <pubDate>Mon, 02 Mar 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：高
-本週收錄 12 則事件、8 個漏洞
-
-重點新聞：
-• Cisco SD-WAN零日漏洞遭威脅行為者長期利用
-• Google Chrome零日漏洞遭野外利用
-• RoundCube郵件系統多個漏洞遭活躍利用
-
-相關術語：CVE, CVSS, Vulnerability</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/07/13 - 2026/07/19</title>
+    <meta name="description" content="資安週報 2026-07-13 - 2026-07-19">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/07/13 - 2026/07/19</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-29 · 發布日期：2026-07-20</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #ef4444;">嚴重</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即套用 Microsoft 7 月 Patch Tuesday 更新，優先處理 SharePoint Server（CVE-2026-58644 CVSS 9.8、CVE-2026-56164 KEV 截止 2026-07-17）及 Active Directory Federation Services（CVE-2026-56155 CVSS 7.8）。SharePoint 修補後必須執行以下後修補程序：（1）依 CISA 建議排查 IIS 機器金鑰竊取指標，檢查 inetpub\wwwroot 下異常檔案及 Application Event Log 中的可疑序列化相關事件；（2）確認排除入侵指標後再輪換 IIS 機器金鑰（先輪換可能導致攻擊者在輪換過程中植入新後門）；（3）啟用 Windows Antimalware Scan Interface（AMSI）整合；（4）若 SharePoint 伺服器直接暴露於網際網路，應立即在修補完成前臨時限制存取來源 IP。</li>
+<li>🔴 立即處置 SonicWall SMA1000 雙零時差（CVE-2026-15409 CVSS 10.0、CVE-2026-15410 CVSS 7.2，CISA KEV 截止 2026-07-17）：（1）聯繫 SonicWall Support 取得熱修補程式 v12.4.3-03453 或 v12.5.0-02835 並立即套用；（2）稽核 SMA1000 存取記錄，搜尋 7 月 14 日前的異常 SSRF 相關請求或管理介面操作；（3）若發現任何入侵指標，應重新映像（硬體）或重新部署（虛擬機），並重置所有使用者及管理員密碼、TOTP 令牌；（4）確認 SMA1000 的 Appliance Work Place 介面是否直接暴露於網際網路，若非必要應限制存取來源 IP。</li>
+<li>🔴 SharePoint Server 本地部署的進階強化措施（針對本週 CISA 緊急公告）：（1）確認所有 SharePoint Server 版本均已套用 7 月 Patch Tuesday 含 CVE-2026-58644 及 CVE-2026-56164 的完整更新；（2）審查 SharePoint 過去 90 天的存取記錄，特別關注異常的匿名存取、不尋常的工作流程觸發或大量文件下載；（3）使用 Microsoft Defender 的 AMSI 偵測規則掃描 SharePoint 伺服器上的反序列化攻擊遺跡；（4）建立 SharePoint 伺服器上非預期 PowerShell 執行、新增排程工作或可疑 DLL 載入的告警機制；（5）強烈建議將 SharePoint Server 從直接網際網路暴露遷移至 <a href="https://glossary.astroicers.link/glossary/waf" class="term-link" title="網頁應用程式防火牆">Web Application Firewall</a> 或零信任代理後方。</li>
+<li>🔴 針對 Nidec 台灣子公司 BlackField 攻擊事件，台灣製造業（尤其是外資集團的台灣子公司）應立即執行勒索軟體防禦稽核：（1）驗證所有生產系統的備份完整性，確認備份與生產環境完全隔離（含網路隔離），並測試還原程序；（2）盤點 ERP、MES、薪資及財務系統的遠端存取方式，強制要求 <a href="https://glossary.astroicers.link/glossary/mfa" class="term-link" title="多因子驗證">MFA</a>；（3）審查台灣廠區與日本/歐美母公司間的 VPN 及遠端存取連線，確認最小權限原則；（4）稽核具有管理員或高權限帳號的第三方 IT 維護廠商存取記錄；（5）若組織使用 SonicWall 或 SharePoint，結合上述修補行動同步進行，因勒索軟體集團積極利用未修補的 <a href="https://glossary.astroicers.link/glossary/vpn" class="term-link" title="虛擬私人網路">VPN</a> 及協作平台作為初始入侵點。</li>
+<li>🟡 Tenda 路由器 CVE-2026-11405 無修補程式應對措施：（1）盤點組織及員工家庭辦公環境中的 Tenda 路由器型號，確認是否屬於受影響型號（FH1201、W15E、AC10 等）；（2）立即限制路由器管理介面（通常為 192.168.0.1 或 192.168.1.1）的存取來源，確保管理介面僅可從特定有線設備存取而非 Wi-Fi 介面；（3）停用路由器遠端管理功能（WAN 側管理介面）；（4）將受影響 Tenda 路由器納入更換計畫，優先採購具持續安全韌體更新支援的品牌；（5）員工居家辦公的 Tenda 路由器若曾連接公司 VPN，應特別注意是否存在 <a href="https://glossary.astroicers.link/glossary/dns" class="term-link" title="網域名稱系統">DNS</a> 重定向攻擊跡象（非預期網站連線失敗或證書警告）。</li>
+<li>🟡 從 AssuranceAmerica 外洩及 D1R 供應商攻擊事件提升憑證與存取管理控制：（1）強制要求所有具特權存取（VPN、雲端控制台、ERP、<a href="https://glossary.astroicers.link/glossary/edr" class="term-link" title="端點偵測與回應">EDR</a> 管理介面）的員工啟用 MFA，無例外；（2）稽核第三方供應商（IT 維護廠商、EDA 軟體供應商、自動化設備商）的存取帳號是否具備適當的最小權限設定，並定期輪換共用帳號；（3）若組織使用 Synopsys EDA 工具或 Bosch 工業設備，確認相關廠商帳號是否有存取組織環境的能力，暫時加強稽核這些帳號的存取記錄；（4）建立員工帳號異常存取的自動化偵測與告警，特別關注非工作時間登入、異常位置存取及大量資料下載行為。</li>
+<li>🟢 從拉脫維亞林業公司案例執行非核心系統修補稽核：（1）盤點組織內超過 12 個月未套用安全更新的系統，特別關注非核心業務的網頁應用程式、公司入口網站、舊版 ERP 模組及 <a href="https://glossary.astroicers.link/glossary/ot" class="term-link" title="營運技術">OT</a>/IT 整合界面；（2）確認這些系統的網路分隔狀態，若無法立即修補應確保其無法直接從外部網際網路或公司外部 IP 存取；（3）為遺留系統建立臨時監控機制，偵測異常登入或流量模式；（4）評估修補或汰換的優先順序時，應以系統對核心業務的存取路徑（而非其功能重要性）作為主要判斷依據——功能次要的系統若連接核心資料庫，其風險遠高於功能重要但完全隔離的系統。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (8)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://msrc.microsoft.com/update-guide/releaseNote/2026-Jul" target="_blank" rel="noopener">Microsoft 7 月 Patch Tuesday 史上最大規模（622 CVE，3 個零時差）：SharePoint CVE-2026-58644 未驗證 RCE CVSS 9.8 遭零時差利用，CISA 罕見要求 FCEB 機構 3 天內修補 SharePoint</a></h3>
+            <p class="event-meta">Microsoft Security Response Center · 2026-07-15</p>
+            <p>微軟 7 月 15 日 Patch Tuesday 修補 622 個 CVE（含 59 個 Critical），打破單月修補記錄。三個零時差中兩個已遭積極利用：CVE-2026-58644（SharePoint Server 反序列化 <a href="https://glossary.astroicers.link/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a>，<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.8）允許未驗證遠端攻擊者執行任意程式碼，在修補程式釋出前即已被野外利用，CISA 於 7 月 16 日列入 <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a>；<a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-5616...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.rapid7.com/blog/post/etr-rapid7-mdr-team-discovers-new-sonicwall-sma1000-zero-days-being-actively-exploited-cve-2026-15409-cve-2026-15410/" target="_blank" rel="noopener">SonicWall SMA1000 雙零時差（CVE-2026-15409 SSRF CVSS 10.0 + CVE-2026-15410 程式碼注入 CVSS 7.2）：Rapid7 MDR 在廠商公告前先行偵測積極利用，CISA KEV 列入並設 7/17 聯邦修補截止</a></h3>
+            <p class="event-meta">Rapid7 · 2026-07-14</p>
+            <p>SonicWall 於 7 月 14 日確認旗下 SMA1000 系列遠端存取設備存在兩個遭積極利用的零時差漏洞，CISA 同日將兩者列入 KEV 並依 BOD 26-04 要求聯邦機構於 7 月 17 日前修補或停用受影響產品。CVE-2026-15409（<a href="https://glossary.astroicers.link/glossary/ssrf" class="term-link" title="伺服器端請求偽造">SSRF</a>，CVSS 10.0）存在於 SMA1000 Appliance Work Place 介面，允許未驗證遠端攻擊者強制設備向內部或任...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations" target="_blank" rel="noopener">CISA 緊急預警 SharePoint Server 多 CVE 串聯遭積極利用：攻擊鏈竊取 IIS 機器金鑰後植入惡意程式，所有本地部署 SharePoint 應立即修補並輪換機器金鑰</a></h3>
+            <p class="event-meta">CISA · 2026-07-14</p>
+            <p>CISA 於 7 月 14 日發布 SharePoint Server 緊急強化公告，確認攻擊者正同步利用至少 4 個 SharePoint CVE（CVE-2026-32201、CVE-2026-45659、CVE-2026-56164、CVE-2026-58644）取得本地 SharePoint 伺服器未授權存取。攻擊鏈分析：攻擊者以 CVE-2026-56164（缺失身份驗證 EoP）取得初...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.bleepingcomputer.com/news/security/blackfield-ransomware-asks-nidec-corporation-for-2-million-ransom/" target="_blank" rel="noopener">Nidec 台灣子公司慶鋒科技遭 BlackField 勒索軟體攻擊：要求 200 萬美元贖金，聲稱竊取 2TB 含薪資、財務及製造業機密資料</a></h3>
+            <p class="event-meta">BleepingComputer · 2026-07-01</p>
+            <p>日本電機大廠日本電產（Nidec Corporation）旗下台灣子公司慶鋒科技（Nidec Chaun-Choung Technology Corporation）於 6 月 22 日遭 BlackField 勒索軟體攻擊，本週攻擊者在暗網公開竊取資料詳情。BlackField 聲稱竊取超過 2TB 資料，涵蓋員工個人資料、薪資記錄、財務文件、採購合約、製造工程資料、法務文件及 IT 基礎設施檔...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.scworld.com/brief/assuranceamerica-confirms-data-breach-affecting-6-9-million-drivers-license-numbers" target="_blank" rel="noopener">AssuranceAmerica 美國汽車保險商資料外洩：690 萬人駕照號碼及保險資料外洩，員工憑證遭竊後歷時 115 天完成通報</a></h3>
+            <p class="event-meta">SC Media · 2026-07-08</p>
+            <p>美國汽車保險商 AssuranceAmerica 本週開始向受影響的 690 萬名個人發送資料外洩通知信，是 2026 年至今最大規模的美國駕照資料外洩事件。外洩資料涵蓋姓名、聯絡方式、駕照號碼、汽車保險保單詳情、車輛資訊及理賠記錄，部分客戶的社會安全碼及稅務 ID 亦受波及。攻擊者透過竊取一名員工帳號憑證取得未授權存取。事件時間軸揭示嚴重的通報延遲問題：AssuranceAmerica 於 3 ...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://cybernews.com/security/latvian-state-forestry-company-hit-by-ransomware-attack/" target="_blank" rel="noopener">拉脫維亞國有林業公司 Latvijas Valsts Meži 遭勒索軟體攻擊：攻擊者利用 2 年未修補系統入侵，44GB 機密資料、憑證與原始碼外洩</a></h3>
+            <p class="event-meta">Cybernews · 2026-07-13</p>
+            <p>拉脫維亞國有林業公司 Latvijas Valsts Meži（LVM）本週遭勒索軟體攻擊，攻擊者已在暗網發布約 44GB 竊取資料，包含內部文件、員工憑證、加密金鑰、原始碼及電子郵件往來記錄。初步調查顯示攻擊者利用一個持續 2 年未更新的系統作為初始入侵點。受影響系統涵蓋地圖測繪、狩獵管理、承包商及客戶服務系統，導致多項業務中斷。此事件凸顯公部門及基礎設施運營商普遍存在的修補管理盲區——非核心業...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://kb.cert.org/vuls/id/213560" target="_blank" rel="noopener">Tenda 路由器韌體隱藏管理員後門（CVE-2026-11405，CERT/CC VU#213560）：廠商 2 個月無回應，確認無修補程式，多型號完全繞過密碼驗證</a></h3>
+            <p class="event-meta">CERT/CC · 2026-07-07</p>
+            <p>CERT/CC 於 7 月 6 日公開披露 Tenda 路由器韌體中存在未文件化的管理員後門（CVE-2026-11405），確認廠商自 5 月起停止回應且無修補計畫。漏洞機制位於 /bin/httpd 網頁伺服器的 login() 函數：正常 MD5 密碼驗證失敗後，程式呼叫 GetValue("sys.rzadmin.password") 取得韌體固化的備用密碼，並以明文比對用戶輸入——任何知...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.kaseya.com/?post_type=post&p=29255" target="_blank" rel="noopener">D1R 網路犯罪組織聲稱同時竊取 Synopsys 與 Bosch 資料：半導體 EDA 工具鏈供應商與德國工業巨頭同週遭鎖定，台灣半導體業應關注供應鏈風險</a></h3>
+            <p class="event-meta">Kaseya Security · 2026-07-15</p>
+            <p>本週出現的 D1R 網路犯罪組織在同一週內聲稱竊取兩大工業技術企業機密資料：Synopsys（全球最大 EDA 電子設計自動化軟體供應商，台積電、三星及主要晶圓廠的核心設計工具鏈供應商）及 Bosch（德國工業科技巨頭，台灣製造業重要設備供應商）。D1R 在網路犯罪論壇公開要求贖金並威脅外洩。兩家企業均尚未公開確認具體損害範圍。Synopsys 作為全球半導體設計工具鏈的核心節點，若其原始碼、客戶...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (8)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-58644" target="_blank">CVE-2026-58644</a></td>
+            <td>Microsoft SharePoint Server 反序列化未驗證遠端程式碼執行漏洞（CVSS 9.8，CISA KEV 7/16，遭零時差利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15409" target="_blank">CVE-2026-15409</a></td>
+            <td>SonicWall SMA1000 Appliance Work Place 伺服器端請求偽造漏洞（CVSS 10.0，CISA KEV 7/14，積極利用中）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56155" target="_blank">CVE-2026-56155</a></td>
+            <td>Microsoft Active Directory Federation Services 特權提升漏洞（CVSS 7.8，CISA KEV 7/14，積極利用中）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-56164" target="_blank">CVE-2026-56164</a></td>
+            <td>Microsoft SharePoint Server 缺失身份驗證特權提升漏洞（CVSS 5.3 但已遭零時差利用，CISA KEV 7/14 設 3 天截止）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>5.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-15410" target="_blank">CVE-2026-15410</a></td>
+            <td>SonicWall SMA1000 Appliance Management Console 程式碼注入漏洞（CVSS 7.2，CISA KEV 7/14，積極利用中）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.2</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32201" target="_blank">CVE-2026-32201</a></td>
+            <td>Microsoft SharePoint Server 偽造漏洞（CVSS 8.8，4 月已修補，仍在本週多 CVE 攻擊鏈中被串聯積極利用）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-50661" target="_blank">CVE-2026-50661</a></td>
+            <td>Windows BitLocker 安全功能繞過漏洞（已公開揭露，尚無已知攻擊，需實體存取）...</td>
+            <td style="color: #eab308; font-weight: 600;">MEDIUM</td>
+            <td>6.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-11405" target="_blank">CVE-2026-11405</a></td>
+            <td>Tenda 路由器韌體未文件化管理員後門（CERT/CC VU#213560，無修補程式，廠商停止回應）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>N/A</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (11)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/rce" target="_blank">RCE</a></h3>
+                <p class="term-zh">遠端程式碼執行</p>
+                <p class="term-def">攻擊者可遠端在目標系統執行任意程式碼的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ssrf" target="_blank">SSRF</a></h3>
+                <p class="term-zh">伺服器端請求偽造</p>
+                <p class="term-def">利用伺服器發送請求存取內部資源的攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/waf" target="_blank">WAF</a></h3>
+                <p class="term-zh">網頁應用程式防火牆</p>
+                <p class="term-def">保護網頁應用程式免受常見攻擊的安全設備</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/vpn" target="_blank">VPN</a></h3>
+                <p class="term-zh">虛擬私人網路</p>
+                <p class="term-def">透過加密通道在公共網路上建立私密連線</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/mfa" target="_blank">MFA</a></h3>
+                <p class="term-zh">多因子驗證</p>
+                <p class="term-def">要求使用者提供兩種以上驗證因子的身分驗證方式</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/dns" target="_blank">DNS</a></h3>
+                <p class="term-zh">網域名稱系統</p>
+                <p class="term-def">將網域名稱轉換為 IP 位址的分散式系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/edr" target="_blank">EDR</a></h3>
+                <p class="term-zh">端點偵測與回應</p>
+                <p class="term-def">監控端點設備以偵測和回應威脅的安全解決方案</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
