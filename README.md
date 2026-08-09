@@ -5,7 +5,7 @@
 [![CI](https://github.com/astroicers/security-glossary-tw/actions/workflows/validate.yml/badge.svg)](https://github.com/astroicers/security-glossary-tw/actions/workflows/validate.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Terms Count](https://img.shields.io/badge/術語數量-428-blue.svg)](https://glossary.astroicers.link/glossary/)
+[![Terms Count](https://img.shields.io/badge/術語數量-471-blue.svg)](https://glossary.astroicers.link/glossary/)
 
 ---
 
@@ -256,7 +256,7 @@ security-glossary-tw/
 
 ## 📊 統計
 
-- 術語總數：428
+- 術語總數：471
 - 分類數：7
 - 標籤數：500+
-- 最後更新：2026-05-10
+- 最後更新：2026-06-10

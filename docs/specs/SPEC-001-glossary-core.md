@@ -67,7 +67,7 @@ Term:
 
 ## 副作用（Side Effects）
 
-- `Glossary()` 初始化時從磁碟讀取所有 `terms/*.yaml`，記憶體佔用與術語數量線性成長（目前 ~428 筆，約 5-10 MB）
+- `Glossary()` 初始化時從磁碟讀取所有 `terms/*.yaml`，記憶體佔用與術語數量線性成長（目前 ~471 筆，約 5-10 MB）
 - `validate()` 不修改輸入文本，只回傳 `ValidationIssue` 列表（無副作用）
 - `find_terms()` 不修改術語庫狀態（唯讀）
 - JSON API 由 CI 靜態產生，不支援即時新增術語
