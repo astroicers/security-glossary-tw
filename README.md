@@ -5,7 +5,7 @@
 [![CI](https://github.com/astroicers/security-glossary-tw/actions/workflows/validate.yml/badge.svg)](https://github.com/astroicers/security-glossary-tw/actions/workflows/validate.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Terms Count](https://img.shields.io/badge/術語數量-471-blue.svg)](https://glossary.astroicers.link/glossary/)
+[![Terms Count](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fglossary.astroicers.link%2Fapi%2Fv1%2Fterms.json&query=$.count&label=%E8%A1%93%E8%AA%9E%E6%95%B8%E9%87%8F&color=blue)](https://glossary.astroicers.link/glossary/)
 
 ---
 
