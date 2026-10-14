@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/09/14 - 2026/09/20</title>
+    <meta name="description" content="資安週報 2026-09-14 - 2026-09-20">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/09/14 - 2026/09/20</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-38 · 發布日期：2026-09-21</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #ef4444;">嚴重</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">6</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">7</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即修補 Cisco Secure Email Gateway CVE-2026-76461（CVSS 9.8，積極利用，CISA KEV 截止 9/17）：（1）確認所有 Cisco Secure Email Gateway 設備的 AsyncOS 版本，立即升級至 17.0 或以上修補版本；（2）無法立即修補者，評估暫時在上游郵件過濾層增加異常格式郵件攔截規則作為緩解，並確保管理介面不暴露於公共網路；（3）稽核 9/9（Microsoft Patch Tuesday 發布日）至今閘道上的異常 root 層級程序、可疑排程任務及非預期的出站連線；（4）Cisco PSIRT 確認主要影響對象為直接接收外部郵件的閘道，確認郵件路由設定中哪些設備直接暴露。</li>
+<li>🔴 立即修補 Cisco ISE CVE-2026-76460（CVSS 10.0，積極利用，CISA KEV 截止 9/19）及同套設備中的其他 CVSS 10.0 漏洞：（1）確認所有 ISE 及 ISE-PIC 部署版本，立即套用 Cisco 發布的修補版本；（2）修補前作為緩解措施，限制 REST API 的存取來源至受信任 IP 範圍，並停用未使用的 API 端點；（3）修補後立即稽核 ISE 管理員帳號清單（搜尋不明帳號）、存取政策異動記錄（過去 30 天）及任何非預期的策略變更；（4）評估 ISE 在企業零信任架構中的核心位置，確認是否有 ISE 管理員帳號具有過度廣泛的存取範圍。</li>
+<li>🔴 FortiBleed 後續應變——確認是否在 96 家受害企業名單內並立即輪換憑證：（1）聯繫 TWCERT/CC（service@twcert.org.tw）確認貴單位是否在受害名單中，資安署已掌握完整名單；（2）無論是否在名單中，凡部署 Fortinet FortiGate 防火牆或 <a href="https://glossary.astroicers.link/glossary/ssl" class="term-link" title="安全通訊端層">SSL</a> VPN 設備的組織應立即稽核所有 VPN 管理員及使用者帳號，並強制輪換所有本地帳號密碼；（3）確認 FortiGate 設備是否已套用 7 月 FortiBleed 相關的憑證重設修補及 Fortinet 建議的後續安全措施；（4）啟用多因素驗證（<a href="https://glossary.astroicers.link/glossary/mfa" class="term-link" title="多因子驗證">MFA</a>）於所有 VPN 及遠端存取入口，作為憑證竊取後的最後防線；（5）稽核過去 60 天的 VPN 登入記錄，搜尋來自異常地理位置或在非工作時間的存取模式。</li>
+<li>🔴 立即套用 Microsoft 9 月 Patch Tuesday 並優先處理兩個積極利用零日及 CVSS 9.8 RCE 漏洞：（1）優先修補 CVE-2026-81963（Windows Update Stack EoP，積極利用）及 CVE-2026-85880（Windows ALPC EoP，積極利用）——兩者均為本地特權提升零日，常用於攻擊鏈的第二階段；（2）同等優先處理 CVSS 9.8 的 Windows DNS Server 及 DHCP Server 遠端程式碼執行漏洞，面向網路的 <a href="https://glossary.astroicers.link/glossary/dns" class="term-link" title="網域名稱系統">DNS</a>/DHCP 服務若被攻陷影響全域；（3）面對 973 個 CVE，建議使用 Microsoft Exploitability Index 及 CVSS 分數雙重篩選，標記「Exploitation More Likely」的漏洞先行處理；（4）確認本月更新覆蓋所有受管 Windows 系統，包含伺服器、工作站及 Azure 混合環境。</li>
+<li>🔴 修補 SonicWall SMA1000（CVE-2026-83548/83549，CVSS 10.0）及 Citrix NetScaler（CVE-2026-19490，CVSS 9.3）——兩者均已確認積極利用：（1）SonicWall SMA1000：立即升級至 12.4.3-03526 或 12.5.0-02952，修補後假設設備已被入侵進行鑑識確認——搜尋非預期的新管理員帳號及近期設定變更；（2）Citrix NetScaler：確認設備是否設定為 AAA 虛擬伺服器或 Gateway 模式，套用 8/19 修補（PoC 已於 9/2 公開）；修補後稽核過去 30 天的 VPN 登入記錄及異常會話；（3）若任一設備已確認受損，立即隔離並啟動事件應變，評估攻擊者可能已取得的網路存取範圍。</li>
+<li>🟡 修補 MikroTik RouterOS 並停用未使用服務（CVE-2026-67277/CVE-2026-86060，CISA KEV 9/10，自 9/2 積極利用）：（1）盤點所有 MikroTik RouterOS 設備，立即升級至 6.49.21、7.23.4 或 7.24.2；（2）修補前暫時停用頻寬測試服務（btest）作為緩解措施（/tool <a href="https://glossary.astroicers.link/glossary/bandwidth" class="term-link" title="頻寬">bandwidth</a>-server set enabled=no）；（3）確認路由器管理介面（Winbox、WebFig）未暴露於公共網路，限制存取來源至受信任 IP；（4）MikroTik 設備常見於台灣 ISP 及分支機構，建議進行完整網路設備盤點，確認版本覆蓋率。</li>
+<li>🟡 評估虛擬主機及雲端服務供應鏈安全——應對 UAT-7237 型 APT 的新威脅模型：（1）若貴單位使用第三方虛擬主機或雲端託管服務，評估供應商的資安防護狀況，要求提供近期滲透測試報告及事件記錄；（2）稽核企業與虛擬主機供應商之間的憑證共享範圍，確認是否有跨越信任邊界的服務帳號；（3）在企業環境中部署的 SoftEther VPN 及 RDP，確認均已套用存取控制及記錄稽核，因 UAT-7237 以此為持久化工具；（4）對關鍵應用程式的虛擬主機環境增加網路流量異常監控，偵測如 UAT-7237 般的低速隱密偵察行為。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (6)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://finance.ftvnews.com.tw/news/detail/2026724W0745" target="_blank" rel="noopener">FortiBleed 後續：96 家台灣企業網域存取權流入地下市場，含 33 家上市公司，駭客開放「賣門票」，資安署 9/14 啟動應變</a></h3>
+            <p class="event-meta">民視財經 / Yahoo 奇摩財經 / 映藍國際 / 中華資安國際 / 神威資訊 · 2026-09-14</p>
+            <p>繼 7 月 17 日 Fortinet FortiBleed 大規模憑證竊取事件（約 7.5 萬台 FortiGate 防火牆及 <a href="https://glossary.astroicers.link/glossary/vpn" class="term-link" title="虛擬私人網路">VPN</a> 設備受影響），9 月 14 日起多家媒體獨家披露：攻擊者已將竊取所得的台灣企業網域存取權搬上地下市場，公開以「Fresh 2026」標籤標示販售，強調存取憑證尚未失效且仍具利用價值。民視財經、Yahoo 奇摩財經取得的受害名單顯示，遭點名企業已由上週曝光的 90...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://blog.talosintelligence.com/uat-7237-targets-web-hosting-infra/" target="_blank" rel="noopener">中國 APT UAT-7237 入侵台灣虛擬主機業者：長期潛伏竊取 VPN 憑證，部署 SoundBill 後門關聯 Volt Typhoon，Talos/Wiz 9 月揭露</a></h3>
+            <p class="event-meta">Cisco Talos / Wiz 威脅情報 / Infosecurity Magazine / SecurityWeek / SecurityAffairs · 2026-09-15</p>
+            <p>Cisco Talos 於 9 月 15 日發布詳細技術報告，揭露中國 <a href="https://glossary.astroicers.link/glossary/apt" class="term-link" title="進階持續性威脅">APT</a> 組織 UAT-7237 於 2025 年 8 月中旬成功入侵一家台灣虛擬主機業者，並長期維持隱蔽駐留。研究人員評估 UAT-7237 為 UAT-5918 的子組織，後者為以繁體中文進行情報操作的中國威脅行為者，與 <a href="https://glossary.astroicers.link/glossary/volt_typhoon" class="term-link" title="Volt Typhoon">Volt Typhoon</a> 存在關聯。UAT-7237 的主要目標為存取受害虛擬主機業者的 VPN 及雲端...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.rapid7.com/blog/post/etr-cve-2026-76461-critical-cisco-secure-email-gateway-vulnerability-exploited-in-the-wild/" target="_blank" rel="noopener">Cisco Secure Email Gateway CVE-2026-76461（CVSS 9.8）：惡意郵件觸發未驗證 SQL 注入可獲 root 權限，CISA KEV 9/14 列入，截止 9/17</a></h3>
+            <p class="event-meta">Cisco PSIRT / CISA / Rapid7 / Help Net Security / SOCRadar · 2026-09-14</p>
+            <p>Cisco 於 9 月 14 日同步發布安全公告並確認 <a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-76461 已遭積極利用——起因為一起 Cisco TAC 支援案例。漏洞根本原因為 Cisco AsyncOS 郵件解析流程中對輸入驗證不足，屬預驗證 <a href="https://glossary.astroicers.link/glossary/sql_injection" class="term-link" title="SQL 注入">SQL 注入</a>（<a href="https://glossary.astroicers.link/glossary/cwe" class="term-link" title="通用弱點列舉">CWE</a>-89），允許未驗證的遠端攻擊者透過發送一封特製郵件，在目標閘道上以 root 權限執行任意命令。由於電子郵件閘道的正常業務即是處理外部送入郵件，攻擊者...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html" target="_blank" rel="noopener">Cisco Identity Services Engine CVE-2026-76460（CVSS 10.0）：零日身份驗證繞過，CISA KEV 9/16 列入並設 9/19 修補截止，4 個 CVSS 10.0 漏洞集中爆發</a></h3>
+            <p class="event-meta">The Hacker News / CISA / Cisco Security Advisory / ThreatAft / Tech-Insider · 2026-09-16</p>
+            <p>Cisco 本週發布大規模安全公告，揭露 Cisco Identity Services Engine（ISE）及 ISE Passive Identity Connector（ISE-PIC）存在 4 個 <a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 10.0 <a href="https://glossary.astroicers.link/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>，其中 CVE-2026-76460 為最嚴重的零日身份驗證繞過漏洞，Cisco 表示「已知悉此漏洞的積極利用情況」，CISA 於 9 月 16 日列入 <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a> 並設定...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ntcompatible.com/story/microsoft-september-2026-patch-tuesday-973-cves-fixed-2-actively-exploited-flaws-confirmed" target="_blank" rel="noopener">Microsoft 9 月 Patch Tuesday 史上最大修補：973 個 CVE、113 個危急、2 個已利用零日（Windows Update Stack 及 ALPC 權限提升），AI 輔助漏洞發現推動「修補量爆炸」趨勢</a></h3>
+            <p class="event-meta">NTCompatible / Forbes / Trinetri / SecurityWeek / Gadget Hacks · 2026-09-09</p>
+            <p>9 月 9 日，微軟發布史上規模最大的 Patch Tuesday，修補 973 個漏洞，較 8 月的 423 個幾乎翻倍，其中 113 個評為危急等級，82 個為遠端程式碼執行漏洞，研究人員將此趨勢歸因於 AI 輔助漏洞發掘工具快速擴散。兩個已確認積極利用的零日漏洞為：CVE-2026-81963（Windows Update Stack 特權提升，CVSS 7.8）及 CVE-2026-858...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.cisa.gov/news-events/alerts/2026/09/10/cisa-adds-two-known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener">MikroTik RouterOS 雙漏洞鏈「MikroTrick」：CISA KEV 9/10 列入，已被用於大規模路由器劫持，修補完成前路由器持續暴露於全面控制風險</a></h3>
+            <p class="event-meta">CISA / CERT Polska / BleepingComputer / 加拿大網路安全中心 / GBHackers · 2026-09-10</p>
+            <p>9 月 10 日，CISA 將 MikroTik RouterOS 的兩個漏洞 CVE-2026-67277 及 CVE-2026-86060 列入 KEV，確認正在積極遭利用。CERT Polska 指出，這兩個漏洞的鏈式利用被稱為「MikroTrick」，自 9 月 2 日起即有實際攻擊案例。CVE-2026-67277 為 RouterOS 頻寬測試服務（btest）中的缺少身份驗證漏洞，允...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (7)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76460" target="_blank">CVE-2026-76460</a></td>
+            <td>Cisco Identity Services Engine (ISE) REST API 零日身份驗證繞過（CVSS 10.0，積極利用，CISA KEV 9/16，截止 9/19）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76461" target="_blank">CVE-2026-76461</a></td>
+            <td>Cisco Secure Email Gateway AsyncOS 預驗證 SQL 注入（CVSS 9.8，惡意郵件觸發 root 執行，CISA KEV 9/14，截止 9/17）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-83548" target="_blank">CVE-2026-83548</a></td>
+            <td>SonicWall SMA1000 預驗證 <a href="https://glossary.astroicers.link/glossary/ssrf" class="term-link" title="伺服器端請求偽造">SSRF</a>（CVSS 10.0，可鏈式達成未驗證 <a href="https://glossary.astroicers.link/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a>，CISA KEV 9/3，持續積極利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-81963" target="_blank">CVE-2026-81963</a></td>
+            <td>Windows Update Stack 特權提升零日（CVSS 7.8，已確認積極利用，9 月 Patch Tuesday）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-85880" target="_blank">CVE-2026-85880</a></td>
+            <td>Windows ALPC 特權提升零日（CVSS 7.8，已確認積極利用，9 月 Patch Tuesday）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19490" target="_blank">CVE-2026-19490</a></td>
+            <td>Citrix NetScaler ADC/Gateway 關鍵身份驗證繞過（CVSS 9.3，<a href="https://glossary.astroicers.link/glossary/poc" class="term-link" title="概念驗證">PoC</a> 9/2 公開後立即遭利用，CISA KEV 9/9）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-67277" target="_blank">CVE-2026-67277</a></td>
+            <td>MikroTik RouterOS 雙漏洞鏈「MikroTrick」：缺少驗證+命令注入可達完全設備控制（CISA KEV 9/10，自 9/2 積極利用）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.1</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (16)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/vpn" target="_blank">VPN</a></h3>
+                <p class="term-zh">虛擬私人網路</p>
+                <p class="term-def">透過加密通道在公共網路上建立私密連線</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/volt_typhoon" target="_blank">Volt Typhoon</a></h3>
+                <p class="term-zh">Volt Typhoon</p>
+                <p class="term-def">中國針對美國關鍵基礎設施的駭客組織</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/apt" target="_blank">APT</a></h3>
+                <p class="term-zh">進階持續性威脅</p>
+                <p class="term-def">國家級駭客組織發動的長期網路攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cwe" target="_blank">CWE</a></h3>
+                <p class="term-zh">通用弱點列舉</p>
+                <p class="term-def">軟體和硬體弱點類型的分類系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/sql_injection" target="_blank">SQL Injection</a></h3>
+                <p class="term-zh">SQL 注入</p>
+                <p class="term-def">透過惡意 SQL 語句操縱資料庫的攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/rce" target="_blank">RCE</a></h3>
+                <p class="term-zh">遠端程式碼執行</p>
+                <p class="term-def">攻擊者可遠端在目標系統執行任意程式碼的漏洞</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

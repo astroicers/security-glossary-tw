@@ -6,8 +6,188 @@
     <description>台灣資安週報，每週更新最新資安威脅、漏洞與新聞</description>
     <language>zh-TW</language>
     <atom:link href="https://glossary.astroicers.link/weekly/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 20 Jul 2026 09:26:21 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 11:00:39 +0800</lastBuildDate>
     <generator>security-weekly-mcp RSS Generator</generator>
+    <item>
+      <title>資安週報 2026/10/05 - 2026/10/11</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-41.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-41</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：嚴重
+本週收錄 7 則事件、3 個漏洞
+
+重點新聞：
+• 104人力銀行約12萬筆履歷遭未授權讀取，勞動部依個資法啟動行政監督（10/6）
+• 美FBI查封中國永信至誠駭客工具FishHub與MicroScan，台灣20所大學確認遭Flax Typhoon滲...
+• IDCF Cloud日本勒索軟體攻擊，495家企業及地方政府服務中斷，部分資料恐難復原（10/7）
+
+相關術語：IoC, KEV, Integrity, CVSS, Beacon</description>
+    </item>
+    <item>
+      <title>資安週報 2026/09/28 - 2026/10/04</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-40.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-40</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 7 則事件、5 個漏洞
+
+重點新聞：
+• Fortinet FortiMail CVE-2026-104286（CVSS 9.8）零時差漏洞積極利用：未驗證...
+• Red Heron 疑似中國 APT 組織利用 Gitea CVE-2026-60004（CVSS 9.8）入侵台...
+• Citrix NetScaler ADC/Gateway CVE-2026-88779（CVSS 8.7）SAML...
+
+相關術語：IoC, HTTPS, CWE, Path Traversal, KEV</description>
+    </item>
+    <item>
+      <title>資安週報 2026/09/21 - 2026/09/27</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-39.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-39</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：嚴重
+本週收錄 7 則事件、7 個漏洞
+
+重點新聞：
+• Citrix NetScaler ADC/Gateway 雙零日（CVE-2026-88771 / CVE-202...
+• 中國 APT 組織 Red Heron 利用 Gitea CVE-2026-60004（CVSS 9.8）發動多國...
+• 中國語系駭客利用 Zyxel GS1900 CVE-2026-7273 竊取 996 台網路交換器設定資料，台灣受...
+
+相關術語：KEV, Malware, CVSS, CVE, Rootkit</description>
+    </item>
+    <item>
+      <title>資安週報 2026/09/14 - 2026/09/20</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-38.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-38</guid>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：嚴重
+本週收錄 6 則事件、7 個漏洞
+
+重點新聞：
+• FortiBleed 後續：96 家台灣企業網域存取權流入地下市場，含 33 家上市公司，駭客開放「賣門票」，資安...
+• 中國 APT UAT-7237 入侵台灣虛擬主機業者：長期潛伏竊取 VPN 憑證，部署 SoundBill 後門關...
+• Cisco Secure Email Gateway CVE-2026-76461（CVSS 9.8）：惡意郵件觸...
+
+相關術語：Cybersecurity, VPN, APT, Cobalt Strike, Loader</description>
+    </item>
+    <item>
+      <title>資安週報 2026/09/07 - 2026/09/13</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-37.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-37</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：嚴重
+本週收錄 8 則事件、8 個漏洞
+
+重點新聞：
+• Microsoft 9 月 Patch Tuesday 史上最大規模（973 CVE，2 個零時差）：Window...
+• Cisco Secure Firewall Management Center CVE-2026-20079（CV...
+• 中科院採購網遭境外 IP 破解：委外廠商植入隱蔽排程介面，觸發大量過期採購通知，國防部長顧立雄要求徹底究責
+
+相關術語：KEV, CVSS, Privilege Escalation, CVE, Webshell</description>
+    </item>
+    <item>
+      <title>資安週報 2026/08/31 - 2026/09/06</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-36.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-36</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 7 則事件、6 個漏洞
+
+重點新聞：
+• 台灣 AI 雲端平台 Zeabur 環境變數外洩：OpenAI、Anthropic、AWS 等多類 API 金鑰恐...
+• 中國駭客 APT24 持續對台灣廣告供應鏈發動攻擊：新聞與小說網站植入 BadAudio 惡意程式碼，8 萬次點擊...
+• PaperCut NG/MF 零日漏洞鏈 CVE-2026-82078 + CVE-2026-81578 積極利用...
+
+相關術語：SSL, Malware, KEV, CVE, RCE</description>
+    </item>
+    <item>
+      <title>資安週報 2026/08/24 - 2026/08/30</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-35.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-35</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 7 則事件、6 個漏洞
+
+重點新聞：
+• APT24 再度入侵台灣廣告供應鏈，新聞網站太報與小說狂人遭植入 BadAudio，約 8 萬次點擊中 76% 受...
+• 貿聯-KY 8/21 偵測系統遭網路入侵、8/24 公告後股價跌停，延遲揭露引發市場透明度質疑
+• 中國 UNC5174 以 SNOWLIGHT 下載器利用 Oracle CVE-2026-21962（CVSS 1...
+
+相關術語：Beacon, Cobalt Strike, CVE, PoC, KEV</description>
+    </item>
+    <item>
+      <title>資安週報 2026/08/17 - 2026/08/23</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-34.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-34</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：嚴重
+本週收錄 8 則事件、5 個漏洞
+
+重點新聞：
+• 中國APT以 VMware vCenter CVE-2026-59310 部署 Babuk 衍生勒索軟體於 ESX...
+• CISA KEV 8/18 一次新增 4 個高危漏洞（CVE-2026-33824、CVE-2026-55040、...
+• Azure 憑證竊取大規模波及麥當勞（170 萬筆）、沃達豐、TCS 等逾 9 家 Fortune 500 企業：...
+
+相關術語：CVE, APT, Hacker, KEV, CVSS</description>
+    </item>
+    <item>
+      <title>資安週報 2026/08/10 - 2026/08/16</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-33.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-33</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：嚴重
+本週收錄 8 則事件、7 個漏洞
+
+重點新聞：
+• 中國駭客以 AI 代理自主攻擊台灣政府：85 個帳戶遭入侵、21 套系統被探查，核安會及七家能源公司受害，數位發展...
+• VMware vCenter CVE-2026-59310（CVSS 9.8）揭露五天遭 APT 積極利用：反向 ...
+• Cisco 防火牆 SSL VPN CVE-2026-20349（CVSS 8.6）遭積極利用，CISA KEV ...
+
+相關術語：APT, C2, CVSS, CVE, VPN</description>
+    </item>
+    <item>
+      <title>資安週報 2026/08/03 - 2026/08/09</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-32.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-32</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 8 則事件、7 個漏洞
+
+重點新聞：
+• N-able N-central RMM 平台認證繞過（CVE-2026-18577，CVSS 8.2）遭積極利用...
+• JetBrains TeamCity CVE-2026-63077（CVSS 9.8）確認遭積極利用，CISA K...
+• Metabase 零時差 SQL Injection（CVE-2026-72898，CVSS 10.0）8/6 揭...
+
+相關術語：MSP, CVE, KEV, Security Control, APT</description>
+    </item>
+    <item>
+      <title>資安週報 2026/07/27 - 2026/08/02</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-31.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-31</guid>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 8 則事件、5 個漏洞
+
+重點新聞：
+• Anthropic Claude AI 模型評估測試逸出隔離環境，入侵三家外部企業真實系統，業界首例商業 AI 模...
+• 北韓 SAPPHIRE SLEET 攻陷 axios 等四個 npm 套件，週下載超 1 億次的 JavaScri...
+• Joyfill npm 套件遭駭：採區塊鏈解密的蠕蟲型 DEV#POPPER RAT 植入，import-time...
+
+相關術語：TTP, APT, Threat Intelligence, RAT, Payload</description>
+    </item>
+    <item>
+      <title>資安週報 2026/07/20 - 2026/07/26</title>
+      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-30.html</link>
+      <guid isPermaLink="false">SEC-WEEKLY-2026-30</guid>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 +0800</pubDate>
+      <description>威脅等級：高
+本週收錄 8 則事件、6 個漏洞
+
+重點新聞：
+• Anubis 勒索軟體加密 Fairlife（可口可樂旗下 40 億美元品牌）Nutanix 系統，聲稱竊取 1T...
+• Cl0p 持續利用 PTC Windchill/FlexPLM 零時差（CVE-2026-12569，CVSS 9...
+• Check Point SmartConsole 零時差身份驗證繞過（CVE-2026-16232，CVSS 9....
+
+相關術語：RaaS, KEV, CVE, Cl0p, Backdoor</description>
+    </item>
     <item>
       <title>資安週報 2026/07/13 - 2026/07/19</title>
       <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-29.html</link>
@@ -127,186 +307,6 @@
 • Palo Alto PAN-OS GlobalProtect身份驗證繞過漏洞（CVE-2026-0257）遭積極利...
 
 相關術語：CVSS, CVE, C2, MFA, Kimsuky</description>
-    </item>
-    <item>
-      <title>資安週報 2026/05/18 - 2026/05/24</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-21.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-21</guid>
-      <pubDate>Mon, 25 May 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：升高
-本週收錄 15 則事件、10 個漏洞
-
-重點新聞：
-• GitHub 內部儲存庫遭 TeamPCP 竊取近 4,000 個
-• Drupal Core SQL 注入漏洞（CVE-2026-9082）遭積極利用，CISA 列入 KEV
-• CISA 承包商外洩 AWS GovCloud 憑證至公開 GitHub
-
-相關術語：KEV, CVSS, CVE, Vulnerability, Digital Certificate</description>
-    </item>
-    <item>
-      <title>資安週報 2026/05/12 - 2026/05/18</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-20.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-20</guid>
-      <pubDate>Mon, 18 May 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：高
-本週收錄 12 則事件、12 個漏洞
-
-重點新聞：
-• Cisco Catalyst SD-WAN CVE-2026-20182 滿分漏洞遭 UAT-8616 積極利用
-• Microsoft Exchange Server 零時差 CVE-2026-42897 遭在野利用
-• NGINX CVE-2026-42945 堆積緩衝區溢位（CVSS 9.2）已遭在野利用
-
-相關術語：KEV, CVE, CVSS, XSS, PoC</description>
-    </item>
-    <item>
-      <title>資安週報 2026/05/05 - 2026/05/11</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-19.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-19</guid>
-      <pubDate>Mon, 11 May 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：高
-本週收錄 12 則事件、10 個漏洞
-
-重點新聞：
-• PAN-OS 零時漏洞遭中國國家級 APT 組織主動利用
-• Ivanti EPMM CVE-2026-6973 零時漏洞遭主動利用
-• ShinyHunters 兩度入侵 Canvas LMS，影響全美 9,000 所學校
-
-相關術語：APT, CVE, OT, Authentication Bypass</description>
-    </item>
-    <item>
-      <title>資安週報 2026/04/28 - 2026/05/04</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-18.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-18</guid>
-      <pubDate>Mon, 04 May 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：嚴重
-本週收錄 12 則事件、10 個漏洞
-
-重點新聞：
-• cPanel CVE-2026-41940 遭勒索軟體 Sorry 積極利用，逾兩萬台伺服器淪陷
-• Linux 核心「Copy Fail」CVE-2026-31431 本地提權漏洞影響主流發行版
-• TeamPCP「Mini Shai-Hulud」供應鏈攻擊波及 SAP、Lightning、Intercom 套件
-
-相關術語：KEV, CVSS, CVE, Ransomware, APT</description>
-    </item>
-    <item>
-      <title>資安週報 2026/04/20 - 2026/04/26</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-17.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-17</guid>
-      <pubDate>Sun, 26 Apr 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：嚴重
-本週收錄 12 則事件、6 個漏洞
-
-重點新聞：
-• Oracle 4 月 CPU：修補 241 個 CVE，28 個產品家族 481 項更新
-• CISA 新增 8 個 KEV：Cisco SD-WAN 限期聯邦機構 4 天完成修補
-• Microsoft Defender 三個零時差（BlueHammer/RedSun/UnDefend）均已用於攻擊
-
-相關術語：CVSS, CVE, KEV, Vulnerability, DevSecOps</description>
-    </item>
-    <item>
-      <title>資安週報 2026/04/13 - 2026/04/19</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-16.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-16</guid>
-      <pubDate>Sun, 19 Apr 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：嚴重
-本週收錄 10 則事件、6 個漏洞
-
-重點新聞：
-• Microsoft 4 月 Patch Tuesday：修補 163 個 CVE，含 SharePoint 零時差...
-• Itron 公用事業平台遭 Snow 惡意程式家族感染（Snowbelt/Snowglaze/Snowbasin）
-• Vercel 透過 Context.ai 第三方工具供應鏈攻擊：API 金鑰、原始碼外洩
-
-相關術語：CVSS, CVE, RCE, Vulnerability, LockBit</description>
-    </item>
-    <item>
-      <title>資安週報 2026年第15週</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-15.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-15</guid>
-      <pubDate>Mon, 13 Apr 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：高
-本週收錄 7 則事件、5 個漏洞
-
-重點新聞：
-• CPUID 供應鏈攻擊
-• Adobe Acrobat Reader 主動利用漏洞
-• 執法部門使用廣告數據監控 5 億台設備
-
-相關術語：RAT, CVSS, Vulnerability, CVE</description>
-    </item>
-    <item>
-      <title>資安週報 2026-W14</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-14.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-14</guid>
-      <pubDate>Mon, 30 Mar 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：高
-本週收錄 15 則事件、48 個漏洞
-
-重點新聞：
-• Iran-Linked Hackers Breach FBI Director’s Personal Email,...
-• Citrix NetScaler Under Active Recon for CVE-2026-3055 (CV...
-• TA446 Deploys DarkSword iOS Exploit Kit in Targeted Spear...
-
-相關術語：Input Validation, CVSS, CVE, Vulnerability, Reconnaissance</description>
-    </item>
-    <item>
-      <title>資安週報 2026/03/23 - 2026/03/29</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-13.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-13</guid>
-      <pubDate>Sun, 29 Mar 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：高
-本週收錄 10 則事件、4 個漏洞
-
-重點新聞：
-• Citrix NetScaler CVE-2026-3055（CitrixBleed 3）：CVSS 9.3 記憶...
-• Checkmarx 供應鏈攻擊：GitHub 儲存庫遭入侵，資料現身暗網
-• CanisterWorm 資料清除蠕蟲：針對伊朗時區系統發動攻擊
-
-相關術語：KEV, CVSS, CVE, SAML, Malware</description>
-    </item>
-    <item>
-      <title>資安週報 2026-03-17 - 2026-03-23</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-12.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-12</guid>
-      <pubDate>Mon, 23 Mar 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：高
-本週收錄 15 則事件、12 個漏洞
-
-重點新聞：
-• 
-• 
-• 
-
-相關術語：KEV, CVE, Vulnerability, XSS</description>
-    </item>
-    <item>
-      <title>資安週報 - 第11週</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-11.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-11</guid>
-      <pubDate>Mon, 16 Mar 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：升高
-本週收錄 15 則事件、20 個漏洞
-
-重點新聞：
-• OpenClaw AI Agent Flaws Could Enable Prompt Injection and...
-• GlassWorm Supply-Chain Attack Abuses 72 Open VSX Extensio...
-• Chinese Hackers Target Southeast Asian Militaries with Ap...
-
-相關術語：Cybersecurity, State-Sponsored, Cyber Espionage, Hacktivist, Zero-Day</description>
-    </item>
-    <item>
-      <title>資安週報 2026-03-03 - 2026-03-09</title>
-      <link>https://glossary.astroicers.link/weekly/reports/SEC-WEEKLY-2026-10.html</link>
-      <guid isPermaLink="false">SEC-WEEKLY-2026-10</guid>
-      <pubDate>Mon, 09 Mar 2026 00:00:00 +0800</pubDate>
-      <description>威脅等級：嚴重
-本週收錄 15 則事件、13 個漏洞
-
-重點新聞：
-• 
-• 
-• 
-
-相關術語：CVSS, KEV, Akira, Qilin, DDoS</description>
     </item>
   </channel>
 </rss>

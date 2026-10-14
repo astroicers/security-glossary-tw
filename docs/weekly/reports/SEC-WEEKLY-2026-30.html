@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/07/20 - 2026/07/26</title>
+    <meta name="description" content="資安週報 2026-07-20 - 2026-07-26">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/07/20 - 2026/07/26</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-30 · 發布日期：2026-07-27</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #f97316;">高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">6</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即修補 PTC Windchill 及 FlexPLM 至 11.0 M030 版本（CVE-2026-12569，Cl0p 積極利用）：（1）盤點組織內所有面向網際網路的 Windchill 及 FlexPLM 部署，確認版本是否受影響；（2）立即套用 PTC 修補程式及配置指引，修補前臨時限制存取來源 IP；（3）搜尋 /Windchill/login/ 路徑下所有以隨機十六進位字串命名的 .jsp 文件，發現即為 Cl0p <a href="https://glossary.astroicers.link/glossary/webshell" class="term-link" title="網頁後門">webshell</a> 的明確入侵指標，需立即啟動事件響應；（4）稽核過去 60 天的 Windchill 存取記錄，特別關注大量 BOM、設計文件或供應商資料的非常規下載；（5）通知與本組織 Windchill 環境整合的外部 OEM 客戶或供應商，評估橫向移動風險。</li>
+<li>🔴 立即處置 Check Point SmartConsole CVE-2026-16232（CVSS 9.1，CISA KEV 截止 7/25）：（1）立即套用 Check Point 安全公告 sk185169 指定的緊急修補程式；（2）確認 Security Management Server 的 SmartConsole 介面是否直接暴露於網際網路，若是應立即限制存取來源；（3）全面稽核管理員帳號、SmartConsole 存取記錄、API 金鑰及應用程式令牌，特別搜尋 7 月 23 日前 30 天的異常登入；（4）依 Check Point 公告中的入侵指標（<a href="https://glossary.astroicers.link/glossary/ioc" class="term-link" title="入侵指標">IoC</a>）進行掃描；（5）若發現異常存取，需重設所有管理員憑證並完整審查防火牆規則集是否遭竄改。</li>
+<li>🔴 評估伊朗 APT OT/ICS 攻擊對台灣工業環境的威脅（CISA/FBI AA26-097A）：（1）盤點 OT 環境中 Schneider Electric、Siemens 及 Rockwell Automation PLC/HMI/SCADA 設備的網際網路暴露狀況，立即隔離任何直接面向網際網路的 ICS 設備；（2）依 CISA 公告指引稽核 Rockwell Automation PLC 程式的可重用程式碼模組，搜尋非授權的程式碼修改；（3）比對 HMI/SCADA 顯示資料與實際感測器讀值，確認顯示資料完整性；（4）驗證 OT 網路與 IT 網路分隔的有效性，確保 IT 側入侵無法橫向移動至 OT 環境；（5）台灣電力、水資源及關鍵製造業應參考此公告強化 <a href="https://glossary.astroicers.link/glossary/ics" class="term-link" title="工業控制系統">ICS</a>/<a href="https://glossary.astroicers.link/glossary/scada" class="term-link" title="監控與資料擷取系統">SCADA</a> 事件監控能力。</li>
+<li>🟡 強化第三方廠商存取管理（Fairlife 事件核心教訓）：（1）盤點所有具備組織內部系統存取能力的第三方廠商帳號，確認存取範圍是否遵循最小權限原則；（2）要求所有具特權存取的第三方廠商帳號強制啟用 <a href="https://glossary.astroicers.link/glossary/mfa" class="term-link" title="多因子驗證">MFA</a>，無例外；（3）建立第三方帳號存取記錄的定期審查機制，特別關注非工作時間或非常規存取地點的登入；（4）若組織使用 Hugging Face API 或連結的雲端憑證，立即輪換 API 金鑰並稽核過去 30 天的存取記錄。</li>
+<li>🟡 立即更新 Google Chrome 至 150.0.7871.186 或以上（修補 CVE-2026-16804 沙箱逃逸及另三個高危漏洞）：（1）確認所有工作站 Chrome 版本達到 150.0.7871.186（Windows/macOS）或 .186（Linux）以上；（2）若使用集中式瀏覽器更新管理（Endpoint Manager、Intune），確認更新政策已推送；（3）雖 Google 目前未報告已知積極利用，沙箱逃逸漏洞具高度串聯利用潛力，應視為優先更新項目；（4）確認 Adobe ColdFusion 環境（若有）已套用 CVE-2026-48282 修補（CVSS 10.0，CISA KEV，截止日期已過）。</li>
+<li>🟢 從 Hugging Face AI 代理攻擊事件評估組織 AI 平台安全管控：（1）評估組織內部的 AI/ML 開發管線安全性，特別是資料處理管線是否具備適當的存取控制與稽核記錄；（2）建立針對自主 AI 代理異常行為的偵測規則，特別關注自動化程式在生產環境中的非常規 API 呼叫模式；（3）確認組織內部部署的 AI 代理系統具備足夠的沙箱隔離，防止在遭受對抗性輸入時橫向移動至其他系統。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (8)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://www.bleepingcomputer.com/news/security/anubis-ransomware-claims-coca-cola-fairlife-attack-threatens-data-leak/" target="_blank" rel="noopener">Anubis 勒索軟體加密 Fairlife（可口可樂旗下 40 億美元品牌）Nutanix 系統，聲稱竊取 1TB 資料並設 7/27 截止日，美國廠區生產中斷</a></h3>
+            <p class="event-meta">BleepingComputer · 2026-07-20</p>
+            <p>可口可樂旗下乳品品牌 Fairlife（年銷售額約 40 億美元）7 月 20 日遭 Anubis 勒索軟體集團列名暗網洩漏站點，7 月 21-22 日公開宣稱責任。Anubis 聲稱已加密 Fairlife 的 Nutanix 虛擬化環境並竊取 1TB 機密資料（財務、人力資源及營運資料），設定 7 月 27 日為外洩截止日，聲稱「象徵性協議即可」。Coca-Cola 公司於 7 月 16 日向...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html" target="_blank" rel="noopener">Cl0p 持續利用 PTC Windchill/FlexPLM 零時差（CVE-2026-12569，CVSS 9.3）：植入 JSP 後門竊取製造業工程資料，製造、航太、汽車產業全面受波及</a></h3>
+            <p class="event-meta">The Hacker News · 2026-07-24</p>
+            <p><a href="https://glossary.astroicers.link/glossary/cl0p_group" class="term-link" title="Cl0p 勒索組織">Cl0p</a> 勒索軟體集團本週持續大規模利用 PTC Windchill 產品生命週期管理（PLM）系統的未驗證遠端程式碼執行漏洞 <a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-12569（CVSS 9.3），本週確認受害產業涵蓋製造、汽車、航太、零售/服飾。攻擊鏈：先利用 FlexPLM WSDL 端點資訊洩漏缺陷（<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 7.5）偵察目標環境，再透過 Windchill 登入 servlet 的 <a href="https://glossary.astroicers.link/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a> 漏洞於 /Wind...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/check-point-patches-exploited.html" target="_blank" rel="noopener">Check Point SmartConsole 零時差身份驗證繞過（CVE-2026-16232，CVSS 9.1）：未驗證攻擊者取得防火牆完整管理員存取，CISA KEV 設 7/25 聯邦截止</a></h3>
+            <p class="event-meta">The Hacker News · 2026-07-23</p>
+            <p>Check Point 於 7 月 22-23 日緊急發布安全公告，確認 SmartConsole（防火牆集中管理平台）存在身份驗證繞過零時差漏洞 CVE-2026-16232（CVSS 9.1），已遭積極利用。漏洞允許未驗證遠端攻擊者取得應用程式登入令牌，以完整管理員權限存取 Security Management Server，進而任意修改防火牆安全政策、存取規則及 <a href="https://glossary.astroicers.link/glossary/vpn" class="term-link" title="虛擬私人網路">VPN</a> 配置，或建立後門帳...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a" target="_blank" rel="noopener">CISA/FBI/NSA 聯合公告：伊朗關聯 APT 升級對美國水資源、能源業 PLC 的 OT 攻擊，已確認造成操作中斷與財務損失</a></h3>
+            <p class="event-meta">CISA · 2026-07-22</p>
+            <p>7 月 22 日，CISA、FBI、NSA、EPA、能源部、美國網路司令部及財政部七個聯邦機構聯合更新資安公告（AA26-097A），確認伊朗關聯 <a href="https://glossary.astroicers.link/glossary/apt" class="term-link" title="進階持續性威脅">APT</a> 行為者正積極針對美國關鍵基礎設施的網際網路連接可程式化邏輯控制器（PLC）發動攻擊，部分案例已造成操作中斷及財務損失。攻擊手法包括：在 Rockwell Automation PLC 程式的可重用程式碼模組中注入惡意邏輯、操縱人機介面（HMI）...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.volexity.com/blog/2026/07/17/proxying-to-compromise-sonicwall-secure-mobile-access-0-day-exploitation/" target="_blank" rel="noopener">Volexity 深度分析 SonicWall SMA 零時差後續：UTA0533 部署 KNUCKLEBALL Python 植入及 ROOTRUN root 提權工具，確認攻擊早於官方公告三週</a></h3>
+            <p class="event-meta">Volexity · 2026-07-21</p>
+            <p>Volexity 發布對 SonicWall SMA 1000 系列零時差攻擊（CVE-2026-15409、CVE-2026-15410）的深度分析，將攻擊歸因於代號 UTA0533 的威脅行為者，確認攻擊最早始於 6 月 22 日（較 SonicWall 7 月 14 日官方公告早三週）。具體惡意程式：KNUCKLEBALL（儲存為 deploy_new.py）為 Python 持久化植入，提...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://techcrunch.com/2026/07/20/hugging-face-confirms-breach-affected-internal-datasets-and-credentials-urges-users-to-take-action/" target="_blank" rel="noopener">自主 AI 代理入侵 Hugging Face：竊取雲端叢集憑證與內部資料集，標誌 AI 驅動攻擊進入新階段</a></h3>
+            <p class="event-meta">TechCrunch · 2026-07-20</p>
+            <p>Hugging Face（全球最大開源 AI 模型與資料集平台）於 7 月 20 日確認遭受資料外洩，入侵路徑為自主 AI 代理系統透過資料處理管線（data processing pipeline）自動探索並利用生產環境漏洞，竊取雲端及叢集憑證後進行橫向移動，進一步存取並竊取內部資料集。Hugging Face 已關閉被利用漏洞、驅逐威脅行為者並重建受損叢集節點。此事件具有三重重要性：（1）自主...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/data-breach-confirmed-after-australian-energy-giant-origin-is-hacked/" target="_blank" rel="noopener">澳洲 Origin Energy 確認客戶資料外洩：姓名、地址、部分支付資料遭未授權存取，攻擊者聲稱規模超過公司所稱</a></h3>
+            <p class="event-meta">SecurityWeek · 2026-07-23</p>
+            <p>澳洲主要能源零售商 Origin Energy 於 7 月 22-23 日確認遭受資料外洩，攻擊者未授權存取部分客戶資料，涵蓋姓名、地址、出生日期、電話號碼、帳戶資訊及部分支付卡或銀行帳號末四碼。Origin Energy 已啟動調查並通知監管機關，聲稱已遏制入侵。然而聲稱發動攻擊的駭客表示實際取得的客戶記錄數量遠超公司所稱，具體規模仍待調查確認。此事件與同週發生的伊朗 <a href="https://glossary.astroicers.link/glossary/ot" class="term-link" title="營運技術">OT</a> 攻擊公告共同構成能源...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.theregister.com/security/2026/07/23/millions-of-california-bought-cars-can-be-hijacked-via-bluetooth/5277315" target="_blank" rel="noopener">KARR 汽車防盜系統藍牙共用金鑰漏洞暴露 220 萬輛汽車遠端解鎖與制動風險，韌體修補已於 7/20 發布</a></h3>
+            <p class="event-meta">The Register · 2026-07-23</p>
+            <p>UC San Diego 研究人員於 7 月 23 日揭露 KARR Security System（由 Acrisure 製造）的嚴重設計缺陷：所有 KARR 及 SWDS 設備均採用同一組固化安全金鑰（hard-coded shared key），攻擊者可在距離車輛 5 公尺範圍內透過藍牙向受影響車輛發送指令，實現遠端解鎖、控制防盜警報，甚至使車輛制動（immobilize）。受影響車輛估計達...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (6)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-12569" target="_blank">CVE-2026-12569</a></td>
+            <td>PTC Windchill/FlexPLM 未驗證遠端程式碼執行漏洞（CVSS 9.3，CISA <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a> 6/25，Cl0p 持續積極利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-16232" target="_blank">CVE-2026-16232</a></td>
+            <td>Check Point SmartConsole 身份驗證繞過漏洞（CVSS 9.1，CISA KEV 7/23，積極利用中，FCEB 截止 7/25）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.1</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48282" target="_blank">CVE-2026-48282</a></td>
+            <td>Adobe ColdFusion 路徑穿越遠端程式碼執行漏洞（CVSS 10.0，CISA KEV 7/7，持續積極利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-16804" target="_blank">CVE-2026-16804</a></td>
+            <td>Google Chrome Input 元件釋放後使用沙箱逃逸漏洞（CVSS 8.3）及同批三個高危漏洞，7 月 23 日緊急修補...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-50522" target="_blank">CVE-2026-50522</a></td>
+            <td>Microsoft SharePoint Server <a href="https://glossary.astroicers.link/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a> <a href="https://glossary.astroicers.link/glossary/poc" class="term-link" title="概念驗證">PoC</a> 公開後確認遭積極利用（7 月 21 日），CVSS 待確認...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/" target="_blank"></a></td>
+            <td>KARR 汽車防盜系統藍牙固化共用金鑰漏洞：220 萬輛車可遠端解鎖與制動，7 月 20 日韌體修補發布...</td>
+            <td style="color: #eab308; font-weight: 600;">MEDIUM</td>
+            <td>N/A</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (15)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/rce" target="_blank">RCE</a></h3>
+                <p class="term-zh">遠端程式碼執行</p>
+                <p class="term-def">攻擊者可遠端在目標系統執行任意程式碼的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cl0p_group" target="_blank">Cl0p</a></h3>
+                <p class="term-zh">Cl0p 勒索組織</p>
+                <p class="term-def">以大規模 MOVEit 漏洞攻擊聞名的勒索軟體組織</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/vpn" target="_blank">VPN</a></h3>
+                <p class="term-zh">虛擬私人網路</p>
+                <p class="term-def">透過加密通道在公共網路上建立私密連線</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/apt" target="_blank">APT</a></h3>
+                <p class="term-zh">進階持續性威脅</p>
+                <p class="term-def">國家級駭客組織發動的長期網路攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ot" target="_blank">OT</a></h3>
+                <p class="term-zh">營運技術</p>
+                <p class="term-def">用於監控和控制實體設備的硬體和軟體</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/poc" target="_blank">PoC</a></h3>
+                <p class="term-zh">概念驗證</p>
+                <p class="term-def">證明漏洞可被利用的示範程式碼</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/09/07 - 2026/09/13</title>
+    <meta name="description" content="資安週報 2026-09-07 - 2026-09-13">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/09/07 - 2026/09/13</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-37 · 發布日期：2026-09-14</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #ef4444;">嚴重</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即套用 Microsoft 9 月 Patch Tuesday 更新，重點處理兩個 Windows 零時差（CVE-2026-81963 Windows Update Stack EoP、CVE-2026-85880 Windows ALPC EoP），CISA 截止日為 9 月 22 日。建議措施：（1）透過 SCCM、Intune 或 WSUS 確認所有 Windows 端點已完整安裝 9 月份累積更新，特別核查 Windows Update Stack 相關補丁的安裝狀態；（2）透過 <a href="https://glossary.astroicers.link/glossary/edr" class="term-link" title="端點偵測與回應">EDR</a> 設定告警，監控 Windows Update 相關程序（TrustedInstaller.exe、MoUsoCoreWorker.exe）生成非預期子程序的行為；（3）若環境中存在無法立即更新的系統（如舊版 Windows Server），應優先隔離此類系統的本地存取並啟用額外稽核記錄；（4）同步評估 Oracle 9 月安全更新——超過 100 個 Critical 等級漏洞中有 240 個以上可無驗證遠端利用，Oracle Database、Middleware 及 Java SE 應納入本月修補計畫。</li>
+<li>🔴 緊急處置 Cisco Secure Firewall Management Center CVE-2026-20079（CVSS 10.0）：（1）確認 FMC 版本是否早於 7 月 29 日修補版本，立即套用可用更新；（2）稽核 FMC 主機過去 60 天的 HTTP 存取記錄，搜尋非預期 IP 對 FMC 管理介面的存取及 root 執行任意指令的跡象；（3）搜尋入侵後指標：/var/tmp 或 /opt/cisco 下的非預期 <a href="https://glossary.astroicers.link/glossary/webshell" class="term-link" title="網頁後門">Web Shell</a> 或 JAR 檔案、異常 Netcat 或 Socat 連線程序、非預期的出站 TCP 連線（特別是通往非授權 IP 的高連接埠流量）；（4）若偵測到任何入侵指標，應立即隔離 FMC 主機並啟動事件響應程序——FMC 被控制後攻擊者可修改所有防火牆策略、開放惡意通訊埠；（5）聯邦機構截止日為 9 月 12 日已過，台灣政府機關及金融業應將此視為最高優先修補項目。</li>
+<li>🔴 立即修補 Citrix NetScaler CVE-2026-19490 及 MikroTik RouterOS（CVE-2026-86060 / CVE-2026-67276）：
+NetScaler：（1）套用 8 月 19 日修補版本；（2）稽核 NetScaler Gateway 及 ADC 自 9 月 3 日起的存取記錄，搜尋未驗證連線成功進入管理介面或 <a href="https://glossary.astroicers.link/glossary/vpn" class="term-link" title="虛擬私人網路">VPN</a> 隧道的記錄；（3）若 NetScaler 暴露於網際網路且尚未修補，應立即在防火牆層限制管理介面存取來源 IP。
+MikroTik：（1）立即升級至 RouterOS 6.49.21（長期版）、7.23.4（長期版）或 7.24.2（穩定版）；（2）若無法立即升級，應封鎖外部 SSH 存取（TCP 22）或限制 SSH 僅允許管理 IP 存取；（3）確認路由器管理記錄是否有 9 月 3 日前的異常登入，特別注意以特殊字元開頭的使用者名稱。台灣 ISP、教育機構及中小企業應優先盤點環境中 MikroTik 設備數量及版本。</li>
+<li>🔴 從中科院委外廠商入侵事件強化供應鏈安全管控：（1）盤點所有委外開發或維護的系統，要求廠商提供完整原始碼稽核報告，特別關注是否存在未文件化的管理介面、隱蔽排程函數或硬編碼憑證；（2）針對所有委外系統的對外介面執行網路掃描，識別非預期暴露的管理端點；（3）要求委外廠商提供系統存取記錄，稽核過去 90 天內廠商 IP 的存取行為是否逾越合約範圍；（4）在與委外系統相連的網路節點部署額外監控，對非正常工作時間或境外 IP 的存取設定即時告警；（5）政府機關及國防相關供應鏈廠商應依《資通安全責任等級分級辦法》檢視委外合約中的資安責任歸屬條款，確保廠商後門行為有明確法律究責依據。</li>
+<li>🟡 修補 WSO2 API Manager CVE-2026-5430 及 Fortinet CVE-2025-25249，並主動搜尋入侵指標：
+WSO2（CVE-2026-5430 CVSS 9.8）：（1）立即升級受影響版本至修補版本；（2）稽核 API Manager 過去 30 天的存取記錄，搜尋使用不支援演算法（如 HS256 搭配 RS256 公鑰）的 JWT 令牌；（3）若發現異常令牌，應視為帳號已遭接管，輪換所有 API 金鑰及服務帳號憑證。
+Fortinet（CVE-2025-25249）：（1）套用廠商修補；（2）搜尋 PivotC2 入侵指標：FortiOS 設備上的異常 Node.js 程序、連往非授權目的地的 <a href="https://glossary.astroicers.link/glossary/https" class="term-link" title="安全超文字傳輸協定">HTTPS</a> 混合 WebSocket 連線；（3）比對 SOCRadar 發布的 PivotC2 <a href="https://glossary.astroicers.link/glossary/ioc" class="term-link" title="入侵指標">IOC</a> 清單進行全環境掃描。</li>
+<li>🟡 針對 BambooToken 及 MQTT C2 威脅強化偵測能力：（1）在防火牆及 NIDS 新增 MQTT 相關規則，監控 TCP 1883（未加密 MQTT）及 TCP 8883（<a href="https://glossary.astroicers.link/glossary/encryption" class="term-link" title="加密">加密</a> MQTTS）的出站連線，特別是連往非授權 MQTT 代理伺服器的流量；（2）若環境中使用 Tendyron OnKey 軟體或有中國銀行業 IT 往來，應立即掃描相關工作站是否存在 BambooToken IOC（DLL 側載行為、SoftEther VPN 程序）；（3）在 EDR 平台設定告警規則，監控合法軟體程序載入非預期 DLL 的行為（DLL 側載偵測）；（4）向紅隊或威脅獵捕團隊提交 Lumen Black Lotus Labs 發布的 BambooToken IOC 清單，執行歷史記錄回溯搜尋，確認是否有潛伏三年以上但尚未被發現的感染。</li>
+<li>🟢 從商周集團攻擊事件評估台灣媒體業及電商平台的資安基線：（1）媒體集團及電商業者應評估 <a href="https://glossary.astroicers.link/glossary/ddos" class="term-link" title="分散式阻斷服務攻擊">DDoS</a> 防護、CDN 快取策略及應用層 <a href="https://glossary.astroicers.link/glossary/waf" class="term-link" title="網頁應用程式防火牆">WAF</a> 設定，確保關鍵服務具備基本韌性；（2）擁有百萬以上訂閱用戶資料庫的組織應確認《<a href="https://glossary.astroicers.link/glossary/pdpa" class="term-link" title="個人資料保護法">個人資料保護法</a>》下的資料外洩通報義務，並測試通報程序是否可在 72 小時內完成（符合歐盟 <a href="https://glossary.astroicers.link/glossary/gdpr" class="term-link" title="歐盟一般資料保護規則">GDPR</a> 標準，中華民國個資法雖無明定時限，但主管機關已日益要求速報）；（3）若攻擊確認涉及資料外洩，商周集團應於確認後儘速向個資保護機關通報並對受影響用戶發出通知，以降低次生損害。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (8)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://www.tenable.com/blog/microsofts-september-2026-patch-tuesday-addresses-964-cves-cve-2026-81963-cve-2026-85880" target="_blank" rel="noopener">Microsoft 9 月 Patch Tuesday 史上最大規模（973 CVE，2 個零時差）：Windows Update Stack CVE-2026-81963 與 ALPC CVE-2026-85880 均遭野外積極利用，CISA 設 9/22 聯邦修補截止</a></h3>
+            <p class="event-meta">Microsoft Security Response Center / Tenable · 2026-09-08</p>
+            <p>微軟 9 月 8 日 Patch Tuesday 修補 973 個 CVE，打破 7 月份 622 個的單月記錄，使 2026 年迄今累計修補數超過 2,600，已逾 2020 年全年記錄的兩倍。兩個零時差均已遭積極利用：<a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-81963（Windows Update Stack <a href="https://glossary.astroicers.link/glossary/privilege_escalation" class="term-link" title="權限提升">權限提升</a>，<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 7.8）是史上首個 Update Stack EoP 遭零時差利用，低權限本地攻擊者可...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.helpnetsecurity.com/2026/09/10/cisco-fmc-exploited-cve-2026-20079-cve-2026-20316/" target="_blank" rel="noopener">Cisco Secure Firewall Management Center CVE-2026-20079（CVSS 10.0）：無驗證 RCE 遭國家級駭客及 Qilin 勒索軟體集團利用，CISA KEV 9/9 設 3 天聯邦截止</a></h3>
+            <p class="event-meta">Cisco Talos / CISA · 2026-09-09</p>
+            <p>CISA 於 9 月 9 日將 Cisco Secure <a href="https://glossary.astroicers.link/glossary/firewall" class="term-link" title="防火牆">Firewall</a> Management Center（FMC）CVE-2026-20079 列入 <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a>，聯邦修補截止日為 9 月 12 日——僅 3 天，屬於少見的極短截止期。<a href="https://glossary.astroicers.link/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a> CVSS 10.0，為認證繞過缺陷：系統啟動時若無使用者登入，啟動程序在 sfsnort.sessions 資料庫中建立的部分 csm_processes 工...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/news/178727" target="_blank" rel="noopener">中科院採購網遭境外 IP 破解：委外廠商植入隱蔽排程介面，觸發大量過期採購通知，國防部長顧立雄要求徹底究責</a></h3>
+            <p class="event-meta">iThome / 公視新聞 · 2026-09-05</p>
+            <p>國家中山科學研究院（中科院）採購網於 8 月 28 日發生異常，自動對逾百家合作廠商大量重送過期詢價通知，共逾 200 封。中科院起初將事件歸咎於「AI Agent 越權」，否認外力入侵。然而在立法院質詢壓力下，中科院於 9 月 5 日承認真實原因：委外原始碼開發廠商為方便日後管理，在系統內預置一個未文件化的隱蔽排程管理介面，該介面遭境外 IP 破解後被用於觸發特定排程指令，完成大量寄送動作。事件...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/news/178827" target="_blank" rel="noopener">商周集團旗下網站遭惡意攻擊：電商及線上閱讀服務全面中斷，為台灣媒體業本年度規模最大資安事件</a></h3>
+            <p class="event-meta">iThome · 2026-09-09</p>
+            <p>商周集團（Business Weekly Group，旗下包含商業週刊、城邦出版集團等主要媒體與電商品牌）於 9 月 9 日發布緊急公告，確認集團旗下多個網站遭受惡意攻擊，立即啟動應變機制，委託第三方資安專業團隊協助調查、隔離與復原。受影響服務涵蓋商周電子閱讀平台、城邦旗下各品牌線上書店及會員服務，整體線上服務中斷，預計完整修復需要相當時間。紙本雜誌出刊及配送不受影響。截至 9 月 10 日，集團...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.rapid7.com/blog/post/etr-cve-2026-19490-critical-vulnerability-affecting-citrix-netscaler-adc-and-netscaler-gateway/" target="_blank" rel="noopener">Citrix NetScaler CVE-2026-19490 認證繞過（CVSS 9.3）：野外積極利用自 9/3 起持續，單日最高 36 次蜜罐攻擊，CISA KEV 9/9</a></h3>
+            <p class="event-meta">Rapid7 / Help Net Security · 2026-09-09</p>
+            <p>Citrix NetScaler ADC 及 NetScaler Gateway 存在嚴重認證繞過漏洞 CVE-2026-19490（CVSS v4.0：9.3），未驗證攻擊者可遠端在無使用者互動或特殊權限的情況下繞過驗證機制。8 月 19 日廠商發布公告，CISA 於 9 月 9 日列入 KEV。研究機構 Previdian 的蜜罐系統自 9 月 3 日起偵測到針對此漏洞的積極利用嘗試，9 月 ...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.bleepingcomputer.com/news/security/hackers-exploit-new-mikrotik-routeros-flaws-to-hijack-routers/" target="_blank" rel="noopener">MikroTik RouterOS MikroTrick 雙漏洞串聯（CVE-2026-67276 + CVE-2026-86060）：無驗證攻擊者可完全控制路由器，CISA KEV 9/10，亞太地區大量暴露設備已遭掃描</a></h3>
+            <p class="event-meta">CERT Polska / insomnisec · 2026-09-10</p>
+            <p>CERT Polska 於 9 月 5 日公開披露「MikroTrick」攻擊鏈，結合 MikroTik RouterOS 兩個漏洞實現無認證完整路由器控制：CVE-2026-67276（帶寬測試服務缺失認證，可讀取核心記憶體或觸發 <a href="https://glossary.astroicers.link/glossary/dos" class="term-link" title="阻斷服務攻擊">DoS</a>）與 CVE-2026-86060（SSH 登入路徑參數處理缺陷，透過以特定字元開頭的使用者名稱可變更 RouterOS 受信任策略遮罩，導致權限提升至管理員）...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/09/active-exploitation-attempts-target.html" target="_blank" rel="noopener">WSO2 API Manager CVE-2026-5430 JWT 驗證繞過（CVSS 9.8）：攻擊者偽造管理員令牌於 9/13 開始積極利用，完整帳號接管風險</a></h3>
+            <p class="event-meta">watchTowr / The Hacker News · 2026-09-13</p>
+            <p>WSO2 API Manager 存在嚴重 JWT 驗證缺陷 CVE-2026-5430（CVSS 9.8）：當 JSON Web Token 以不受支援的演算法簽署時，API Manager 未能正確拒絕，攻擊者可偽造包含管理員權限的 JWT 令牌，繞過所有 API 驗證機制，達到完整帳號接管（含管理員帳號），進而取得 API 後端服務的全面存取。watchTowr 的蜜罐網路於 9 月 13 ...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/09/bambootoken-malware-uses-mqtt-to.html" target="_blank" rel="noopener">BambooToken MQTT C2 惡意程式披露：疑似中國背景，跨平台感染亞洲金融、法律及行動應用服務，活躍逾 3 年</a></h3>
+            <p class="event-meta">The Hacker News / BleepingComputer · 2026-09-08</p>
+            <p>Lumen Black Lotus Labs 本週公開披露 BambooToken 多平台惡意程式，此前在 VirusTotal 發現後調查發現其活躍期至少始於 2023 年 2 月，最近活動記錄至 2026 年 7 月。BambooToken 使用訊息佇列遙測傳輸協定（MQTT）作為命令與控制（C2）通道，MQTT 本為物聯網設備輕量通訊協定，在企業環境中通常不受傳統 <a href="https://glossary.astroicers.link/glossary/c2" class="term-link" title="命令與控制">C2</a> 偵測規則監控。Win...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (8)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20079" target="_blank">CVE-2026-20079</a></td>
+            <td>Cisco Secure Firewall Management Center 認證繞過至 Root 遠端程式碼執行漏洞（CVSS 10.0，CISA KEV 9/9，國家級 <a href="https://glossary.astroicers.link/glossary/apt" class="term-link" title="進階持續性威脅">APT</a> 及勒索軟體集團積...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5430" target="_blank">CVE-2026-5430</a></td>
+            <td>WSO2 API Manager JWT 演算法混淆認證繞過漏洞（CVSS 9.8，9/13 蜜罐確認積極利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-19490" target="_blank">CVE-2026-19490</a></td>
+            <td>Citrix NetScaler ADC / Gateway 認證繞過漏洞（CVSS 9.3，CISA KEV 9/9，野外利用自 9/3 起持續）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-81963" target="_blank">CVE-2026-81963</a></td>
+            <td>Windows Update Stack 權限提升零時差漏洞（CVSS 7.8，史上首個 Update Stack EoP 零時差，CISA KEV 截止 9/22）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-85880" target="_blank">CVE-2026-85880</a></td>
+            <td>Windows 進階本地程序呼叫（ALPC）權限提升零時差漏洞（CVSS 7.8，CISA KEV 截止 9/22）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-86060" target="_blank">CVE-2026-86060</a></td>
+            <td>MikroTik RouterOS SSH 路徑指令注入漏洞（CISA KEV 9/10，MikroTrick 攻擊鏈組成部分，無驗證完整路由器控制）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-25249" target="_blank">CVE-2025-25249</a></td>
+            <td>Fortinet FortiOS / FortiSwitchManager 堆積緩衝區溢位漏洞（CVSS 7.3，CISA KEV 9/9，PivotC2 <a href="https://glossary.astroicers.link/glossary/rat" class="term-link" title="遠端存取木馬">RAT</a> 已感染 178 台設備）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-87491" target="_blank">CVE-2026-87491</a></td>
+            <td>Google Chrome V8 引擎越界寫入漏洞（CISA KEV 9/9，未驗證遠端任意程式碼執行）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (20)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/privilege_escalation" target="_blank">Privilege Escalation</a></h3>
+                <p class="term-zh">權限提升</p>
+                <p class="term-def">攻擊者取得更高系統權限的技術</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/firewall" target="_blank">Firewall</a></h3>
+                <p class="term-zh">防火牆</p>
+                <p class="term-def">監控和控制網路流量的安全設備</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/dos" target="_blank">DoS</a></h3>
+                <p class="term-zh">阻斷服務攻擊</p>
+                <p class="term-def">癱瘓目標系統使其無法提供正常服務的攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/c2" target="_blank">C2</a></h3>
+                <p class="term-zh">命令與控制</p>
+                <p class="term-def">攻擊者用來遠端控制受感染系統的基礎設施</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/apt" target="_blank">APT</a></h3>
+                <p class="term-zh">進階持續性威脅</p>
+                <p class="term-def">國家級駭客組織發動的長期網路攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/rat" target="_blank">RAT</a></h3>
+                <p class="term-zh">遠端存取木馬</p>
+                <p class="term-def">允許攻擊者遠端控制受感染系統的惡意程式</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/09/28 - 2026/10/04</title>
+    <meta name="description" content="資安週報 2026-09-28 - 2026-10-04">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/09/28 - 2026/10/04</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-40 · 發布日期：2026-10-05</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #f97316;">高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">7</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">5</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即緩解 Fortinet FortiMail CVE-2026-104286（CVSS 9.8，積極利用中，CISA KEV 10/1，大多數版本尚無修補）：（1）確認所有 FortiMail 部署版本（8.0.x、7.6.x、7.4.x、7.2.x）；（2）立即執行緩解措施：（a）停用 IBE（Identity-Based <a href="https://glossary.astroicers.link/glossary/encryption" class="term-link" title="加密">Encryption</a>）功能支援；（b）以 ACL 或防火牆規則限制管理介面，僅允許受信任 IP 存取，封鎖外部對管理埠的直接存取；（3）對照 Fortinet 發布的 <a href="https://glossary.astroicers.link/glossary/ioc" class="term-link" title="入侵指標">IoC</a> 清單（攻擊者 IP、可疑文件路徑及組態變更），稽核現有部署是否已遭利用；（4）稽核 FortiMail 系統日誌，搜尋 10/1 前後的可疑 HTTP/HTTPS 請求（異常路徑遍歷字元序列）；（5）有 FortiMail 暴露於外部網路的組織，優先評估是否可能已遭利用，考慮臨時隔離並進行取證分析；（6）持續關注 Fortinet 修補版本（8.0.2、7.6.7、7.4.9）發布進度，一旦發布立即套用。</li>
+<li>🔴 確認 Gitea 已升級並稽核 Red Heron 入侵指標（台灣半導體、國防、能源相關組織尤重要）：（1）確認所有 Gitea 自架實例版本，立即升級至 1.27.1 以上——版本 1.17 至 1.27.0 均受 CVE-2026-60004（CVSS 9.8 <a href="https://glossary.astroicers.link/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a>）影響；（2）稽核 Gitea 存取記錄，搜尋自 2026/7/29 以來異常的管理員操作、儲存庫複製、大量下載或新建 SSH 金鑰及 webhook；（3）Red Heron 鎖定國防、能源、航太、電信、半導體及政府相關組織——此類組織應進行完整入侵指標比對；（4）確認 Gitea 伺服器的 Linux 環境無非預期核心模組載入（執行 lsmod 並比對正常基線，稽核 /proc/modules），排除 SIXZUT <a href="https://glossary.astroicers.link/glossary/rootkit" class="term-link" title="根套件">rootkit</a>；（5）若 Gitea 伺服器同處 Proxmox 虛擬化叢集，確認 Proxmox 管理介面無非預期存取記錄及非預期 VM 快照建立。</li>
+<li>🔴 確認 Citrix NetScaler 已修補 CVE-2026-88779，稽核 SAML 組態曝險狀態：（1）確認所有 NetScaler ADC 及 Gateway 設備版本，升級至 14.1-73.41 或 13.1-64.28；（2）確認是否配置 SAML SP（show authentication samlAction）或 SAML IdP（show <a href="https://glossary.astroicers.link/glossary/authentication" class="term-link" title="身分驗證">authentication</a> samlIdPProfile）——僅有上述組態的設備才有直接暴露風險；（3）無法立即修補者評估是否可臨時停用 SAML 組態，並以替代方式提供遠端存取；（4）稽核設備記錄，搜尋本週（10/1–10/4）起的 SAML 端點異常請求及非預期系統重啟事件；（5）2026 年已有六個 NetScaler 漏洞進入 CISA KEV——評估是否需要規劃基礎設施升級或替代方案，而非僅被動應對逐一修補。</li>
+<li>🔴 立即套用 Atlassian CVE-2026-21589 修補，稽核 Crowd 憑證及管理員帳號：（1）確認所有自架 Atlassian 產品（Jira、Confluence、Bitbucket、Bamboo、Crowd、Jira Service Management、Crucible、Fisheye）已升級至 10/5 發布的修補版本；（2）Crowd 部署須重點稽核：搜尋 WEB-INF/classes/crowd.properties 的存取記錄，確認是否有憑證洩漏；（3）比對管理員帳號建立及群組成員記錄，搜尋 10/1–10/7 期間（漏洞公開窗口）新增的非預期帳號或 jira-administrators 群組成員；（4）Atlassian Cloud 版本已預先修補，僅自架 Data Center 及 Server 版本受影響；（5）自架 Jira DC 可套用 Atlassian 提供的 rewrite.config 臨時緩解檔案作為修補前的過渡措施。</li>
+<li>🟡 稽核內部部署 SharePoint 環境並評估 Warlock 殘存風險，<a href="https://glossary.astroicers.link/glossary/hardening" class="term-link" title="系統強化">強化</a> API 速率限制防禦自動化爬取：（1）確認所有內部部署 SharePoint Server 已套用 ToolShell 相關漏洞修補（CVE-2025-49704、CVE-2025-49706 等），並輪換 SharePoint 農場帳號密碼、服務帳號憑證及 Web 應用程式金鑰；（2）搜尋 SharePoint 伺服器上的 <a href="https://glossary.astroicers.link/glossary/webshell" class="term-link" title="網頁後門">Webshell</a>（比對 Symantec IoC 中的已知惡意文件雜湊值及路徑），稽核 SYSVOL 共享目錄是否有非預期執行檔；（3）稽核域內是否有 <a href="https://glossary.astroicers.link/glossary/edr" class="term-link" title="端點偵測與回應">EDR</a> 服務被停用的主機（Warlock 批量部署勒索軟體的前置步驟）；（4）面向神腦國際等台灣電商與零售業者的自動化爬取事件：評估訂單查詢 API 的速率限制、異常行為偵測（單 IP 高頻請求、非正常使用者代理）及 CAPTCHA 機制是否完備，降低自動化爬取風險。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (7)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://www.helpnetsecurity.com/2026/10/02/fortinet-fortimail-vulnerability-cve-2026-104286/" target="_blank" rel="noopener">Fortinet FortiMail CVE-2026-104286（CVSS 9.8）零時差漏洞積極利用：未驗證任意寫檔可取得初始存取，CISA KEV 10/1 列入，FCEB 截止 10/4 而修補版本仍未發布</a></h3>
+            <p class="event-meta">Fortinet / CISA / The Register / Help Net Security / eSentire · 2026-10-01</p>
+            <p>Fortinet 於 10 月 1 日揭露 FortiMail 的路徑遍歷與空字元注入組合漏洞 <a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-104286（<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.8），揭露與 CISA <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a> 列入係同一天——顯示 Fortinet 在協調披露前即已知野外利用活動已發生。漏洞成因為 CWE-22（<a href="https://glossary.astroicers.link/glossary/path_traversal" class="term-link" title="路徑遍歷">路徑遍歷</a>）與 <a href="https://glossary.astroicers.link/glossary/cwe" class="term-link" title="通用弱點列舉">CWE</a>-158（空字元注入）的組合缺陷，允許未驗證攻擊者透過特製 HTTP/<a href="https://glossary.astroicers.link/glossary/https" class="term-link" title="安全超文字傳輸協定">HTTPS</a> 請求在底層作業系統任...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.acronis.com/en/tru/posts/red-heron-exploits-gitea-n-day-flaw-in-multinational-campaign-exposing-new-linux-rootkit/" target="_blank" rel="noopener">Red Heron 疑似中國 APT 組織利用 Gitea CVE-2026-60004（CVSS 9.8）入侵台灣工業自動化業者：竊取數百個程式碼儲存庫、在 Proxmox 叢集取得 root 存取，部署未知 Linux rootkit SIXZUT</a></h3>
+            <p class="event-meta">Acronis / The Hacker News / Security Brief · 2026-09-29</p>
+            <p>Acronis 威脅研究團隊 9 月 15 日揭露的 Red Heron 攻擊行動，本週仍在台灣及全球範圍持續擴散。此組織針對自架 Gitea 原始碼管理平台，在全球六國 13 個組織造成成功入侵，台灣為主要目標。確認的台灣受害案例中，一家工業自動化業者遭竊數百個程式碼儲存庫；另一台灣環境中，攻擊者從存在漏洞的 Gitea 伺服器橫向移動至三節點 Proxmox 虛擬化叢集並取得 root 存取，...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/10/new-netscaler-zero-day-exploited-in.html" target="_blank" rel="noopener">Citrix NetScaler ADC/Gateway CVE-2026-88779（CVSS 8.7）SAML 端點零時差積極利用：CISA KEV 10/4 列入，兩週三零時差、2026 年第六個 NetScaler KEV 漏洞</a></h3>
+            <p class="event-meta">Citrix / CISA / SecurityWeek / BleepingComputer / watchTowr / CyberScoop · 2026-10-03</p>
+            <p>Citrix 於 10 月 3 日發布 CTX697174 公告，揭露 NetScaler ADC 及 NetScaler Gateway 的 <a href="https://glossary.astroicers.link/glossary/saml" class="term-link" title="SAML 身分驗證協定">SAML</a> 端點記憶體溢位漏洞 CVE-2026-88779（CVSS 4.0: 8.7），已確認有針對性的積極利用活動發生於公告發布前。CISA 於 10 月 4 日列入 KEV，要求聯邦民事機構於 10 月 7 日前完成修補。此為 Citrix 在不到兩...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://securityaffairs.com/?p=200304" target="_blank" rel="noopener">Warlock 勒索軟體持續利用 SharePoint ToolShell 漏洞攻擊水利、電信等關鍵基礎設施，使用 EDR 停用工具橫向清除 33 台主機防護後批量部署（Symantec 10/1 報告）</a></h3>
+            <p class="event-meta">Symantec / Cloud Security Alliance / BleepingComputer / Security Affairs / Infosecurity Magazine · 2026-10-01</p>
+            <p>Symantec 於 10 月 1 日發布分析報告，揭露中國連結勒索軟體組織 Warlock（Symantec 追蹤為 Longlegs，微軟稱 Storm-2603）在 2026 年延續利用 SharePoint ToolShell 漏洞鏈（CVE-2025-49704、CVE-2025-49706 等，僅影響內部部署版 SharePoint Server），確認過去兩個月內攻擊水利業者、電信業...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/news/179308" target="_blank" rel="noopener">神腦國際（2450）外部伺服器遭自動化攻擊，部分訂單資訊遭未授權擷取（9/29 重大訊息）</a></h3>
+            <p class="event-meta">公開資訊觀測站 / iThome 資安 · 2026-09-29</p>
+            <p>神腦國際（股票代號 2450，上市電信通路商）於 9 月 29 日在公開資訊觀測站發布重大訊息，揭露其外部伺服器遭受自動化攻擊，攻擊者對部分訂單資訊實施擷取。公司表示獲報後立即啟動資安應變機制，採取必要防護與阻斷措施，初步評估對公司營運、財務及服務提供無重大影響。神腦未在公告中說明受影響訂單資訊的具體欄位（如姓名、電話、地址、付款資訊）、確切受影響筆數，亦未說明是否已完成主管機關通報。此事件屬「自...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://konbriefing.com/en-topics/cyber-attacks.html" target="_blank" rel="noopener">大阪市立大學遭勒索軟體攻擊：約 500 台伺服器下線，逾 13 萬師生個資恐外洩，部分課程暫停（10 月初）</a></h3>
+            <p class="event-meta">KonBriefing / CM Alliance · 2026-10-02</p>
+            <p>10 月初，大阪市立大學（Osaka Metropolitan University）遭勒索軟體攻擊，約 500 台伺服器被迫下線，波及學術系統、行政作業及研究資料，部分課程因此中斷。初步調查顯示，遭竊或暴露的資料涉及逾 13 萬名在學學生及教職員的個人資訊。攻擊發生後，學校緊急隔離受感染網段並通報主管機關，日本警察廳已介入調查，勒索軟體組織及初始入侵手法尚未公開。此為本週 APAC 高等教育機構...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://asec.ahnlab.com/en/95545/" target="_blank" rel="noopener">Metaencryptor 勒索軟體鎖定東亞製造業供應鏈：日本汽車零組件製造商與韓國相機模組業者確認遭攻擊（9 月第四週，ASEC 報告）</a></h3>
+            <p class="event-meta">AhnLab ASEC · 2026-09-28</p>
+            <p>AhnLab ASEC 9 月第四週（9 月 22–28 日）深色網頁與勒索軟體監控報告指出，新興勒索軟體組織 Metaencryptor 確認攻擊兩家東亞製造業業者：一家韓國相機模組製造商及一家日本汽車零組件製造商。Metaencryptor 採雙重勒索模式（先竊取資料後加密），以不公開資料為籌碼施壓要求贖款，初始入侵手法仍在調查中。此事件凸顯東亞製造業供應鏈對新興勒索軟體組織的持續吸引力，相關...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (5)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104286" target="_blank">CVE-2026-104286</a></td>
+            <td>Fortinet FortiMail 未驗證任意寫檔（CVSS 9.8，零時差積極利用，CISA KEV 10/1，FCEB 截止 10/4，揭露時修補版本仍未發布）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-88779" target="_blank">CVE-2026-88779</a></td>
+            <td>Citrix NetScaler ADC/Gateway SAML 端點記憶體溢位（CVSS 8.7，零時差積極利用，CISA KEV 10/4，兩週第三個 NetScaler 零時差）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.7</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21589" target="_blank">CVE-2026-21589</a></td>
+            <td>Atlassian 八項產品未驗證任意文件讀取（CVSS 9.3，<a href="https://glossary.astroicers.link/glossary/poc" class="term-link" title="概念驗證">PoC</a> 發布數小時後遭利用，修補版本 10/5 發布，可鏈接 Crowd 憑證取得管理員權限）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-60004" target="_blank">CVE-2026-60004</a></td>
+            <td>Gitea 未驗證遠端程式碼執行（CVSS 9.8，Red Heron 疑似中國 <a href="https://glossary.astroicers.link/glossary/apt" class="term-link" title="進階持續性威脅">APT</a> 積極利用，台灣工業業者確認受害，修補後兩天即遭利用）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-102490" target="_blank">CVE-2026-102490</a></td>
+            <td>Zammad 本機權限提升至 root（CISA KEV 10/2，與 CVE-2026-102489 Session 劫持組合可實現完整系統入侵）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (17)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/https" target="_blank">HTTPS</a></h3>
+                <p class="term-zh">安全超文字傳輸協定</p>
+                <p class="term-def">使用 TLS 加密的安全網頁傳輸協定</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cwe" target="_blank">CWE</a></h3>
+                <p class="term-zh">通用弱點列舉</p>
+                <p class="term-def">軟體和硬體弱點類型的分類系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/path_traversal" target="_blank">Path Traversal</a></h3>
+                <p class="term-zh">路徑遍歷</p>
+                <p class="term-def">透過操縱路徑存取未授權檔案的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/saml" target="_blank">SAML</a></h3>
+                <p class="term-zh">SAML 身分驗證協定</p>
+                <p class="term-def">企業單一登入的身分驗證標準</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/poc" target="_blank">PoC</a></h3>
+                <p class="term-zh">概念驗證</p>
+                <p class="term-def">證明漏洞可被利用的示範程式碼</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/apt" target="_blank">APT</a></h3>
+                <p class="term-zh">進階持續性威脅</p>
+                <p class="term-def">國家級駭客組織發動的長期網路攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ioc" target="_blank">IoC</a></h3>
+                <p class="term-zh">入侵指標</p>
+                <p class="term-def">用於識別系統是否遭入侵的技術證據</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

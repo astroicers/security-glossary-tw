@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/10/05 - 2026/10/11</title>
+    <meta name="description" content="資安週報 2026-10-05 - 2026-10-11">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/10/05 - 2026/10/11</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-41 · 發布日期：2026-10-12</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #ef4444;">嚴重</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">7</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">3</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即緩解Fortinet FortiMail CVE-2026-104286（CVSS 9.8，零時差，尚無修補版本）並啟動應急鑑識：（1）所有FortiMail部署立即執行兩項緩解措施之一——停用IBE（Identity-Based <a href="https://glossary.astroicers.link/glossary/encryption" class="term-link" title="加密">Encryption</a>）功能支援，或完全停止管理介面的網頁存取並透過ACL/防火牆規則嚴格限制來源IP僅允許信任地址；（2）依Fortinet發布的入侵指標（<a href="https://glossary.astroicers.link/glossary/ioc" class="term-link" title="入侵指標">IoC</a>），掃描FortiMail系統的可疑檔案、設定異動及非預期連線至外部IP；（3）稽核所有FortiMail管理員帳號，確認無非預期帳號（FortiBleed同期活動已確認攻擊者會建立後門帳號）；（4）7.2分支使用者需同時升級至7.4以上版本，以在修補版本（7.4.9、7.6.7、8.0.2）發布時能立即套用；（5）持續監控Fortinet官方公告，有修補版本時立即部署。</li>
+<li>🔴 立即修補Cisco Catalyst SD-WAN Manager CVE-2026-76504（CVSS 9.8，CISA KEV 9/30）並稽核入侵跡象：（1）確認所有Cisco Catalyst SD-WAN Manager部署版本，立即升級至修補版本（20.9.10.1、20.12.8.2、20.15.6.1、20.18.4.1、26.1.2.1或26.2.1）——Cisco明確指出無任何暫時緩解措施；（2）修補前或無法立即修補時，評估限制SD-WAN Manager管理介面的網際網路可達性；（3）稽核SD-WAN Manager稽核記錄（<a href="https://glossary.astroicers.link/glossary/audit_log" class="term-link" title="稽核日誌">audit log</a>）中，自9月起針對 /j_security_check 及 /%6a_security_check 路徑的異常請求；（4）確認所有SD-WAN Manager的管理員帳號列表，搜尋非預期帳號或組態異動；（5）若確認受損，應立即隔離受影響Manager並評估受管邊緣設備的完整性。</li>
+<li>🔴 立即修補所有Atlassian Data Center產品CVE-2026-21589並針對Jira+Crowd整合部署啟動應急回應：（1）確認所有Bitbucket、Confluence、Jira Software、Jira Service Management、Bamboo、Crowd、Crucible及Fisheye Data Center自管部署版本，立即升級至最新修補版本；（2）Jira整合Crowd的部署優先處理：立即主動輪換crowd.properties中的應用程式憑證（即便尚未確認遭利用亦應輪換，因主動利用已確認），並透過Crowd管理介面稽核所有管理員帳號，刪除非預期帳號；（3）修補前的暫時緩解：透過WAF規則封鎖含「..::」序列的HTTP請求，並限制管理介面的外部網路存取；（4）稽核過去7天的存取記錄，搜尋對WEB-INF路徑的任何GET請求（攻擊特徵）；（5）雲端版本已自動修補，無需額外操作。</li>
+<li>🔴 稽核所有Fortinet設備管理員帳號並強制輪換憑證（對應FortiBleed大規模攻擊）：（1）立即盤點所有FortiGate及FortiMail設備，登入管理介面核查管理員帳號列表，刪除任何非預期帳號；（2）若無法登入自身設備（疑似帳號遭竄改），立即透過實體主控台重設管理員密碼；（3）強制輪換所有Fortinet設備的管理員密碼（包含服務帳號）並啟用多因素驗證；（4）確認Fortinet設備是否啟用管理員登入稽核，並設定異常登入告警（非工作時間、來自未知IP的登入）；（5）確認FortiGate <a href="https://glossary.astroicers.link/glossary/ssl" class="term-link" title="安全通訊端層">SSL</a>-VPN設定未遭異動（攻擊者常藉此建立持久後門通道）。</li>
+<li>🔴 台灣學術機構及關鍵基礎設施確認FishHub/MicroScan感染指標並配合CISA AA26-281A補丁截止：（1）依CISA通報AA26-281A核查所有新增至KEV的Flax Typhoon相關CVE，確認已在10月11日前完成修補或已套用緩解措施；（2）台灣大學及研究機構應立即核查主機及網路端點是否存在FishHub或MicroScan的已知IoC（聯繫TWCERT/CC或CISA取得最新IoC清單）；（3）稽核IT環境中是否有非預期的遠端管理工具、不明的外部SSH連線或異常的資料存取記錄；（4）確認電子郵件閘道的防釣魚設定，針對近期聲稱的學術活動或政策議題的可疑郵件加強警戒（對應Talos UAT-11985的AitM釣魚活動）；（5）若懷疑遭滲透，立即向TWCERT/CC（twcert.org.tw）報告並啟動鑑識調查。</li>
+<li>🟡 稽核GitHub Actions工作流程並強制輪換受GhostAction影響的CI/CD憑證：（1）核查所有公開及私有Repository中是否存在2026年8月31日後新增的 security-audit.yml 或 github_actions_security.yml 工作流程，若存在應視為已遭入侵；（2）受影響Repository立即強制輪換所有已暴露的GitHub Secrets、AWS/GCP/Azure Token、Kubernetes憑證及AI供應商API金鑰（OpenAI、Anthropic等），五個月後仍有效的竊取憑證顯示被動等待失效並不可靠；（3）稽核GitHub Organization的第三方App授權及已安裝的GitHub Actions，確認無非預期的高權限操作；（4）未來的安全強化措施：將工作流程依賴項固定至特定commit SHA（而非版本標籤），並啟用Step Security Harden-Runner等工具監控Actions執行環境中的可疑網路連線。</li>
+<li>🟡 確認備份策略應對雲端勒索軟體（對應IDCF Cloud事件）：（1）核查在APAC地區使用雲端服務（IDC Frontier、AWS、Azure、GCP或其他IaaS）的工作負載，確認是否有異地（跨雲或本地）的獨立備份，且備份資料與主要環境的帳號憑證完全隔離（防止攻擊者以相同憑證刪除備份）；（2）測試備份還原程序的實際可用性——IDCF Cloud事件揭示許多客戶依賴雲端服務商的備份而非維護獨立備份，造成資料難以復原；（3）參考3-2-1備份原則：三份備份、兩種媒體、一份離線或異地存放，確保單一供應商遭攻擊不會導致業務資料完全滅失；（4）評估關鍵系統（ERP、資料庫、郵件）的業務連續性計畫（<a href="https://glossary.astroicers.link/glossary/business_continuity" class="term-link" title="業務持續">BCP</a>），確認雲端供應商服務中斷時的備援方案。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (7)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://finance.technews.tw/2026/10/06/104-corporation-hacked/" target="_blank" rel="noopener">104人力銀行約12萬筆履歷遭未授權讀取，勞動部依個資法啟動行政監督（10/6）</a></h3>
+            <p class="event-meta">科技新報 / 中時電子報 / 自由時報 / 經理人 / Yahoo 新聞 · 2026-10-06</p>
+            <p>10月6日，104人力銀行（一零四資訊科技）發布資安重訊，指出旗下App系統出現異常讀取情形，調查確認約12萬筆求職者履歷資料遭未經授權讀取，已向調查局報案。104表示系統與營運維持正常，並已透過Email個別通知可能受影響的會員；截至10月7日，攻擊手法與遭存取的具體資料欄位仍未對外說明。勞動部7日表示將依個人資料保護法啟動行政監督與管理措施，包含對104人力銀行進行行政檢查。此事件具有高度社交...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.bleepingcomputer.com/news/security/fbi-disrupts-chinese-hacking-tools-used-to-breach-critical-infrastructure/" target="_blank" rel="noopener">美FBI查封中國永信至誠駭客工具FishHub與MicroScan，台灣20所大學確認遭Flax Typhoon滲透（10/8）</a></h3>
+            <p class="event-meta">BleepingComputer / The Register / SecurityWeek / Nextgov/FCW / The Record · 2026-10-08</p>
+            <p>10月8日，美國司法部與FBI宣布依法院授權查封中國永信至誠科技（<a href="https://glossary.astroicers.link/glossary/integrity" class="term-link" title="完整性">Integrity</a> Technology Group）旗下兩款駭客工具的七個域名：漏洞掃描工具MicroScan及網路釣魚工具FishHub。調查文件指出，永信至誠與中國政府存在合約關係，長期與Flax Typhoon駭客組織活動高度重合。FishHub用於發送偽裝釣魚信件並在入侵後植入遠端控制惡意程式，MicroScan則執行漏洞...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://scworld.com/brief/japanese-cloud-provider-idc-frontier-hit-by-ransomware-attack" target="_blank" rel="noopener">IDCF Cloud日本勒索軟體攻擊，495家企業及地方政府服務中斷，部分資料恐難復原（10/7）</a></h3>
+            <p class="event-meta">SC World / tech-insider.org / thecybersecguru.com / neuracybintel.com · 2026-10-07</p>
+            <p>10月7日凌晨3時40分，SoftBank子公司IDC Frontier旗下IDCF Cloud服務遭第三方勒索軟體攻擊，東日本1區的企業及地方政府客戶共495家受影響，服務陷入中斷。受害機構涵蓋JR東日本郵件服務、多個縣市政府官網、新聞機構及冷鏈物流業者。攻擊者聲稱在七分鐘內突破基礎設施並加密3.6PB資料，IDC Frontier坦承部分受影響區域的資料極難復原，客戶僅能依靠自身備份進行還原。...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.helpnetsecurity.com/?p=387226" target="_blank" rel="noopener">Atlassian Data Center CVE-2026-21589 PoC發布後數小時即遭大規模掃描利用，Jira整合Crowd部署可達管理員接管（10/5-8）</a></h3>
+            <p class="event-meta">Infosecurity Magazine / Help Net Security / BleepingComputer / Akamai / watchTowr · 2026-10-08</p>
+            <p>Atlassian於10月5至6日發布安全公告，揭露CVE-2026-21589（<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> v4.0 9.3），影響所有版本的Bitbucket、Confluence、Jira Software、Jira Service Management、Bamboo、Crowd、Crucible及Fisheye Data Center自管部署；雲端版本已自動修補。漏洞根因為共用套件 atlassian-pl...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://letsdatascience.com/news/ghostaction-injects-credential-stealing-github-workflows-95439117" target="_blank" rel="noopener">GhostAction GitHub Actions供應鏈攻擊，入侵維護者帳號後向345個Repo注入憑證竊取工作流程（10/8）</a></h3>
+            <p class="event-meta">Step Security / GitGuardian / letsdatascience.com / SC World · 2026-10-08</p>
+            <p>10月8日，攻擊組織GhostAction入侵兩個GitHub維護者帳號，在數分鐘內以自動化方式向345個公開Repository注入惡意GitHub Actions工作流程檔案 security-audit.yml。惡意工作流程的設計涵蓋工作樹及完整Git提交歷史的掃描，竊取目標包含GitHub Actions Secrets、AWS/GCP/Azure Token、Kubernetes憑證、A...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.microsoft.com/en-us/corporate-responsibility/topics/cybersecurity/reports/microsoft-digital-defense-report/" target="_blank" rel="noopener">Microsoft 2026數位防禦報告：台灣全球第4大攻擊目標，上半年193起國家級駭客事件，較去年增加35%（10月）</a></h3>
+            <p class="event-meta">Microsoft / trendingtopics.eu / the-sourcecode.com / Cisco Talos（UAT-11985） · 2026-10-06</p>
+            <p>微軟本週發布《2026年數位防禦報告》（Microsoft Digital Defense Report 2026），涵蓋2025年7月至2026年6月的威脅態勢分析。報告揭示台灣在Microsoft客戶遭受網路攻擊的國家排名中位居全球第4（攻擊占比3.9%），僅次於美國（25.5%）、以色列及烏克蘭；2026年上半年針對台灣的國家級駭客活動共記錄193起，較報告書中2024年統計的143起增加約...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://this.weekinsecurity.com/this-week-in-security-october-11-2026-edition" target="_blank" rel="noopener">FortiBleed大規模憑證竊取，全球86,000台FortiGate設備遭入侵，攻擊者鎖定網路邊界管理帳號（10/6）</a></h3>
+            <p class="event-meta">This Week in Security（Oct 11版）/ SOCRadar / FBI-Secret Service聯合諮詢 · 2026-10-06</p>
+            <p>10月6日，FBI與特勤局（Secret Service）聯合發布資安諮詢，揭露全球規模的Fortinet防火牆憑證竊取攻擊活動。SOCRadar統計顯示，全球194個國家逾86,000台FortiGate設備遭到入侵，攻擊者竊取管理員憑證後，部分案例中進一步刪除或竄改原始管理員帳號，導致設備擁有者被鎖定在自身設備之外。此攻擊波段與Fortinet FortiMail <a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-10428...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (3)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-104286" target="_blank">CVE-2026-104286</a></td>
+            <td>Fortinet FortiMail 未驗證任意檔案寫入零時差（CVSS 9.8，CISA <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a> 10/1，截止10/4，尚無修補版本）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-76504" target="_blank">CVE-2026-76504</a></td>
+            <td>Cisco Catalyst SD-WAN Manager API驗證繞過（CVSS 9.8，CISA KEV 9/30，截止10/3，已發布修補）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-21589" target="_blank">CVE-2026-21589</a></td>
+            <td>Atlassian Data Center全產品線未驗證任意檔案讀取（CVSS 9.3，PoC發布後數小時遭大規模掃描，Jira+Crowd可達管理員接管）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.3</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (9)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/integrity" target="_blank">Integrity</a></h3>
+                <p class="term-zh">完整性</p>
+                <p class="term-def">確保資訊在儲存和傳輸過程中不被未授權修改</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ioc" target="_blank">IoC</a></h3>
+                <p class="term-zh">入侵指標</p>
+                <p class="term-def">用於識別系統是否遭入侵的技術證據</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/encryption" target="_blank">Encryption</a></h3>
+                <p class="term-zh">加密</p>
+                <p class="term-def">將資料轉換為無法直接讀取的格式以保護機密性</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/audit_log" target="_blank">Audit Log</a></h3>
+                <p class="term-zh">稽核日誌</p>
+                <p class="term-def">記錄系統活動和安全事件的日誌</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ssl" target="_blank">SSL</a></h3>
+                <p class="term-zh">安全通訊端層</p>
+                <p class="term-def">早期用於保護網路通訊的加密協定（已棄用）</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/business_continuity" target="_blank">Business Continuity</a></h3>
+                <p class="term-zh">業務持續</p>
+                <p class="term-def">確保組織在災難後能持續運作的計畫與能力</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

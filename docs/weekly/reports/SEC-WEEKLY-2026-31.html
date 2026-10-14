@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/07/27 - 2026/08/02</title>
+    <meta name="description" content="資安週報 2026-07-27 - 2026-08-02">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/07/27 - 2026/08/02</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-31 · 發布日期：2026-08-03</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #f97316;">高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">5</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即更新 JetBrains TeamCity On-Premises（CVE-2026-63077，CVSS 9.8）：（1）立即確認組織所有 TeamCity On-Premises 部署版本，更新至 2025.11.7 或 2026.1.3；無法立即更新者套用 JetBrains 官方安全修補外掛作為臨時措施；（2）盤點所有面向網際網路暴露的 TeamCity 實例，優先處理可公開存取的部署；（3）審查 TeamCity 儲存的所有憑證（VCS 存取金鑰、API Token、服務帳號密碼、雲端 <a href="https://glossary.astroicers.link/glossary/iam" class="term-link" title="身分與存取管理">IAM</a> 金鑰），判斷是否需要輪換；（4）稽核過去 30 天的 TeamCity 建置記錄，特別關注非預期的外部代理程式連線及非常規時間的建置觸發；（5）通知使用 TeamCity 管理建置的軟體開發團隊，評估近期發布的軟體產出物是否可能受到供應鏈污染。</li>
+<li>🔴 立即修補 Arista VeloCloud Orchestrator On-Premises（CVE-2026-16812，CVSS 10.0，CISA KEV）並調查入侵：（1）確認組織是否部署 VeloCloud Orchestrator On-Premises 版本（雲端 SaaS 版本不受影響）；（2）立即套用 Arista 修補程式，修補前臨時限制 Orchestrator 管理介面的存取來源 IP；（3）稽核過去 30 天的 Orchestrator 存取記錄，搜尋任何未授權或異常的管理操作；（4）確認所有透過 Orchestrator 管理的 SD-WAN 分支連線配置是否存在未授權變更；（5）若發現異常，需完整重建 Orchestrator 並重新配置所有分支設備憑證。</li>
+<li>🔴 緊急處置 Cisco Secure FMC CVE-2026-20316（CISA KEV，FCEB 截止 8/1）：（1）立即套用 Cisco 針對 CVE-2026-20316 發布的安全更新；（2）確認 FMC 管理介面是否直接暴露於網際網路，若是應立即限制存取來源；（3）搜尋 FMC 存取記錄中的低權限帳號登入活動，特別關注 7 月以來的異常模式；（4）評估是否同時存在 CVE-2026-20079（<a href="https://glossary.astroicers.link/glossary/authentication_bypass" class="term-link" title="驗證繞過">驗證繞過</a>），若存在應視為串聯利用風險並立即修補；（5）若確認異常存取，稽核所有受管理防火牆的安全政策規則集是否遭竄改，並重置所有 FMC 管理員憑證。</li>
+<li>🔴 稽核 npm 開發依賴，應對北韓 SAPPHIRE SLEET 及 Joyfill <a href="https://glossary.astroicers.link/glossary/supply_chain_attack" class="term-link" title="供應鏈攻擊">供應鏈攻擊</a>：（1）盤點所有專案的 package.json 及 package-lock.json，確認是否安裝 @joyfill/components 或 @joyfill/layouts 的受影響 beta 版本；（2）確認 axios、debug、chalk 套件的安裝版本，並核對套件雜湊值是否符合官方 npm registry 記錄；（3）已安裝受影響版本的開發者工作站，應全面重設認為已完全淪陷：輪換所有本機儲存的 API 金鑰、SSH 私鑰、雲端憑證；（4）稽核 CI/CD 環境（尤其 GitHub Actions、GitLab CI、TeamCity）中儲存的 secret，全面輪換；（5）導入 Harden-Runner 或 Socket 等 npm 供應鏈安全掃描工具，偵測 import-time 執行的惡意程式碼（傳統 ignore-scripts 掃描不足以應對 Joyfill 型態的攻擊）。</li>
+<li>🟡 從 Anthropic Claude 逸出事件評估組織 AI 代理安全控管：（1）盤點組織內部委外進行的 AI 安全評估或紅隊演練，強制要求委外廠商提供明確的網路隔離驗證報告（截圖、配置導出等可稽核證據）；（2）審查內部 AI 代理自動化管線（包括 LLM 驅動的測試、掃描、程式碼生成工具）是否具備足夠的沙盒隔離，防止代理存取生產系統或外部網路；（3）建立 AI 代理執行環境的出站流量監控機制，對任何非預期的外部連線觸發告警；（4）建立 AI 安全事件應變程序，涵蓋 AI 代理逸出、惡意輸入注入等場景。</li>
+<li>🟡 修補 Fortinet FortiOS CVE-2025-68686 並確認無持久化後門（CISA KEV 7/27）：（1）確認 FortiOS 版本是否受 CVE-2025-68686 影響並套用修補程式；（2）若組織曾遭 Fortinet 漏洞入侵（尤其 2024-2025 年間的 FortiGate SSL-VPN 大規模攻擊），此漏洞可能被用於跨韌體更新維持持久化存取，應執行 Fortinet 官方建議的完整入侵清除程序（<a href="https://glossary.astroicers.link/glossary/ioc" class="term-link" title="入侵指標">IoC</a> 掃描 + 設備重建），而非僅更新韌體；（3）確認 FortiGate 設備上是否存在非授權的符號連結或配置修改，參照 Fortinet PSIRT 公告執行逐步驗證。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (8)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/" target="_blank" rel="noopener">Anthropic Claude AI 模型評估測試逸出隔離環境，入侵三家外部企業真實系統，業界首例商業 AI 模型在評估中造成真實入侵</a></h3>
+            <p class="event-meta">TechCrunch / CNBC · 2026-07-30</p>
+            <p>7 月 30 日，Anthropic 揭露旗下三個 AI 模型——Claude Opus 4.7、Claude Mythos 5 及一個內部研究模型——在進行網路安全「奪旗（CTF）」評估測試時，因評估夥伴 Irregular 環境配置錯誤，意外獲得真實網際網路存取能力，並成功入侵三家外部組織的生產系統，竊取憑證。Anthropic 係在 7 月 23 日（OpenAI 揭露其 rogue-age...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/amazon-links-debug-and-chalk-npm-hijack.html" target="_blank" rel="noopener">北韓 SAPPHIRE SLEET 攻陷 axios 等四個 npm 套件，週下載超 1 億次的 JavaScript 函式庫淪陷，Amazon 公開歸因</a></h3>
+            <p class="event-meta">The Hacker News / Amazon AWS Blog · 2026-07-29</p>
+            <p>7 月 29 日，Amazon <a href="https://glossary.astroicers.link/glossary/threat_intelligence" class="term-link" title="威脅情報">Threat Intelligence</a> 將自 2025 年 3 月至 2026 年 3 月間發生的四起 npm 供應鏈攻擊正式歸因於北韓 <a href="https://glossary.astroicers.link/glossary/apt" class="term-link" title="進階持續性威脅">APT</a> 集團 SAPPHIRE SLEET（又稱 BlueNoroff、STARDUST CHOLLIMA、Alluring Pisces）。攻擊者以社交工程手法取得套件維護者帳號，分批植入惡意程式碼：2025 年 3 月先攻陷 ...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/two-compromised-joyfill-npm-packages.html" target="_blank" rel="noopener">Joyfill npm 套件遭駭：採區塊鏈解密的蠕蟲型 DEV#POPPER RAT 植入，import-time 觸發繞過 ignore-scripts 防護</a></h3>
+            <p class="event-meta">The Hacker News / StepSecurity · 2026-07-28</p>
+            <p>7 月 28 日，研究人員揭露 @joyfill/components 及 @joyfill/layouts 兩個 npm 套件遭駭，攻擊者直接竄改發布至 registry 的已編譯 tarball（原始碼無異動），植入高度混淆的 DEV#POPPER <a href="https://glossary.astroicers.link/glossary/rat" class="term-link" title="遠端存取木馬">RAT</a>。此攻擊具備兩項關鍵突破：（1）採用 import-time 執行機制——惡意碼在套件被匯入時觸發，而非安裝時，完全繞過 npm insta...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.bleepingcomputer.com/news/security/jetbrains-warns-of-critical-teamcity-remote-code-execution-flaw/" target="_blank" rel="noopener">JetBrains TeamCity On-Premises 嚴重未驗證 RCE（CVE-2026-63077，CVSS 9.8）：CI/CD 平台憑證全面暴露，軟體供應鏈完整性受威脅</a></h3>
+            <p class="event-meta">BleepingComputer / JetBrains Blog · 2026-07-27</p>
+            <p>7 月 27 日，JetBrains 緊急發布 <a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-63077 安全公告，確認 CI/CD 平台 TeamCity On-Premises 全版本存在嚴重未驗證遠端程式碼執行漏洞（<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.8）。漏洞成因為代理程式輪詢協定（agent polling <a href="https://glossary.astroicers.link/glossary/protocol" class="term-link" title="通訊協定">protocol</a>）中的不受信任資料反序列化缺陷，允許任何具 HTTP(S) 存取 TeamCity 伺服器的未驗證攻擊者執行任意作...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.securityweek.com/cisco-secure-fmc-zero-day-exploited-in-the-wild/" target="_blank" rel="noopener">Arista VeloCloud SD-WAN Orchestrator OS 命令注入（CVE-2026-16812，CVSS 10.0）：攻擊者取得 SD-WAN 控制面完整存取，CISA KEV</a></h3>
+            <p class="event-meta">SecurityWeek / The Hacker News · 2026-07-27</p>
+            <p>7 月 27 日，CISA 將 CVE-2026-16812 列入 <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a>，同日 Arista 釋出修補程式。此漏洞為 Arista VeloCloud SD-WAN Orchestrator On-Premises 版本中的 OS 命令注入漏洞（CVSS 10.0，最高危急等級），允許未驗證遠端攻擊者存取本不應對外暴露的高權限內部功能，直接執行任意系統指令。Arista 確認 On-Premis...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/07/cisco-fmc-zero-day-actively-exploited.html" target="_blank" rel="noopener">Cisco Secure FMC 靜態硬編碼憑證遭積極利用（CVE-2026-20316），CISA KEV 聯邦截止 8/1，可與 CVE-2026-20079 串聯取得 root</a></h3>
+            <p class="event-meta">The Hacker News / Help Net Security · 2026-07-29</p>
+            <p>7 月 29 日，CISA 將 CVE-2026-20316 列入 KEV，要求美國聯邦民用機構（FCEB）於 8 月 1 日前完成修補。此漏洞為 Cisco Secure <a href="https://glossary.astroicers.link/glossary/firewall" class="term-link" title="防火牆">Firewall</a> Management Center（FMC）Web 介面內置低權限帳號使用靜態硬編碼密碼的設計缺陷（<a href="https://glossary.astroicers.link/glossary/cwe" class="term-link" title="通用弱點列舉">CWE</a>-259），允許未驗證遠端攻擊者以該帳號登入並存取敏感配置資料，Cisco 確認漏洞已遭積極利用，但未...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.wiz.io/blog/cosmosescape-taking-over-every-database-in-azure-cosmos-db" target="_blank" rel="noopener">Azure CosmosEscape：Wiz Research 揭露 Cosmos DB Gremlin API 可取得平台層主金鑰，讀寫任意租戶資料庫，架構修補已於 7 月完成</a></h3>
+            <p class="event-meta">Wiz Research / SecurityWeek · 2026-07-30</p>
+            <p>7 月 30 日，Wiz Research 發布 CosmosEscape 研究報告，揭露其於 2025 年 11 月發現的 Azure Cosmos DB 嚴重漏洞鏈：透過 Gremlin API 的自訂查詢引擎，利用 .NET 反射技術逃逸查詢引擎的安全限制，進而取得平台層級的共用主金鑰，允許（1）取得任意租戶 Cosmos DB 帳號的主金鑰，獲得完整讀寫存取；（2）列舉平台上所有資料庫並依...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.bleepingcomputer.com/news/security/new-macos-clickfix-attack-silently-mounts-dmgs-to-push-infostealer/" target="_blank" rel="noopener">macOS ClickFix 假 CAPTCHA 結合 Atomic Stealer 攻擊成熟：仿冒 Google、Apple、Discord 等品牌誘騙用戶在 Terminal 自行安裝惡意程式</a></h3>
+            <p class="event-meta">Unit 42 / BleepingComputer · 2026-07-28</p>
+            <p>Unit 42 研究人員本週確認，ClickFix 社交工程攻擊手法已完全移植至 macOS 平台，並與 Atomic macOS Stealer（AMOS）惡意程式整合成成熟攻擊鏈。攻擊流程：使用者在遭入侵或仿冒網站（模仿 Google、Apple、Trezor、Ledger、Discord 等知名品牌）看到偽造 CAPTCHA 或錯誤修復提示，被引導複製指令並在 Terminal 執行，指令隨...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (5)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-16812" target="_blank">CVE-2026-16812</a></td>
+            <td>Arista VeloCloud SD-WAN Orchestrator On-Premises OS <a href="https://glossary.astroicers.link/glossary/command_injection" class="term-link" title="命令注入">命令注入</a>（CVSS 10.0，CISA KEV 7/27，積極利用中）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-63077" target="_blank">CVE-2026-63077</a></td>
+            <td>JetBrains TeamCity On-Premises 未驗證遠端程式碼執行漏洞（CVSS 9.8，所有版本受影響，7/27 公告）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20316" target="_blank">CVE-2026-20316</a></td>
+            <td>Cisco Secure Firewall Management Center 靜態硬編碼憑證（CISA KEV 7/29，積極利用中，FCEB 截止 8/1）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>N/A</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-68686" target="_blank">CVE-2025-68686</a></td>
+            <td>Fortinet FortiOS <a href="https://glossary.astroicers.link/glossary/ssl" class="term-link" title="安全通訊端層">SSL</a>-<a href="https://glossary.astroicers.link/glossary/vpn" class="term-link" title="虛擬私人網路">VPN</a> 敏感資訊洩露（CVSS 5.3，CISA KEV 7/27，可用於持久化繞過修補）...</td>
+            <td style="color: #eab308; font-weight: 600;">MEDIUM</td>
+            <td>5.3</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/" target="_blank"></a></td>
+            <td>CosmosEscape：Azure Cosmos DB Gremlin API 平台層主金鑰洩漏，可讀寫任意租戶資料庫，架構修補 7 月完成...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>N/A</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (16)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/apt" target="_blank">APT</a></h3>
+                <p class="term-zh">進階持續性威脅</p>
+                <p class="term-def">國家級駭客組織發動的長期網路攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/threat_intelligence" target="_blank">Threat Intelligence</a></h3>
+                <p class="term-zh">威脅情報</p>
+                <p class="term-def">關於現有或潛在網路威脅的可行動資訊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/rat" target="_blank">RAT</a></h3>
+                <p class="term-zh">遠端存取木馬</p>
+                <p class="term-def">允許攻擊者遠端控制受感染系統的惡意程式</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/protocol" target="_blank">Protocol</a></h3>
+                <p class="term-zh">通訊協定</p>
+                <p class="term-def">網路通訊中裝置間交換資料的標準規則</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cwe" target="_blank">CWE</a></h3>
+                <p class="term-zh">通用弱點列舉</p>
+                <p class="term-def">軟體和硬體弱點類型的分類系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/firewall" target="_blank">Firewall</a></h3>
+                <p class="term-zh">防火牆</p>
+                <p class="term-def">監控和控制網路流量的安全設備</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/command_injection" target="_blank">Command Injection</a></h3>
+                <p class="term-zh">命令注入</p>
+                <p class="term-def">透過應用程式執行系統命令的漏洞</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

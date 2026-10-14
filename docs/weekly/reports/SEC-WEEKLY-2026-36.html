@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/08/31 - 2026/09/06</title>
+    <meta name="description" content="資安週報 2026-08-31 - 2026-09-06">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/08/31 - 2026/09/06</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-36 · 發布日期：2026-09-07</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #f97316;">高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">7</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">6</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即修補 SonicWall SMA1000 CVE-2026-83548/83549（CVSS 10.0，零日積極利用，CISA KEV 9/2）：（1）確認所有 SMA1000 部署版本，立即升級至 12.4.3-03526 或 12.5.0-02952；（2）修補前緊急緩解：透過防火牆規則嚴格限制 SMA 管理介面（AMC）及 Work Place 介面的存取來源 IP，僅允許已知信任的管理工作站；（3）修補後稽核設備日誌，確認無非預期的設定變更、管理員帳戶建立或異常的對外連線；（4）評估 SMA1000 是否曾遭入侵——若設備在 9 月 1 日前已曝露於公網且未修補，應假設已遭滲透並啟動鑑識調查，特別是稽核過去 30 天的 <a href="https://glossary.astroicers.link/glossary/vpn" class="term-link" title="虛擬私人網路">VPN</a> 存取記錄確認是否有攻擊者進入內網。</li>
+<li>🔴 立即修補 JFrog Artifactory CVE-2026-82329（CVSS 9.8，CISA KEV 9/2）並稽核製品完整性：（1）本地部署版本立即升級至 Artifactory 7.161.20；JFrog 雲端部署已由 JFrog 完成修補，無需客戶操作；（2）升級後強制輪換所有已存在的 Access Token，避免攻擊者在升級前已建立的 Token 仍然有效；（3）稽核管理員帳戶清單，移除任何非預期的帳戶及其對應的 Token；（4）稽核過去 30 天 Artifactory 上所有製品的上傳記錄，確認無可疑的惡意套件被注入；（5）若確認被入侵，應評估所有下游系統（CI/CD、開發環境、生產環境）是否已消費受污染的製品。</li>
+<li>🔴 立即修補 PaperCut NG/MF CVE-2026-82078 + CVE-2026-81578（零日，攻擊已升級為實際入侵，CISA KEV）：（1）立即升級至 PaperCut 緊急修補版本（適用版本 24、25、26 系列）；（2）修補前緊急緩解：將 PaperCut 管理介面限制為僅內部網路存取，移除任何對公網的暴露；（3）稽核 PaperCut 日誌，特別尋找 Base64 編碼的命令執行記錄（如 `cmd.exe /c` 或 `powershell`）、非預期的管理員登入或設定變更；（4）若列印伺服器已遭入侵，須評估攻擊者是否已橫向移動至其他內網系統。</li>
+<li>🔴 立即更新 Google Chrome 至 152.0.7977.82 或更新版本（CVE-2026-85046，CISA KEV 9/4，截止 9/18）：（1）全企業確認並強制更新 Chrome 至最新穩定版（152.0.7977.82+）——若使用企業政策管理 Chrome 版本，須立即推送強制更新；（2）Microsoft Edge（Chromium）及其他 Chromium 衍生瀏覽器確認各廠商對應的修補版本並同步更新；（3）評估是否有用戶在 9 月 3 日修補前曾遭到針對性的網路釣魚攻擊（結合特製 HTML 頁面的 drive-by 攻擊）；（4）啟用 Chrome 的自動更新機制，確保後續零日漏洞可自動獲得修補，縮短曝險窗口。</li>
+<li>🔴 Zeabur 使用者緊急輪換所有外洩憑證，評估 AI API 金鑰使用異常：（1）曾在 Zeabur 平台部署應用的開發者，立即稽核所有儲存於 Zeabur 環境變數中的憑證，包含 OpenAI、Anthropic、OpenRouter、Gemini、GitHub、AWS、Cloudflare、Stripe API 金鑰及資料庫連接字串；（2）強制輪換所有上述憑證，不論是否收到 Zeabur 的入侵通知——被動等待平台確認無法防止已外洩金鑰被濫用；（3）稽核 OpenAI、Anthropic 等 AI 平台的用量記錄，確認是否有非正常的 API 呼叫（異常的 Token 消耗高峰、非常用時段的大量呼叫）；（4）未來評估雲端部署平台的安全性時，應將環境變數保護機制（<a href="https://glossary.astroicers.link/glossary/encryption_at_rest" class="term-link" title="靜態加密">靜態加密</a>、<a href="https://glossary.astroicers.link/glossary/access_control" class="term-link" title="存取控制">存取控制</a>、稽核記錄）納入必要評估項目。</li>
+<li>🟡 強化廣告供應鏈安全防護（因應 APT24 台灣廣告供應鏈攻擊）：（1）台灣媒體、入口網站及任何嵌入第三方廣告服務的網站，立即稽核廣告腳本來源，確認無未授權的外部 JavaScript 注入；（2）部署子資源完整性（Subresource <a href="https://glossary.astroicers.link/glossary/integrity" class="term-link" title="完整性">Integrity</a>, SRI）機制對第三方腳本進行雜湊驗證，防止廣告腳本遭竄改後未被偵測；（3）終端使用者安全意識：建議使用廣告封鎖及指紋保護的瀏覽器擴充套件，減少成為廣告供應鏈攻擊目標的風險；（4）企業網路建議部署 <a href="https://glossary.astroicers.link/glossary/dns" class="term-link" title="網域名稱系統">DNS</a> 過濾及 <a href="https://glossary.astroicers.link/glossary/proxy" class="term-link" title="代理伺服器">Web Proxy</a>，封鎖已知惡意廣告網路及 APT24 使用的 <a href="https://glossary.astroicers.link/glossary/c2" class="term-link" title="命令與控制">C2</a> 基礎設施。</li>
+<li>🟡 加強 ZaWoo 等新興勒索軟體防護（製造業及科技業優先）：（1）確認所有對外的 RDP、VPN 及遠端存取服務已套用最新修補並啟用 <a href="https://glossary.astroicers.link/glossary/mfa" class="term-link" title="多因子驗證">MFA</a>；（2）強化電子郵件安全防護，部署釣魚郵件偵測及沙箱分析——ZaWoo 以釣魚作為主要初始存取手法；（3）部署 AD（Active Directory）橫向移動偵測機制，設定異常的管理員帳戶活動警報；（4）稽核並更新端點備份策略，確保備份與主網路隔離（air-gapped 或不可變備份），以降低勒索軟體攻擊後的業務中斷影響。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (7)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://en.kocpc.com.tw/archives/24934" target="_blank" rel="noopener">台灣 AI 雲端平台 Zeabur 環境變數外洩：OpenAI、Anthropic、AWS 等多類 API 金鑰恐大規模遭竊，攻擊者即時刷光 AI 服務額度</a></h3>
+            <p class="event-meta">King of Computer Media / AlphaMatch AI / iThome · 2026-08-31</p>
+            <p>Zeabur 是台灣知名的一鍵部署雲端平台，在 Vibe Coding 社群尤為廣泛使用，支援直接從 GitHub 部署應用並自動管理環境變數、資料庫與 <a href="https://glossary.astroicers.link/glossary/ssl" class="term-link" title="安全通訊端層">SSL</a>。8 月 27 日，Zeabur 確認一起資安事件：其內部服務憑證遭未授權存取，導致使用者儲存於專案中的環境變數被外部讀取。外洩的環境變數涵蓋 OpenAI、Anthropic（Claude API）、OpenRouter、Gemini、G...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.ithome.com.tw/news/178479" target="_blank" rel="noopener">中國駭客 APT24 持續對台灣廣告供應鏈發動攻擊：新聞與小說網站植入 BadAudio 惡意程式碼，8 萬次點擊 76% 來自台灣</a></h3>
+            <p class="event-meta">iThome 資安日報 / Gen Digital · 2026-08-31</p>
+            <p>8 月 27 日，iThome 報導中國駭客組織 APT24 再度入侵台灣廣告行銷業者，藉由污染廣告供應鏈，在多個知名台灣新聞網站及小說閱讀網站植入混淆的惡意程式碼，目標是對特定 Windows 使用者散布 BadAudio <a href="https://glossary.astroicers.link/glossary/malware" class="term-link" title="惡意程式">惡意程式</a>。Gen Digital 研究人員分析，攻擊者在受害頁面注入 JavaScript，收集瀏覽器指紋資料以過濾攻擊目標後，才投放惡意酬載。此波攻擊共記錄約 8 萬次點擊...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/08/papercut-zero-day-exploited-in-attacks.html" target="_blank" rel="noopener">PaperCut NG/MF 零日漏洞鏈 CVE-2026-82078 + CVE-2026-81578 積極利用升級為實際入侵：攻擊者由偵察轉向鍵盤操控，所有版本受影響</a></h3>
+            <p class="event-meta">The Hacker News / Rapid7 / Qualys ThreatPROTECT / Help Net Security · 2026-09-01</p>
+            <p>PaperCut Software 於 8 月 27 日發布緊急公告，說明兩個零日漏洞正遭積極利用，影響 PaperCut NG 及 PaperCut MF 所有版本（包含 24、25、26 系列）。CVE-2026-81578 是一個驗證繞過漏洞，允許未驗證遠端攻擊者修改特定系統設定；<a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-82078 是資料庫連線工具中不安全的動態類別載入缺陷，可觸發任意 Java 程式碼執行。兩者...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html" target="_blank" rel="noopener">JFrog Artifactory CVE-2026-82329（CVSS 9.8）披露三天即遭利用：攻擊者無需驗證即可偽造管理員 Token，建立後門帳戶滲透軟體供應鏈</a></h3>
+            <p class="event-meta">The Hacker News / BleepingComputer / SecurityWeek / Qualys ThreatPROTECT · 2026-09-01</p>
+            <p>JFrog 於 8 月 28 日公開披露 Artifactory 的嚴重驗證繞過漏洞 CVE-2026-82329（<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.8）：預設設定下，未驗證的遠端攻擊者只需具備網路存取能力，即可透過 JFrog Access 信任邏輯的缺陷，取得管理員等級的身份令牌（Admin Token），繞過所有存取控制。攻擊不需要任何憑證、特殊權限或使用者互動。曝光揭露後不到三天，9 月 1 日，曝險管理公司...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://www.rapid7.com/blog/post/etr-critical-sonicwall-sma1000-vulnerabilities-cve-2026-83548-cve-2026-83549-exploited-in-the-wild/" target="_blank" rel="noopener">SonicWall SMA1000 雙零日漏洞 CVE-2026-83548（CVSS 10.0）+ CVE-2026-83549 確認遭積極利用：未驗證 SSRF 鏈 OS 命令注入可達完整 RCE</a></h3>
+            <p class="event-meta">Rapid7 / eSentire / Sophos / SecurityOnline · 2026-09-01</p>
+            <p>9 月 1 日，SonicWall 發布緊急公告，揭露 SMA1000 系列設備（含 SMA 6210、SMA 7210、SMA 8200v）存在兩個零日漏洞，並確認均已遭積極利用。CVE-2026-83548（CVSS 10.0）是 SMA1000 Appliance Work Place 介面中的預驗證伺服器端請求偽造（<a href="https://glossary.astroicers.link/glossary/ssrf" class="term-link" title="伺服器端請求偽造">SSRF</a>）<a href="https://glossary.astroicers.link/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>，允許未驗證的遠端攻擊者存取敏感功能並透過非預期的替代存取路...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html" target="_blank" rel="noopener">Google Chrome V8 零日漏洞 CVE-2026-85046（CVSS 8.8）遭積極利用：2026 年第三個 V8 零日，Chrome 152.0.7977.82 緊急修補，CISA 要求 9/18 前完成更新</a></h3>
+            <p class="event-meta">The Hacker News / Help Net Security / BleepingComputer / TechTimes · 2026-09-04</p>
+            <p>9 月 3 日，Google 發布 Chrome 緊急穩定版更新（152.0.7977.82/83），修補包含 CVE-2026-85046 在內的 12 個安全漏洞。CVE-2026-85046 是 Chrome V8 JavaScript/WebAssembly 引擎中的型別混淆（<a href="https://glossary.astroicers.link/glossary/type_confusion" class="term-link" title="型別混淆">Type Confusion</a>）漏洞（CVSS 8.8），根本原因為 V8 編譯器中一個使陣列接收不正確映射的缺陷，...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://asec.ahnlab.com/en/95223/" target="_blank" rel="noopener">ZaWoo 新型勒索軟體集團崛起：鎖定科技與製造業，完全覆寫原始檔名實施雙重勒索，已在歐洲發動多起攻擊</a></h3>
+            <p class="event-meta">ASEC / AhnLab / DeXpose / WatchGuard Technologies · 2026-09-01</p>
+            <p>8 月底至 9 月初，資安研究人員追蹤到一個新興勒索軟體集團 ZaWoo 開始積極活動。ZaWoo 採用人工操控網路入侵手法（human-operated），以釣魚郵件及商品化惡意程式作為初始存取管道，隨後進行精準的橫向移動。其加密行為有一獨特特徵：相較於一般勒索軟體僅在原始檔名後附加副檔名，ZaWoo 會完全覆寫原始檔名及副檔名，使受害者難以判斷檔案類型及受影響範圍。8 月 30 日，ZaWoo...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (6)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-83548" target="_blank">CVE-2026-83548</a></td>
+            <td>SonicWall SMA1000 Appliance Work Place 預驗證 SSRF（CVSS 10.0，零日積極利用，可鏈接 CVE-2026-83549 達成未驗證 <a href="https://glossary.astroicers.link/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a>，CISA K...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82329" target="_blank">CVE-2026-82329</a></td>
+            <td>JFrog Artifactory 預驗證管理員 Token 偽造（CVSS 9.8，披露三天即遭利用，攻擊者建立後門帳戶，CISA <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a> 9/2）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-82078" target="_blank">CVE-2026-82078</a></td>
+            <td>PaperCut NG/MF 不安全動態類別載入 RCE（零日，與 CVE-2026-81578 鏈接達成未驗證 RCE，攻擊已升級為實際入侵，CISA KEV）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-85046" target="_blank">CVE-2026-85046</a></td>
+            <td>Google Chrome V8 引擎型別混淆零日（CVSS 8.8，2026 年第三個 V8 零日，積極利用中，CISA KEV 9/4，截止 9/18）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-81578" target="_blank">CVE-2026-81578</a></td>
+            <td>PaperCut NG/MF <a href="https://glossary.astroicers.link/glossary/authentication_bypass" class="term-link" title="驗證繞過">驗證繞過</a>（零日，可與 CVE-2026-82078 鏈接達成未驗證 RCE，CISA KEV）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.6</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-83549" target="_blank">CVE-2026-83549</a></td>
+            <td>SonicWall SMA1000 AMC OS <a href="https://glossary.astroicers.link/glossary/command_injection" class="term-link" title="命令注入">命令注入</a>（與 CVE-2026-83548 SSRF 鏈接後可達未驗證 RCE，CISA KEV 9/2）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.1</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (19)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ssl" target="_blank">SSL</a></h3>
+                <p class="term-zh">安全通訊端層</p>
+                <p class="term-def">早期用於保護網路通訊的加密協定（已棄用）</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/malware" target="_blank">Malware</a></h3>
+                <p class="term-zh">惡意程式</p>
+                <p class="term-def">設計用來損害系統或竊取資料的軟體總稱</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ssrf" target="_blank">SSRF</a></h3>
+                <p class="term-zh">伺服器端請求偽造</p>
+                <p class="term-def">利用伺服器發送請求存取內部資源的攻擊</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/type_confusion" target="_blank">Type Confusion</a></h3>
+                <p class="term-zh">型別混淆</p>
+                <p class="term-def">程式將資料當作錯誤的型別處理</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/rce" target="_blank">RCE</a></h3>
+                <p class="term-zh">遠端程式碼執行</p>
+                <p class="term-def">攻擊者可遠端在目標系統執行任意程式碼的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/authentication_bypass" target="_blank">Authentication Bypass</a></h3>
+                <p class="term-zh">驗證繞過</p>
+                <p class="term-def">繞過身分驗證機制取得未授權存取的漏洞</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

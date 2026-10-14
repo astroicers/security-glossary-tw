@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資安週報 2026/08/03 - 2026/08/09</title>
+    <meta name="description" content="資安週報 2026-08-03 - 2026-08-09">
+    <link rel="alternate" type="application/rss+xml" title="資安週報 RSS" href="../feed.xml">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { margin-bottom: 2rem; }
+        h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .meta { color: var(--text-muted); margin-bottom: 1rem; }
+        .back-link { color: var(--primary); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+        .back-link:hover { text-decoration: underline; }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .summary-card .value { font-size: 1.5rem; font-weight: 700; }
+        .summary-card .label { color: var(--text-muted); font-size: 0.875rem; }
+        section { margin-bottom: 2rem; }
+        h2 { font-size: 1.25rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .event-card h3 a { color: var(--text); text-decoration: none; }
+        .event-card h3 a:hover { color: var(--primary); }
+        .event-meta { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        td a { color: var(--primary); text-decoration: none; }
+        td a:hover { text-decoration: underline; }
+        .actions { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+        .actions ul { list-style: none; }
+        .actions li { padding: 0.5rem 0; }
+        /* 術語連結樣式 */
+        .term-link {
+            color: var(--primary);
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+            cursor: help;
+        }
+        .term-link:hover {
+            text-decoration: underline solid;
+        }
+        /* 本期術語區塊樣式 */
+        .terms-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+        .terms-section h2 {
+            border-bottom-color: #7dd3fc;
+        }
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .term-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .term-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        .term-card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .term-card h3 a:hover {
+            text-decoration: underline;
+        }
+        .term-zh {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .term-def {
+            font-size: 0.85rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        footer { margin-top: 3rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">&larr; 返回週報列表</a>
+
+        <header>
+            <h1>資安週報 2026/08/03 - 2026/08/09</h1>
+            <p class="meta">報告編號：SEC-WEEKLY-2026-32 · 發布日期：2026-08-10</p>
+        </header>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <div class="value" style="color: #f97316;">高</div>
+                <div class="label">威脅等級</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">8</div>
+                <div class="label">資安事件</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">7</div>
+                <div class="label">漏洞數量</div>
+            </div>
+        </div>
+
+        <section>
+            <h2>行動建議</h2>
+            <div class="actions">
+                <ul>
+                    <li>🔴 立即更新 N-able N-central 至 2026.3.1.10（CVE-2026-18577，CISA KEV 8/3）：（1）立即確認所有 N-central 部署版本，升級至 2026.3.1.10（Hotfix 2）——已套用 Hotfix 1（2026.3.1.7）亦須再次更新；（2）審查 N-central 伺服器過去 30 天的管理員登入記錄，搜尋未預期的 IP 來源及異常時間的登入；（3）在受管端點清查是否存在非預期的 cloudflared 服務或程序（攻擊者用於持久化的 Cloudflare Tunnel 客戶端）；（4）確認「Take <a href="https://glossary.astroicers.link/glossary/security_control" class="term-link" title="安全控制措施">Control</a>」功能的存取審計記錄，評估是否有非 MSP 人員啟動的遠端工作階段；（5）若確認受損，需將 N-central 視為完全淪陷，重建後通知所有受管客戶評估端點完整性。</li>
+<li>🔴 確認 JetBrains TeamCity 已更新並調查建置產出物完整性（CVE-2026-63077，CISA KEV 8/5）：（1）確認所有 TeamCity On-Premises 部署已更新至 2025.11.7 或 2026.1.3，或已套用官方安全修補外掛；（2）稽核 8 月 5 日之後（CISA KEV 列入日）至完成修補期間的所有建置記錄，確認無異常外部代理程式連線或非常規建置觸發；（3）全面輪換 TeamCity 儲存的憑證（版本控制存取金鑰、API Token、雲端 <a href="https://glossary.astroicers.link/glossary/iam" class="term-link" title="身分與存取管理">IAM</a> 金鑰、服務帳號密碼）；（4）對 7 月 27 日後建置並已部署的所有軟體產出物進行雜湊值驗證，評估供應鏈污染可能性；（5）限制 TeamCity 管理介面的外部存取，並啟用管理員操作稽核記錄。</li>
+<li>🔴 立即修補 Metabase（CVE-2026-72898，CVSS 10.0）並稽核已連線資料庫異常存取：（1）自托管 Metabase 用戶立即升級至修補版本（x.63.5、x.62.9、x.61.11、x.60.17、x.59.21、x.58.24）；Metabase Cloud 用戶由 Metabase 代為修補，無需自行操作；（2）稽核 Metabase 連線的所有資料庫，查詢過去 30 天是否存在來自 Metabase 服務帳號的異常大量資料匯出或非預期查詢模式；（3）稽核 Metabase 應用程式記錄中是否有針對 /api/session/reset_password 端點的異常 POST 請求（含非預期欄位）；（4）若確認被入侵，需輪換 Metabase 連線的所有資料庫密碼及 API 金鑰，並評估資料外洩通報義務。</li>
+<li>🔴 套用 Windows 8 月 Patch Tuesday 安全更新，優先處理 CVE-2026-68820（Lazarus 積極利用中）：（1）立即套用 8 月 11 日 Microsoft Patch Tuesday 更新，優先確保包含 CVE-2026-68820（AFD.sys WinSock 零時差）在內的所有安全性更新已套用；（2）針對國防、航太、半導體等高價值目標產業，啟用進階 EDR 核心防護（Kernel Sensor），監控 AFD.sys 及 afd.sys 相關的異常核心驅動程式載入；（3）對 LinkedIn 或其他社群平台接收到的招募相關訊息及附件提高戒備，並加強員工識別 Operation Dream Job 社交工程技巧的訓練；（4）確認端點 <a href="https://glossary.astroicers.link/glossary/edr" class="term-link" title="端點偵測與回應">EDR</a> 的 ETW 遙測管道完整性，若發現遙測中斷應立即調查。</li>
+<li>🔴 立即更新 Progress Kemp LoadMaster（CVE-2026-8037，CVSS 9.6，CISA KEV 8/7，FCEB 截止 8/10）：（1）確認 LoadMaster 版本並升級至 GA 7.2.63.2 或 LTSF 7.2.54.18；（2）修補前臨時透過防火牆限制 LoadMaster 管理介面的存取來源 IP，至少排除所有網際網路直接存取；（3）稽核 LoadMaster 的管理操作記錄，搜尋過去 41 天內的異常命令執行或配置變更；（4）確認 LoadMaster 後端伺服器是否存在非預期的新連線或服務啟動，排除已被用作橫向移動跳板的可能性。</li>
+<li>🟡 修補 Rails Active Storage（CVE-2026-66066，KindaRails2Shell，CVSS 9.5）並更新 libvips：（1）確認 Rails 應用程式版本，升級至 7.2.3.2、8.0.5.1 或 8.1.3.1；（2）同步確認 libvips 版本為 8.13 或以上——單獨升級 Rails 版本不足；（3）稽核 Rails 應用程式記錄，搜尋異常的圖像上傳請求，特別關注含 file:// 或 URI 方案的 URL；（4）如應用程式可暫時關閉圖像上傳功能，修補前可作為臨時緩解措施；（5）稽核伺服器環境變數及 config/ 目錄，確認 secret_key_base 等敏感資料是否已外洩，必要時輪換。</li>
+<li>🟡 套用 Linux 核心安全更新修補 OVSwrap（CVE-2026-64531，CVSS 7.8），評估雲端多租戶環境橫向移動風險：（1）確認 Linux 核心版本並套用包含 CVE-2026-64531 修補的安全更新（上游修補已於 7 月 24 日進入穩定核心樹，各 Linux 發行版應已發布對應安全更新）；（2）對使用 KVM 虛擬化或 OpenStack 的雲端及資料中心環境，評估具本地存取帳號的多租戶場景中橫向移動風險；（3）若 OVS 並非必要功能，評估卸除 openvswitch 核心模組作為臨時緩解措施（rmmod openvswitch）；（4）監控系統記錄中與 OVS Netlink 介面相關的異常存取模式。</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>資安新聞 (8)</h2>
+            
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html" target="_blank" rel="noopener">N-able N-central RMM 平台認證繞過（CVE-2026-18577，CVSS 8.2）遭積極利用：攻擊者接管 MSP 受管端點並植入 Cloudflare 隧道持久化，CISA KEV 8/3</a></h3>
+            <p class="event-meta">The Hacker News / Help Net Security / Huntress · 2026-08-03</p>
+            <p>8 月 1 日起，攻擊者積極利用 N-able N-central 遠端監控與管理（RMM）平台的認證繞過漏洞 CVE-2026-18577，此為 7 月先前披露的 <a href="https://glossary.astroicers.link/glossary/cve" class="term-link" title="通用漏洞揭露">CVE</a>-2026-18556（不完整修補）的繞過版本。N-central 廣泛部署於受管服務提供商（<a href="https://glossary.astroicers.link/glossary/msp" class="term-link" title="託管服務提供商">MSP</a>）環境，單一伺服器可管控數千台客戶端點，攻擊者一旦接管 N-central 即可橫向入侵所有受管系統。攻擊者利用平台內建的「Ta...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/08/cisa-flags-teamcity-cve-2026-63077-rce.html" target="_blank" rel="noopener">JetBrains TeamCity CVE-2026-63077（CVSS 9.8）確認遭積極利用，CISA KEV 8/5 列入並設 8/8 修補截止，CI/CD 管線供應鏈安全告急</a></h3>
+            <p class="event-meta">CISA / The Hacker News / SecurityWeek · 2026-08-05</p>
+            <p>7 月 27 日 JetBrains 披露的 TeamCity On-Premises 未驗證遠端程式碼執行漏洞（CVE-2026-63077，<a href="https://glossary.astroicers.link/glossary/cvss" class="term-link" title="通用漏洞評分系統">CVSS</a> 9.8），於 8 月 5 日被 CISA 列入 <a href="https://glossary.astroicers.link/glossary/kev" class="term-link" title="已知遭利用漏洞清單">KEV</a>，同日 JetBrains 亦更新公告確認接獲多起積極利用與未遂利用報告，與歷史預測一致——過往 TeamCity 嚴重漏洞（CVE-2024-23917、CVE-2023-42793）均在公...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html" target="_blank" rel="noopener">Metabase 零時差 SQL Injection（CVE-2026-72898，CVSS 10.0）8/6 揭露即遭實際利用，密碼重設端點不需驗證即可竊取全部資料庫憑證，N8n 及 Kilo Code 確認受害</a></h3>
+            <p class="event-meta">The Hacker News / Wiz Blog / BleepingComputer · 2026-08-06</p>
+            <p>8 月 6 日，Metabase 發布 CVE-2026-72898 安全公告，揭露其密碼重設 API 端點（POST /api/session/reset_password）存在嚴重未驗證 SQL 注入漏洞（CVSS 10.0）。根本原因為請求主體的欄位驗證缺失，攻擊者可在不需任何身份驗證的情況下，透過注入惡意欄位影響後端 SQL 查詢，進而取得平台的管理員控制權、存取所有已連線資料庫的憑證，並...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/08/progress-kemp-loadmaster-flaw-hits-cisa.html" target="_blank" rel="noopener">Progress Kemp LoadMaster OS 命令注入（CVE-2026-8037，CVSS 9.6）CISA KEV 8/7，792 次攻擊嘗試確認，FCEB 截止 8/10</a></h3>
+            <p class="event-meta">The Hacker News / CISA / SecurityWeek · 2026-08-07</p>
+            <p>8 月 7 日，CISA 將 Progress Kemp LoadMaster 負載均衡器的 OS 命令注入漏洞（CVE-2026-8037，CVSS 9.6）列入 KEV，要求 FCEB 機構於 8 月 10 日前完成修補。漏洞源於應用程式 escape_quotes() 函數對使用者輸入的處理不當，允許未驗證遠端攻擊者透過多個命令端點注入任意 OS 指令並以高權限執行。攻擊者可完整控制 Loa...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://malware.news/t/clop-ransomware-targets-fis-global/124620" target="_blank" rel="noopener">Clop 勒索軟體集團攻擊全球金融科技龍頭 FIS Global，竊取 874GB 資料威脅公開，金融業供應商安全風險再升</a></h3>
+            <p class="event-meta">Malware News / DeXpose / Ransomware.live · 2026-08-05</p>
+            <p>8 月 4 日至 5 日間，<a href="https://glossary.astroicers.link/glossary/ransomware_group" class="term-link" title="勒索軟體集團">勒索軟體集團</a> Clop 聲稱對全球最大金融科技基礎設施提供商之一 FIS Global（Fidelity National Information Services）發動攻擊，竊取 874GB 資料後於暗網公告威脅若談判失敗將全數公開。<a href="https://glossary.astroicers.link/glossary/clop" class="term-link" title="Clop 勒索軟體">Clop</a> 本次攻擊關聯漏洞 CVE-2026-12569，延續其利用企業廣泛部署的商業應用平台零時差漏洞進行大規模資料竊取的慣用手法（前...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html" target="_blank" rel="noopener">北韓 Lazarus Operation Dream Job 利用 Windows WinSock 核心零時差（CVE-2026-68820）部署 FudModule v3.1 rootkit，鎖定國防航太業取得 SYSTEM 權限並癱瘓 EDR</a></h3>
+            <p class="event-meta">Check Point Research / The Hacker News / cybersecuritynews.com · 2026-08-05</p>
+            <p>Check Point Research 揭露北韓 Lazarus 集團最新一波 Operation Dream Job 攻擊活動，透過 LinkedIn 等平台以假徵才信息誘騙國防、航太及軍事技術領域的目標下載惡意檔案，並在攻擊鏈中利用 Windows Ancillary Function Driver（AFD.sys）的 <a href="https://glossary.astroicers.link/glossary/use_after_free" class="term-link" title="釋放後使用">use-after-free</a> 零時差漏洞（CVE-2026-68820，...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/" target="_blank" rel="noopener">Head Mare 駭客組織入侵 TrueConf 視訊會議伺服器，將客戶端安裝程式木馬化植入 PhantomCore 與 PhantomGraph 雙後門（8/8）</a></h3>
+            <p class="event-meta">Securelist (Kaspersky) / BleepingComputer / SC Media · 2026-08-08</p>
+            <p>8 月 8 日，Kaspersky Securelist 研究人員揭露反烏克蘭駭客組織 Head Mare 透過入侵 TrueConf On-Premises 視訊會議伺服器，在用戶下載更新時散布木馬化安裝程式的供應鏈攻擊活動。攻擊者利用兩個 TrueConf Server <a href="https://glossary.astroicers.link/glossary/vulnerability" class="term-link" title="漏洞">漏洞</a>（KLCERT-26-057 及 KLCERT-26-058，影響未修補至 5.3.9/5.4.9/5.5.5 版的部署...</p>
+        </div>
+        
+        <div class="event-card">
+            <h3><a href="https://securityaffairs.com/196657/hacking/ovswrap-13-year-old-linux-kernel-flaw-lets-local-users-become-root.html" target="_blank" rel="noopener">Linux 核心 OVSwrap（CVE-2026-64531，CVSS 7.8）PoC 公開：13 年歷史的 Open vSwitch 整數溢位允許本地用戶取得 root，約 800 個核心版本受影響</a></h3>
+            <p class="event-meta">GBHackers / Security Affairs / CloudLinux · 2026-08-05</p>
+            <p>8 月 5 日，研究人員 Asim Viladi Oglu Manizada 公開 CVE-2026-64531（OVSwrap）技術細節及概念驗證（<a href="https://glossary.astroicers.link/glossary/poc" class="term-link" title="概念驗證">PoC</a>）攻擊程式，該漏洞存在於 Linux 核心的 Open vSwitch（OVS）資料平面實作中，長達 13 年未被發現。漏洞根本原因為 OVS 建構巢狀 Netlink 動作串流時的 16 位元長度欄位整數溢位，使核心在處理溢位後的記憶體時誤認...</p>
+        </div>
+        
+        </section>
+
+        <section>
+            <h2>漏洞追蹤 (7)</h2>
+            <table>
+                <thead>
+                    <tr><th>CVE ID</th><th>描述</th><th>嚴重性</th><th>CVSS</th></tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-18577" target="_blank">CVE-2026-18577</a></td>
+            <td>N-able N-central 認證繞過（CVSS 8.2，CISA KEV 8/3，積極利用中），攻擊者可取得 MSP 管理員控制並橫向入侵所有受管端點...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>8.2</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-63077" target="_blank">CVE-2026-63077</a></td>
+            <td>JetBrains TeamCity On-Premises 未驗證遠端程式碼執行（CVSS 9.8，CISA KEV 8/5，積極利用中，FCEB 截止 8/8）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-72898" target="_blank">CVE-2026-72898</a></td>
+            <td>Metabase 未驗證 <a href="https://glossary.astroicers.link/glossary/sql_injection" class="term-link" title="SQL 注入">SQL Injection</a> 密碼重設端點（CVSS 10.0，零時差，CISA KEV 8/11，積極利用中）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>10.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-8037" target="_blank">CVE-2026-8037</a></td>
+            <td>Progress Kemp LoadMaster OS <a href="https://glossary.astroicers.link/glossary/command_injection" class="term-link" title="命令注入">命令注入</a>（CVSS 9.6，CISA KEV 8/7，792 次攻擊嘗試確認，FCEB 截止 8/10）...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.6</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-68820" target="_blank">CVE-2026-68820</a></td>
+            <td>Windows Ancillary Function Driver（AFD.sys）Use-After-Free 提權零時差（CVSS 7.0，Lazarus 積極利用中，8/11 Patch Tue...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.0</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-64531" target="_blank">CVE-2026-64531</a></td>
+            <td>Linux 核心 Open vSwitch OVSwrap 整數溢位本地提權（CVSS 7.8，PoC 已公開，約 800 個受影響核心版本）...</td>
+            <td style="color: #f97316; font-weight: 600;">HIGH</td>
+            <td>7.8</td>
+        </tr>
+        
+        <tr>
+            <td><a href="https://nvd.nist.gov/vuln/detail/CVE-2026-66066" target="_blank">CVE-2026-66066</a></td>
+            <td>Ruby on Rails Active Storage 任意檔案讀取及潛在 <a href="https://glossary.astroicers.link/glossary/rce" class="term-link" title="遠端程式碼執行">RCE</a>（KindaRails2Shell，CVSS 9.5），secrets 外洩可升級為完整伺服器入侵...</td>
+            <td style="color: #ef4444; font-weight: 600;">CRITICAL</td>
+            <td>9.5</td>
+        </tr>
+        </tbody>
+            </table>
+        </section>
+
+        
+        <section class="terms-section">
+            <h2>📚 本期術語 (15)</h2>
+            <div class="terms-grid">
+                
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/msp" target="_blank">MSP</a></h3>
+                <p class="term-zh">託管服務提供商</p>
+                <p class="term-def">為企業提供 IT 基礎設施和服務管理的外包商</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cve" target="_blank">CVE</a></h3>
+                <p class="term-zh">通用漏洞揭露</p>
+                <p class="term-def">公開已知漏洞的統一編號系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/kev" target="_blank">KEV</a></h3>
+                <p class="term-zh">已知遭利用漏洞清單</p>
+                <p class="term-def">CISA 維護的已確認遭實際利用的漏洞清單</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/cvss" target="_blank">CVSS</a></h3>
+                <p class="term-zh">通用漏洞評分系統</p>
+                <p class="term-def">評估漏洞嚴重程度的標準化計分系統</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/clop" target="_blank">Clop</a></h3>
+                <p class="term-zh">Clop 勒索軟體</p>
+                <p class="term-def">以大規模資料外洩著稱的勒索軟體組織</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/ransomware_group" target="_blank">Ransomware Group</a></h3>
+                <p class="term-zh">勒索軟體集團</p>
+                <p class="term-def">專門開發和散播勒索軟體的犯罪組織</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/use_after_free" target="_blank">Use-After-Free</a></h3>
+                <p class="term-zh">釋放後使用</p>
+                <p class="term-def">程式使用已釋放記憶體區域的漏洞</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/vulnerability" target="_blank">Vulnerability</a></h3>
+                <p class="term-zh">漏洞</p>
+                <p class="term-def">系統或軟體中可被利用的安全弱點</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/poc" target="_blank">PoC</a></h3>
+                <p class="term-zh">概念驗證</p>
+                <p class="term-def">證明漏洞可被利用的示範程式碼</p>
+            </div>
+            
+            <div class="term-card">
+                <h3><a href="https://glossary.astroicers.link/glossary/sql_injection" target="_blank">SQL Injection</a></h3>
+                <p class="term-zh">SQL 注入</p>
+                <p class="term-def">透過惡意 SQL 語句操縱資料庫的攻擊</p>
+            </div>
+            
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>
+                <a href="../feed.xml">訂閱 RSS</a> ·
+                由 <a href="https://github.com/AstroicerS/security-weekly-mcp">security-weekly-mcp</a> 生成
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
